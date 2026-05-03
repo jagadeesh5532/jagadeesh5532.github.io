@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | JG Moments Photography</title>
+  <meta name="description" content="Browse JG Moments Photography gallery — Indian weddings, swim photography, sports action, and family portraits from Houston."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-text">JG</span><span class="logo-sub">Moments</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero--portfolio">
+    <div class="page-hero-content">
+      <div class="section-label">My Work</div>
+      <h1>Portfolio</h1>
+      <p>A collection of moments captured with passion, precision, and authentic joy.</p>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="portfolio-section">
+    <div class="container">
+
+      <!-- FILTER BUTTONS -->
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="indian">Indian Events</button>
+        <button class="filter-btn" data-filter="swim">Swim Photography</button>
+        <button class="filter-btn" data-filter="sports">Sports</button>
+        <button class="filter-btn" data-filter="portraits">Family Portraits</button>
+      </div>
+
+      <!-- GALLERY GRID -->
+      <div class="gallery-grid">
+
+        <!-- INDIAN EVENTS -->
+        <div class="gallery-item" data-category="indian">
+          <img src="images/diwali-celebration.jpg" alt="Diwali Celebration">
+          <div class="gallery-caption">Diwali Night · 2026</div>
+        </div>
+
+        <div class="gallery-item" data-category="indian">
+          <img src="images/holi-colors.jpg" alt="Holi Colors">
+          <div class="gallery-caption">Holi Festival · 2026</div>
+        </div>
+
+        <div class="gallery-item" data-category="indian">
+          <img src="images/wedding-ceremony.jpg" alt="Indian Wedding Ceremony">
+          <div class="gallery-caption">Wedding Ceremony · 2026</div>
+        </div>
+
+        <div class="gallery-item" data-category="indian">
+          <img src="images/mehndi-celebration.jpg" alt="Mehndi Celebration">
+          <div class="gallery-caption">Mehndi Night · 2025</div>
+        </div>
+
+        <!-- SWIM PHOTOGRAPHY -->
+        <div class="gallery-item" data-category="swim">
+          <img src="images/swim-meet-action.jpg" alt="Swim Meet Action">
+          <div class="gallery-caption">District Championships · 2026</div>
+        </div>
+
+        <div class="gallery-item" data-category="swim">
+          <img src="images/freestyle-swimmer.jpg" alt="Freestyle Swimmer">
+          <div class="gallery-caption">Freestyle Finals · 2025</div>
+        </div>
+
+        <div class="gallery-item" data-category="swim">
+          <img src="images/diving-moment.jpg" alt="Diving Moment">
+          <div class="gallery-caption">Diving Competition · 2025</div>
+        </div>
+
+        <!-- SPORTS PHOTOGRAPHY -->
+        <div class="gallery-item" data-category="sports">
+          <img src="images/soccer-goal.jpg" alt="Soccer Goal">
+          <div class="gallery-caption">Tournament Match · 2026</div>
+        </div>
+
+        <div class="gallery-item" data-category="sports">
+          <img src="images/cricket-action.jpg" alt="Cricket Action">
+          <div class="gallery-caption">Cricket Championship · 2025</div>
+        </div>
+
+        <div class="gallery-item" data-category="sports">
+          <img src="images/team-celebration.jpg" alt="Team Celebration">
+          <div class="gallery-caption">Victory Moment · 2026</div>
+        </div>
+
+        <!-- FAMILY PORTRAITS -->
+        <div class="gallery-item" data-category="portraits">
+          <img src="images/family-outdoor.jpg" alt="Family Portrait Outdoor">
+          <div class="gallery-caption">Family Portrait · 2026</div>
+        </div>
+
+        <div class="gallery-item" data-category="portraits">
+          <img src="images/children-candid.jpg" alt="Children Candid">
+          <div class="gallery-caption">Candid Moment · 2026</div>
+        </div>
+
+        <div class="gallery-item" data-category="portraits">
+          <img src="images/family-studio.jpg" alt="Family Studio Portrait">
+          <div class="gallery-caption">Studio Session · 2025</div>
+        </div>
+
+        <div class="gallery-item" data-category="portraits">
+          <img src="images/grandparents.jpg" alt="Grandparents Portrait">
+          <div class="gallery-caption">Family Legacy · 2025</div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align: center; margin-top: 4rem; padding: 3rem 2rem; background: linear-gradient(135deg, rgba(230, 57, 70, 0.05) 0%, rgba(233, 196, 106, 0.05) 100%); border-radius: 4px;">
+        <p style="font-family: var(--font-display); font-size: 1.5rem; color: var(--dark); margin-bottom: 1rem;">Love what you see?</p>
+        <p style="font-family: var(--font-body); color: var(--warm-gray); margin-bottom: 2rem; font-size: 1rem;">Let's create beautiful memories together.</p>
+        <a href="contact.html" class="btn btn-primary">Inquire About a Session</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-text">JG</span><span class="logo-sub">Moments</span>
+        <p>Joyful &amp; Graceful Moments Photography</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">📷 Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 JG Moments Photography · Jagadeesh Gundala · Houston, TX</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
