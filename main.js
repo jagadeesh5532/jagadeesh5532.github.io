@@ -266,3 +266,10 @@ function initScrollingGallery() {
   });
 }
 initScrollingGallery();
+
+// Scrolling Albums
+const scrollingWrapper = document.querySelector('.scrolling-wrapper');
+if (scrollingWrapper) {
+  scrollingWrapper.addEventListener('mouseover', () => scrollingWrapper.style.animationPlayState = 'paused');
+  scrollingWrapper.addEventListener('mouseout', () => scrollingWrapper.style.animationPlayState = 'running');
+}
