@@ -117,3 +117,26 @@ Current gallery structure:
 ---
 
 **Files are ready in your jg-photography folder!** 🚀
+
+
+## How to update photos on your site
+
+Do it yourself via GitHub (no coding needed)
+Step 1 — Upload your images to GitHub
+
+Go to github.com/jagadeesh5532/jagadeesh5532.github.io
+Click "Add file" → "Upload files"
+Drag and drop your photos in (JPG/PNG/WebP)
+Name them something clean like portrait-001.jpg, swim-race.jpg, etc.
+Click "Commit changes"
+
+Step 2 — Update the HTML to point to your new image
+
+Open the relevant file (e.g. portraits.html)
+Click the pencil ✏️ edit icon
+Find the <img src="..."> line you want to change
+Replace the URL with /your-new-photo.jpg (just the filename if it's in the root folder, or /images/your-photo.jpg if you put them in a subfolder)
+Click "Commit changes"
+
+
+
