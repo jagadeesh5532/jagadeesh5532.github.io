@@ -144,7 +144,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .album-card:hover .album-arrow { opacity: 1; transform: translateY(0); border-color: var(--saffron); color: var(--saffron); }
 
 /* MOSAIC */
-.mosaic { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+.mosaic { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 0.5rem;
 }
 .mosaic-item {
