@@ -193,3 +193,41 @@ async function loadDynamicAlbum() {
   gallery.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 }
 loadDynamicAlbum();
+
+// ===== RANDOM ALBUM COVERS (portfolio cards + page heroes) =====
+async function setRandomCovers() {
+  // Find all elements with data-random-folder attribute
+  const targets = document.querySelectorAll('[data-random-folder]');
+  if (!targets.length) return;
+
+  targets.forEach(async (el) => {
+    const folder = el.dataset.randomFolder;
+    const max    = parseInt(el.dataset.photoCount || '60');
+
+    // Build a shuffled list of candidate indices
+    const indices = Array.from({length: max}, (_, i) => i + 1)
+      .sort(() => Math.random() - 0.5);
+
+    for (const i of indices) {
+      const num = String(i).padStart(2, '0');
+      const src = `images/${folder}/${num}.jpg`;
+      const ok  = await new Promise(resolve => {
+        const img = new Image();
+        img.onload  = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = src;
+      });
+      if (ok) {
+        // Hero bg div
+        if (el.classList.contains('page-hero-bg') || el.dataset.type === 'bg') {
+          el.style.backgroundImage = `url('${src}')`;
+        } else {
+          // <img> card cover
+          el.src = src;
+        }
+        return; // stop after first valid hit
+      }
+    }
+  });
+}
+setRandomCovers();
