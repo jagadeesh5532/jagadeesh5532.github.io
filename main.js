@@ -140,3 +140,56 @@ document.querySelectorAll('.ajax-form').forEach(form => {
     }
   });
 });
+
+// ===== DYNAMIC ALBUM GALLERY (auto-loads from images/[folder]/) =====
+async function loadDynamicAlbum() {
+  const gallery = document.getElementById('dynamicGallery');
+  if (!gallery) return;
+  const folder = gallery.dataset.folder;
+  if (!folder) return;
+  const comingSoon = document.getElementById('albumComingSoon');
+
+  // Probe 01.jpg through 60.jpg in parallel — checks .jpg, .jpeg, .png, .webp
+  const exts = ['jpg','jpeg','png','webp'];
+  const probes = [];
+  for (let i = 1; i <= 60; i++) {
+    const num = String(i).padStart(2, '0');
+    probes.push(new Promise(resolve => {
+      let tried = 0;
+      function tryExt(ei) {
+        if (ei >= exts.length) return resolve(null);
+        const src = `images/${folder}/${num}.${exts[ei]}`;
+        const img = new Image();
+        img.onload  = () => resolve({ src, num });
+        img.onerror = () => tryExt(ei + 1);
+        img.src = src;
+      }
+      tryExt(0);
+    }));
+  }
+
+  const results = await Promise.all(probes);
+  const found = results.filter(Boolean).sort((a,b) => +a.num - +b.num);
+
+  if (found.length === 0) {
+    if (comingSoon) comingSoon.style.display = 'block';
+    return;
+  }
+  if (comingSoon) comingSoon.style.display = 'none';
+
+  const srcs = found.map(f => f.src);
+  found.forEach(({ src }, i) => {
+    const div = document.createElement('div');
+    div.className = 'album-photo fade-up';
+    div.innerHTML = `<img src="${src}" alt="Photo" loading="lazy"/><div class="album-photo-icon"><span>+</span></div>`;
+    div.addEventListener('click', () => openLightbox(srcs, i));
+    gallery.appendChild(div);
+  });
+
+  // Trigger fade-up observer on new elements
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  gallery.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+}
+loadDynamicAlbum();
