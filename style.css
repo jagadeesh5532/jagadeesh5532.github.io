@@ -146,7 +146,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* MOSAIC */
 .mosaic { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 80px; gap: 3px; }
 .mosaic-item { overflow: hidden; position: relative; cursor: pointer; }
-.mosaic-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
+.mosaic-item img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+}
 .mosaic-item:hover img { transform: scale(1.06); }
 .mosaic-item:nth-child(1) { grid-column: span 7; grid-row: span 5; }
 .mosaic-item:nth-child(2) { grid-column: span 5; grid-row: span 3; }
