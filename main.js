@@ -26,31 +26,27 @@ if (hamburger && mobileNav) {
 
 // HERO BG ZOOM
 const heroBg = document.getElementById('heroBg');
-if (heroBg) {
-  setTimeout(() => heroBg.classList.add('loaded'), 100);
-}
+if (heroBg) setTimeout(() => heroBg.classList.add('loaded'), 100);
 
 // FADE UP ON SCROLL
 const fadeEls = document.querySelectorAll('.fade-up');
 if (fadeEls.length) {
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1 });
   fadeEls.forEach(el => obs.observe(el));
 }
 
 // LIGHTBOX
 const lightbox = document.getElementById('lightbox');
-const lbImg = document.getElementById('lbImg');
-const lbClose = document.getElementById('lbClose');
-const lbPrev = document.getElementById('lbPrev');
-const lbNext = document.getElementById('lbNext');
-let lbImages = [];
-let lbIndex = 0;
+const lbImg    = document.getElementById('lbImg');
+const lbClose  = document.getElementById('lbClose');
+const lbPrev   = document.getElementById('lbPrev');
+const lbNext   = document.getElementById('lbNext');
+let lbImages = [], lbIndex = 0;
 
 function openLightbox(imgs, idx) {
-  lbImages = imgs;
-  lbIndex = idx;
+  lbImages = imgs; lbIndex = idx;
   lbImg.src = lbImages[lbIndex];
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -64,17 +60,16 @@ function lbNavigate(dir) {
   lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
   lbImg.src = lbImages[lbIndex];
 }
-
 if (lbClose) lbClose.addEventListener('click', closeLightbox);
-if (lbPrev) lbPrev.addEventListener('click', () => lbNavigate(-1));
-if (lbNext) lbNext.addEventListener('click', () => lbNavigate(1));
+if (lbPrev)  lbPrev.addEventListener('click',  () => lbNavigate(-1));
+if (lbNext)  lbNext.addEventListener('click',  () => lbNavigate(1));
 if (lightbox) {
-  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener('keydown', (e) => {
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => {
     if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') lbNavigate(-1);
-    if (e.key === 'ArrowRight') lbNavigate(1);
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowLeft')   lbNavigate(-1);
+    if (e.key === 'ArrowRight')  lbNavigate(1);
   });
 }
 
@@ -83,78 +78,65 @@ function initAlbumGallery() {
   const photos = document.querySelectorAll('.album-photo');
   if (!photos.length) return;
   const imgs = Array.from(photos).map(p => p.querySelector('img').src);
-  photos.forEach((photo, i) => {
-    photo.addEventListener('click', () => openLightbox(imgs, i));
-  });
+  photos.forEach((photo, i) => photo.addEventListener('click', () => openLightbox(imgs, i)));
 }
 initAlbumGallery();
 
-// MOSAIC LIGHTBOX (homepage)
+// MOSAIC LIGHTBOX
 function initMosaic() {
   const items = document.querySelectorAll('.mosaic-item');
   if (!items.length) return;
   const imgs = Array.from(items).map(m => m.querySelector('img').src);
-  items.forEach((item, i) => {
-    item.addEventListener('click', () => openLightbox(imgs, i));
-  });
+  items.forEach((item, i) => item.addEventListener('click', () => openLightbox(imgs, i)));
 }
 initMosaic();
 
-// PORTFOLIO FILTER (portfolio page)
-const filterBtns = document.querySelectorAll('.filter-btn');
-if (filterBtns.length) {
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      document.querySelectorAll('.album-card-item').forEach(item => {
-        item.style.display = (filter === 'all' || item.dataset.cat === filter) ? '' : 'none';
-      });
-    });
-  });
-}
-
-// STAR RATING
-const starPickers = document.querySelectorAll('.star-picker');
-starPickers.forEach(picker => {
-  const inputs = picker.querySelectorAll('input');
-  inputs.forEach(input => {
-    input.addEventListener('change', () => {
-      const hidden = picker.closest('form').querySelector('input[name="rating"]');
-      if (hidden) hidden.value = input.value;
-    });
-  });
-});
-
-// FORMSPREE AJAX SUBMIT
-const ajaxForms = document.querySelectorAll('.ajax-form');
-ajaxForms.forEach(form => {
-  form.addEventListener('submit', async (e) => {
+// ===== FORMSPREE AJAX SUBMIT (JSON method — most reliable) =====
+document.querySelectorAll('.ajax-form').forEach(form => {
+  form.addEventListener('submit', async function(e) {
     e.preventDefault();
-    const btn = form.querySelector('[type=submit]');
-    const msg = form.querySelector('.success-msg');
-    const orig = btn.textContent;
+
+    const btn     = form.querySelector('[type=submit]');
+    const succMsg = form.querySelector('.success-msg');
+    const origTxt = btn.textContent;
+
+    // Collect form fields into a plain object (works with all inputs, selects, textareas)
+    const payload = {};
+    new FormData(form).forEach((val, key) => { payload[key] = val; });
+
     btn.textContent = 'Sending…';
     btn.disabled = true;
+
     try {
       const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body:    JSON.stringify(payload)
       });
+
       if (res.ok) {
         form.reset();
-        if (msg) { msg.style.display = 'block'; }
-        btn.textContent = 'Sent!';
-        setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 4000);
+        btn.textContent = '✓ Sent Successfully!';
+        btn.style.background = 'var(--teal)';
+        if (succMsg) { succMsg.style.display = 'block'; succMsg.scrollIntoView({ behavior:'smooth', block:'nearest' }); }
+        setTimeout(() => {
+          btn.textContent = origTxt;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 5000);
       } else {
-        btn.textContent = 'Error — try again';
+        const errData = await res.json().catch(() => ({}));
+        console.error('Formspree error:', errData);
+        btn.textContent = 'Failed — please try again';
+        btn.style.background = 'var(--crimson)';
         btn.disabled = false;
+        setTimeout(() => { btn.textContent = origTxt; btn.style.background = ''; }, 4000);
       }
-    } catch(err) {
-      btn.textContent = 'Error — try again';
-      btn.disabled = false;
+    } catch (err) {
+      console.error('Network error:', err);
+      // Fallback: submit form normally if fetch fails
+      btn.textContent = 'Redirecting…';
+      form.submit();
     }
   });
 });
