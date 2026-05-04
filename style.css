@@ -77,6 +77,46 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .scroll-line { width: 1px; height: 50px; background: linear-gradient(to bottom, var(--saffron), transparent); animation: scrollPulse 2.2s ease-in-out infinite; }
 @keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
 
+.random-scroll-section .scrolling-gallery-clip {
+  overflow: hidden;
+  margin-top: 3rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+.scrolling-gallery {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  animation: scrollGallery 38s linear infinite;
+}
+
+.scrolling-gallery:hover {
+  animation-play-state: paused;
+}
+
+.scrolling-gallery img {
+  width: min(280px, 100vw);
+  height: 190px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 18px;
+  filter: saturate(1.08);
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.scrolling-gallery img:hover {
+  transform: scale(1.03);
+}
+
+@keyframes scrollGallery {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* BANDS */
 .gradient-band { height: 2px; background: linear-gradient(to right, var(--purple), var(--crimson), var(--saffron), var(--gold), var(--teal)); }
 .thin-band { height: 1px; background: linear-gradient(to right, transparent, var(--gold), var(--saffron), var(--gold), transparent); margin: 0 6%; }

@@ -231,3 +231,38 @@ async function setRandomCovers() {
   });
 }
 setRandomCovers();
+
+function initScrollingGallery() {
+  const gallery = document.getElementById('scrollingGallery');
+  if (!gallery) return;
+
+  const sources = [];
+  const folders = [
+    { name: 'portraits', count: 35 },
+    { name: 'candids', count: 0 },
+    { name: 'celebrations', count: 18 },
+    { name: 'swim-events', count: 7 }
+  ];
+
+  folders.forEach(({ name, count }) => {
+    for (let i = 1; i <= count; i += 1) {
+      const num = String(i).padStart(2, '0');
+      sources.push(`images/${name}/${num}.jpg`);
+    }
+  });
+
+  if (!sources.length) return;
+
+  const shuffled = sources.sort(() => Math.random() - 0.5);
+  const display = shuffled.slice(0, Math.min(shuffled.length, 28));
+  const loopImages = display.concat(display);
+
+  loopImages.forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = 'Featured photo';
+    img.loading = 'lazy';
+    gallery.appendChild(img);
+  });
+}
+initScrollingGallery();
