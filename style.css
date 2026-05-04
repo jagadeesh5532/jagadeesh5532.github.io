@@ -130,17 +130,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .section-desc { font-size: 1rem; color: var(--text-muted); max-width: 540px; line-height: 1.85; margin-top: 1.2rem; }
 
 /* ALBUMS */
-.albums-grid {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
+.albums-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 4rem; }
 .album-card { position: relative; aspect-ratio: 3/4; overflow: hidden; cursor: pointer; display: block; }
 .album-card.wide { aspect-ratio: 16/9; grid-column: span 2; }
-.album-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-}
+.album-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
 .album-card:hover img { transform: scale(1.07); }
 .album-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,4,4,0.92) 0%, rgba(8,4,4,0.3) 50%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; transition: background var(--transition); }
 .album-card:hover .album-overlay { background: linear-gradient(to top, rgba(8,4,4,0.96) 0%, rgba(8,4,4,0.55) 55%, rgba(8,4,4,0.1) 100%); }
@@ -153,13 +146,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* MOSAIC */
 .mosaic { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 80px; gap: 3px; }
 .mosaic-item { overflow: hidden; position: relative; cursor: pointer; }
-.mosaic-item img {
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  height: 100%;
-  border-radius: var(--radius);
-}
+.mosaic-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease; }
 .mosaic-item:hover img { transform: scale(1.06); }
 .mosaic-item:nth-child(1) { grid-column: span 7; grid-row: span 5; }
 .mosaic-item:nth-child(2) { grid-column: span 5; grid-row: span 3; }
