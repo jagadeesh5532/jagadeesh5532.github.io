@@ -152,7 +152,7 @@ async function loadDynamicAlbum() {
   // Probe 01.jpg through 60.jpg in parallel — checks .jpg, .jpeg, .png, .webp
   const exts = ['jpg','jpeg','png','webp'];
   const probes = [];
-  for (let i = 1; i <= 60; i++) {
+  for (let i = 1; i <= 200; i++) {
     const num = String(i).padStart(2, '0');
     probes.push(new Promise(resolve => {
       let tried = 0;
