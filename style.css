@@ -144,7 +144,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .album-card:hover .album-arrow { opacity: 1; transform: translateY(0); border-color: var(--saffron); color: var(--saffron); }
 
 /* MOSAIC */
-.mosaic { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
+.mosaic { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;
   gap: 0.5rem;
 }
 .mosaic-item { aspect-ratio: 4/3; position: relative; overflow: hidden; cursor: pointer; /* uniform grid — overrides below */
