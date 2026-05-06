@@ -151,7 +151,8 @@ async function loadDynamicAlbum() {
   const exts = ['jpg','jpeg','png','webp'];
   const srcs = [];
   let misses = 0;
-  const BATCH_SIZE = 12;
+  const INITIAL_BATCH = 6;  // Load 6 images on page load (faster for mobile)
+  const SUBSEQUENT_BATCH = 12;  // Load 12 at a time as user scrolls
   let loadedCount = 0;
 
   // Scan all images (only once, at init)
@@ -179,8 +180,8 @@ async function loadDynamicAlbum() {
   if (comingSoon) comingSoon.style.display = 'none';
 
   // Batch rendering function with responsive picture elements
-  function renderBatch(startIdx) {
-    const endIdx = Math.min(startIdx + BATCH_SIZE, srcs.length);
+  function renderBatch(startIdx, batchSize = SUBSEQUENT_BATCH) {
+    const endIdx = Math.min(startIdx + batchSize, srcs.length);
     for (let i = startIdx; i < endIdx; i++) {
       const src = srcs[i];
       const webpSrc = src.replace(/\.jpg$/i, '.webp');
@@ -217,8 +218,8 @@ async function loadDynamicAlbum() {
     }
   }
 
-  // Initial batch
-  renderBatch(0);
+  // Initial batch (smaller for faster page load on mobile)
+  renderBatch(0, INITIAL_BATCH);
 }
 loadDynamicAlbum();
 
