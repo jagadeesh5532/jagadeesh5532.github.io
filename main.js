@@ -178,14 +178,16 @@ async function loadDynamicAlbum() {
   }
   if (comingSoon) comingSoon.style.display = 'none';
 
-  // Batch rendering function
+  // Batch rendering function with responsive picture elements
   function renderBatch(startIdx) {
     const endIdx = Math.min(startIdx + BATCH_SIZE, srcs.length);
     for (let i = startIdx; i < endIdx; i++) {
       const src = srcs[i];
+      const webpSrc = src.replace(/\.jpg$/i, '.webp');
       const div = document.createElement('div');
       div.className = 'album-photo fade-up';
-      div.innerHTML = `<img src="${src}" alt="Photo" loading="lazy"/><div class="album-photo-icon"><span>+</span></div>`;
+      // Use picture element for WebP with JPEG fallback + SRCSET for responsive sizes
+      div.innerHTML = `<picture><source srcset="${webpSrc} 1x, ${webpSrc.replace(/\.webp$/, '@2x.webp')} 2x" type="image/webp"><img src="${src}" srcset="${src} 1x, ${src.replace(/\.jpg$/, '@2x.jpg')} 2x" alt="Photo" loading="lazy"/></picture><div class="album-photo-icon"><span>+</span></div>`;
       div.addEventListener('click', () => openLightbox(srcs, i));
       gallery.appendChild(div);
     }
@@ -246,10 +248,23 @@ async function setRandomCovers() {
       if (ok) {
         // Hero bg div
         if (el.classList.contains('page-hero-bg') || el.dataset.type === 'bg') {
-          el.style.backgroundImage = `url('${src}')`;
+          const webpSrc = src.replace(/\.jpg$/i, '.webp');
+          // Use WebP as primary, fall back to JPEG
+          el.style.backgroundImage = `url('${webpSrc}')`;
+          el.style.backgroundImage = `image-set(url('${webpSrc}') type('image/webp'), url('${src}') type('image/jpeg'))`;
         } else {
-          // <img> card cover
-          el.src = src;
+          // <img> card cover with picture element for responsive/WebP support
+          if (!el.parentNode.querySelector('picture')) {
+            const webpSrc = src.replace(/\.jpg$/i, '.webp');
+            const picture = document.createElement('picture');
+            const source = document.createElement('source');
+            source.srcset = webpSrc;
+            source.type = 'image/webp';
+            picture.appendChild(source);
+            picture.appendChild(el.cloneNode(true));
+            el.parentNode.replaceChild(picture, el);
+            picture.querySelector('img').src = src;
+          }
         }
         return; // stop after first valid hit
       }
@@ -284,11 +299,18 @@ function initScrollingGallery() {
   const loopImages = display.concat(display);
 
   loopImages.forEach(src => {
+    const picture = document.createElement('picture');
+    const webpSrc = src.replace(/\.jpg$/i, '.webp');
+    const source = document.createElement('source');
+    source.srcset = webpSrc;
+    source.type = 'image/webp';
+    picture.appendChild(source);
     const img = document.createElement('img');
     img.src = src;
     img.alt = 'Featured photo';
     img.loading = 'lazy';
-    gallery.appendChild(img);
+    picture.appendChild(img);
+    gallery.appendChild(picture);
   });
 }
 initScrollingGallery();
