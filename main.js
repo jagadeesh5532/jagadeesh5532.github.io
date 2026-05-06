@@ -283,7 +283,7 @@ function initScrollingGallery() {
     { name: 'portraits', count: 35 },
     { name: 'candids', count: 0 },
     { name: 'celebrations', count: 18 },
-    { name: 'swim-events', count: 7 }
+    { name: 'sports', count: 7 }
   ];
 
   folders.forEach(({ name, count }) => {

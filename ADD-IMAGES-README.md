@@ -41,7 +41,7 @@ cp ~/Downloads/photo3.jpg new-images/
 ./add-images.sh candids             # Unscripted moments
 ./add-images.sh celebrations        # Events, festivals
 ./add-images.sh shared-moments      # Togetherness, belonging
-./add-images.sh swim-events         # Sports, aquatics
+./add-images.sh sports         # Sports, aquatics
 ./add-images.sh travel-nature       # Landscapes, wandering
 ```
 

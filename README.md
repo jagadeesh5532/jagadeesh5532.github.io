@@ -13,7 +13,7 @@ jagadeesh5532.github.io/
 │   ├── home/          ← Hero + featured photos for the Home page
 │   ├── logo/          ← Your logo files (logo.png, logo-white.png)
 │   ├── portraits/     ← Photos for Portraits & Lifestyle album
-│   ├── swim-events/   ← Photos for Swim Events album
+│   ├── sports/   ← Photos for Swim Events album
 │   ├── candids/       ← Photos for Candids album
 │   ├── celebrations/  ← Photos for Celebrations album
 │   └── travel-nature/ ← Photos for Travel & Nature album
@@ -21,7 +21,7 @@ jagadeesh5532.github.io/
 ├── index.html         ← Home page
 ├── portfolio.html     ← Album overview page
 ├── portraits.html     ← Portraits album page
-├── swim-events.html   ← Swim Events album page
+├── sports.html   ← Swim Events album page
 ├── candids.html       ← Candids album page
 ├── celebrations.html  ← Celebrations album page
 ├── travel-nature.html ← Travel & Nature album page
@@ -64,7 +64,7 @@ Supported formats: `.jpg`, `.jpeg`, `.png`, `.webp`
 | Folder | Website Page |
 |--------|-------------|
 | `images/portraits/` | portraits.html |
-| `images/swim-events/` | swim-events.html |
+| `images/sports/` | sports.html |
 | `images/candids/` | candids.html |
 | `images/celebrations/` | celebrations.html |
 | `images/travel-nature/` | travel-nature.html |
