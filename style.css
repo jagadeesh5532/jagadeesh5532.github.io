@@ -302,7 +302,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .nav-links { display: none; }
   .nav-book { display: none; }
   .hamburger { display: flex; }
-  .hero-bg { background-position: center center; }
+  .hero-bg { background-position: center top; }
   .hero-title { font-size: clamp(2.8rem, 9vw, 4.5rem); }
   .section { padding: 4.5rem 5%; }
   .albums-grid { grid-template-columns: 1fr; } .album-card, .album-card.wide { max-height: 300px; }
