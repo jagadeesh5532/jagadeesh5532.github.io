@@ -141,7 +141,7 @@ document.querySelectorAll('.ajax-form').forEach(form => {
   });
 });
 
-// ===== DYNAMIC ALBUM GALLERY (sequential — stops after 3 consecutive misses) =====
+// ===== DYNAMIC ALBUM GALLERY (lazy batch loading — loads 12 at a time) =====
 async function loadDynamicAlbum() {
   const gallery = document.getElementById('dynamicGallery');
   if (!gallery) return;
@@ -151,7 +151,10 @@ async function loadDynamicAlbum() {
   const exts = ['jpg','jpeg','png','webp'];
   const srcs = [];
   let misses = 0;
+  const BATCH_SIZE = 12;
+  let loadedCount = 0;
 
+  // Scan all images (only once, at init)
   for (let i = 1; i <= 200; i++) {
     if (misses >= 3) break;
     const num = String(i).padStart(2, '0');
@@ -175,18 +178,45 @@ async function loadDynamicAlbum() {
   }
   if (comingSoon) comingSoon.style.display = 'none';
 
-  srcs.forEach((src, i) => {
-    const div = document.createElement('div');
-    div.className = 'album-photo fade-up';
-    div.innerHTML = `<img src="${src}" alt="Photo" loading="lazy"/><div class="album-photo-icon"><span>+</span></div>`;
-    div.addEventListener('click', () => openLightbox(srcs, i));
-    gallery.appendChild(div);
-  });
+  // Batch rendering function
+  function renderBatch(startIdx) {
+    const endIdx = Math.min(startIdx + BATCH_SIZE, srcs.length);
+    for (let i = startIdx; i < endIdx; i++) {
+      const src = srcs[i];
+      const div = document.createElement('div');
+      div.className = 'album-photo fade-up';
+      div.innerHTML = `<img src="${src}" alt="Photo" loading="lazy"/><div class="album-photo-icon"><span>+</span></div>`;
+      div.addEventListener('click', () => openLightbox(srcs, i));
+      gallery.appendChild(div);
+    }
 
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  }, { threshold: 0.1 });
-  gallery.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+    // Observe new elements for fade-in
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    gallery.querySelectorAll('.fade-up:not(.visible)').forEach(el => obs.observe(el));
+
+    loadedCount = endIdx;
+
+    // Load next batch when user scrolls near bottom
+    if (loadedCount < srcs.length) {
+      const lastPhoto = gallery.lastChild;
+      if (lastPhoto) {
+        const sentinel = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              renderBatch(loadedCount);
+              sentinel.disconnect();
+            }
+          });
+        }, { rootMargin: '100px' });
+        sentinel.observe(lastPhoto);
+      }
+    }
+  }
+
+  // Initial batch
+  renderBatch(0);
 }
 loadDynamicAlbum();
 
