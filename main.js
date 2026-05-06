@@ -204,51 +204,23 @@ function loadDynamicAlbum() {
 loadDynamicAlbum();
 
 // ===== RANDOM ALBUM COVERS (portfolio cards + page heroes) =====
-async function setRandomCovers() {
-  // Find all elements with data-random-folder attribute
+function setRandomCovers() {
   const targets = document.querySelectorAll('[data-random-folder]');
   if (!targets.length) return;
 
-  targets.forEach(async (el) => {
+  targets.forEach(el => {
     const folder = el.dataset.randomFolder;
-    const max    = parseInt(el.dataset.photoCount || '60');
+    const max = parseInt(el.dataset.photoCount || '10');
+    // Pick a random index instantly — all files 01..max are known to exist
+    const i = Math.floor(Math.random() * max) + 1;
+    const num = String(i).padStart(2, '0');
+    const src = `images/${folder}/${num}.jpg`;
+    const webpSrc = src.replace(/\.jpg$/i, '.webp');
 
-    // Build a shuffled list of candidate indices
-    const indices = Array.from({length: max}, (_, i) => i + 1)
-      .sort(() => Math.random() - 0.5);
-
-    for (const i of indices) {
-      const num = String(i).padStart(2, '0');
-      const src = `images/${folder}/${num}.jpg`;
-      const ok  = await new Promise(resolve => {
-        const img = new Image();
-        img.onload  = () => resolve(true);
-        img.onerror = () => resolve(false);
-        img.src = src;
-      });
-      if (ok) {
-        // Hero bg div
-        if (el.classList.contains('page-hero-bg') || el.dataset.type === 'bg') {
-          const webpSrc = src.replace(/\.jpg$/i, '.webp');
-          // Use WebP as primary, fall back to JPEG
-          el.style.backgroundImage = `url('${webpSrc}')`;
-          el.style.backgroundImage = `image-set(url('${webpSrc}') type('image/webp'), url('${src}') type('image/jpeg'))`;
-        } else {
-          // <img> card cover with picture element for responsive/WebP support
-          if (!el.parentNode.querySelector('picture')) {
-            const webpSrc = src.replace(/\.jpg$/i, '.webp');
-            const picture = document.createElement('picture');
-            const source = document.createElement('source');
-            source.srcset = webpSrc;
-            source.type = 'image/webp';
-            picture.appendChild(source);
-            picture.appendChild(el.cloneNode(true));
-            el.parentNode.replaceChild(picture, el);
-            picture.querySelector('img').src = src;
-          }
-        }
-        return; // stop after first valid hit
-      }
+    if (el.classList.contains('page-hero-bg') || el.dataset.type === 'bg') {
+      el.style.backgroundImage = `image-set(url('${webpSrc}') type('image/webp'), url('${src}') type('image/jpeg'))`;
+    } else {
+      el.src = src;
     }
   });
 }
