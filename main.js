@@ -141,45 +141,31 @@ document.querySelectorAll('.ajax-form').forEach(form => {
   });
 });
 
-// ===== DYNAMIC ALBUM GALLERY (lazy batch loading — loads 12 at a time) =====
-async function loadDynamicAlbum() {
+// ===== DYNAMIC ALBUM GALLERY (instant render from data-photo-count) =====
+function loadDynamicAlbum() {
   const gallery = document.getElementById('dynamicGallery');
   if (!gallery) return;
   const folder = gallery.dataset.folder;
   if (!folder) return;
   const comingSoon = document.getElementById('albumComingSoon');
-  const exts = ['jpg','jpeg','png','webp'];
-  const srcs = [];
-  let misses = 0;
-  const INITIAL_BATCH = 6;  // Load 6 images on page load (faster for mobile)
-  const SUBSEQUENT_BATCH = 12;  // Load 12 at a time as user scrolls
-  let loadedCount = 0;
+  const count = parseInt(gallery.dataset.photoCount || '0');
 
-  // Scan all images (only once, at init)
-  for (let i = 1; i <= 200; i++) {
-    if (misses >= 3) break;
-    const num = String(i).padStart(2, '0');
-    let found = false;
-    for (const ext of exts) {
-      const src = `images/${folder}/${num}.${ext}`;
-      const ok = await new Promise(resolve => {
-        const img = new Image();
-        img.onload  = () => resolve(true);
-        img.onerror = () => resolve(false);
-        img.src = src;
-      });
-      if (ok) { srcs.push(src); found = true; break; }
-    }
-    misses = found ? 0 : misses + 1;
-  }
-
-  if (srcs.length === 0) {
+  if (!count) {
     if (comingSoon) comingSoon.style.display = 'block';
     return;
   }
   if (comingSoon) comingSoon.style.display = 'none';
 
-  // Batch rendering function with responsive picture elements
+  const INITIAL_BATCH = 6;
+  const SUBSEQUENT_BATCH = 12;
+  let loadedCount = 0;
+
+  // Build src list immediately — no sequential HTTP probing needed
+  const srcs = Array.from({ length: count }, (_, i) => {
+    const num = String(i + 1).padStart(2, '0');
+    return `images/${folder}/${num}.jpg`;
+  });
+
   function renderBatch(startIdx, batchSize = SUBSEQUENT_BATCH) {
     const endIdx = Math.min(startIdx + batchSize, srcs.length);
     for (let i = startIdx; i < endIdx; i++) {
@@ -187,13 +173,12 @@ async function loadDynamicAlbum() {
       const webpSrc = src.replace(/\.jpg$/i, '.webp');
       const div = document.createElement('div');
       div.className = 'album-photo fade-up';
-      // Use picture element for WebP with JPEG fallback + SRCSET for responsive sizes
-      div.innerHTML = `<picture><source srcset="${webpSrc} 1x, ${webpSrc.replace(/\.webp$/, '@2x.webp')} 2x" type="image/webp"><img src="${src}" srcset="${src} 1x, ${src.replace(/\.jpg$/, '@2x.jpg')} 2x" alt="Photo" loading="lazy"/></picture><div class="album-photo-icon"><span>+</span></div>`;
+      div.innerHTML = `<picture><source srcset="${webpSrc}" type="image/webp"><img src="${src}" alt="Photo" loading="lazy"/></picture><div class="album-photo-icon"><span>+</span></div>`;
+      div.querySelector('img').onerror = function() { div.style.display = 'none'; };
       div.addEventListener('click', () => openLightbox(srcs, i));
       gallery.appendChild(div);
     }
 
-    // Observe new elements for fade-in
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.1 });
@@ -201,16 +186,12 @@ async function loadDynamicAlbum() {
 
     loadedCount = endIdx;
 
-    // Load next batch when user scrolls near bottom
     if (loadedCount < srcs.length) {
       const lastPhoto = gallery.lastChild;
       if (lastPhoto) {
         const sentinel = new IntersectionObserver((entries) => {
           entries.forEach(e => {
-            if (e.isIntersecting) {
-              renderBatch(loadedCount);
-              sentinel.disconnect();
-            }
+            if (e.isIntersecting) { renderBatch(loadedCount); sentinel.disconnect(); }
           });
         }, { rootMargin: '100px' });
         sentinel.observe(lastPhoto);
@@ -218,7 +199,6 @@ async function loadDynamicAlbum() {
     }
   }
 
-  // Initial batch (smaller for faster page load on mobile)
   renderBatch(0, INITIAL_BATCH);
 }
 loadDynamicAlbum();

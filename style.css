@@ -316,7 +316,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .form-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 800px) and (orientation: portrait) {
-  .hero-bg { background-position: 75% top; }
+  .hero-bg { background-position: 85% top; }
 }
 @media (max-width: 500px) {
   .album-gallery { columns: 1; }
