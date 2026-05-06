@@ -63,7 +63,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* HERO */
 .hero { position: relative; height: 100vh; min-height: 620px; display: flex; align-items: flex-end; padding-bottom: 10vh; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 30%; }
+.hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 45%; }
 .hero-bg.loaded { }
 .hero-gradient { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(8,4,4,0.88) 0%, rgba(8,4,4,0.5) 40%, rgba(8,4,4,0.15) 70%, rgba(110,31,168,0.12) 100%); }
 .hero-gradient-bottom { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,4,4,0.97) 0%, transparent 55%); }
@@ -314,6 +314,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .mosaic { grid-template-columns: repeat(2, 1fr); }
   .mosaic-item { aspect-ratio: 4/5; position: relative; overflow: hidden; cursor: pointer; grid-column: span 1 !important; grid-row: span 1 !important; min-height: 200px; }
   .form-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 800px) and (orientation: portrait) {
+  .hero-bg { background-position: 62% top; }
 }
 @media (max-width: 500px) {
   .album-gallery { columns: 1; }
