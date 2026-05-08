@@ -33,7 +33,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* NAV */
 .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: rgba(8,4,4,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: all var(--transition); }
 .navbar.scrolled { background: rgba(8,4,4,0.99); border-bottom-color: rgba(212,160,23,0.35); }
-.nav-logo img { height: 70px; width: auto; filter: brightness(0) invert(1); transition: filter var(--transition); }
+.nav-logo img { height: 90px; width: auto; filter: brightness(0) invert(1); transition: filter var(--transition); }
 .nav-logo:hover img { filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,107,0,0.7)); }
 .nav-links { display: flex; align-items: center; gap: 2.4rem; list-style: none; }
 .nav-links a { font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--text-muted); transition: color var(--transition); position: relative; padding-bottom: 4px; }
