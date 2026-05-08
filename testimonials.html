@@ -34,50 +34,7 @@
   <h2 class="section-title">Stories of <em>Joy</em></h2>
   <p class="section-desc">Every session is a privilege. Here's what families and athletes have shared about their JG Moments experience.</p>
 
-  <div class="testimonials-grid" style="margin-top:3.5rem;">
-    <div class="testimonial-card fade-up">
-      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-      <p class="testimonial-quote">"Jag captured our family portraits beautifully — every shot felt authentic and full of warmth. We absolutely love how they turned out!"</p>
-      <p class="testimonial-author">The Patel Family</p>
-      <p class="testimonial-type">Portrait Session</p>
-    </div>
-    <div class="testimonial-card fade-up delay-1">
-      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-      <p class="testimonial-quote">"The swim meet photos were incredible! He captured every splash, every turn, every moment of triumph. Our daughter was absolutely thrilled!"</p>
-      <p class="testimonial-author">Michael &amp; Jennifer Chen</p>
-      <p class="testimonial-type">Swim Event Photography</p>
-    </div>
-    <div class="testimonial-card fade-up delay-2">
-      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-      <p class="testimonial-quote">"Our Diwali celebration was captured so colorfully and vibrantly. Every diya, every smile perfectly preserved. Highly recommend Jag!"</p>
-      <p class="testimonial-author">Priya &amp; Arjun Sharma</p>
-      <p class="testimonial-type">Celebration Photography</p>
-    </div>
-    <div class="testimonial-card fade-up">
-      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-      <p class="testimonial-quote">"Jag has an amazing eye for candid moments. He made everyone feel so comfortable — the photos look natural and genuine. Truly gifted!"</p>
-      <p class="testimonial-author">Sarah &amp; Raj Kumar</p>
-      <p class="testimonial-type">Wedding &amp; Candid Photography</p>
-    </div>
-    <div class="testimonial-card fade-up delay-1">
-      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-      <p class="testimonial-quote">"Booked Jag for our son's swim championship. The action shots were sharp, dramatic, and full of energy. We'll frame these forever!"</p>
-      <p class="testimonial-author">The Anderson Family</p>
-      <p class="testimonial-type">Swim Event Coverage</p>
-    </div>
-    <div class="testimonial-card fade-up delay-2">
-      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-      <p class="testimonial-quote">"Our Holi event photos are absolutely stunning — the colors, the joy, the energy. Jag captured the essence of the festival perfectly!"</p>
-      <p class="testimonial-author">The Mehta Family</p>
-      <p class="testimonial-type">Festival Photography</p>
-    </div>
-    <div class="testimonial-card fade-up">
-      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-      <p class="testimonial-quote">"Wonderful photography.. Love it."</p>
-      <p class="testimonial-author">Anu</p>
-      <p class="testimonial-type">Travel &amp; Nature</p>
-    </div>
-  </div>
+  <div class="testimonials-grid" id="testimonialGrid" style="margin-top:3.5rem;"></div>
 </section>
 
 <div class="gradient-band"></div>
@@ -168,5 +125,39 @@
   <div class="footer-bottom"><p class="footer-copy">© 2026 JG Moments Photography · Jagadeesh Gundala · Houston, TX</p></div>
 </footer>
 <script src="main.js?v=5"></script>
+<script>
+// Load testimonials from JSON and render dynamically
+async function loadTestimonials() {
+  try {
+    const response = await fetch('testimonials.json?v=' + Date.now());
+    const testimonials = await response.json();
+    const grid = document.getElementById('testimonialGrid');
+
+    if (!grid) return;
+
+    const delayClasses = ['', 'delay-1', 'delay-2'];
+
+    testimonials.forEach((testimonial, index) => {
+      const delayClass = delayClasses[index % 3];
+      const stars = '★'.repeat(testimonial.stars);
+
+      const card = document.createElement('div');
+      card.className = `testimonial-card fade-up ${delayClass}`.trim();
+      card.innerHTML = `
+        <div class="stars">${Array.from({length: testimonial.stars}, () => '<span class="star">★</span>').join('')}</div>
+        <p class="testimonial-quote">"${testimonial.quote}"</p>
+        <p class="testimonial-author">${testimonial.name}</p>
+        <p class="testimonial-type">${testimonial.type}</p>
+      `;
+
+      grid.appendChild(card);
+    });
+  } catch (error) {
+    console.log('Testimonials loaded via JSON');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadTestimonials);
+</script>
 </body>
 </html>
