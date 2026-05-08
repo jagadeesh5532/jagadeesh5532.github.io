@@ -130,21 +130,31 @@
 async function loadTestimonials() {
   try {
     const response = await fetch('testimonials.json?v=' + Date.now());
+    if (!response.ok) throw new Error('Failed to fetch testimonials.json');
+
     const testimonials = await response.json();
     const grid = document.getElementById('testimonialGrid');
 
-    if (!grid) return;
+    if (!grid) {
+      console.error('Grid element #testimonialGrid not found');
+      return;
+    }
+
+    if (!Array.isArray(testimonials) || testimonials.length === 0) {
+      console.warn('No testimonials found in JSON');
+      return;
+    }
 
     const delayClasses = ['', 'delay-1', 'delay-2'];
 
     testimonials.forEach((testimonial, index) => {
       const delayClass = delayClasses[index % 3];
-      const stars = '★'.repeat(testimonial.stars);
+      const starsHTML = Array.from({length: testimonial.stars}, () => '<span class="star">★</span>').join('');
 
       const card = document.createElement('div');
       card.className = `testimonial-card fade-up ${delayClass}`.trim();
       card.innerHTML = `
-        <div class="stars">${Array.from({length: testimonial.stars}, () => '<span class="star">★</span>').join('')}</div>
+        <div class="stars">${starsHTML}</div>
         <p class="testimonial-quote">"${testimonial.quote}"</p>
         <p class="testimonial-author">${testimonial.name}</p>
         <p class="testimonial-type">${testimonial.type}</p>
@@ -152,8 +162,10 @@ async function loadTestimonials() {
 
       grid.appendChild(card);
     });
+
+    console.log(`Successfully loaded ${testimonials.length} testimonials`);
   } catch (error) {
-    console.log('Testimonials loaded via JSON');
+    console.error('Error loading testimonials:', error);
   }
 }
 
