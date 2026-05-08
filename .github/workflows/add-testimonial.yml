@@ -17,24 +17,37 @@ jobs:
           # Get the form data from the dispatch event
           DATA='${{ toJson(github.event.client_payload) }}'
 
+          # Exit gracefully if no payload
+          if [ -z "$DATA" ] || [ "$DATA" = "null" ]; then
+            echo "✓ No form data to process"
+            exit 0
+          fi
+
           # Check if this is a testimonial form
           FORM_TYPE=$(echo "$DATA" | jq -r '.form_type // empty')
 
-          if [ "$FORM_TYPE" = "testimonial" ]; then
-            # Extract fields
-            NAME=$(echo "$DATA" | jq -r '.name // "Anonymous"')
-            QUOTE=$(echo "$DATA" | jq -r '.message // ""')
-            SESSION_TYPE=$(echo "$DATA" | jq -r '.session_type // "Other"')
-            STARS=$(echo "$DATA" | jq -r '.star_rating // 5')
+          if [ "$FORM_TYPE" != "testimonial" ]; then
+            echo "✓ Not a testimonial form, skipping"
+            exit 0
+          fi
 
-            # Escape quotes for JSON
-            QUOTE_ESCAPED=$(echo "$QUOTE" | jq -R '.')
+          # Extract fields
+          NAME=$(echo "$DATA" | jq -r '.name // "Anonymous"')
+          QUOTE=$(echo "$DATA" | jq -r '.message // ""')
+          SESSION_TYPE=$(echo "$DATA" | jq -r '.session_type // "Other"')
+          STARS=$(echo "$DATA" | jq -r '.star_rating // 5')
 
-            # Read existing testimonials
-            TESTIMONIALS=$(cat testimonials.json)
+          # Escape quotes for JSON
+          QUOTE_ESCAPED=$(echo "$QUOTE" | jq -R '.')
 
-            # Add new testimonial
-            NEW_TESTIMONIAL=$(cat <<EOF
+          # Read existing testimonials
+          if [ ! -f testimonials.json ]; then
+            echo "[]" > testimonials.json
+          fi
+          TESTIMONIALS=$(cat testimonials.json)
+
+          # Add new testimonial
+          NEW_TESTIMONIAL=$(cat <<EOF
 {
   "name": $NAME,
   "quote": $QUOTE_ESCAPED,
@@ -44,23 +57,24 @@ jobs:
 EOF
 )
 
-            # Append to array
-            UPDATED=$(echo "$TESTIMONIALS" | jq ". += [$NEW_TESTIMONIAL]")
+          # Append to array
+          UPDATED=$(echo "$TESTIMONIALS" | jq ". += [$NEW_TESTIMONIAL]")
 
-            # Write back to file
-            echo "$UPDATED" | jq '.' > testimonials.json
+          # Write back to file
+          echo "$UPDATED" | jq '.' > testimonials.json
 
-            echo "added=true" >> $GITHUB_OUTPUT
-            echo "name=$NAME" >> $GITHUB_OUTPUT
-          else
-            echo "added=false" >> $GITHUB_OUTPUT
-          fi
+          echo "✓ Testimonial added successfully"
 
       - name: Commit and push
-        if: steps.process.outputs.added == 'true'
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add testimonials.json
-          git commit -m "Add new testimonial from ${{ steps.process.outputs.name }}" || true
-          git push
+          # Check if there are changes
+          if git diff --quiet; then
+            echo "✓ No changes to commit"
+          else
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add testimonials.json
+            git commit -m "Add new testimonial" || true
+            git push
+            echo "✓ Changes pushed"
+          fi
