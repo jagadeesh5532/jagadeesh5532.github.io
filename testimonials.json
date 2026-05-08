@@ -1,20 +1,14 @@
 [
   {
-    "name": "The Patel Family",
+    "name": "Shivam & Priya",
     "quote": "Jag captured our family portraits beautifully — every shot felt authentic and full of warmth. We absolutely love how they turned out!",
     "type": "Portrait Session",
     "stars": 5
   },
   {
-    "name": "Michael & Jennifer Chen",
+    "name": "Jennifer Chen",
     "quote": "The swim meet photos were incredible! He captured every splash, every turn, every moment of triumph. Our daughter was absolutely thrilled!",
     "type": "Swim Event Photography",
-    "stars": 5
-  },
-  {
-    "name": "Priya & Arjun Sharma",
-    "quote": "Our Diwali celebration was captured so colorfully and vibrantly. Every diya, every smile perfectly preserved. Highly recommend Jag!",
-    "type": "Celebration Photography",
     "stars": 5
   },
   {
@@ -24,15 +18,9 @@
     "stars": 5
   },
   {
-    "name": "The Anderson Family",
-    "quote": "Booked Jag for our son's swim championship. The action shots were sharp, dramatic, and full of energy. We'll frame these forever!",
-    "type": "Swim Event Coverage",
-    "stars": 5
-  },
-  {
-    "name": "The Mehta Family",
-    "quote": "Our Holi event photos are absolutely stunning — the colors, the joy, the energy. Jag captured the essence of the festival perfectly!",
-    "type": "Festival Photography",
+    "name": "Michelle",
+    "quote": "I’m so obsessed with my birthday photos! Jag is amazing to work with and has such a great eye. Thank you for making my day so special!",
+    "type": "Celebration Photography",
     "stars": 5
   }
 ]
