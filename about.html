@@ -28,24 +28,57 @@
 <div class="gradient-band"></div>
 
 <section class="section">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
-    <div style="position:relative;">
-      <img src="images/portraits/24.jpg" alt="Jagadeesh Gundala" style="width:100%;border-radius:2px;" loading="lazy"/>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+    <!-- Image First on Mobile -->
+    <div style="position:relative;order:2;@media (max-width:768px){order:1}">
+      <img src="images/portraits/24.jpg" alt="Jagadeesh Gundala" style="width:100%;border-radius:2px;max-width:500px;" loading="lazy"/>
       <div style="position:absolute;bottom:-16px;right:-16px;width:50%;height:50%;border:2px solid var(--saffron);border-radius:2px;z-index:-1;opacity:0.6;"></div>
     </div>
-    <div class="fade-up">
+
+    <!-- Text Content -->
+    <div class="fade-up" style="order:1;@media (max-width:768px){order:2}">
       <div class="section-eyebrow">My Story</div>
       <h2 class="section-title">Joyful &amp; <em>Graceful</em><br>Moments</h2>
-      <p style="font-size:1rem;color:var(--text-muted);line-height:1.85;margin-top:1.5rem;">Hi, I'm <strong style="color:var(--text);">Jagadeesh Gundala</strong> — a Houston-based photographer with a deep passion for capturing the beauty in everyday life. What started as a personal hobby over 15 years ago has grown into a meaningful practice of visual storytelling.</p>
-      <p style="font-size:1rem;color:var(--text-muted);line-height:1.85;margin-top:1rem;">I specialize in <strong style="color:var(--gold-light);">portraits, swim events, candids, celebrations, and travel photography</strong>. Whether it's the splash of a swimmer hitting the water, the vibrant colors of a Diwali celebration, or the quiet warmth of a family portrait — I approach every frame with curiosity, care, and creativity.</p>
-      <p style="font-size:1rem;color:var(--text-muted);line-height:1.85;margin-top:1rem;">Based in Houston but available for travel assignments, I believe every moment deserves to be preserved with honesty and beauty. My goal is simple: to give you images that still move you years from now.</p>
-      <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="portfolio.html" class="btn btn-saffron">View My Work</a>
-        <a href="contact.html" class="btn btn-gold">Get In Touch</a>
+
+      <!-- Bio Card -->
+      <div style="background:var(--bg-card);padding:2rem;border-radius:4px;margin-top:2rem;border-left:4px solid var(--saffron);">
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin:0;">Hi, I'm <strong style="color:var(--text);">Jagadeesh Gundala</strong> — a Houston-based photographer passionate about capturing beauty in everyday life.</p>
+        <p style="font-size:0.9rem;color:var(--text-dim);margin-top:0.8rem;margin-bottom:0;">15+ years of visual storytelling</p>
+      </div>
+
+      <!-- Specialties Card -->
+      <div style="background:var(--bg-card);padding:2rem;border-radius:4px;margin-top:1.5rem;border-left:4px solid var(--gold-light);">
+        <p style="font-size:0.85rem;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin:0;letter-spacing:1px;">I Specialize In</p>
+        <p style="font-size:0.95rem;color:var(--text);line-height:1.8;margin-top:1rem;margin-bottom:0;"><strong>Portraits</strong> • <strong>Swim Events</strong> • <strong>Candids</strong> • <strong>Celebrations</strong> • <strong>Travel</strong></p>
+      </div>
+
+      <!-- Philosophy Card -->
+      <div style="background:var(--bg-card);padding:2rem;border-radius:4px;margin-top:1.5rem;border-left:4px solid var(--text);">
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin:0;">Every moment deserves to be preserved with <strong>honesty and beauty</strong>. My goal is simple: to give you images that still move you years from now.</p>
+      </div>
+
+      <!-- CTA Buttons - More Prominent -->
+      <div style="margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem;">
+        <a href="contact.html" class="btn btn-saffron" style="width:100%;text-align:center;padding:1rem;font-size:0.95rem;">Book a Session →</a>
+        <a href="portfolio.html" class="btn btn-gold" style="width:100%;text-align:center;padding:1rem;font-size:0.95rem;">View My Work →</a>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  @media (max-width:768px) {
+    .section > div {
+      display:flex !important;
+      flex-direction:column-reverse !important;
+      grid-template-columns:1fr !important;
+      gap:2rem !important;
+    }
+    .section img {
+      max-width:100% !important;
+    }
+  }
+</style>
 
 <div class="stats-band">
   <div class="stats-grid">
@@ -61,31 +94,31 @@
     <div class="section-eyebrow" style="justify-content:center;">What I Love Shooting</div>
     <h2 class="section-title">Five <em>Specialties</em></h2>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:3rem;">
-    <a href="portraits.html" style="background:var(--bg-card);border:1px solid var(--border);padding:2rem;text-align:center;border-radius:2px;transition:all 0.3s;display:block;">
-      <div style="font-size:2.5rem;margin-bottom:1rem;">🖼️</div>
-      <h3 style="font-family:var(--font-display);font-size:1.3rem;color:var(--text);margin-bottom:0.5rem;font-weight:300;">Portraits</h3>
-      <p style="font-size:0.85rem;color:var(--text-muted);">Family &amp; lifestyle sessions with natural, authentic feels.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.2rem;margin-top:3rem;">
+    <a href="portraits.html" style="background:var(--bg-card);border:2px solid var(--border);padding:1.8rem 1.5rem;text-align:center;border-radius:4px;transition:all 0.3s;display:block;hover:border-color:var(--saffron);">
+      <div style="font-size:2.8rem;margin-bottom:1rem;display:block;">🖼️</div>
+      <h3 style="font-family:var(--font-display);font-size:1.1rem;color:var(--text);margin:0.5rem 0;font-weight:400;">Portraits</h3>
+      <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;margin:0;">Natural, authentic family &amp; lifestyle.</p>
     </a>
-    <a href="sports.html" style="background:var(--bg-card);border:1px solid var(--border);padding:2rem;text-align:center;border-radius:2px;transition:all 0.3s;display:block;">
-      <div style="font-size:2.5rem;margin-bottom:1rem;">🏊</div>
-      <h3 style="font-family:var(--font-display);font-size:1.3rem;color:var(--text);margin-bottom:0.5rem;font-weight:300;">Sports</h3>
-      <p style="font-size:0.85rem;color:var(--text-muted);">Competitive swimming action captured with precision.</p>
+    <a href="sports.html" style="background:var(--bg-card);border:2px solid var(--border);padding:1.8rem 1.5rem;text-align:center;border-radius:4px;transition:all 0.3s;display:block;">
+      <div style="font-size:2.8rem;margin-bottom:1rem;display:block;">🏊</div>
+      <h3 style="font-family:var(--font-display);font-size:1.1rem;color:var(--text);margin:0.5rem 0;font-weight:400;">Sports</h3>
+      <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;margin:0;">Competitive swimming action.</p>
     </a>
-    <a href="candids.html" style="background:var(--bg-card);border:1px solid var(--border);padding:2rem;text-align:center;border-radius:2px;transition:all 0.3s;display:block;">
-      <div style="font-size:2.5rem;margin-bottom:1rem;">😊</div>
-      <h3 style="font-family:var(--font-display);font-size:1.3rem;color:var(--text);margin-bottom:0.5rem;font-weight:300;">Candids</h3>
-      <p style="font-size:0.85rem;color:var(--text-muted);">Unscripted moments of genuine joy and human connection.</p>
+    <a href="candids.html" style="background:var(--bg-card);border:2px solid var(--border);padding:1.8rem 1.5rem;text-align:center;border-radius:4px;transition:all 0.3s;display:block;">
+      <div style="font-size:2.8rem;margin-bottom:1rem;display:block;">😊</div>
+      <h3 style="font-family:var(--font-display);font-size:1.1rem;color:var(--text);margin:0.5rem 0;font-weight:400;">Candids</h3>
+      <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;margin:0;">Genuine joy &amp; connection.</p>
     </a>
-    <a href="celebrations.html" style="background:var(--bg-card);border:1px solid var(--border);padding:2rem;text-align:center;border-radius:2px;transition:all 0.3s;display:block;">
-      <div style="font-size:2.5rem;margin-bottom:1rem;">🎊</div>
-      <h3 style="font-family:var(--font-display);font-size:1.3rem;color:var(--text);margin-bottom:0.5rem;font-weight:300;">Celebrations</h3>
-      <p style="font-size:0.85rem;color:var(--text-muted);">Weddings, festivals, Diwali, Holi, and every milestone.</p>
+    <a href="celebrations.html" style="background:var(--bg-card);border:2px solid var(--border);padding:1.8rem 1.5rem;text-align:center;border-radius:4px;transition:all 0.3s;display:block;">
+      <div style="font-size:2.8rem;margin-bottom:1rem;display:block;">🎊</div>
+      <h3 style="font-family:var(--font-display);font-size:1.1rem;color:var(--text);margin:0.5rem 0;font-weight:400;">Celebrations</h3>
+      <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;margin:0;">Weddings, festivals, milestones.</p>
     </a>
-    <a href="travel-nature.html" style="background:var(--bg-card);border:1px solid var(--border);padding:2rem;text-align:center;border-radius:2px;transition:all 0.3s;display:block;">
-      <div style="font-size:2.5rem;margin-bottom:1rem;">🌿</div>
-      <h3 style="font-family:var(--font-display);font-size:1.3rem;color:var(--text);margin-bottom:0.5rem;font-weight:300;">Travel &amp; Nature</h3>
-      <p style="font-size:0.85rem;color:var(--text-muted);">Landscapes, adventures, and the wonders of the world.</p>
+    <a href="travel-nature.html" style="background:var(--bg-card);border:2px solid var(--border);padding:1.8rem 1.5rem;text-align:center;border-radius:4px;transition:all 0.3s;display:block;">
+      <div style="font-size:2.8rem;margin-bottom:1rem;display:block;">🌿</div>
+      <h3 style="font-family:var(--font-display);font-size:1.1rem;color:var(--text);margin:0.5rem 0;font-weight:400;">Travel &amp; Nature</h3>
+      <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;margin:0;">Landscapes &amp; adventures.</p>
     </a>
   </div>
 </section>
