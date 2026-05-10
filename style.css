@@ -62,7 +62,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .btn-outline:hover { border-color: var(--saffron); color: var(--saffron); }
 
 /* HERO */
-.hero { position: relative; height: 80vh; min-height: 500px; display: flex; align-items: flex-end; padding-bottom: 6vh; overflow: hidden; margin-top: var(--nav-h); }
+.hero { position: relative; height: 80vh; min-height: 500px; display: flex; align-items: flex-end; padding-bottom: 10vh; overflow: hidden; margin-top: var(--nav-h); }
 .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 45%; }
 .hero-bg.loaded { }
 .hero-gradient { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(8,4,4,0.88) 0%, rgba(8,4,4,0.5) 40%, rgba(8,4,4,0.15) 70%, rgba(110,31,168,0.12) 100%); }
