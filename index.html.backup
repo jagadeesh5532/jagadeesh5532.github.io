@@ -164,12 +164,12 @@
       <p class="stat-label">Years of Experience</p>
     </div>
     <div class="stat-item fade-up delay-1">
-      <span class="stat-num">HTX</span>
-      <p class="stat-label">Houston Based</p>
+      <span class="stat-num">500+</span>
+      <p class="stat-label">Sessions Captured</p>
     </div>
     <div class="stat-item fade-up delay-2">
-      <span class="stat-num">∞</span>
-      <p class="stat-label">Timeless Moments</p>
+      <span class="stat-num">10000+</span>
+      <p class="stat-label">Memories Created</p>
     </div>
     <div class="stat-item fade-up delay-3">
       <span class="stat-num">100%</span>
@@ -231,8 +231,6 @@
       <p class="footer-tagline">"Joyful &amp; Graceful Moments"</p>
       <p class="footer-bio">Houston-based photographer specializing in portraits, swim events, candids, cultural celebrations, and travel photography. Capturing the soul of every moment since 2010.</p>
       <div class="footer-socials">
-        <a href="https://www.facebook.com/profile.php?id=61589169345858" target="_blank" aria-label="Facebook" title="Follow on Facebook">📘</a>
-        <a href="https://www.instagram.com/jg_moments/" target="_blank" aria-label="Instagram" title="Follow on Instagram">📷</a>
         <a href="https://jgmomentsphotography.com" aria-label="Portfolio" title="Adobe Portfolio">🌐</a>
         <a href="mailto:jgmoments.htx@gmail.com" aria-label="Email">✉</a>
       </div>
@@ -268,8 +266,8 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">© 2026 JG Moments Photography · Houston, TX</p>
-    <p class="footer-copy" style="color:var(--text-dim);">All images © JG Moments Photography. All rights reserved.</p>
+    <p class="footer-copy">© 2026 JG Moments Photography · Jagadeesh Gundala · Houston, TX</p>
+    <p class="footer-copy" style="color:var(--text-dim);">All images © Jagadeesh Gundala. All rights reserved.</p>
   </div>
 </footer>
 
