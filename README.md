@@ -150,7 +150,7 @@ To swap them with your own photos:
 
 ## 📩 Contact Form & Testimonials
 
-- Contact form submissions → your email **jgmoments.htx@gmail.com** via Formspree
+- Contact form submissions → your email **contact@jg-moments.com** via Formspree
 - Testimonial submissions → same inbox, tagged `[Testimonial]`
 - If emails stop arriving, check your Formspree dashboard at [formspree.io](https://formspree.io)
 
