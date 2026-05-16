@@ -173,7 +173,21 @@ function loadDynamicAlbum() {
       const webpSrc = src.replace(/\.jpg$/i, '.webp');
       const div = document.createElement('div');
       div.className = 'album-photo fade-up';
-      div.innerHTML = `<picture><source srcset="${webpSrc}" type="image/webp"><img src="${src}" alt="Photo" loading="lazy"/></picture><div class="album-photo-icon"><span>+</span></div>`;
+
+      // Generate descriptive alt text based on folder
+      let altText = 'Photography photo';
+      const folderMap = {
+        'portraits': 'Professional portrait and lifestyle photography - Image from JG Moments Houston',
+        'sports': 'Competitive swimming and aquatic sports photography - Action moment captured',
+        'candids': 'Candid photography capturing genuine and unscripted moments',
+        'celebrations': 'Celebration and festival photography featuring vibrant special moments',
+        'travel-nature': 'Travel and nature landscape photography showcasing scenic destinations'
+      };
+      if (folderMap[folder]) {
+        altText = folderMap[folder];
+      }
+
+      div.innerHTML = `<picture><source srcset="${webpSrc}" type="image/webp"><img src="${src}" alt="${altText}" loading="lazy"/></picture><div class="album-photo-icon"><span>+</span></div>`;
       div.querySelector('img').onerror = function() { div.style.display = 'none'; };
       div.addEventListener('click', () => openLightbox(srcs, i));
       gallery.appendChild(div);
