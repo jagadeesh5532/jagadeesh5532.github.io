@@ -1,0 +1,26 @@
+# JG Moments Photography - robots.txt
+# Tells search engines how to crawl this website
+
+# Allow all search engines
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Specify sitemap location
+Sitemap: https://jg-moments.com/sitemap.xml
+
+# Crawl delay (be respectful to server)
+Crawl-delay: 1
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
