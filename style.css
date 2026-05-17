@@ -31,12 +31,12 @@ a { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
 /* SOCIAL BAR */
-.social-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 1001; height: 40px; display: flex; align-items: center; justify-content: center; gap: 1rem; background: var(--bg); border-bottom: 1px solid var(--border); padding: 0 5%; }
+.social-bar { display: flex; align-items: center; justify-content: center; gap: 1rem; background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0.8rem 5%; width: 100%; }
 .social-bar-icon { width: 18px; height: 18px; display: block; color: var(--text-muted); transition: color var(--transition); }
 .social-bar a:hover .social-bar-icon { color: var(--saffron); }
 
 /* NAV */
-.navbar { position: fixed; top: 40px; left: 0; right: 0; z-index: 1000; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: rgba(8,4,4,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: all var(--transition); }
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: rgba(8,4,4,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: all var(--transition); }
 .navbar.scrolled { background: rgba(8,4,4,0.99); border-bottom-color: rgba(212,160,23,0.35); }
 .nav-logo img { height: 90px; width: auto; filter: brightness(0) invert(1); transition: filter var(--transition); }
 .nav-logo:hover img { filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,107,0,0.7)); }
@@ -52,7 +52,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-.mobile-nav { display: none; position: fixed; top: calc(40px + var(--nav-h)); left: 0; right: 0; background: rgba(8,4,4,0.99); padding: 2rem 5%; z-index: 999; border-bottom: 1px solid var(--border); }
+.mobile-nav { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: rgba(8,4,4,0.99); padding: 2rem 5%; z-index: 999; border-bottom: 1px solid var(--border); }
 .mobile-nav.open { display: block; }
 .mobile-nav a { display: block; padding: 1rem 0; font-family: var(--font-display); font-size: 1.4rem; color: var(--text-muted); border-bottom: 1px solid var(--border); transition: color var(--transition); }
 .mobile-nav a:hover { color: var(--saffron); }
@@ -67,7 +67,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .btn-outline:hover { border-color: var(--saffron); color: var(--saffron); }
 
 /* HERO */
-.hero { position: relative; height: 80vh; min-height: 500px; display: flex; align-items: flex-end; padding-bottom: 10vh; overflow: hidden; margin-top: calc(40px + var(--nav-h)); }
+.hero { position: relative; height: 80vh; min-height: 500px; display: flex; align-items: flex-end; padding-bottom: 10vh; overflow: hidden; margin-top: var(--nav-h); }
 .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 45%; }
 .hero-bg.loaded { }
 .hero-gradient { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(8,4,4,0.88) 0%, rgba(8,4,4,0.5) 40%, rgba(8,4,4,0.15) 70%, rgba(110,31,168,0.12) 100%); }
@@ -194,7 +194,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
 
 /* PAGE HERO */
-.page-hero { height: 52vh; min-height: 340px; position: relative; display: flex; align-items: flex-end; padding: 0 6% 5vh; margin-top: calc(40px + var(--nav-h)); overflow: hidden; }
+.page-hero { height: 52vh; min-height: 340px; position: relative; display: flex; align-items: flex-end; padding: 0 6% 5vh; margin-top: var(--nav-h); overflow: hidden; }
 .page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 40%; }
 .page-hero-tint { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,4,4,0.96) 0%, rgba(8,4,4,0.4) 55%, rgba(8,4,4,0.6) 100%); }
 .page-hero-content { position: relative; z-index: 2; }
