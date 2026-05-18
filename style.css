@@ -72,7 +72,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     top: auto;
     left: auto;
     height: auto;
-    padding: 1.2rem 0;
+    padding: 1rem 0;
     gap: 0.8rem;
     margin-left: 0;
     border-top: 1px solid var(--border);
@@ -80,6 +80,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     background: var(--bg-2);
     justify-content: flex-start;
     padding-left: 5%;
+    order: -1;
   }
   .social-bar a { padding: 0 6px; }
   .social-bar-icon {
@@ -91,7 +92,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* NAV */
 .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: rgba(8,4,4,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: all var(--transition); gap: 1rem; }
 @media (max-width: 800px) {
-  .navbar { padding: 0 3%; position: relative; top: auto; }
+  .navbar {
+    padding: 0 3%;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    z-index: 100;
+    width: 100%;
+    border-top: 1px solid var(--border);
+    margin-top: 0;
+  }
 }
 .navbar.scrolled { background: rgba(8,4,4,0.99); border-bottom-color: rgba(212,160,23,0.35); }
 .nav-logo img { height: 90px; width: auto; filter: brightness(0) invert(1); transition: filter var(--transition); object-fit: contain; margin: auto 0; }
@@ -114,6 +125,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 .mobile-nav { display: none; position: fixed; top: calc(var(--nav-h) + 70px); left: 0; right: 0; background: rgba(8,4,4,0.99); padding: 2rem 5%; z-index: 999; border-bottom: 1px solid var(--border); }
 .mobile-nav.open { display: block; }
+@media (max-width: 800px) {
+  .mobile-nav { top: calc(var(--nav-h) + 36px); }
+}
 .mobile-nav a { display: block; padding: 1rem 0; font-family: var(--font-display); font-size: 1.4rem; color: var(--text-muted); border-bottom: 1px solid var(--border); transition: color var(--transition); }
 .mobile-nav a:hover { color: var(--saffron); }
 
@@ -129,7 +143,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* HERO */
 .hero { position: relative; height: 80vh; min-height: 500px; display: flex; align-items: flex-end; padding-bottom: 10vh; overflow: hidden; margin-top: var(--nav-h); }
 @media (max-width: 800px) {
-  .hero { margin-top: calc(var(--nav-h) + 70px); }
+  .hero { margin-top: 0; }
 }
 .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 45%; }
 .hero-bg.loaded { }
@@ -259,7 +273,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* PAGE HERO */
 .page-hero { height: 52vh; min-height: 340px; position: relative; display: flex; align-items: flex-end; padding: 0 6% 5vh; margin-top: var(--nav-h); overflow: hidden; }
 @media (max-width: 800px) {
-  .page-hero { margin-top: calc(var(--nav-h) + 70px); }
+  .page-hero { margin-top: 0; }
 }
 .page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 40%; }
 .page-hero-tint { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,4,4,0.96) 0%, rgba(8,4,4,0.4) 55%, rgba(8,4,4,0.6) 100%); }
@@ -375,12 +389,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .nav-links { display: none; }
   .nav-book { display: none; }
   .hamburger { display: flex; }
-  .social-bar { height: 36px; gap: 0.8rem; }
   .social-bar-icon { width: 16px; height: 16px; }
-  .navbar { top: 36px; }
-  .mobile-nav { top: calc(36px + var(--nav-h)); }
-  .hero { margin-top: calc(36px + var(--nav-h)); }
-  .page-hero { margin-top: calc(36px + var(--nav-h)); }
   .hero-bg { background-position: center top; }
   .section { padding: 4.5rem 5%; }
   .albums-grid { grid-template-columns: 1fr; max-width: 100%; width: 100%; }
