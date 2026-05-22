@@ -223,16 +223,8 @@ const externalGalleries = {
 'travel-nature': {
 type: 'pixieset',
 baseUrl: 'https://jgmoments.pixieset.com/travelandnature/',
-// Option 1: Use a specific image index (unlimited)
-// This will pick a random image from the Pixieset gallery
-randomImageIndices: true,
-maxImageIndex: 999, // Unlimited - picks from 1-999
-// Option 2: Or provide specific image URLs if you have them
-// imageUrls: [
-//   'https://pixieset-cdn-url-1',
-//   'https://pixieset-cdn-url-2',
-//   // ... add more URLs as needed
-// ]
+// Using direct image URL from Pixieset
+imageUrl: '//images.pixieset.com/343064511/91cfb9487adfb451faa5eefce55bcf59-xxlarge.jpg'
 }
 };
 
@@ -249,25 +241,15 @@ if (isExternal) {
 const config = externalGalleries[folder];
 
 if (config.type === 'pixieset') {
-// For Pixieset, use a random image ID approach
-let imageSrc = '';
-
-if (config.imageUrls && config.imageUrls.length > 0) {
-// If specific URLs are provided, use them
-const randomUrl = config.imageUrls[Math.floor(Math.random() * config.imageUrls.length)];
-imageSrc = randomUrl;
-} else if (config.randomImageIndices) {
-// Otherwise, use a random index approach
-// This creates a link to a random image in the Pixieset gallery
-const randomIndex = Math.floor(Math.random() * config.maxImageIndex) + 1;
-const imageNum = String(randomIndex).padStart(2, '0');
-// Use Pixieset's thumbnail URL pattern (these are publicly visible)
-imageSrc = `${config.baseUrl}?img=${imageNum}`;
-// Alternative: Create a fixed image URL from a known photo
-// You can find direct image URLs by inspecting your Pixieset album
-}
+// For Pixieset, use the direct image URL
+let imageSrc = config.imageUrl || '';
 
 if (imageSrc) {
+// Ensure protocol is included
+if (imageSrc.startsWith('//')) {
+imageSrc = 'https:' + imageSrc;
+}
+
 if (el.classList.contains('page-hero-bg') || el.dataset.type === 'bg') {
 el.style.backgroundImage = `url('${imageSrc}')`;
 } else {
