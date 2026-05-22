@@ -137,7 +137,7 @@
       <div class="album-arrow">→</div>
     </a>
     <a href="travel-nature.html" class="album-card">
-      <img src="" class="travel-nature-img" alt="Travel and nature landscape photography showcasing scenic destinations and outdoor adventures" loading="lazy"/>
+      <img src="//images.pixieset.com/343064511/1feae446962ebdde7a057e674836b314-xxlarge.jpg" class="travel-nature-img" alt="Travel and nature landscape photography showcasing scenic destinations and outdoor adventures" loading="lazy"/>
       <div class="album-overlay">
         <p class="album-tag">Album 05</p>
         <h3 class="album-title">Travel &amp; Nature</h3>
@@ -177,7 +177,7 @@
 </footer>
 <script>
 // Load random Travel & Nature album images
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   const travelNatureImages = [
     "https://images.pixieset.com/343064511/f20aa2cf6df610c2d9bae194b45449c6-large.jpg",
     "https://images.pixieset.com/343064511/f3586c9bb4da408401bd054fe25418c8-large.jpg",
@@ -208,9 +208,8 @@
   if (img) {
     const randomImage = travelNatureImages[Math.floor(Math.random() * travelNatureImages.length)];
     img.src = randomImage;
-    img.onerror = function() { this.src = travelNatureImages[0]; };
   }
-})();
+});
 </script>
 <script src="main.js?v=5"></script>
 </body>
