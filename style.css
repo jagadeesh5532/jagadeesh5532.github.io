@@ -379,6 +379,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* RESPONSIVE */
 @media (max-width: 1100px) {
+  .social-bar {
+    display: none;
+  }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .albums-grid { grid-template-columns: repeat(2, 1fr); }
   .album-card.wide { grid-column: span 1; }
