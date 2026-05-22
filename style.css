@@ -275,7 +275,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (max-width: 800px) {
   .page-hero { margin-top: 0; }
 }
-.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 40%; }
+.page-hero-bg { position: absolute; inset: 0; background-size: contain; background-repeat: no-repeat; background-position: center; }
 .page-hero-tint { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,4,4,0.96) 0%, rgba(8,4,4,0.4) 55%, rgba(8,4,4,0.6) 100%); }
 .page-hero-content { position: relative; z-index: 2; }
 .page-hero-content h1 { font-family: var(--font-display); font-size: clamp(2.8rem, 6.5vw, 5.5rem); font-weight: 300; color: var(--text); line-height: 1.05; }
