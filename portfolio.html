@@ -137,7 +137,7 @@
       <div class="album-arrow">→</div>
     </a>
     <a href="travel-nature.html" class="album-card">
-      <img src="images/travel-nature/01.jpg" class="travel-nature-img" alt="Travel and nature landscape photography showcasing scenic destinations and outdoor adventures" loading="lazy"/>
+      <img src="" class="travel-nature-img" alt="Travel and nature landscape photography showcasing scenic destinations and outdoor adventures" loading="lazy"/>
       <div class="album-overlay">
         <p class="album-tag">Album 05</p>
         <h3 class="album-title">Travel &amp; Nature</h3>
@@ -208,7 +208,7 @@
   if (img) {
     const randomImage = travelNatureImages[Math.floor(Math.random() * travelNatureImages.length)];
     img.src = randomImage;
-    img.onerror = function() { this.src = 'images/travel-nature/01.jpg'; };
+    img.onerror = function() { this.src = travelNatureImages[0]; };
   }
 })();
 </script>
