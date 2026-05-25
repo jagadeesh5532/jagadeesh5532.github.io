@@ -2,37 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Travel & Nature | JG Moments Photography</title>
-  <!-- Canonical Tag -->
-  <link rel="canonical" href="https://jg-moments.com/travel-nature.html"/>
-
-  <!-- Schema Markup: Breadcrumb -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://jg-moments.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Portfolio",
-        "item": "https://jg-moments.com/portfolio.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Travel & Nature",
-        "item": "https://jg-moments.com/travel-nature.html"
-      }
-    ]
-  }
-  </script>
+  <title>Shared Moments | JG Moments Photography</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
@@ -55,50 +25,31 @@
   <a href="mailto:contact@jg-moments.com" aria-label="Email"><svg class="social-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
 </div>
 
-<div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Travel & Nature</span></div>
-<div class="gradient-band"></div>
-
-<!-- Pixieset Gallery Embed -->
-<div style="padding:4rem 6%;background-color:var(--bg);text-align:center;">
-  <p style="color:var(--text-muted);margin-bottom:2rem;font-size:0.95rem;">The complete Travel & Nature gallery is hosted on Pixieset for the best viewing experience.</p>
-  <iframe src="https://jgmoments.pixieset.com/travelandnature/" style="width:100%;height:800px;border:none;border-radius:8px;" title="Travel & Nature Gallery"></iframe>
-</div>
-
-<!-- PIXIESET ALBUM SECTION -->
-<div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:4rem 6%;margin-top:3rem;text-align:center;">
-  <h3 style="font-family:var(--font-serif);font-size:1.3rem;margin-bottom:1rem;">View Full Album on Pixieset</h3>
-  <p style="color:var(--text-muted);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;">Explore the complete Travel & Nature collection with enhanced browsing, sharing, and printing options on our Pixieset gallery.</p>
-  <a href="https://jgmoments.pixieset.com/travelandnature/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
-</div>
-
-<div style="background-color:var(--bg-light);padding:4rem 6%;margin-top:0;">
-  <h2 style="text-align:center;margin-bottom:2rem;font-family:var(--font-serif);font-size:1.8rem;">Explore Other Albums</h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;max-width:1200px;margin:0 auto;">
-    <div style="text-align:center;">
-      <h3 style="margin-bottom:1rem;font-family:var(--font-serif);font-size:1.3rem;">Portraits & Lifestyle</h3>
-      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Professional portraits and authentic moments</p>
-      <a href="portraits.html" class="btn btn-outline">View Portraits Album</a>
-    </div>
-    <div style="text-align:center;">
-      <h3 style="margin-bottom:1rem;font-family:var(--font-serif);font-size:1.3rem;">Sports & Aquatics</h3>
-      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Action shots and competitive moments</p>
-      <a href="sports.html" class="btn btn-outline">View Sports Album</a>
-    </div>
-    <div style="text-align:center;">
-      <h3 style="margin-bottom:1rem;font-family:var(--font-serif);font-size:1.3rem;">Candids</h3>
-      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Unscripted and authentic moments</p>
-      <a href="candids.html" class="btn btn-outline">View Candids Album</a>
-    </div>
-    <div style="text-align:center;">
-      <h3 style="margin-bottom:1rem;font-family:var(--font-serif);font-size:1.3rem;">Celebrations</h3>
-      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Birthdays, graduations, and milestones</p>
-      <a href="celebrations.html" class="btn btn-outline">View Celebrations Album</a>
-    </div>
+<div class="page-hero">
+  <div class="page-hero-bg" id="sharedHero" data-random-folder="shared-moments" data-photo-count="200" style="background-image:url('images/shared-moments/01.jpg');background-position:center;"></div>
+  <div class="page-hero-tint"></div>
+  <div class="page-hero-content">
+    <h1>Shared <em style="color:var(--gold-light);">Moments</em></h1>
+    <p>Togetherness, belonging, and the joy of shared experiences.</p>
   </div>
+</div>
+<div class="gradient-band"></div>
+<div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Shared Moments</span></div>
+
+<!-- Photos auto-load from images/shared-moments/01.jpg, 02.jpg … -->
+<div class="album-gallery" id="dynamicGallery" data-folder="shared-moments" data-photo-count="41"></div>
+
+<div class="coming-soon" id="albumComingSoon" style="display:none;">
+  <div class="coming-soon-icon">📸</div>
+  <h3>Gallery Coming Soon</h3>
+  <p>Upload photos named <strong>01.jpg, 02.jpg…</strong> to the <code>images/shared-moments/</code> folder on GitHub and they'll appear here automatically.</p>
+  <a href="contact.html" class="btn btn-saffron">Enquire About Shared Moments Photography</a>
+  &nbsp;&nbsp;
+  <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
 </div>
 
 <div class="text-center" style="padding:3rem 6%;">
-  <a href="contact.html" class="btn btn-saffron">Book a Travel Session</a>&nbsp;&nbsp;
+  <a href="contact.html" class="btn btn-saffron">Book a Shared Moments Session</a>&nbsp;&nbsp;
   <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
 </div>
 
@@ -124,7 +75,6 @@
         <li><a href="candids.html">Candids</a></li>
         <li><a href="celebrations.html">Celebrations</a></li>
         <li><a href="travel-nature.html">Travel &amp; Nature</a></li>
-        <li><a href="nikkah-ceremony.html">Nikkah Ceremony</a></li>
       </ul>
     </div>
     <div>
