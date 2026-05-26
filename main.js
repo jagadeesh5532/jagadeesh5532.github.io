@@ -179,7 +179,6 @@ let altText = 'Photography photo';
 const folderMap = {
 'portraits': 'Professional portrait and lifestyle photography - Image from JG Moments Houston',
 'sports': 'Competitive swimming and aquatic sports photography - Action moment captured',
-'candids': 'Candid photography capturing genuine and unscripted moments',
 'celebrations': 'Celebration and festival photography featuring vibrant special moments',
 'travel-nature': 'Travel and nature landscape photography showcasing scenic destinations'
 };
@@ -283,7 +282,6 @@ if (!gallery) return;
 const sources = [];
 const folders = [
 { name: 'portraits', count: 35 },
-{ name: 'candids', count: 0 },
 { name: 'celebrations', count: 18 },
 { name: 'sports', count: 7 }
 ];
