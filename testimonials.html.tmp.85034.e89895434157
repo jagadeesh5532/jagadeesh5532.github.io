@@ -153,7 +153,7 @@
           "@type": "Person",
           "name": "Lorain Pinto"
         },
-        "reviewBody": "Absolutely stunning photography — every shot captured the emotion perfectly. The attention to detail and lighting was incredible. Professional, creative, and easy to work with. Every photo tells a story. Thank you for capturing such genuine smiles and emotions. Pure magic behind the camera. Highly recommend Joyful & Graceful Moments!"
+        "reviewBody": "Absolutely stunning photography — every shot captured the emotion perfectly. The attention to detail and lighting was incredible. Professional, creative, and easy to work with. Every photo tells a story. Thank you for capturing such genuine smiles and emotions. Pure magic behind the camera. Highly recommend Joyful & Graceful Moments."
       }
     ],
     "aggregateRating": {
@@ -214,12 +214,6 @@
       <p class="testimonial-type">Ceremony Photography</p>
     </div>
     <div class="testimonial-card fade-up delay-1">
-      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-      <p class="testimonial-quote">"Absolutely stunning photography — every shot captured the emotion perfectly. The attention to detail and lighting was incredible. Professional, creative, and easy to work with. Every photo tells a story. Thank you for capturing such genuine smiles and emotions. Pure magic behind the camera💫"</p>
-      <p class="testimonial-author">Lorain Pinto</p>
-      <p class="testimonial-type">Professional Photography</p>
-    </div>
-    <div class="testimonial-card fade-up delay-2">
       <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
       <p class="testimonial-quote">"Jag captured our family portraits beautifully — every shot felt authentic and full of warmth. We absolutely love how they turned out!"</p>
       <p class="testimonial-author">Jay & Samantha</p>
