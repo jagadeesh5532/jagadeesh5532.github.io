@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kam & Amber | JG Moments Photography</title>
+  <title>Jessica Gifford | JG Moments Photography</title>
   <!-- Canonical Tag -->
-  <link rel="canonical" href="https://jg-moments.com/kam-marriage-proposal.html"/>
+  <link rel="canonical" href="https://jg-moments.com/jessica-gifford.html"/>
 
   <!-- Schema Markup: Breadcrumb -->
   <script type="application/ld+json">
@@ -28,8 +28,8 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Kam & Amber",
-        "item": "https://jg-moments.com/kam-marriage-proposal.html"
+        "name": "Jessica Gifford",
+        "item": "https://jg-moments.com/jessica-gifford.html"
       }
     ]
   }
@@ -193,7 +193,7 @@
   <a href="mailto:contact@jg-moments.com" aria-label="Email"><svg class="social-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
 </div>
 
-<div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Kam & Amber</span></div>
+<div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Jessica Gifford</span></div>
 <div class="gradient-band"></div>
 
 
@@ -201,8 +201,8 @@
 <!-- PIXIESET ALBUM SECTION -->
 <div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:4rem 6%;margin-top:3rem;text-align:center;">
   <h3 style="font-family:var(--font-serif);font-size:1.3rem;margin-bottom:1rem;">View Full Album on Pixieset</h3>
-  <p style="color:var(--text-muted);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;">Explore the complete Kam & Amber collection with enhanced browsing, sharing, and printing options on our Pixieset gallery.</p>
-  <a href="https://jgmoments.pixieset.com/kamedwardproposal/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
+  <p style="color:var(--text-muted);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;">Explore the complete Jessica Gifford collection with enhanced browsing, sharing, and printing options on our Pixieset gallery.</p>
+  <a href="https://jgmoments.pixieset.com/jessicagifford/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
 </div>
 
 <div style="background-color:var(--bg-light);padding:4rem 6%;margin-top:0;">
@@ -234,20 +234,15 @@
       <a href="travel-nature.html" class="btn btn-outline">View Travel Album</a>
     </div>
     <div style="text-align:center;">
-      <h3 style="margin-bottom:1rem;font-family:var(--font-serif);font-size:1.3rem;">Graduation Party</h3>
-      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Academic milestones and celebrations</p>
-      <a href="graduation-party-2026.html" class="btn btn-outline">View Graduation Album</a>
-    </div>
-    <div style="text-align:center;">
-      <h3 style="margin-bottom:1rem;font-family:var(--font-serif);font-size:1.3rem;">Michael & Melanie</h3>
-      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Romantic engagement moments</p>
-      <a href="surprise-marriage-proposal.html" class="btn btn-outline">View Proposal Album</a>
+      <h3 style="margin-bottom:1rem;font-family:var(--font-serif);font-size:1.3rem;">Nikkah Ceremony</h3>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Cultural celebration and traditions</p>
+      <a href="nikkah-ceremony.html" class="btn btn-outline">View Nikkah Album</a>
     </div>
   </div>
 </div>
 
 <div class="text-center" style="padding:3rem 6%;">
-  <a href="contact.html" class="btn btn-saffron">Book a Proposal Session</a>&nbsp;&nbsp;
+  <a href="contact.html" class="btn btn-saffron">Book a Session</a>&nbsp;&nbsp;
   <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
 </div>
 
@@ -311,7 +306,7 @@
 <script>
   // Password protection logic
   const CORRECT_PASSWORD = '0813';
-  const SESSION_KEY = 'kam_marriage_proposal_unlocked';
+  const SESSION_KEY = 'jessica_gifford_unlocked';
 
   const passwordModal = document.getElementById('passwordModal');
   const passwordInput = document.getElementById('passwordInput');
@@ -349,12 +344,6 @@
       passwordError.classList.add('show');
       passwordInput.value = '';
       passwordInput.focus();
-
-      // Shake animation
-      passwordModal.style.animation = 'none';
-      setTimeout(() => {
-        passwordModal.style.animation = 'shake 0.5s';
-      }, 10);
     }
   }
 
@@ -366,20 +355,11 @@
     }
   });
 
-  // Check access on page load
-  document.addEventListener('DOMContentLoaded', checkSessionAccess);
+  // Check on page load
   checkSessionAccess();
-
-  // Add shake animation
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-10px); }
-      75% { transform: translateX(10px); }
-    }
-  `;
-  document.head.appendChild(style);
+  if (passwordModal.classList.contains('hidden')) {
+    pageContent.classList.add('visible');
+  }
 </script>
 <script src="main.js?v=5"></script>
 </body>
