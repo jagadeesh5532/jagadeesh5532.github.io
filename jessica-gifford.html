@@ -37,15 +37,93 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
+
   <style>
+    .pixieset-container {
+      aspect-ratio: 16 / 10;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #1a1a1a;
+      height: auto;
+    }
+
+    .pixieset-container.loading::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(255, 102, 0, 0.2);
+      border-top-color: #ff6600;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      z-index: 10;
+    }
+
+    @keyframes spin {
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .pixieset-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .scroll-indicator {
+      text-align: center;
+      padding: 0.8rem 0;
+      color: var(--accent);
+      font-size: 1.5rem;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); opacity: 0.6; }
+      50% { transform: translateY(8px); opacity: 1; }
+    }
+
     @media (max-width: 768px) {
-      .pixieset-embed iframe {
-        height: 600px !important;
+      .pixieset-cta {
+        padding: 2rem 6% !important;
+      }
+      .pixieset-embed {
+        padding: 0 6% 2rem !important;
+        margin-left: -6%;
+        margin-right: -6%;
+      }
+      .pixieset-container {
+        aspect-ratio: auto;
+        height: 100vh;
       }
     }
     @media (max-width: 480px) {
-      .pixieset-embed iframe {
-        height: 500px !important;
+      .pixieset-cta {
+        padding: 1.5rem 6% !important;
+      }
+      .pixieset-cta h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.8rem !important;
+      }
+      .pixieset-cta p {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.5rem !important;
+      }
+      .pixieset-embed {
+        padding: 0 6% 2rem !important;
+        margin-left: -6%;
+        margin-right: -6%;
+      }
+      .pixieset-embed p {
+        font-size: 0.85rem !important;
+        margin-bottom: 1rem !important;
+      }
+      .pixieset-container {
+        aspect-ratio: auto;
+        height: 100vh;
       }
     }
   </style>
@@ -72,19 +150,22 @@
 <div class="gradient-band"></div>
 
 <!-- Pixieset Gallery Embed -->
-<div style="padding:4rem 6%;background-color:var(--bg);text-align:center;" class="pixieset-embed">
-  <p style="color:var(--text-muted);margin-bottom:2rem;font-size:0.95rem;">The complete Jessica Gifford gallery is hosted on Pixieset for the best viewing experience.</p>
-  <iframe src="https://jgmoments.pixieset.com/jessicagifford/" style="width:100%;height:800px;border:none;border-radius:8px;" title="Jessica Gifford Gallery"></iframe>
+<div style="padding:0 6% 2rem;background-color:var(--bg);text-align:center;" class="pixieset-embed">
+  <!-- Gallery Container with Loading Indicator -->
+  <div class="pixieset-container loading" id="pixiesetContainer">
+    <iframe
+      id="pixiesetFrame"
+      src="https://jgmoments.pixieset.com/jessicagifford/"
+      title="Jessica Gifford Gallery"
+      loading="lazy"
+      onload="document.getElementById('pixiesetContainer').classList.remove('loading');">
+    </iframe>
+  </div>
 </div>
 
-<!-- PIXIESET ALBUM SECTION -->
-<div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:4rem 6%;margin-top:3rem;text-align:center;">
-  <h3 style="font-family:var(--font-serif);font-size:1.3rem;margin-bottom:1rem;">View Full Album on Pixieset</h3>
-  <p style="color:var(--text-muted);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;">Explore the complete Jessica Gifford collection with enhanced browsing, sharing, and printing options on our Pixieset gallery.</p>
+<!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
+<div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:2rem 6%;text-align:center;" class="pixieset-cta">
   <a href="https://jgmoments.pixieset.com/jessicagifford/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
-</div>
-
-
 </div>
 
 <div class="text-center" style="padding:3rem 6%;">
