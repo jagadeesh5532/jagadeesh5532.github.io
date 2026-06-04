@@ -39,8 +39,11 @@
   <link rel="stylesheet" href="style.css"/>
   <style>
     @media (max-width: 768px) {
+      .pixieset-cta {
+        padding: 2rem 6% !important;
+      }
       .pixieset-embed {
-        padding: 4rem 0 !important;
+        padding: 2rem 0 !important;
         margin-left: -6%;
         margin-right: -6%;
       }
@@ -49,10 +52,25 @@
       }
     }
     @media (max-width: 480px) {
+      .pixieset-cta {
+        padding: 1.5rem 6% !important;
+      }
+      .pixieset-cta h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.8rem !important;
+      }
+      .pixieset-cta p {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.5rem !important;
+      }
       .pixieset-embed {
-        padding: 2rem 0 !important;
+        padding: 1.5rem 0 !important;
         margin-left: -6%;
         margin-right: -6%;
+      }
+      .pixieset-embed p {
+        font-size: 0.85rem !important;
+        margin-bottom: 1rem !important;
       }
       .pixieset-embed iframe {
         height: 500px !important;
@@ -82,19 +100,19 @@
 <div class="gradient-band"></div>
 
 <!-- PIXIESET ALBUM SECTION - TOP CALL TO ACTION -->
-<div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:4rem 6%;text-align:center;">
+<div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:2.5rem 6%;text-align:center;" class="pixieset-cta">
   <h3 style="font-family:var(--font-serif);font-size:1.3rem;margin-bottom:1rem;">View Full Album on Pixieset</h3>
   <p style="color:var(--text-muted);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;">Explore the complete Amber & Billy Maternity Shoot collection with enhanced browsing, sharing, and printing options on our Pixieset gallery.</p>
   <a href="https://jgmoments.pixieset.com/amberandbillymaternityshoot/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
 </div>
 
 <!-- Pixieset Gallery Embed -->
-<div style="padding:4rem 6%;background-color:var(--bg);text-align:center;" class="pixieset-embed">
-  <p style="color:var(--text-muted);margin-bottom:2rem;font-size:0.95rem;">Scroll down to view gallery images.</p>
+<div style="padding:2rem 6%;background-color:var(--bg);text-align:center;" class="pixieset-embed">
+  <p style="color:var(--text-muted);margin-bottom:1.5rem;font-size:0.95rem;">Scroll down to view gallery images.</p>
   <iframe src="https://jgmoments.pixieset.com/amberandbillymaternityshoot/" style="width:100%;height:800px;border:none;border-radius:8px;" title="Amber & Billy Maternity Shoot Gallery"></iframe>
 </div>
 
-<div class="text-center" style="padding:3rem 6%;">
+<div class="text-center" style="padding:2rem 6%;">
   <a href="contact.html" class="btn btn-saffron">Book a Session</a>&nbsp;&nbsp;
   <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
 </div>
