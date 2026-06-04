@@ -38,7 +38,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
 
-
   <style>
     .pixieset-container {
       aspect-ratio: 16 / 10;
@@ -130,23 +129,6 @@
   </style>
 </head>
 <body>
-
-<!-- PASSWORD PROTECTION MODAL -->
-<div class="password-modal" id="passwordModal">
-  <div class="password-modal-content">
-    <div class="lock-icon">🔒</div>
-    <h2>Password Protected</h2>
-    <p>This is a private album. Please enter the password to view.</p>
-    <div class="password-input-group">
-      <input type="password" id="passwordInput" placeholder="Enter Password" aria-label="Enter password">
-    </div>
-    <button id="submitPasswordBtn">Unlock Album</button>
-    <div class="password-error" id="passwordError">Incorrect password. Please try again.</div>
-  </div>
-</div>
-
-<!-- PAGE CONTENT (Hidden until password verified) -->
-<div class="page-content" id="pageContent">
 
 <nav class="navbar" id="navbar">
   <a href="index.html" class="nav-logo"><img src="images/logo/JG_white.png" onerror="this.src='https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f'" alt="JG Moments"/></a>
@@ -248,81 +230,6 @@
   </div>
 </footer>
 
-</div><!-- End page-content -->
-
-<script>
-  // Password protection logic
-  const CORRECT_PASSWORD = '0813';
-  const SESSION_KEY = 'surprise_marriage_proposal_unlocked';
-
-  const passwordModal = document.getElementById('passwordModal');
-  const passwordInput = document.getElementById('passwordInput');
-  const submitPasswordBtn = document.getElementById('submitPasswordBtn');
-  const passwordError = document.getElementById('passwordError');
-  const pageContent = document.getElementById('pageContent');
-
-  // Check if already unlocked in this session
-  function checkSessionAccess() {
-    if (sessionStorage.getItem(SESSION_KEY) === 'true') {
-      unlockAlbum();
-    }
-  }
-
-  function unlockAlbum() {
-    sessionStorage.setItem(SESSION_KEY, 'true');
-    passwordModal.classList.add('hidden');
-    pageContent.classList.add('visible');
-
-    // Focus and initialize page scripts
-    document.addEventListener('DOMContentLoaded', function() {
-      if (window.main && typeof window.main === 'function') {
-        window.main();
-      }
-    });
-  }
-
-  function verifyPassword() {
-    const enteredPassword = passwordInput.value.trim();
-
-    if (enteredPassword === CORRECT_PASSWORD) {
-      passwordError.classList.remove('show');
-      unlockAlbum();
-    } else {
-      passwordError.classList.add('show');
-      passwordInput.value = '';
-      passwordInput.focus();
-
-      // Shake animation
-      passwordModal.style.animation = 'none';
-      setTimeout(() => {
-        passwordModal.style.animation = 'shake 0.5s';
-      }, 10);
-    }
-  }
-
-  // Event listeners
-  submitPasswordBtn.addEventListener('click', verifyPassword);
-  passwordInput.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-      verifyPassword();
-    }
-  });
-
-  // Check access on page load
-  document.addEventListener('DOMContentLoaded', checkSessionAccess);
-  checkSessionAccess();
-
-  // Add shake animation
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-10px); }
-      75% { transform: translateX(10px); }
-    }
-  `;
-  document.head.appendChild(style);
-</script>
 <script src="main.js?v=5"></script>
 </body>
 </html>
