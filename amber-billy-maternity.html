@@ -44,6 +44,7 @@
       overflow: hidden;
       border-radius: 8px;
       background: #1a1a1a;
+      height: auto;
     }
 
     .pixieset-container.loading::before {
@@ -81,7 +82,8 @@
         margin-right: -6%;
       }
       .pixieset-container {
-        aspect-ratio: 16 / 12;
+        aspect-ratio: auto;
+        height: 100vh;
       }
     }
     @media (max-width: 480px) {
@@ -106,7 +108,8 @@
         margin-bottom: 1rem !important;
       }
       .pixieset-container {
-        aspect-ratio: 16 / 14;
+        aspect-ratio: auto;
+        height: 100vh;
       }
     }
   </style>
