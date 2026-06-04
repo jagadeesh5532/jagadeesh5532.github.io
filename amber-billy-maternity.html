@@ -71,52 +71,6 @@
       border: none;
     }
 
-    .gallery-controls {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .fullscreen-btn {
-      background-color: var(--accent);
-      color: white;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 4px;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      font-family: var(--font-sans);
-      font-weight: 500;
-    }
-
-    .fullscreen-btn:hover {
-      background-color: #e55a00;
-    }
-
-    .gallery-metadata {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .swipe-indicator {
-      display: none;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      margin-top: 0.8rem;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.6; }
-      50% { opacity: 1; }
-    }
-
     @media (max-width: 768px) {
       .pixieset-cta {
         padding: 2rem 6% !important;
@@ -128,9 +82,6 @@
       }
       .pixieset-container {
         aspect-ratio: 16 / 12;
-      }
-      .swipe-indicator {
-        display: block;
       }
     }
     @media (max-width: 480px) {
@@ -156,13 +107,6 @@
       }
       .pixieset-container {
         aspect-ratio: 16 / 14;
-      }
-      .gallery-controls {
-        gap: 0.8rem;
-      }
-      .fullscreen-btn {
-        padding: 0.7rem 1.2rem;
-        font-size: 0.9rem;
       }
     }
   </style>
@@ -196,13 +140,6 @@
 
 <!-- Pixieset Gallery Embed -->
 <div style="padding:0.5rem 6% 2rem;background-color:var(--bg);text-align:center;" class="pixieset-embed">
-  <!-- Gallery Controls -->
-  <div class="gallery-controls">
-    <button class="fullscreen-btn" onclick="openGalleryFullscreen();" title="View gallery in fullscreen">
-      ⛶ View Fullscreen
-    </button>
-  </div>
-
   <!-- Gallery Container with Loading Indicator -->
   <div class="pixieset-container loading" id="pixiesetContainer">
     <iframe
@@ -212,16 +149,6 @@
       loading="lazy"
       onload="document.getElementById('pixiesetContainer').classList.remove('loading');">
     </iframe>
-  </div>
-
-  <!-- Gallery Metadata -->
-  <div class="gallery-metadata">
-    📸 Maternity Shoot • Professional Gallery • High Resolution Images
-  </div>
-
-  <!-- Mobile Swipe Indicator -->
-  <div class="swipe-indicator">
-    ← Swipe to browse →
   </div>
 </div>
 
@@ -289,17 +216,5 @@
 </footer>
 <div class="lightbox" id="lightbox"><div class="lightbox-inner"><img src="" alt="" id="lbImg"/></div><button class="lb-close" id="lbClose">✕</button><button class="lb-prev" id="lbPrev">‹</button><button class="lb-next" id="lbNext">›</button></div>
 <script src="main.js?v=5"></script>
-<script>
-  function openGalleryFullscreen() {
-    const container = document.getElementById('pixiesetContainer');
-    if (container.requestFullscreen) {
-      container.requestFullscreen();
-    } else if (container.webkitRequestFullscreen) {
-      container.webkitRequestFullscreen();
-    } else if (container.msRequestFullscreen) {
-      container.msRequestFullscreen();
-    }
-  }
-</script>
 </body>
 </html>
