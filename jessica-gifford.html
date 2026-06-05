@@ -58,36 +58,39 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      padding: 3rem 6%;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      auto-rows: auto;
+      gap: 0;
+      padding: 0;
       background-color: var(--bg);
     }
 
     .gallery-item {
       position: relative;
-      overflow: hidden;
-      border-radius: 8px;
+      overflow: visible;
+      border-radius: 0;
       cursor: pointer;
-      transition: transform 0.3s ease;
-      background: #1a1a1a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 350px;
+      transition: filter 0.3s ease;
+      background: transparent;
+      display: block;
+      aspect-ratio: auto;
     }
 
     .gallery-item:hover {
-      transform: scale(1.02);
+      filter: brightness(1.1);
     }
 
     .gallery-item img {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
+      height: auto;
       display: block;
-      max-width: 100%;
-      max-height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
     }
 
     @media (max-width: 768px) {
@@ -95,12 +98,7 @@
         height: 300px;
       }
       .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 1rem;
-        padding: 2rem 6%;
-      }
-      .gallery-item {
-        min-height: 280px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       }
     }
 
@@ -109,12 +107,7 @@
         height: 250px;
       }
       .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
-        padding: 1.5rem 4%;
-      }
-      .gallery-item {
-        min-height: 240px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       }
     }
 
@@ -124,11 +117,6 @@
       }
       .gallery-grid {
         grid-template-columns: 1fr;
-        gap: 0.6rem;
-        padding: 1rem 4%;
-      }
-      .gallery-item {
-        min-height: 300px;
       }
     }
   </style>
