@@ -39,12 +39,15 @@
   <link rel="stylesheet" href="style.css"/>
   <style>
     .page-hero {
-      background-size: cover;
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      height: 500px;
+      min-height: 400px;
+      max-height: 600px;
+      height: auto;
       position: relative;
       margin-top: -2rem;
+      aspect-ratio: 16 / 9;
     }
     .page-hero-tint {
       position: absolute;
@@ -57,7 +60,7 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       auto-rows: auto;
       gap: 10px;
       padding: 0;
@@ -98,25 +101,25 @@
 
     @media (max-width: 1024px) {
       .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       }
     }
 
     @media (max-width: 768px) {
       .page-hero {
-        height: 300px;
+        aspect-ratio: 16 / 9;
       }
       .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
     }
 
     @media (max-width: 600px) {
       .page-hero {
-        height: 250px;
+        aspect-ratio: 4 / 3;
       }
       .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
     }
 
