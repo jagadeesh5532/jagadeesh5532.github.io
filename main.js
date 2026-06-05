@@ -95,10 +95,24 @@ initMosaic();
 function initGalleryGrid() {
 const items = document.querySelectorAll('.gallery-item');
 if (!items.length) return;
-const imgs = Array.from(items).map(item => item.querySelector('img').src);
-items.forEach((item, i) => item.addEventListener('click', () => openLightbox(imgs, i)));
+const imgs = Array.from(items).map(item => {
+const img = item.querySelector('img');
+return img ? img.src : '';
+}).filter(src => src);
+items.forEach((item, i) => {
+item.style.cursor = 'pointer';
+item.addEventListener('click', (e) => {
+e.stopPropagation();
+openLightbox(imgs, i);
+});
+});
 }
+// Initialize on load and after DOM ready
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', initGalleryGrid);
+} else {
 initGalleryGrid();
+}
 
 // ===== FORMSPREE AJAX SUBMIT (JSON method — most reliable) =====
 document.querySelectorAll('.ajax-form').forEach(form => {
