@@ -129,7 +129,7 @@ grid.style.gridTemplateColumns = `repeat(auto-fit, minmax(${minWidth}px, 1fr))`;
 adjustGridColumns();
 window.addEventListener('resize', adjustGridColumns);
 
-// Auto-adjust image spans based on aspect ratio (landscape images wider)
+// Auto-adjust image spans based on aspect ratio (landscape images span 2 columns)
 items.forEach(item => {
 const img = item.querySelector('img');
 if (!img) return;
@@ -143,13 +143,11 @@ img.addEventListener('load', handleImageLoad);
 
 function handleImageLoad() {
 const ratio = img.naturalWidth / img.naturalHeight;
-// If landscape (wider than tall), consider spanning more
-if (ratio > 1.3) {
-// Landscape: slightly prefer wider layout
-item.style.minWidth = '320px';
-} else if (ratio < 0.7) {
-// Very portrait: slightly prefer narrower
-item.style.minWidth = '200px';
+// If landscape (wider than tall), make it span 2 columns for visual prominence
+if (ratio > 1.2) {
+item.classList.add('landscape');
+} else {
+item.classList.remove('landscape');
 }
 }
 });
