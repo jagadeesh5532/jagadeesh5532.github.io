@@ -39,91 +39,70 @@
   <link rel="stylesheet" href="style.css"/>
 
   <style>
-    .pixieset-container {
-      aspect-ratio: 16 / 10;
+    .page-hero {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 500px;
+      position: relative;
+      margin-top: -2rem;
+    }
+    .page-hero-tint {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.3);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 6%;
+      background-color: var(--bg);
+    }
+
+    .gallery-item {
       position: relative;
       overflow: hidden;
       border-radius: 8px;
-      background: #1a1a1a;
-      height: auto;
+      aspect-ratio: 3/4;
+      cursor: pointer;
+      transition: transform 0.3s ease;
     }
 
-    .pixieset-container.loading::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50px;
-      height: 50px;
-      border: 4px solid rgba(255, 102, 0, 0.2);
-      border-top-color: #ff6600;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      z-index: 10;
+    .gallery-item:hover {
+      transform: scale(1.02);
     }
 
-    @keyframes spin {
-      to { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    .pixieset-container iframe {
+    .gallery-item img {
       width: 100%;
       height: 100%;
-      border: none;
-    }
-
-    .scroll-indicator {
-      text-align: center;
-      padding: 0.8rem 0;
-      color: var(--accent);
-      font-size: 1.5rem;
-      animation: bounce 2s ease-in-out infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); opacity: 0.6; }
-      50% { transform: translateY(8px); opacity: 1; }
+      object-fit: cover;
+      display: block;
     }
 
     @media (max-width: 768px) {
-      .pixieset-cta {
-        padding: 2rem 6% !important;
+      .page-hero {
+        height: 300px;
       }
-      .pixieset-embed {
-        padding: 0 6% 2rem !important;
-        margin-left: -6%;
-        margin-right: -6%;
-      }
-      .pixieset-container {
-        aspect-ratio: auto;
-        height: 100vh;
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 2rem 6%;
       }
     }
+
     @media (max-width: 480px) {
-      .pixieset-cta {
-        padding: 1.5rem 6% !important;
+      .page-hero {
+        height: 250px;
       }
-      .pixieset-cta h3 {
-        font-size: 1.1rem !important;
-        margin-bottom: 0.8rem !important;
-      }
-      .pixieset-cta p {
-        font-size: 0.9rem !important;
-        margin-bottom: 1.5rem !important;
-      }
-      .pixieset-embed {
-        padding: 0 6% 2rem !important;
-        margin-left: -6%;
-        margin-right: -6%;
-      }
-      .pixieset-embed p {
-        font-size: 0.85rem !important;
-        margin-bottom: 1rem !important;
-      }
-      .pixieset-container {
-        aspect-ratio: auto;
-        height: 100vh;
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        padding: 1.5rem 6%;
       }
     }
   </style>
@@ -149,27 +128,29 @@
 <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Jessica Gifford</span></div>
 <div class="gradient-band"></div>
 
-<!-- Pixieset Gallery Embed -->
-<div style="padding:0 6% 2rem;background-color:var(--bg);text-align:center;" class="pixieset-embed">
-  <!-- Gallery Container with Loading Indicator -->
-  <div class="pixieset-container loading" id="pixiesetContainer">
-    <iframe
-      id="pixiesetFrame"
-      src="https://jgmoments.pixieset.com/jessicagifford/"
-      title="Jessica Gifford Gallery"
-      loading="lazy"
-      onload="document.getElementById('pixiesetContainer').classList.remove('loading');">
-    </iframe>
-  </div>
+<!-- Hero Section -->
+<div class="page-hero" id="pageHero" style="background-image:url('https://images.pixieset.com/132512611/263370a0c92e60028a89e77e8dad433e-xxlarge.jpg');"></div>
+
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+  <div class="gallery-item"><img src="https://images.pixieset.com/132512611/9eb3085aa06045f7323657c699334a47-xxlarge.jpg" alt="Jessica Gifford" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/132512611/2c4abf05023121366cc6616e069dc847-xxlarge.jpg" alt="Jessica Gifford" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/132512611/bef3cc1e131b44ace2a6dac1d8a7b708-xxlarge.jpg" alt="Jessica Gifford" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/132512611/f3aa122b00b2095e4c1089dd3bb0572e-xxlarge.jpg" alt="Jessica Gifford" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/132512611/d58b14d1ec72e0d5536cb10d3e7bd0ab-xxlarge.jpg" alt="Jessica Gifford" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/132512611/85696f551352274154d92d1e20cef810-xxlarge.jpg" alt="Jessica Gifford" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/132512611/b54442ce513ed4266aafc7351ba3edbe-xxlarge.jpg" alt="Jessica Gifford" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/132512611/02c7e84b82ef4779f911f565ddfde97d-xxlarge.jpg" alt="Jessica Gifford" loading="lazy"/></div>
 </div>
 
-<!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
+<!-- BOTTOM CTA -->
 <div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:2rem 6%;text-align:center;" class="pixieset-cta">
-  <a href="https://jgmoments.pixieset.com/jessicagifford/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
+  <a href="https://jgmoments.pixieset.com/jessicagifford/" target="_blank" class="btn btn-saffron" style="display:inline-block;">View Full Gallery →</a>
 </div>
 
-<div class="text-center" style="padding:3rem 6%;">
-  <a href="contact.html" class="btn btn-saffron">Book a Session</a>&nbsp;&nbsp;
+<div class="text-center" style="padding:2rem 6%;background-color:var(--bg);">
+  <h3 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:1rem;color:var(--text);">Ready to Capture Your Moments?</h3>
+  <a href="contact.html" class="btn btn-saffron" style="margin-bottom:1rem;">Book Your Session Today</a><br>
   <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
 </div>
 
