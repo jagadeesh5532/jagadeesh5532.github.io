@@ -91,14 +91,18 @@ items.forEach((item, i) => item.addEventListener('click', () => openLightbox(img
 }
 initMosaic();
 
-// GALLERY GRID LIGHTBOX (for album pages like Amber Billy, Jessica Gifford)
+// GALLERY GRID LIGHTBOX & AUTO-FIT (for album pages like Amber Billy, Jessica Gifford)
 function initGalleryGrid() {
+const grid = document.querySelector('.gallery-grid');
 const items = document.querySelectorAll('.gallery-item');
-if (!items.length) return;
+if (!items.length || !grid) return;
+
 const imgs = Array.from(items).map(item => {
 const img = item.querySelector('img');
 return img ? img.src : '';
 }).filter(src => src);
+
+// Set lightbox listeners
 items.forEach((item, i) => {
 item.style.cursor = 'pointer';
 item.addEventListener('click', (e) => {
@@ -106,7 +110,51 @@ e.stopPropagation();
 openLightbox(imgs, i);
 });
 });
+
+// Auto-fit: adjust grid columns based on viewport width
+function adjustGridColumns() {
+const width = window.innerWidth;
+let minWidth = 280;
+
+if (width <= 400) minWidth = 200;
+else if (width <= 600) minWidth = 200;
+else if (width <= 768) minWidth = 240;
+else if (width <= 1024) minWidth = 260;
+else minWidth = 280;
+
+grid.style.gridTemplateColumns = `repeat(auto-fit, minmax(${minWidth}px, 1fr))`;
 }
+
+// Adjust columns on load and resize
+adjustGridColumns();
+window.addEventListener('resize', adjustGridColumns);
+
+// Auto-adjust image spans based on aspect ratio (landscape images wider)
+items.forEach(item => {
+const img = item.querySelector('img');
+if (!img) return;
+
+// Wait for image to load to get aspect ratio
+if (img.complete) {
+handleImageLoad();
+} else {
+img.addEventListener('load', handleImageLoad);
+}
+
+function handleImageLoad() {
+const ratio = img.naturalWidth / img.naturalHeight;
+// If landscape (wider than tall), consider spanning more
+if (ratio > 1.3) {
+// Landscape: slightly prefer wider layout
+item.style.minWidth = '320px';
+} else if (ratio < 0.7) {
+// Very portrait: slightly prefer narrower
+item.style.minWidth = '200px';
+}
+}
+});
+}
+
 // Initialize on load and after DOM ready
 if (document.readyState === 'loading') {
 document.addEventListener('DOMContentLoaded', initGalleryGrid);
