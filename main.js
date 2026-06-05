@@ -91,6 +91,15 @@ items.forEach((item, i) => item.addEventListener('click', () => openLightbox(img
 }
 initMosaic();
 
+// GALLERY GRID LIGHTBOX (for album pages like Amber Billy, Jessica Gifford)
+function initGalleryGrid() {
+const items = document.querySelectorAll('.gallery-item');
+if (!items.length) return;
+const imgs = Array.from(items).map(item => item.querySelector('img').src);
+items.forEach((item, i) => item.addEventListener('click', () => openLightbox(imgs, i)));
+}
+initGalleryGrid();
+
 // ===== FORMSPREE AJAX SUBMIT (JSON method — most reliable) =====
 document.querySelectorAll('.ajax-form').forEach(form => {
 form.addEventListener('submit', async function(e) {
