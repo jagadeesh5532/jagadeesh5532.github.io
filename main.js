@@ -293,6 +293,11 @@ type: 'pixieset',
 baseUrl: 'https://jgmoments.pixieset.com/travelandnature/',
 // Using direct image URL from Pixieset
 imageUrl: '//images.pixieset.com/343064511/91cfb9487adfb451faa5eefce55bcf59-xxlarge.jpg'
+},
+'arya-cake-smash': {
+type: 'pixieset',
+baseUrl: 'https://jgmoments.pixieset.com/aryacakesmash/',
+imageUrl: 'https://images.pixieset.com/962486611/524949cf8e0aa024297b4378827ed72d-xxlarge.jpg'
 }
 };
 
