@@ -152,7 +152,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (max-width: 800px) {
   .hero { margin-top: 0; }
 }
-.hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 45%; }
+.hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 65%; }
 .hero-bg.loaded { }
 .hero-gradient { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(8,4,4,0.88) 0%, rgba(8,4,4,0.5) 40%, rgba(8,4,4,0.15) 70%, rgba(110,31,168,0.12) 100%); }
 .hero-gradient-bottom { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,4,4,0.97) 0%, transparent 55%); }
