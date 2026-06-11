@@ -65,25 +65,31 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: scale(1.15);
 }
 
-/* Mobile - NOT fixed, scrolls with page */
+/* Tablet/Small screens - Hide fixed social bar */
+@media (max-width: 1400px) {
+  .social-bar {
+    display: none !important;
+  }
+}
+
+/* Mobile - Show as non-fixed element below navbar */
 @media (max-width: 800px) {
   .social-bar {
-    display: flex;
-    position: relative;
-    top: auto;
-    left: auto;
+    display: flex !important;
+    position: static;
     height: auto;
-    padding: 1rem 0;
-    gap: 0.8rem;
-    margin-left: 0;
+    padding: 1rem 5%;
+    gap: 1.2rem;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     background: var(--bg-2);
     justify-content: flex-start;
-    padding-left: 5%;
     order: -1;
+    left: auto;
+    top: auto;
+    z-index: auto;
   }
-  .social-bar a { padding: 0 6px; }
+  .social-bar a { padding: 0; }
   .social-bar-icon {
     width: 18px;
     height: 18px;
@@ -379,10 +385,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .mb-3 { margin-bottom: 3rem; }
 
 /* RESPONSIVE */
-@media (max-width: 1200px) {
-  .social-bar {
-    display: none;
-  }
+@media (max-width: 1400px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .albums-grid { grid-template-columns: repeat(2, 1fr); }
   .album-card.wide { grid-column: span 1; }
