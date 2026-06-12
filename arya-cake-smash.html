@@ -37,91 +37,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .pixieset-container {
-      aspect-ratio: 16 / 10;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      auto-rows: auto;
+      gap: 10px;
+      padding: 0;
+      background-color: var(--bg);
+      grid-auto-flow: dense;
+    }
+
+    .gallery-item.landscape {
+      grid-column: span 2;
+    }
+
+    @supports not (grid-template-columns: subgrid) {
+      .gallery-item.landscape {
+        grid-column: span 1;
+      }
+    }
+
+    .gallery-item {
       position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      background: #1a1a1a;
-      height: auto;
+      overflow: visible;
+      border-radius: 0;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+      background: transparent;
+      display: block;
+      aspect-ratio: auto;
     }
 
-    .pixieset-container.loading::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50px;
-      height: 50px;
-      border: 4px solid rgba(255, 102, 0, 0.2);
-      border-top-color: #ff6600;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      z-index: 10;
+    .gallery-item:hover {
+      filter: brightness(1.1);
     }
 
-    @keyframes spin {
-      to { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    .pixieset-container iframe {
+    .gallery-item img {
       width: 100%;
-      height: 100%;
-      border: none;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
 
-    .scroll-indicator {
-      text-align: center;
-      padding: 0.8rem 0;
-      color: var(--accent);
-      font-size: 1.5rem;
-      animation: bounce 2s ease-in-out infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); opacity: 0.6; }
-      50% { transform: translateY(8px); opacity: 1; }
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
     }
 
     @media (max-width: 768px) {
-      .pixieset-cta {
-        padding: 2rem 6% !important;
-      }
-      .pixieset-embed {
-        padding: 0 6% 2rem !important;
-        margin-left: -6%;
-        margin-right: -6%;
-      }
-      .pixieset-container {
-        aspect-ratio: auto;
-        height: 100vh;
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       }
     }
-    @media (max-width: 480px) {
-      .pixieset-cta {
-        padding: 1.5rem 6% !important;
-      }
-      .pixieset-cta h3 {
-        font-size: 1.1rem !important;
-        margin-bottom: 0.8rem !important;
-      }
-      .pixieset-cta p {
-        font-size: 0.9rem !important;
-        margin-bottom: 1.5rem !important;
-      }
-      .pixieset-embed {
-        padding: 0 6% 2rem !important;
-        margin-left: -6%;
-        margin-right: -6%;
-      }
-      .pixieset-embed p {
-        font-size: 0.85rem !important;
-        margin-bottom: 1rem !important;
-      }
-      .pixieset-container {
-        aspect-ratio: auto;
-        height: 100vh;
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.8rem;
+        padding: 1.5rem 6%;
       }
     }
   </style>
@@ -147,18 +121,27 @@
 <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Arya Cake Smash</span></div>
 <div class="gradient-band"></div>
 
-<!-- Pixieset Gallery Embed -->
-<div style="padding:0 6% 2rem;background-color:var(--bg);text-align:center;" class="pixieset-embed">
-  <!-- Gallery Container with Loading Indicator -->
-  <div class="pixieset-container loading" id="pixiesetContainer">
-    <iframe
-      id="pixiesetFrame"
-      src="https://jgmoments.pixieset.com/aryacakesmash/"
-      title="Arya Cake Smash Gallery"
-      loading="lazy"
-      onload="document.getElementById('pixiesetContainer').classList.remove('loading');">
-    </iframe>
-  </div>
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/524949cf8e0aa024297b4378827ed72d-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/0d25f8e2101c65d74d87dd7a9f4247c5-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/a31b71fb3d02d636b0b42147d28d6acb-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/8b78dbb950ffc801fc830601dbc3d241-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/71fbcb51b2f65564fae0e21bfd889313-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/9a9a9f495767edf9ef0f9230893c1c3b-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/dbfee866e2e0665d2e336c1c5aca5974-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/4d6e8ea26d183bc29ab6a99b79278f02-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/b367259465e1d991a7afcc7dfa7dc68a-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/95d26b0c6331e5838fb1c8f8a2e8abda-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/3b9098998f88a6dbd31bfc8182f6f758-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/132aef1a04668883b7e39d9af2a0c58a-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/ce5a211c98433cf26f274751731f4eae-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/157e5616363bc596dd7a7f3507bec7b1-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/0993fe64f69a4cc5ef64468209e9a397-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/c0408b300e006d4e5801ffd6a8b3ec0d-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/092ef8f33ab686c7bd4e394464708728-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/e3a3366c632a522a2c60b925e7f951af-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/962486611/53863e69f8e6cb318cc40a73eaf24cca-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/></div>
 </div>
 
 <!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
@@ -198,6 +181,7 @@
         <li><a href="shelbi-audition-shoot.html">Shelbi Audition shoot</a></li>
         <li><a href="kam-marriage-proposal.html">Kam & Amber</a></li>
         <li><a href="jessica-gifford.html">Jessica Gifford</a></li>
+        <li><a href="creshelle-family.html">Creshelle Family</a></li>
         <li><a href="amber-billy-maternity.html">Amber & Billy Maternity Shoot</a></li>
         <li><a href="arya-cake-smash.html">Arya Cake Smash</a></li>
       </ul>
