@@ -278,7 +278,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
 
 /* PAGE HERO */
-.page-hero { height: auto; min-height: auto; position: relative; display: flex; align-items: flex-end; padding: 4rem 6%; margin-top: var(--nav-h); overflow: hidden; }
+.page-hero { height: auto; min-height: auto; position: relative; display: flex; align-items: flex-end; padding: 2rem 6%; margin-top: var(--nav-h); overflow: hidden; }
 @media (max-width: 800px) {
   .page-hero { margin-top: 0; }
 }
