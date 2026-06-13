@@ -126,6 +126,60 @@
         height: 100vh;
       }
     }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 6%;
+      background-color: var(--bg);
+    }
+
+    .gallery-item.landscape {
+      grid-column: span 2;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: visible;
+      border-radius: 0;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+      background: transparent;
+      display: block;
+      aspect-ratio: auto;
+    }
+
+    .gallery-item:hover {
+      filter: brightness(1.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.8rem;
+        padding: 1.5rem 6%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -149,18 +203,20 @@
 <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Shelbi Audition shoot</span></div>
 <div class="gradient-band"></div>
 
-<!-- Pixieset Gallery Embed -->
-<div style="padding:0 6% 2rem;background-color:var(--bg);text-align:center;" class="pixieset-embed">
-  <!-- Gallery Container with Loading Indicator -->
-  <div class="pixieset-container loading" id="pixiesetContainer">
-    <iframe
-      id="pixiesetFrame"
-      src="https://jgmoments.pixieset.com/shelbinocolle/"
-      title="Shelbi Audition shoot Gallery"
-      loading="lazy"
-      onload="document.getElementById('pixiesetContainer').classList.remove('loading');">
-    </iframe>
-  </div>
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/153ad63ad751d325a5824374d66c615b-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/7c57b220f59b0d58fa072a1705282236-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/87df4b7871130420a2add08e06536071-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/5c9e6d21b75a0264388269dbb994f5d8-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/f2cf6d5019776fa9e47918799a869dab-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/31bca63f5c113623523f155e6c923836-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/d31aa644604d9781f739f06870d0f4db-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/25f9d05a33e7469c99fa140452edb177-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/50ae01512f16092cb9a61e2a07823397-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/07f3284bc5345efab3b1f19ece50e238-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/5b4734d5f9c2298ce8b9feb8c95e8ecb-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/498708511/efec605149d8c35f6316e21595694fef-xxlarge.jpg" alt="Shelbi Audition shoot" loading="lazy"/></div>
 </div>
 
 <!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
