@@ -126,6 +126,60 @@
         height: 100vh;
       }
     }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 6%;
+      background-color: var(--bg);
+    }
+
+    .gallery-item.landscape {
+      grid-column: span 2;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: visible;
+      border-radius: 0;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+      background: transparent;
+      display: block;
+      aspect-ratio: auto;
+    }
+
+    .gallery-item:hover {
+      filter: brightness(1.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.8rem;
+        padding: 1.5rem 6%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -149,18 +203,28 @@
 <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Graduation Party 2026</span></div>
 <div class="gradient-band"></div>
 
-<!-- Pixieset Gallery Embed -->
-<div style="padding:0 6% 2rem;background-color:var(--bg);text-align:center;" class="pixieset-embed">
-  <!-- Gallery Container with Loading Indicator -->
-  <div class="pixieset-container loading" id="pixiesetContainer">
-    <iframe
-      id="pixiesetFrame"
-      src="https://jgmoments.pixieset.com/graduationparty2026/"
-      title="Graduation Party 2026 Gallery"
-      loading="lazy"
-      onload="document.getElementById('pixiesetContainer').classList.remove('loading');">
-    </iframe>
-  </div>
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/5337d5adb087475c817fb1073076822e-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/aa211092a15bc5758114083a50783eb2-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/011dbd7c74124dfb3be5b453fce90729-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/cf8e610cc571d79df52e86b1faa0959b-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/2225312a7e72f6438bf9b34b86b32205-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/d826c45b3102c7efa20117634e693419-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/c81395e7c24481ae3ec936b5c6893ae5-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/2c18c4d1a61f022f87439ce1c92d8faa-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/ea1377dd2b8ce22c2313d63d8c433c31-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/f8261d3b72771d7fb471d8bcafe95b79-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/a3757167cd2377a8a45474f9f410155c-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/941fcfb44b2f1a2111820428847e4cca-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/14aa4111ba4dd659181cb9f696bbd3a3-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/e0a3a8f6641f8c6abb583f645806b34a-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/e4fb702d726178988302e35590b70205-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/15bf1647c1856ec68eed156941ec38a4-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/f11e7c68ac91cf22850900348b9146a8-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/01cf42fde57c3dfb5076652ecb369be3-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/d43621c62980de5db9a3c834b33c6264-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/379006511/4679495ebe1982050524d950fba5d2c5-xxlarge.jpg" alt="Graduation Party 2026" loading="lazy"/></div>
 </div>
 
 <!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
