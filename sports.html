@@ -38,91 +38,65 @@
   <link rel="stylesheet" href="style.css"/>
 
   <style>
-    .pixieset-container {
-      aspect-ratio: 16 / 10;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      auto-rows: auto;
+      gap: 10px;
+      padding: 0;
+      background-color: var(--bg);
+      grid-auto-flow: dense;
+    }
+
+    .gallery-item.landscape {
+      grid-column: span 2;
+    }
+
+    @supports not (grid-template-columns: subgrid) {
+      .gallery-item.landscape {
+        grid-column: span 1;
+      }
+    }
+
+    .gallery-item {
       position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      background: #1a1a1a;
-      height: auto;
+      overflow: visible;
+      border-radius: 0;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+      background: transparent;
+      display: block;
+      aspect-ratio: auto;
     }
 
-    .pixieset-container.loading::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50px;
-      height: 50px;
-      border: 4px solid rgba(255, 102, 0, 0.2);
-      border-top-color: #ff6600;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      z-index: 10;
+    .gallery-item:hover {
+      filter: brightness(1.1);
     }
 
-    @keyframes spin {
-      to { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    .pixieset-container iframe {
+    .gallery-item img {
       width: 100%;
-      height: 100%;
-      border: none;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
 
-    .scroll-indicator {
-      text-align: center;
-      padding: 0.8rem 0;
-      color: var(--accent);
-      font-size: 1.5rem;
-      animation: bounce 2s ease-in-out infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); opacity: 0.6; }
-      50% { transform: translateY(8px); opacity: 1; }
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
     }
 
     @media (max-width: 768px) {
-      .pixieset-cta {
-        padding: 2rem 6% !important;
-      }
-      .pixieset-embed {
-        padding: 0 6% 2rem !important;
-        margin-left: -6%;
-        margin-right: -6%;
-      }
-      .pixieset-container {
-        aspect-ratio: auto;
-        height: 100vh;
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       }
     }
-    @media (max-width: 480px) {
-      .pixieset-cta {
-        padding: 1.5rem 6% !important;
-      }
-      .pixieset-cta h3 {
-        font-size: 1.1rem !important;
-        margin-bottom: 0.8rem !important;
-      }
-      .pixieset-cta p {
-        font-size: 0.9rem !important;
-        margin-bottom: 1.5rem !important;
-      }
-      .pixieset-embed {
-        padding: 0 6% 2rem !important;
-        margin-left: -6%;
-        margin-right: -6%;
-      }
-      .pixieset-embed p {
-        font-size: 0.85rem !important;
-        margin-bottom: 1rem !important;
-      }
-      .pixieset-container {
-        aspect-ratio: auto;
-        height: 100vh;
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.8rem;
+        padding: 1.5rem 6%;
       }
     }
   </style>
@@ -145,21 +119,29 @@
   <a href="mailto:contact@jg-moments.com" aria-label="Email"><svg class="social-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
 </div>
 
-<div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Sports</span></div>
+<div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Swimming</span></div>
 <div class="gradient-band"></div>
 
-<!-- Pixieset Gallery Embed -->
-<div style="padding:0 6% 2rem;background-color:var(--bg);text-align:center;" class="pixieset-embed">
-  <!-- Gallery Container with Loading Indicator -->
-  <div class="pixieset-container loading" id="pixiesetContainer">
-    <iframe
-      id="pixiesetFrame"
-      src="https://jgmoments.pixieset.com/sports/"
-      title="Sports Gallery"
-      loading="lazy"
-      onload="document.getElementById('pixiesetContainer').classList.remove('loading');">
-    </iframe>
-  </div>
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/AJWuquMs1i_t1779908910-f5f52aff89c33626f4f213888388a882.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/sa3AcDD8ja_t1779748993-04af7f79ce758da7a8f8ef414d522865.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/yfztgRCr3E_t1779748993-1fdb92da051e9d77f274cdfd285a0c34.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/YHK2JdZETx_t1779748993-b86e41dc8224fe69f0b2fb9edb98ea3f.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/r9cyHReClY_t1779748993-8e8e8e4d7d69a524d11acec3b4f77f11.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/8tWsuNcR0I_t1779748993-0ba6c5bb8375936fd29346fab7117738.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/54MKPlyQZn_t1779748993-9b1f8a6b6b0c6320ce0dc9b56c02e775.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/ajPJesetNv_t1779748993-189593d3aaf783b7873ab8d8ab0b2580.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/KdZkDoL5Q8_t1779748993-b10957416efb8899babd27d66d438c4a.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/9qefICHFqg_t1779748994-d6933e18eea753481a8818bc4544a183.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/k7bpiojKT9_t1779748994-ad11496cd6b486b840ef78a454755607.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/xkBmnZ9oCp_t1779748994-bd4415946b6c8474833e2184488d3e3b.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/zRUN702cwP_t1779748993-a0ff058d5404378ec0a0861497274524.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/Zoab9wRMUP_t1779748994-3b022a09bb10dd0a223388623cf46d9b.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/gS76hEWHJd_t1779748994-0e9a80c56a7ec75fcd10e5173f7aafc1.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/GWgFmv0Ucn_t1779748994-c27d88a15d308c86d545b15c42f1c123.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/3PIkyUkWpP_t1779908878-88085083ecb2f347350d2f977ae414fd.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/482966511/U0XlgwaLWZ_t1779908897-4f3ca5b164423b4fe6d22870a182c5b3.jpg" alt="Swimming Event Photography" loading="lazy"/></div>
 </div>
 
 <!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
@@ -167,8 +149,9 @@
   <a href="https://jgmoments.pixieset.com/sports/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
 </div>
 
-<div class="text-center" style="padding:3rem 6%;">
-  <a href="contact.html" class="btn btn-saffron">Book a Sports Session</a>&nbsp;&nbsp;
+<div class="text-center" style="padding:2rem 6%;background-color:var(--bg);">
+  <h3 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:1rem;color:var(--text);">Ready to Capture Your Moments?</h3>
+  <a href="contact.html" class="btn btn-saffron" style="margin-bottom:1rem;">Book Your Session Today</a><br>
   <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
 </div>
 
@@ -189,7 +172,7 @@
       <p class="footer-heading">Albums</p>
       <ul class="footer-links">
         <li><a href="portraits.html">Children & Teens</a></li>
-        <li><a href="sports.html">Sports</a></li>
+        <li><a href="sports.html">Swimming</a></li>
         <li><a href="portraits-families.html">Portraits & Families</a></li>
         <li><a href="celebrations.html">Celebrations</a></li>
         <li><a href="travel-nature.html">Travel &amp; Nature</a></li>
@@ -199,8 +182,10 @@
         <li><a href="shelbi-audition-shoot.html">Shelbi Audition shoot</a></li>
         <li><a href="kam-marriage-proposal.html">Kam & Amber</a></li>
         <li><a href="jessica-gifford.html">Jessica Gifford</a></li>
-
-                <li><a href="amber-billy-maternity.html">Amber & Billy Maternity Shoot</a></li>
+        <li><a href="creshelle-family.html">Creshelle Family</a></li>
+        <li><a href="amber-billy-maternity.html">Amber & Billy Maternity Shoot</a></li>
+        <li><a href="arya-cake-smash.html">Arya Cake Smash</a></li>
+        <li><a href="soccer.html">Soccer Training Session</a></li>
       </ul>
     </div>
     <div>
