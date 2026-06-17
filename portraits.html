@@ -37,91 +37,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .pixieset-container {
-      aspect-ratio: 16 / 10;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      auto-rows: auto;
+      gap: 10px;
+      padding: 0;
+      background-color: var(--bg);
+      grid-auto-flow: dense;
+    }
+
+    .gallery-item.landscape {
+      grid-column: span 2;
+    }
+
+    @supports not (grid-template-columns: subgrid) {
+      .gallery-item.landscape {
+        grid-column: span 1;
+      }
+    }
+
+    .gallery-item {
       position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      background: #1a1a1a;
-      height: auto;
+      overflow: visible;
+      border-radius: 0;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+      background: transparent;
+      display: block;
+      aspect-ratio: auto;
     }
 
-    .pixieset-container.loading::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50px;
-      height: 50px;
-      border: 4px solid rgba(255, 102, 0, 0.2);
-      border-top-color: #ff6600;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      z-index: 10;
+    .gallery-item:hover {
+      filter: brightness(1.1);
     }
 
-    @keyframes spin {
-      to { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    .pixieset-container iframe {
+    .gallery-item img {
       width: 100%;
-      height: 100%;
-      border: none;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
 
-    .scroll-indicator {
-      text-align: center;
-      padding: 0.8rem 0;
-      color: var(--accent);
-      font-size: 1.5rem;
-      animation: bounce 2s ease-in-out infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); opacity: 0.6; }
-      50% { transform: translateY(8px); opacity: 1; }
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
     }
 
     @media (max-width: 768px) {
-      .pixieset-cta {
-        padding: 2rem 6% !important;
-      }
-      .pixieset-embed {
-        padding: 0 6% 2rem !important;
-        margin-left: -6%;
-        margin-right: -6%;
-      }
-      .pixieset-container {
-        aspect-ratio: auto;
-        height: 100vh;
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       }
     }
-    @media (max-width: 480px) {
-      .pixieset-cta {
-        padding: 1.5rem 6% !important;
-      }
-      .pixieset-cta h3 {
-        font-size: 1.1rem !important;
-        margin-bottom: 0.8rem !important;
-      }
-      .pixieset-cta p {
-        font-size: 0.9rem !important;
-        margin-bottom: 1.5rem !important;
-      }
-      .pixieset-embed {
-        padding: 0 6% 2rem !important;
-        margin-left: -6%;
-        margin-right: -6%;
-      }
-      .pixieset-embed p {
-        font-size: 0.85rem !important;
-        margin-bottom: 1rem !important;
-      }
-      .pixieset-container {
-        aspect-ratio: auto;
-        height: 100vh;
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.8rem;
+        padding: 1.5rem 6%;
       }
     }
   </style>
@@ -147,18 +121,55 @@
 <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Children & Teens</span></div>
 <div class="gradient-band"></div>
 
-<!-- Pixieset Gallery Embed -->
-<div style="padding:0 6% 2rem;background-color:var(--bg);text-align:center;" class="pixieset-embed">
-  <!-- Gallery Container with Loading Indicator -->
-  <div class="pixieset-container loading" id="pixiesetContainer">
-    <iframe
-      id="pixiesetFrame"
-      src="https://jgmoments.pixieset.com/kidsportraits/"
-      title="Children & Teens Gallery"
-      loading="lazy"
-      onload="document.getElementById('pixiesetContainer').classList.remove('loading');">
-    </iframe>
-  </div>
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/dc197ef1746ce335175833fb943225a0-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/1c1589e3f10b04fdc6c1bcecb3938af2-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/e25c699e165a3fff4902aae382b2d4f1-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/1065c8e15a6d7b2f3831ad10c78abe13-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/2a09ae7249dbcd3b229b656b11e11a87-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/fdd71fb9309635aa9088ed5049e39aa4-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/2fef2173b1f25e95cdae85ce379cc72c-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/ceab9d4f581e5dff56199da798fb6f11-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/dbc93b0d108e419e0b1fed9ca411dfae-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/c63bfb1d0cda6f5258ba53c9025ffa23-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/1791481cf182c46901a5a36294df3219-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/ead5ab45ea76ad552120462b59603d05-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/a5451f1adbfe5dbce94bdb95f2e215ad-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/e27cc63561ff3d1bde77d21d7f031c90-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/e8dc7e8ad954881da34a2e14f6d5e841-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/c7dce7ad1b4cb97228c9287d21c1017a-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/7cace870bd6195c92f813e866f0fb427-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/ef76f8d7e39c28d99cfdc5ed57c2b98d-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/26a09123383f6045db7332d944410b58-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/47ef14caabc109a962d365285a3327b9-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/207a39daa8d06b3d4ec1cadf18ee7dfd-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/b000715b64b61dc0c175322fd19ecd94-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/9640fae603f1c2f48fb91a1802101330-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/6de8d5f11c03a60986cc4ad63cb03f52-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/6dea5e2bbda8f256742312cf1e2c1f19-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/589e17588ccd776b70d2af1adeca79c2-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/e7c37c77952e21b70dac3359786f318d-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/e97d9099df7e9e842d2d70d5d1c5722c-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/57ab32fdd272324d8c4e459c5c9f1941-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/09b3c7a1ad51456a41d93902c934aeea-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/828ad0e83f2d3fef97e597806bbd2fe6-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/1544d595aabae245bed0e9272953aee1-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/a209fd08edcb1f745c57252e7299be90-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/d0a524253e39ab5c2a9535f364c49885-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/c771a5d37c9e6c5385febf3ecf4190c4-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/31a58daf0ca203c484be031a75ac964c-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/c7ae8831cf5e47c9a4d75c877862ffb0-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/c775c6950076ebd40862a3f99bded2da-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/580f90dd987c79847d098c571f743bab-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/19c1cac06de01fc82354b56891a07845-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/abd75ba4810623309c894b741c1b0bca-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/96d2dc6cc8f3e2393cc777ff73f34ecc-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/175af8da660147cea8821096ad36380f-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/4bbeaefe23be87f96c6264821e1d9971-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/c6e552a541eab1308d168eb44ec8d1ca-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/06a27237b88d5644044931add63e71e0-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/0020e28a113aed65abc4760f94282bb3-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
 </div>
 
 <!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
@@ -166,7 +177,11 @@
   <a href="https://jgmoments.pixieset.com/kidsportraits/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
 </div>
 
-<div class="text-center" style="padding:3rem 6%;"><a href="contact.html" class="btn btn-saffron">Book a Portrait Session</a>&nbsp;&nbsp;<a href="portfolio.html" class="btn btn-outline">← Back to Albums</a></div>
+<div class="text-center" style="padding:2rem 6%;background-color:var(--bg);">
+  <h3 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:1rem;color:var(--text);">Ready to Capture Your Moments?</h3>
+  <a href="contact.html" class="btn btn-saffron" style="margin-bottom:1rem;">Book Your Session Today</a><br>
+  <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
+</div>
 
 <footer class="footer">
   <div class="gradient-band" style="margin-bottom:4rem;margin-left:-6%;margin-right:-6%;"></div>
@@ -185,7 +200,7 @@
       <p class="footer-heading">Albums</p>
       <ul class="footer-links">
         <li><a href="portraits.html">Children & Teens</a></li>
-        <li><a href="sports.html">Sports</a></li>
+        <li><a href="sports.html">Swimming</a></li>
         <li><a href="portraits-families.html">Portraits & Families</a></li>
         <li><a href="celebrations.html">Celebrations</a></li>
         <li><a href="travel-nature.html">Travel &amp; Nature</a></li>
@@ -195,8 +210,10 @@
         <li><a href="shelbi-audition-shoot.html">Shelbi Audition shoot</a></li>
         <li><a href="kam-marriage-proposal.html">Kam & Amber</a></li>
         <li><a href="jessica-gifford.html">Jessica Gifford</a></li>
-
-                <li><a href="amber-billy-maternity.html">Amber & Billy Maternity Shoot</a></li>
+        <li><a href="creshelle-family.html">Creshelle Family</a></li>
+        <li><a href="amber-billy-maternity.html">Amber & Billy Maternity Shoot</a></li>
+        <li><a href="arya-cake-smash.html">Arya Cake Smash</a></li>
+        <li><a href="soccer.html">Soccer Training Session</a></li>
       </ul>
     </div>
     <div>
