@@ -37,91 +37,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .pixieset-container {
-      aspect-ratio: 16 / 10;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      auto-rows: auto;
+      gap: 10px;
+      padding: 0;
+      background-color: var(--bg);
+      grid-auto-flow: dense;
+    }
+
+    .gallery-item.landscape {
+      grid-column: span 2;
+    }
+
+    @supports not (grid-template-columns: subgrid) {
+      .gallery-item.landscape {
+        grid-column: span 1;
+      }
+    }
+
+    .gallery-item {
       position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      background: #1a1a1a;
-      height: auto;
+      overflow: visible;
+      border-radius: 0;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+      background: transparent;
+      display: block;
+      aspect-ratio: auto;
     }
 
-    .pixieset-container.loading::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50px;
-      height: 50px;
-      border: 4px solid rgba(255, 102, 0, 0.2);
-      border-top-color: #ff6600;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      z-index: 10;
+    .gallery-item:hover {
+      filter: brightness(1.1);
     }
 
-    @keyframes spin {
-      to { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    .pixieset-container iframe {
+    .gallery-item img {
       width: 100%;
-      height: 100%;
-      border: none;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
 
-    .scroll-indicator {
-      text-align: center;
-      padding: 0.8rem 0;
-      color: var(--accent);
-      font-size: 1.5rem;
-      animation: bounce 2s ease-in-out infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); opacity: 0.6; }
-      50% { transform: translateY(8px); opacity: 1; }
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
     }
 
     @media (max-width: 768px) {
-      .pixieset-cta {
-        padding: 2rem 6% !important;
-      }
-      .pixieset-embed {
-        padding: 0 6% 2rem !important;
-        margin-left: -6%;
-        margin-right: -6%;
-      }
-      .pixieset-container {
-        aspect-ratio: auto;
-        height: 100vh;
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       }
     }
-    @media (max-width: 480px) {
-      .pixieset-cta {
-        padding: 1.5rem 6% !important;
-      }
-      .pixieset-cta h3 {
-        font-size: 1.1rem !important;
-        margin-bottom: 0.8rem !important;
-      }
-      .pixieset-cta p {
-        font-size: 0.9rem !important;
-        margin-bottom: 1.5rem !important;
-      }
-      .pixieset-embed {
-        padding: 0 6% 2rem !important;
-        margin-left: -6%;
-        margin-right: -6%;
-      }
-      .pixieset-embed p {
-        font-size: 0.85rem !important;
-        margin-bottom: 1rem !important;
-      }
-      .pixieset-container {
-        aspect-ratio: auto;
-        height: 100vh;
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.8rem;
+        padding: 1.5rem 6%;
       }
     }
   </style>
@@ -147,18 +121,63 @@
 <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Travel & Nature</span></div>
 <div class="gradient-band"></div>
 
-<!-- Pixieset Gallery Embed -->
-<div style="padding:0 6% 2rem;background-color:var(--bg);text-align:center;" class="pixieset-embed">
-  <!-- Gallery Container with Loading Indicator -->
-  <div class="pixieset-container loading" id="pixiesetContainer">
-    <iframe
-      id="pixiesetFrame"
-      src="https://jgmoments.pixieset.com/travelandnature/"
-      title="Travel & Nature Gallery"
-      loading="lazy"
-      onload="document.getElementById('pixiesetContainer').classList.remove('loading');">
-    </iframe>
-  </div>
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/Psfkw6YNMc_t1779450034-937c9d2b99a58ac0df46df6d2997d8c1.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/MlJIONrnyl_t1779450034-232709b7c049b722d938d8b8d44074b8.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/CFzBNplSrJ_t1779450034-9034e91e4d858acbc13f17f9f10bfde1.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/p1HqgOMklV_t1779450035-53d8429ba749d2afe3c738c8c6ac4f8e.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/u6UAGXx2YK_t1779450035-776ee5f1606dd9b5bc975d2b02fc1231.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/Ohocxf3JLh_t1779450035-639d5a81e4c2eccbbebd90b054e20a63.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/san7MSe8ja_t1779450035-2eb9af18e4265b312b0ec66a0e4c6ed7.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/p1HqgJnklV_t1779450035-d7e0cfd91d4d65527502154755b00d1c.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/GWeZRdkUcn_t1779450035-16ca55cc6f75b74831549712891f8e4d.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/san7MS78ja_t1779450035-2c156089fd1f6563c81dcb1e366c9566.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/4ExzmfjOlu_t1779450035-95eb68c3adbb0dea7bcbb7633bf57e8b.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/qDtmauc31J_t1779450035-5010310da787f1f7fcd2fad8316626e8.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/Ohocx9WJLh_t1779450035-5d41e87d142b6cd3402528aa59c3ea65.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/PsfkwHhNMc_t1779450035-9cf1d369292d0dbbfd558737eaefe12d.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/QOZTbCJA48_t1779450036-89d18163b5b76dc9b778febeaafb1bf4.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/AJM1ZCLs1i_t1779450035-9ccbdabe0c4119f00283087cdc2e01d9.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/CFzBNKDSrJ_t1779450036-6c39d0bfe384f115dc94ddc5b100651e.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/LTgn6JIpHO_t1779450036-4e4583b8f32e7313863eccc77854766f.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/KdXWVyo5Q8_t1779450036-f4ebde75de10fd0f6ffa0105f130950e.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/KdXWVCN5Q8_t1779450037-e32fa6c698655fe9a89c153c50d40f80.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/8tqdnvrR0I_t1779450036-e9b3c6e82ad2f9b4b59b80c1b7e1b193.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/2gLsUnEY5X_t1779450036-d2dbde78e5be2fd3d787fc60f8def2a5.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/ZoOS42jMUP_t1779450038-4f3398d7e6d03e4ef35ff088a9e85ddd.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/HI1tTDbVtl_t1779450036-15d419baf14265e1c0e06bc44158cccf.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/LTgn6avpHO_t1779450036-54521020040b3066f94b2aa614fde794.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/KdXWVrl5Q8_t1779450036-94e26b68bacec761047e2e5864afeddb.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/DAwpjVUPsx_t1779450037-83a19ab07d31fcd56d83ef08faf31d41.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/mpY92Rfx3n_t1779450037-d0476793f1b3c554b760658e4c938a3b.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/twDYikKyJw_t1779450037-3bb75e5f6868a9141dea8a0f5e8f0e09.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/N89KfbMzXv_t1779450037-0238bdb5cd609066c5ee8059a3a2ed43.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/DAwpjXLPsx_t1779450037-238aa1cfd7d47ebaeab7705b211382da.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/mpY92e9x3n_t1779450037-282a6e1702b6a21a7cbd2d6d73d09203.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/hXKekTyBvQ_t1779450038-59bd6b8f46627e5bc22c3c2b80302f96.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/SGcjzsHIsz_t1779450038-077225393f034aa21666228aff02d93a.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/IUuwc8MvBl_t1779450038-c69da0c86becca2044b9ea40034c0655.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/GWeZRtsUcn_t1779450038-93b04008c3a33f9f7d499dffa392fd74.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/Ry34qineNh_t1779450038-65d3799d5053a4192373827015bb673c.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/k7V3HIqKT9_t1779450039-bf6fa6d3e25cbc699120554478a47e3e.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/F3Rb8aHGX8_t1779450038-ecee93ebca8a1a06df5f305c33093bda.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/k7V3HSnKT9_t1779450038-9f368fcc07d08ba803659c8902b528e2.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/Xmdr7uEbb5_t1779450038-04e84194dc77b7d42b35ef1185db9034.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/k7V3HSxKT9_t1779450038-341efdd896bb837f27e0267b40ae8ffe.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/yfPEDQ3r3E_t1779450038-af17338080d67672bd1bac43628969f3.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/gSTa0NAHJd_t1779450038-d8b7f02876c7747e69e48ca31c61caeb.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/zRF59nScwP_t1779450038-12efc3890e58e395d039780940d14660.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/EVkRpTzhxL_t1779450038-b37798c9c5885d8c0f984c9c4398acc8.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/2gLsU0wY5X_t1779450039-464e84be4aa62a271e00bf1f6c27dc13.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/HI1tTcqVtl_t1779450039-966a0a4d20d9f73d8589283eec882322.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/vL2fugDmzD_t1779450039-90de483fba0bea647baea88515ee97c7.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/3PyxtwxWpP_t1779450039-0b9408916e2864dfa6a1e7a7653d2309.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/N89Kfn3zXv_t1779450039-e35b1380f8ce897f6e164ef65d531203.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/yfPEDAWr3E_t1779450039-fd0ada43af44f4de7e4671b0fcf6bad9.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/Xmdr72hbb5_t1779450039-4771336cc532586b033f4d5e3899bf14.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/zRF59qIcwP_t1779450039-42734a1d88c4d786c1b429038ae45ac1.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/343064511/2gLsUTfY5X_t1779450039-fea3c3e5bd6edac87450c93f94a95061.jpg" alt="Travel & Nature Photography" loading="lazy"/></div>
 </div>
 
 <!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
@@ -166,8 +185,9 @@
   <a href="https://jgmoments.pixieset.com/travelandnature/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
 </div>
 
-<div class="text-center" style="padding:3rem 6%;">
-  <a href="contact.html" class="btn btn-saffron">Book a Travel Session</a>&nbsp;&nbsp;
+<div class="text-center" style="padding:2rem 6%;background-color:var(--bg);">
+  <h3 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:1rem;color:var(--text);">Ready to Capture Your Moments?</h3>
+  <a href="contact.html" class="btn btn-saffron" style="margin-bottom:1rem;">Book Your Session Today</a><br>
   <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
 </div>
 
@@ -188,7 +208,7 @@
       <p class="footer-heading">Albums</p>
       <ul class="footer-links">
         <li><a href="portraits.html">Children & Teens</a></li>
-        <li><a href="sports.html">Sports</a></li>
+        <li><a href="sports.html">Swimming</a></li>
         <li><a href="portraits-families.html">Portraits & Families</a></li>
         <li><a href="celebrations.html">Celebrations</a></li>
         <li><a href="travel-nature.html">Travel &amp; Nature</a></li>
@@ -198,9 +218,10 @@
         <li><a href="shelbi-audition-shoot.html">Shelbi Audition shoot</a></li>
         <li><a href="kam-marriage-proposal.html">Kam & Amber</a></li>
         <li><a href="jessica-gifford.html">Jessica Gifford</a></li>
-
-                <li><a href="amber-billy-maternity.html">Amber & Billy Maternity Shoot</a></li>
+        <li><a href="creshelle-family.html">Creshelle Family</a></li>
+        <li><a href="amber-billy-maternity.html">Amber & Billy Maternity Shoot</a></li>
         <li><a href="arya-cake-smash.html">Arya Cake Smash</a></li>
+        <li><a href="soccer.html">Soccer Training Session</a></li>
       </ul>
     </div>
     <div>
