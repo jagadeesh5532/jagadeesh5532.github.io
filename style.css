@@ -264,6 +264,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .testimonial-quote { font-family: var(--font-display); font-size: 1.12rem; line-height: 1.72; color: var(--text-muted); font-style: italic; margin-bottom: 1.8rem; }
 .testimonial-author { font-weight: 600; font-size: 0.9rem; color: var(--text); }
 .testimonial-type { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--saffron); margin-top: 0.3rem; }
+.testimonial-gallery-link { font-size: 0.75rem; margin-top: 1.2rem; }
+.testimonial-gallery-link a { transition: all var(--transition); }
+.testimonial-gallery-link a:hover { color: var(--gold-light) !important; }
 
 /* STATS */
 .stats-band { background: var(--bg-2); padding: 4rem 6%; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
