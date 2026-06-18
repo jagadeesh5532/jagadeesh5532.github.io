@@ -36,6 +36,69 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      auto-rows: auto;
+      gap: 10px;
+      padding: 0;
+      background-color: var(--bg);
+      grid-auto-flow: dense;
+    }
+
+    .gallery-item.landscape {
+      grid-column: span 2;
+    }
+
+    @supports not (grid-template-columns: subgrid) {
+      .gallery-item.landscape {
+        grid-column: span 1;
+      }
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: visible;
+      border-radius: 0;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+      background: transparent;
+      display: block;
+      aspect-ratio: auto;
+    }
+
+    .gallery-item:hover {
+      filter: brightness(1.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.8rem;
+        padding: 1.5rem 6%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -58,8 +121,20 @@
 <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Fernando Proposal</span></div>
 <div class="gradient-band"></div>
 
-<!-- Pixieset Gallery Embed -->
-<iframe src="https://jgmoments.pixieset.com/fernandoproposal/" style="width:100%;height:800px;border:none;max-width:100%;" allow="fullscreen" title="Fernando Proposal Gallery"></iframe>
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/547edbb86889f09d3ebb5a25ad7aaa38-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/330866299a75785dc4428c1da4e0a3e0-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/l58Ed9giGA_t1781059360-cb4d5541fc950776a675bf3bb2213725.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/JB9xVk5aEB_t1781059343-5ec1b9ebac773a2d0e1b39ba0f1439d3.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/10debbef08f2c5ef52104f68ec4f9b3d-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/266a8632393c11a8e741f343e7ec65e8-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+</div>
+
+<!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
+<div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:2rem 6%;text-align:center;" class="pixieset-cta">
+  <a href="https://jgmoments.pixieset.com/fernandoproposal/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
+</div>
 
 <div class="text-center" style="padding:2rem 6%;background-color:var(--bg);">
   <h3 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:1rem;color:var(--text);">Ready to Capture Your Moments?</h3>

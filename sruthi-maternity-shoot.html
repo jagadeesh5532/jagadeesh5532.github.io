@@ -36,6 +36,69 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      auto-rows: auto;
+      gap: 10px;
+      padding: 0;
+      background-color: var(--bg);
+      grid-auto-flow: dense;
+    }
+
+    .gallery-item.landscape {
+      grid-column: span 2;
+    }
+
+    @supports not (grid-template-columns: subgrid) {
+      .gallery-item.landscape {
+        grid-column: span 1;
+      }
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: visible;
+      border-radius: 0;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+      background: transparent;
+      display: block;
+      aspect-ratio: auto;
+    }
+
+    .gallery-item:hover {
+      filter: brightness(1.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.8rem;
+        padding: 1.5rem 6%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -58,8 +121,19 @@
 <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Sruthi Maternity Shoot</span></div>
 <div class="gradient-band"></div>
 
-<!-- Pixieset Gallery Embed -->
-<iframe src="https://jgmoments.pixieset.com/sruthimaternityshoot-1/" style="width:100%;height:800px;border:none;max-width:100%;" allow="fullscreen" title="Sruthi Maternity Shoot Gallery"></iframe>
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+  <div class="gallery-item"><img src="https://images.pixieset.com/771891711/54mPt6lQZn_t1781801991-c2e984d2cf84591fa181448d6de7ce10.jpg" alt="Sruthi Maternity Shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/771891711/MlhFN1fnyl_t1781801991-b2ca0acc0451e304a39259c598d899a0.jpg" alt="Sruthi Maternity Shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/771891711/ZoE9PdVMUP_t1781801992-8018f7c7e84c3382c95a8f715d185e0e.jpg" alt="Sruthi Maternity Shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/771891711/GWym7MIUcn_t1781801995-f9452a349b094928684129eb7c4ff982.jpg" alt="Sruthi Maternity Shoot" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/771891711/VvujlCoXmZ_t1781801995-2e5da95de59757cd1633ac70e511cd4d.jpg" alt="Sruthi Maternity Shoot" loading="lazy"/></div>
+</div>
+
+<!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
+<div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:2rem 6%;text-align:center;" class="pixieset-cta">
+  <a href="https://jgmoments.pixieset.com/sruthimaternityshoot-1/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
+</div>
 
 <div class="text-center" style="padding:2rem 6%;background-color:var(--bg);">
   <h3 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:1rem;color:var(--text);">Ready to Capture Your Moments?</h3>
