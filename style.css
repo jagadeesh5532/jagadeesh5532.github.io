@@ -259,6 +259,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .testimonial-card:hover { border-color: rgba(212,160,23,0.45); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
 .stars { display: flex; gap: 3px; margin-bottom: 1.2rem; }
 .star { color: var(--gold-light); font-size: 0.9rem; }
+.testimonial-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; margin-right: 0.8rem; display: inline-block; vertical-align: middle; border: 2px solid var(--saffron); }
+.testimonial-header { display: flex; align-items: center; margin-bottom: 1.2rem; }
 .testimonial-quote { font-family: var(--font-display); font-size: 1.12rem; line-height: 1.72; color: var(--text-muted); font-style: italic; margin-bottom: 1.8rem; }
 .testimonial-author { font-weight: 600; font-size: 0.9rem; color: var(--text); }
 .testimonial-type { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--saffron); margin-top: 0.3rem; }
