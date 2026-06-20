@@ -441,10 +441,18 @@ const prevBtn = document.getElementById('carouselPrev');
 const nextBtn = document.getElementById('carouselNext');
 let autoScrollInterval;
 
+console.log('Carousel track found:', !!track);
+console.log('Testimonials count:', testimonials.length);
+
 function renderCarousel() {
-  if (!track) return;
+  console.log('renderCarousel called');
+  if (!track) {
+    console.error('Track element not found!');
+    return;
+  }
   track.innerHTML = '';
-  testimonials.forEach(t => {
+  console.log('Rendering', testimonials.length, 'testimonials');
+  testimonials.forEach((t, idx) => {
     const card = document.createElement('div');
     card.className = 'testimonial-card';
     card.innerHTML = `
@@ -459,6 +467,7 @@ function renderCarousel() {
     `;
     track.appendChild(card);
   });
+  console.log('Rendered', track.children.length, 'cards');
 }
 
 function updateCarouselPosition() {
