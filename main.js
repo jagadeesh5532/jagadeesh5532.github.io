@@ -446,7 +446,7 @@ function renderCarousel() {
   track.innerHTML = '';
   testimonials.forEach(t => {
     const card = document.createElement('div');
-    card.className = 'testimonial-card fade-up';
+    card.className = 'testimonial-card';
     card.innerHTML = `
       <div class="testimonial-header">
         <div>
