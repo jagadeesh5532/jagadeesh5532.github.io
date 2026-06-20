@@ -268,6 +268,35 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .testimonial-gallery-link a { transition: all var(--transition); }
 .testimonial-gallery-link a:hover { color: var(--gold-light) !important; }
 
+/* CAROUSEL */
+.carousel-container { position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 3.5rem; }
+.carousel-wrapper { flex: 1; overflow: hidden; width: 100%; }
+.carousel-track { display: flex; gap: 1.5rem; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+.carousel-track .testimonial-card { flex: 0 0 calc(33.333% - 1rem); min-width: 0; }
+.carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(212,160,23,0.2); border: 1.5px solid var(--border-bright); color: var(--saffron); font-size: 2rem; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all var(--transition); cursor: pointer; }
+.carousel-arrow:hover { background: rgba(212,160,23,0.4); color: var(--gold-light); transform: translateY(-50%) scale(1.1); }
+.carousel-prev { left: -70px; }
+.carousel-next { right: -70px; }
+
+@media (max-width: 1200px) {
+  .carousel-container { gap: 1rem; }
+  .carousel-arrow { width: 45px; height: 45px; font-size: 1.8rem; }
+  .carousel-prev { left: -60px; }
+  .carousel-next { right: -60px; }
+  .carousel-track .testimonial-card { flex: 0 0 calc(50% - 0.75rem); }
+}
+
+@media (max-width: 800px) {
+  .carousel-container { gap: 0.75rem; margin-top: 2.5rem; }
+  .carousel-arrow { width: 40px; height: 40px; font-size: 1.6rem; position: static; transform: none; margin-top: 1.5rem; }
+  .carousel-arrow:hover { transform: scale(1.1); }
+  .carousel-prev { margin-right: auto; }
+  .carousel-next { margin-left: auto; }
+  .carousel-wrapper { width: 100%; }
+  .carousel-track { gap: 1rem; }
+  .carousel-track .testimonial-card { flex: 0 0 100%; }
+}
+
 /* STATS */
 .stats-band { background: var(--bg-2); padding: 4rem 6%; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
