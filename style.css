@@ -288,14 +288,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 @media (max-width: 800px) {
-  .carousel-container { gap: 1rem; margin-top: 2.5rem; align-items: center; justify-content: center; }
-  .carousel-wrapper { flex: 1; overflow: hidden !important; width: 100%; }
+  .carousel-container { gap: 1rem; margin-top: 2.5rem; align-items: center; justify-content: center; width: 100%; }
+  .carousel-wrapper { flex: 1; min-width: 0; overflow: hidden !important; }
   .carousel-arrow { width: 44px; height: 44px; font-size: 1.6rem; position: static !important; transform: none !important; top: auto; left: auto; right: auto; flex-shrink: 0; }
   .carousel-prev { order: -1; }
   .carousel-next { order: 1; }
   .carousel-arrow:hover { transform: scale(1.1) !important; }
-  .carousel-track { gap: 0.5rem; }
-  .carousel-track .testimonial-card { flex: 0 0 100%; padding: 1.5rem; min-height: auto; }
+  .carousel-track { gap: 0; }
+  .carousel-track .testimonial-card { flex: 0 0 calc(100% - 0px); width: 100%; padding: 1.5rem; min-height: auto; }
   .testimonial-card { min-height: 0 !important; }
   .testimonial-quote { font-size: 0.95rem; line-height: 1.5; }
   .testimonial-author { font-size: 0.85rem; }
