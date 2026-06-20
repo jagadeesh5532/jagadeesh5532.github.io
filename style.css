@@ -289,17 +289,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 @media (max-width: 800px) {
   .carousel-container { position: relative; gap: 0; margin-top: 2.5rem; align-items: center; justify-content: center; width: 100%; padding: 0 50px; }
-  .carousel-wrapper { width: 100%; overflow: hidden !important; }
+  .carousel-wrapper { width: 100%; overflow: hidden !important; min-height: auto !important; }
   .carousel-arrow { width: 40px; height: 40px; font-size: 1.6rem; position: absolute !important; transform: none !important; top: 50%; margin-top: -20px; flex-shrink: 0; }
   .carousel-prev { left: 0; }
   .carousel-next { right: 0; }
   .carousel-arrow:hover { transform: scale(1.1) !important; }
   .carousel-track { gap: 0; }
-  .carousel-track .testimonial-card { flex: 0 0 100%; width: 100%; padding: 1.5rem; min-height: auto; }
+  .carousel-track .testimonial-card { flex: 0 0 100%; width: 100%; padding: 1.5rem; min-height: auto; height: auto; }
   .testimonial-card { min-height: 0 !important; }
-  .testimonial-quote { font-size: 0.95rem; line-height: 1.5; }
+  .testimonial-quote { font-size: 0.95rem; line-height: 1.5; margin-bottom: 0 !important; }
   .testimonial-author { font-size: 0.85rem; }
   .testimonial-type { font-size: 0.65rem; }
+  .carousel-track .testimonial-card { padding: 1.2rem; }
 }
 
 /* STATS */
