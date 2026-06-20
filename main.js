@@ -481,7 +481,7 @@ function updateCarouselPosition() {
 function scrollCarousel(direction) {
   const itemsToShow = window.innerWidth <= 800 ? 1 : window.innerWidth <= 1200 ? 2 : 3;
   const maxPos = Math.max(0, testimonials.length - itemsToShow);
-  carouselPos += direction;
+  carouselPos += direction * itemsToShow;  // Advance by itemsToShow positions
   if (carouselPos > maxPos) carouselPos = 0;
   if (carouselPos < 0) carouselPos = maxPos;
   updateCarouselPosition();
