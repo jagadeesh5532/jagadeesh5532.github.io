@@ -494,3 +494,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: 100%;
   object-fit: cover;
 }
+
+/* Hide Pixieset Gallery CTA button on all album pages */
+.pixieset-cta {
+  display: none !important;
+}
