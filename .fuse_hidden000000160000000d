@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amber & Billy Maternity Shoot | JG Moments Photography</title>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fernando Proposal | JG Moments Photography</title>
   <!-- Canonical Tag -->
-  <link rel="canonical" href="https://jg-moments.com/amber-billy-maternity.html"/>
+  <link rel="canonical" href="https://jg-moments.com/fernando-proposal.html"/>
 
   <!-- Schema Markup: Breadcrumb -->
   <script type="application/ld+json">
@@ -28,8 +27,8 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Amber & Billy Maternity Shoot",
-        "item": "https://jg-moments.com/amber-billy-maternity.html"
+        "name": "Fernando Proposal",
+        "item": "https://jg-moments.com/fernando-proposal.html"
       }
     ]
   }
@@ -38,32 +37,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .page-hero {
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 400px;
-      max-height: 600px;
-      height: auto;
-      position: relative;
-      margin-top: -2rem;
-      aspect-ratio: 16 / 9;
-    }
-    .page-hero-tint {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.3);
-    }
-
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       auto-rows: auto;
-      gap: 10px;
-      padding: 0;
+      gap: 0;
+      padding: 0 6%;
       background-color: var(--bg);
       grid-auto-flow: dense;
     }
@@ -107,18 +86,12 @@
     }
 
     @media (max-width: 768px) {
-      .page-hero {
-        aspect-ratio: 16 / 9;
-      }
       .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       }
     }
 
     @media (max-width: 600px) {
-      .page-hero {
-        aspect-ratio: 4 / 3;
-      }
       .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         gap: 0.8rem;
@@ -145,36 +118,27 @@
   <a href="mailto:contact@jg-moments.com" aria-label="Email"><svg class="social-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
 </div>
 
-<div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Amber & Billy Maternity Shoot</span></div>
+<div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Fernando Proposal</span></div>
 <div class="gradient-band"></div>
 
 <!-- Gallery Grid -->
 <div class="gallery-grid">
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/7ce353e32ac179ba14998b9fec1eee45-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/f380409963cc684619557e473ea11e18-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/6eca3a1be3f3fef058c92d4eec4e80ee-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/86c12e4238fd3e8a8124173b4e5058cf-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/56d3c072ee22884ea857886e9b4a2c7c-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/2df945afb80ec3d87edc36692ad50283-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/cb5e497cfc2aa05bb99c5e7fe6d80217-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/53b4d95881c59b0bc7ea583bf5a9a198-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/a3ee4454c3132c659266b4dba7c82195-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/7648d2908d8c432d7d15d9324d727d4d-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/f04bb6fd03630d82bf94636d61f70c9d-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/7d2f341069810bfc46665bf704dc2f75-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/36636e197ae517cc21c59fe6e785b9f6-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/49725b9daf645e87c78f048a65d8dfca-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/b63a2eeecfd2cb52e95836011ef3a0b7-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/547edbb86889f09d3ebb5a25ad7aaa38-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/330866299a75785dc4428c1da4e0a3e0-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/10debbef08f2c5ef52104f68ec4f9b3d-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/266a8632393c11a8e741f343e7ec65e8-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/8f0a875bf3700645994655b1afbd3b0f-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/371645611/44482ccc9dac79ead6f3c1e255260189-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
 </div>
 
 <!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
 <div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:2rem 6%;text-align:center;" class="pixieset-cta">
-  <a href="https://jgmoments.pixieset.com/amberandbillymaternityshoot/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
+  <a href="https://jgmoments.pixieset.com/fernandoproposal/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
 </div>
 
 <div class="text-center" style="padding:2rem 6%;background-color:var(--bg);">
   <h3 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:1rem;color:var(--text);">Ready to Capture Your Moments?</h3>
-  <a href="contact.html" class="btn btn-saffron" style="margin-bottom:1rem;">Get In touch</a><br>
+  <a href="contact.html" class="btn btn-saffron" style="margin-bottom:1rem;">Book Your Session Today</a><br>
   <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
 </div>
 
@@ -191,8 +155,7 @@
         <a href="https://jg-moments.com" aria-label="Portfolio" title="Adobe Portfolio"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
         <a href="mailto:contact@jg-moments.com" aria-label="Email"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
       </div>
-    </div>
-    <div>
+    </div>    <div>
       <p class="footer-heading">Featured Albums</p>
       <ul class="footer-links">
         <li><a href="portraits.html">Children & Teens</a></li>
@@ -203,30 +166,10 @@
         <li style="margin-top:0.5rem;"><a href="portfolio.html" style="color:var(--saffron);font-weight:500;">View All Albums →</a></li>
       </ul>
     </div>
-    <div>
-      <p class="footer-heading">Navigate</p>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <p class="footer-heading">Get In Touch</p>
-      <div class="footer-contact-line"><span class="icon"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span><a href="mailto:contact@jg-moments.com" style="color:var(--text-muted);">contact@jg-moments.com</a></div>
-      <div class="footer-contact-line"><span class="icon"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 2H2.5A1.5 1.5 0 0 0 1 3.5v17A1.5 1.5 0 0 0 2.5 22h19A1.5 1.5 0 0 0 23 20.5v-17A1.5 1.5 0 0 0 21.5 2M12 18.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5"/></svg></span><span>Houston, Texas</span></div>
-      <div class="footer-contact-line"><span class="icon"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><a href="https://jg-moments.com" style="color:var(--text-muted);">jg-moments.com</a></div>
-      <div style="margin-top:1.5rem;">
-        <a href="contact.html" class="btn btn-saffron" style="font-size:0.68rem;padding:0.7rem 1.5rem;">Get in touch</a>
-      </div>
-    </div>
+    <div><p class="footer-heading">Navigate</p><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><p class="footer-heading">Contact</p><div class="footer-contact-line"><span class="icon">✉</span><a href="mailto:contact@jg-moments.com" style="color:var(--text-muted);">contact@jg-moments.com</a></div><div class="footer-contact-line"><span class="icon">📍</span><span>Houston, Texas</span></div></div>
   </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">© 2026 JG Moments Photography · Houston, TX</p>
-    <p class="footer-copy" style="color:var(--text-dim);">All images © JG Moments Photography. All rights reserved.</p>
-  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 JG Moments Photography · Houston, TX</p></div>
 </footer>
 <div class="lightbox" id="lightbox"><div class="lightbox-inner"><img src="" alt="" id="lbImg"/></div><button class="lb-close" id="lbClose">✕</button><button class="lb-prev" id="lbPrev">‹</button><button class="lb-next" id="lbNext">›</button></div>
 <script src="main.js?v=5"></script>

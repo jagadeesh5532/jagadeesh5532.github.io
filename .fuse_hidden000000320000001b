@@ -1,131 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amber & Billy Maternity Shoot | JG Moments Photography</title>
-  <!-- Canonical Tag -->
-  <link rel="canonical" href="https://jg-moments.com/amber-billy-maternity.html"/>
-
-  <!-- Schema Markup: Breadcrumb -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://jg-moments.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Portfolio",
-        "item": "https://jg-moments.com/portfolio.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Amber & Billy Maternity Shoot",
-        "item": "https://jg-moments.com/amber-billy-maternity.html"
-      }
-    ]
-  }
-  </script>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shared Moments | JG Moments Photography</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
-  <style>
-    .page-hero {
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 400px;
-      max-height: 600px;
-      height: auto;
-      position: relative;
-      margin-top: -2rem;
-      aspect-ratio: 16 / 9;
-    }
-    .page-hero-tint {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.3);
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-      auto-rows: auto;
-      gap: 10px;
-      padding: 0;
-      background-color: var(--bg);
-      grid-auto-flow: dense;
-    }
-
-    .gallery-item.landscape {
-      grid-column: span 2;
-    }
-
-    @supports not (grid-template-columns: subgrid) {
-      .gallery-item.landscape {
-        grid-column: span 1;
-      }
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: visible;
-      border-radius: 0;
-      cursor: pointer;
-      transition: filter 0.3s ease;
-      background: transparent;
-      display: block;
-      aspect-ratio: auto;
-    }
-
-    .gallery-item:hover {
-      filter: brightness(1.1);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-
-    @media (max-width: 1024px) {
-      .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      }
-    }
-
-    @media (max-width: 768px) {
-      .page-hero {
-        aspect-ratio: 16 / 9;
-      }
-      .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      }
-    }
-
-    @media (max-width: 600px) {
-      .page-hero {
-        aspect-ratio: 4 / 3;
-      }
-      .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 0.8rem;
-        padding: 1.5rem 6%;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -145,36 +25,31 @@
   <a href="mailto:contact@jg-moments.com" aria-label="Email"><svg class="social-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
 </div>
 
-<div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Amber & Billy Maternity Shoot</span></div>
+<div class="page-hero">
+  <div class="page-hero-bg" id="sharedHero" data-random-folder="shared-moments" data-photo-count="0" style="background-image:url('images/shared-moments/01.jpg');background-position:center;"></div>
+  <div class="page-hero-tint"></div>
+  <div class="page-hero-content">
+    <h1>Shared <em style="color:var(--gold-light);">Moments</em></h1>
+    <p>Togetherness, belonging, and the joy of shared experiences.</p>
+  </div>
+</div>
 <div class="gradient-band"></div>
+<div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Shared Moments</span></div>
 
-<!-- Gallery Grid -->
-<div class="gallery-grid">
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/7ce353e32ac179ba14998b9fec1eee45-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/f380409963cc684619557e473ea11e18-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/6eca3a1be3f3fef058c92d4eec4e80ee-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/86c12e4238fd3e8a8124173b4e5058cf-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/56d3c072ee22884ea857886e9b4a2c7c-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/2df945afb80ec3d87edc36692ad50283-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/cb5e497cfc2aa05bb99c5e7fe6d80217-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/53b4d95881c59b0bc7ea583bf5a9a198-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/a3ee4454c3132c659266b4dba7c82195-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/7648d2908d8c432d7d15d9324d727d4d-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/f04bb6fd03630d82bf94636d61f70c9d-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/7d2f341069810bfc46665bf704dc2f75-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/36636e197ae517cc21c59fe6e785b9f6-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/49725b9daf645e87c78f048a65d8dfca-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/937963611/b63a2eeecfd2cb52e95836011ef3a0b7-xxlarge.jpg" alt="Amber & Billy Maternity" loading="lazy"/></div>
+<!-- Photos auto-load from images/shared-moments/01.jpg, 02.jpg … -->
+<div class="album-gallery" id="dynamicGallery" data-folder="shared-moments" data-photo-count="0"></div>
+
+<div class="coming-soon" id="albumComingSoon" style="display:none;">
+  <div class="coming-soon-icon">📸</div>
+  <h3>Gallery Coming Soon</h3>
+  <p>Upload photos named <strong>01.jpg, 02.jpg…</strong> to the <code>images/shared-moments/</code> folder on GitHub and they'll appear here automatically.</p>
+  <a href="contact.html" class="btn btn-saffron">Enquire About Shared Moments Photography</a>
+  &nbsp;&nbsp;
+  <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
 </div>
 
-<!-- PIXIESET GALLERY SECTION - BOTTOM CTA -->
-<div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:2rem 6%;text-align:center;" class="pixieset-cta">
-  <a href="https://jgmoments.pixieset.com/amberandbillymaternityshoot/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
-</div>
-
-<div class="text-center" style="padding:2rem 6%;background-color:var(--bg);">
-  <h3 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:1rem;color:var(--text);">Ready to Capture Your Moments?</h3>
-  <a href="contact.html" class="btn btn-saffron" style="margin-bottom:1rem;">Get In touch</a><br>
+<div class="text-center" style="padding:3rem 6%;">
+  <a href="contact.html" class="btn btn-saffron">Book a Shared Moments Session</a>&nbsp;&nbsp;
   <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
 </div>
 
@@ -191,16 +66,22 @@
         <a href="https://jg-moments.com" aria-label="Portfolio" title="Adobe Portfolio"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
         <a href="mailto:contact@jg-moments.com" aria-label="Email"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
       </div>
-    </div>
-    <div>
-      <p class="footer-heading">Featured Albums</p>
+    </div>    <div>
+      <p class="footer-heading">Albums</p>
       <ul class="footer-links">
         <li><a href="portraits.html">Children & Teens</a></li>
-        <li><a href="sports.html">Swimming</a></li>
+        <li><a href="sports.html">Sports</a></li>
         <li><a href="portraits-families.html">Portraits & Families</a></li>
         <li><a href="celebrations.html">Celebrations</a></li>
         <li><a href="travel-nature.html">Travel &amp; Nature</a></li>
-        <li style="margin-top:0.5rem;"><a href="portfolio.html" style="color:var(--saffron);font-weight:500;">View All Albums →</a></li>
+        <li><a href="nikkah-ceremony.html">Nikkah Ceremony</a></li>
+        <li><a href="graduation-party-2026.html">Graduation Party 2026</a></li>
+        <li><a href="surprise-marriage-proposal.html">Michael & Melanie</a></li>
+        <li><a href="shelbi-audition-shoot.html">Shelbi Audition shoot</a></li>
+        <li><a href="kam-marriage-proposal.html">Kam & Amber</a></li>
+        <li><a href="jessica-gifford.html">Jessica Gifford</a></li>
+
+                <li><a href="amber-billy-maternity.html">Amber & Billy Maternity Shoot</a></li>
       </ul>
     </div>
     <div>
@@ -209,7 +90,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html">About Me</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
