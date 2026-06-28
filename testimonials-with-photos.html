@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Testimonials with Photos | JG Moments Photography (Draft)</title>
-  <meta name="description" content="DRAFT: Testimonials with client photos — not live on website"/>
+  <meta name="description" content="DRAFT: Testimonials with client session photos — not live on website"/>
   <meta name="robots" content="noindex, nofollow"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,114 +11,55 @@
   <link rel="stylesheet" href="style.css"/>
 
   <style>
-    .testimonial-with-photo {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 2rem;
-      align-items: center;
-      padding: 2rem;
-      background: rgba(255, 251, 245, 0.02);
-      border-radius: 8px;
-      margin-bottom: 2.5rem;
-      border-left: 4px solid var(--saffron);
+    .testimonial-with-gallery {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 107, 0, 0.2);
     }
 
-    .testimonial-photo-placeholder {
+    .testimonial-with-gallery:last-child {
+      border-bottom: none;
+    }
+
+    .session-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: rgba(255, 107, 0, 0.05);
+      border-radius: 8px;
+    }
+
+    .gallery-photo {
       position: relative;
       width: 100%;
       aspect-ratio: 1;
       background: linear-gradient(135deg, rgba(255, 107, 0, 0.1), rgba(196, 18, 48, 0.1));
-      border-radius: 8px;
+      border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 3rem;
-      color: var(--text-muted);
-      border: 2px dashed rgba(255, 107, 0, 0.3);
       overflow: hidden;
+      border: 2px dashed rgba(255, 107, 0, 0.3);
+      cursor: pointer;
+      transition: transform 0.2s ease;
     }
 
-    .testimonial-photo-placeholder img {
+    .gallery-photo:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .testimonial-photo-placeholder .placeholder-text {
+    .gallery-photo-placeholder {
       text-align: center;
-      pointer-events: none;
-    }
-
-    .testimonial-content {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .testimonial-header-with-photo {
-      margin-bottom: 0.5rem;
-    }
-
-    .testimonial-author-name {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text);
-      margin: 0;
-    }
-
-    .testimonial-type-label {
-      font-size: 0.85rem;
-      color: var(--saffron);
-      font-weight: 500;
-      margin: 0.25rem 0 0 0;
-    }
-
-    .stars-row {
-      display: flex;
-      gap: 0.25rem;
-    }
-
-    .stars-row .star {
-      color: var(--gold);
-      font-size: 1rem;
-    }
-
-    .testimonial-quote-text {
-      font-size: 0.95rem;
-      line-height: 1.7;
       color: var(--text-muted);
-      margin: 0;
-      font-style: italic;
-    }
-
-    @media (max-width: 900px) {
-      .testimonial-with-photo {
-        grid-template-columns: 200px 1fr;
-        gap: 1.5rem;
-        padding: 1.5rem;
-      }
-
-      .testimonial-quote-text {
-        font-size: 0.9rem;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .testimonial-with-photo {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 1.5rem;
-      }
-
-      .testimonial-photo-placeholder {
-        aspect-ratio: 3/4;
-        max-width: 250px;
-        margin: 0 auto;
-      }
-
-      .testimonial-content {
-        order: 2;
-      }
+      font-size: 2rem;
     }
 
     .draft-banner {
@@ -127,9 +68,16 @@
       color: var(--gold-light);
       padding: 1.5rem;
       border-radius: 6px;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       text-align: center;
       font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .session-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 0.75rem;
+      }
     }
   </style>
 </head>
@@ -137,7 +85,7 @@
 
 <nav class="navbar" id="navbar">
   <a href="index.html" class="nav-logo"><img src="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f" alt="JG Moments"/></a>
-  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="testimonials.html" class="active">Testimonials</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
   <a href="contact.html" class="nav-book">Get in touch</a>
   <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
 </nav>
@@ -156,554 +104,752 @@
   <div class="page-hero-tint" style="display:none;"></div>
   <div class="page-hero-content">
     <div class="section-eyebrow">Client Stories</div>
-    <h1>Testimonials <em style="color:var(--gold-light);">with Photos</em></h1>
+    <h1>What People <em style="color:var(--gold-light);">Say</em></h1>
   </div>
 </div>
 
-<section class="section" style="padding-top:2rem; max-width:1000px; margin:0 auto;">
-  <div class="draft-banner">📸 DRAFT VERSION — Not live on website. Add photos to each client, then we'll update the main testimonials page.</div>
+<!-- TESTIMONIALS WITH SESSION PHOTOS -->
+<section class="section" style="padding-top:0; margin-top:-2rem;">
+  <div class="draft-banner">📸 DRAFT VERSION — Same layout as original, but with 4-5 session photos per client. Add images, then we'll go live!</div>
 
-  <!-- TESTIMONIALS WITH PHOTO PLACEHOLDERS -->
-  <div>
+  <div style="max-width:1000px; margin:0 auto;">
+
     <!-- 1. Jessica Smith -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Jessica Smith</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Jessica Smith</p>
-          <p class="testimonial-type-label">Engagement Photography, Humble</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Jessica Smith</p>
+            <p class="testimonial-type">Engagement Photography, Humble</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"We could not be happier with our engagement photo experience!"</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"We could not be happier with our engagement photo experience! From the moment he arrived, we knew we were in great hands."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 2. Dominque Joshua -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Dominque Joshua</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Dominque Joshua</p>
-          <p class="testimonial-type-label">Wedding Photography, Spring</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Dominque Joshua</p>
+            <p class="testimonial-type">Wedding Photography, Spring</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"The photographer came to our home & was amazing!"</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"The photographer came to our home & was amazing! This was so fun & intimate!"</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 3. Afreen Pargaonkar -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Afreen Pargaonkar</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Afreen Pargaonkar</p>
-          <p class="testimonial-type-label">Family Photography, Tomball</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Afreen Pargaonkar</p>
+            <p class="testimonial-type">Family Photography, Tomball</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"He is so patient and understanding especially when it comes to photography with kids."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"He is so patient and understanding especially when it comes to photography with kids."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 4. Shari Block -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Shari Block</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Shari Block</p>
-          <p class="testimonial-type-label">Portrait Photography, Spring</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Shari Block</p>
+            <p class="testimonial-type">Portrait Photography, Spring</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Love the photos!!! Jag was very nice and I felt comfortable meeting him."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Love the photos!!! Jag was very nice and I felt comfortable meeting him and during the shoot."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 5. Rashmi SA -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Rashmi SA</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Rashmi SA</p>
-          <p class="testimonial-type-label">Family Photography, Tomball</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Rashmi SA</p>
+            <p class="testimonial-type">Family Photography, Tomball</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"A truly dedicated photographer who captures every moment perfectly."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"A truly dedicated photographer who captures every moment perfectly."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 6. Creshelle Smith -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Creshelle Smith</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Creshelle Smith</p>
-          <p class="testimonial-type-label">Family Photography, Pearland</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Creshelle Smith</p>
+            <p class="testimonial-type">Family Photography, Pearland</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"We received our pictures faster than I've ever experienced."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Absolutely loved our photos. Jag was professional and so accommodating; he worked great with our busy toddlers."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 7. Krishna Lanka -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Krishna Lanka</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Krishna Lanka</p>
-          <p class="testimonial-type-label">Family & Cultural Events Photography, Tomball</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Krishna Lanka</p>
+            <p class="testimonial-type">Family & Cultural Events Photography, Tomball</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Every single photo came out really really good."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"We had multiple photo shoots done with them and every single photo came out really really good."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 8. Neelima -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Neelima</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Neelima</p>
-          <p class="testimonial-type-label">Portrait Photography, Chicago</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Neelima</p>
+            <p class="testimonial-type">Portrait Photography, Chicago</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"The pictures turned out beautifully, especially the night shots."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"We had a wonderful experience! Jagadesh made us feel very comfortable throughout the photoshoot."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 9. Northpoint Shockwaves -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <img src="https://d1nmxxg9d5tdo.cloudfront.net/2528/logos/original/NorthpointeShockwavesLogo3.jpg" alt="Northpoint Shockwaves"/>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Northpoint Shockwaves</p>
-          <p class="testimonial-type-label">Swim Team Photography, Tomball</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <img src="https://d1nmxxg9d5tdo.cloudfront.net/2528/logos/original/NorthpointeShockwavesLogo3.jpg" alt="Northpoint Shockwaves" class="testimonial-avatar"/>
+          <div>
+            <p class="testimonial-author">Northpoint Shockwaves</p>
+            <p class="testimonial-type">Swim Team Photography, Tomball</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"We have so many fun memories to look back on."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Thank you for all the awesome pictures you've taken this season, Jag. We have so many fun memories to look back on."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
       </div>
     </div>
 
     <!-- 10. Alishba Hamid -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Alishba Hamid</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Alishba Hamid</p>
-          <p class="testimonial-type-label">Cake Smash & Birthday Photography, Houston</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Alishba Hamid</p>
+            <p class="testimonial-type">Cake Smash & Birthday Photography, Houston</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"The photographer was super nice and got me exactly what I asked for."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Such a great experience working with JG moments. The photographer was super nice and got me exactly what I asked for."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎂</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎂</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎂</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎂</div></div>
       </div>
     </div>
 
     <!-- 11. Hamdi Gomma -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Hamdi Gomma</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Hamdi Gomma</p>
-          <p class="testimonial-type-label">Nikkah Ceremony Photography, Katy</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Hamdi Gomma</p>
+            <p class="testimonial-type">Nikkah Ceremony Photography, Katy</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Jag captured the best moments of our small, private ceremony beautifully."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Great experience! Wonderful photographer. Jag captured the best moments of our small, private ceremony beautifully."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💒</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💒</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💒</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💒</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💒</div></div>
       </div>
     </div>
 
     <!-- 12. Lorain Pinto -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Lorain Pinto</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Lorain Pinto</p>
-          <p class="testimonial-type-label">Family Photography, Tomball</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Lorain Pinto</p>
+            <p class="testimonial-type">Family Photography, Tomball</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Every shot captured the emotion perfectly."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Absolutely stunning photography — every shot captured the emotion perfectly."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 13. Venkatesh M -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Venkatesh M</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Venkatesh M</p>
-          <p class="testimonial-type-label">Family & Cultural Events Photography, Tomball</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Venkatesh M</p>
+            <p class="testimonial-type">Family & Cultural Events Photography, Tomball</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Highly recommended for his photography for any events."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Awesome photography. Pictures are crisp and clear. Excellent capture of those beautiful smiles and moments."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 14. Meenakshi Anurag -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Meenakshi Anurag</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Meenakshi Anurag</p>
-          <p class="testimonial-type-label">Candid Photography, Cypress</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Meenakshi Anurag</p>
+            <p class="testimonial-type">Candid Photography, Cypress</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"His candid shots are especially outstanding."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Jagdeesh has a remarkable eye for light and composition. His candid shots are especially outstanding."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 15. Michael Repking -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Michael Repking</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Michael Repking</p>
-          <p class="testimonial-type-label">Proposal Photography, Kingwood</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Michael Repking</p>
+            <p class="testimonial-type">Proposal Photography, Kingwood</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Awesome thank you so much, they look amazing!"</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Awesome thank you so much, they look amazing!"</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
       </div>
     </div>
 
     <!-- 16. Shelbie -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Shelbie</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Shelbie</p>
-          <p class="testimonial-type-label">Audition Photography, Houston</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Shelbie</p>
+            <p class="testimonial-type">Audition Photography, Houston</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Everything came out perfect and exactly how I wanted it."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"He was so nice and did such a great job! Everything came out perfect and exactly how I wanted it."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎬</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎬</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎬</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎬</div></div>
       </div>
     </div>
 
     <!-- 17. Sudhir -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Sudhir</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Sudhir</p>
-          <p class="testimonial-type-label">Family Photography, Cypress</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Sudhir</p>
+            <p class="testimonial-type">Family Photography, Cypress</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"He captures those moments beautifully."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Amazing photographs.. he knows what he is doing and captures those moments beautifully."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 18. Amber Smith -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Amber Smith</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Amber Smith</p>
-          <p class="testimonial-type-label">Family Photography</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Amber Smith</p>
+            <p class="testimonial-type">Family Photography</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"We loved the different lighting and edits in the photos."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Jag was wonderful! He helped with the poses and was very quick in getting the photos back to us."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 19. Ayman Resheidat -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Ayman Resheidat</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Ayman Resheidat</p>
-          <p class="testimonial-type-label">Portrait Photography, Houston</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Ayman Resheidat</p>
+            <p class="testimonial-type">Portrait Photography, Houston</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Jag is a nice man, knows his stuff, was there on time."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Had a session and I love the pictures. Jag is a nice man, knows his stuff, was there on time, was patient and took his time!"</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 20. Sarah & Raj -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Sarah & Raj</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Sarah & Raj</p>
-          <p class="testimonial-type-label">Wedding & Candid Photography, Spring</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Sarah & Raj</p>
+            <p class="testimonial-type">Wedding & Candid Photography, Spring</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"The photos look natural and genuine. Truly gifted!"</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Jag has an amazing eye for candid moments. He made everyone feel so comfortable — the photos look natural and genuine."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
       </div>
     </div>
 
     <!-- 21. Jenny -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Jenny</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Jenny</p>
-          <p class="testimonial-type-label">Swim Event Photography, Spring</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Jenny</p>
+            <p class="testimonial-type">Swim Event Photography, Spring</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"He captured every splash, every turn, every moment of triumph."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"The swim meet photos were incredible! He captured every splash, every turn, every moment of triumph."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
       </div>
     </div>
 
     <!-- 22. Anita Kundaje -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Anita Kundaje</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Anita Kundaje</p>
-          <p class="testimonial-type-label">Swim Meet Photography, Tomball</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Anita Kundaje</p>
+            <p class="testimonial-type">Swim Meet Photography, Tomball</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Every shot tells a story and captures emotions so beautifully."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Jag photographed my daughter's swim meet and I was honestly blown away. Every shot tells a story."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🏊</div></div>
       </div>
     </div>
 
     <!-- 23. Venkat Reddy -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Venkat Reddy</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Venkat Reddy</p>
-          <p class="testimonial-type-label">Kids Ceremony Photography, Tomball</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Venkat Reddy</p>
+            <p class="testimonial-type">Kids Ceremony Photography, Tomball</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Highly Recommended for anyone looking for quality photography."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"We had a wonderful experience during our kids ceremony. Jagadeesh was punctual, professional, patient, and very supportive."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">👶</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">👶</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">👶</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">👶</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">👶</div></div>
       </div>
     </div>
 
     <!-- 24. Mamatha R -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Mamatha R</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Mamatha R</p>
-          <p class="testimonial-type-label">Family & Cultural Events Photography, Tomball</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Mamatha R</p>
+            <p class="testimonial-type">Family & Cultural Events Photography, Tomball</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"His talent behind the camera is incredible."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"I've had the pleasure of knowing him as a friend, and I can honestly say his talent behind the camera is incredible."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 25. Samantha -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Samantha</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Samantha</p>
-          <p class="testimonial-type-label">Portrait Session, Humble</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Samantha</p>
+            <p class="testimonial-type">Portrait Session, Humble</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Every shot felt authentic and full of warmth."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Jag captured our family portraits beautifully — every shot felt authentic and full of warmth."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 26. Manisha -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Manisha</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Manisha</p>
-          <p class="testimonial-type-label">Festival Photography, Woodlands</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Manisha</p>
+            <p class="testimonial-type">Festival Photography, Woodlands</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Jag captured the essence of the festival perfectly!"</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Our Holi event photos are absolutely stunning — the colors, the joy, the energy. Jag captured the essence of the festival perfectly!"</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎨</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎨</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎨</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎨</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎨</div></div>
       </div>
     </div>
 
     <!-- 27. Priya -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Priya</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Priya</p>
-          <p class="testimonial-type-label">Celebration Photography, Katy</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Priya</p>
+            <p class="testimonial-type">Celebration Photography, Katy</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Every diya, every smile perfectly preserved."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Our Diwali celebration was captured so colorfully and vibrantly. Every diya, every smile perfectly preserved."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🪔</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🪔</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🪔</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🪔</div></div>
       </div>
     </div>
 
     <!-- 28. James Maxwell -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">James Maxwell</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">James Maxwell</p>
-          <p class="testimonial-type-label">Soccer Photography, Missouri City</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">James Maxwell</p>
+            <p class="testimonial-type">Soccer Photography, Missouri City</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Pictures came out great and received them shortly after."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Pictures came out great and received them shortly after the shoot."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">⚽</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">⚽</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">⚽</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">⚽</div></div>
       </div>
     </div>
 
     <!-- 29. Extra Time Soccer Training -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">⚽<br><span style="font-size:0.5em;">Soccer Team</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Extra Time Soccer Training</p>
-          <p class="testimonial-type-label">Soccer Photography, Missouri City</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Extra Time Soccer Training</p>
+            <p class="testimonial-type">Soccer Photography, Missouri City</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"They came out great thank you!!"</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"They came out great thank you!!"</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">⚽</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">⚽</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">⚽</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">⚽</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">⚽</div></div>
       </div>
     </div>
 
     <!-- 30. Kam Edwards -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">💍<br><span style="font-size:0.5em;">Kam Edwards</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Kam Edwards</p>
-          <p class="testimonial-type-label">Surprise Proposal, Buffalo Bayou Park</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Kam Edwards</p>
+            <p class="testimonial-type">Surprise Proposal, Buffalo Bayou Park</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"They're Amazing!"</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"They're Amazing!"</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">💍</div></div>
       </div>
     </div>
 
     <!-- 31. Shobhit Shah -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Shobhit Shah</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Shobhit Shah</p>
-          <p class="testimonial-type-label">Family Photography, Cypress</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Shobhit Shah</p>
+            <p class="testimonial-type">Family Photography, Cypress</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"All were exceptional."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Amazing Photography as family had lots of photos taken at many different functions and all were exceptional."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 32. Stavrula Carataidis -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Stavrula Carataidis</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Stavrula Carataidis</p>
-          <p class="testimonial-type-label">Graduation Party, Spring</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Stavrula Carataidis</p>
+            <p class="testimonial-type">Graduation Party, Spring</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"They were lovely thank you"</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"They were lovely thank you"</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎓</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎓</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎓</div></div>
       </div>
     </div>
 
     <!-- 33. Mayur Shah -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Mayur Shah</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Mayur Shah</p>
-          <p class="testimonial-type-label">Family Event Photography, Tomball</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Mayur Shah</p>
+            <p class="testimonial-type">Family Event Photography, Tomball</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"He always pours excellent ideas."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Jagdish is very professional photographer and always positive. He always pours excellent ideas."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 34. Priyank Chouksey -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">📸<br><span style="font-size:0.5em;">Priyank Chouksey</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Priyank Chouksey</p>
-          <p class="testimonial-type-label">Family Photography, Cypress</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Priyank Chouksey</p>
+            <p class="testimonial-type">Family Photography, Cypress</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"I will definitely be using his services again in the future."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"We had an amazing experience working with Jagdeesh from the very beginning. I will definitely be using his services again in the future."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">📸</div></div>
       </div>
     </div>
 
     <!-- 35. Damone Johnson -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">👶<br><span style="font-size:0.5em;">Damone Johnson</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Damone Johnson</p>
-          <p class="testimonial-type-label">Kids Graduation Photography</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Damone Johnson</p>
+            <p class="testimonial-type">Kids Graduation Photography</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Works really well with children."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Really good photo quality. Works really well with children. Super nice and professional."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">👶</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">👶</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">👶</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">👶</div></div>
       </div>
     </div>
 
     <!-- 36. Maudie Byrd -->
-    <div class="testimonial-with-photo fade-up">
-      <div class="testimonial-photo-placeholder">
-        <div class="placeholder-text">🎂<br><span style="font-size:0.5em;">Maudie Byrd</span></div>
-      </div>
-      <div class="testimonial-content">
-        <div class="testimonial-header-with-photo">
-          <p class="testimonial-author-name">Maudie Byrd</p>
-          <p class="testimonial-type-label">Birthday Party Photography, Galveston</p>
+    <div class="testimonial-with-gallery fade-up">
+      <div class="testimonial-card" style="margin-bottom:0;">
+        <div class="testimonial-header">
+          <div>
+            <p class="testimonial-author">Maudie Byrd</p>
+            <p class="testimonial-type">Birthday Party Photography, Galveston</p>
+          </div>
         </div>
-        <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="testimonial-quote-text">"Did a wonderful job catching the party spirit."</p>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-quote">"Pictures took place at my home for very special birthday party. Did a wonderful job catching the party spirit."</p>
+      </div>
+      <div class="session-gallery">
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎂</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎂</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎂</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎂</div></div>
+        <div class="gallery-photo"><div class="gallery-photo-placeholder">🎂</div></div>
       </div>
     </div>
+
   </div>
 </section>
 
