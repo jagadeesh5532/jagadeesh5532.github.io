@@ -31,6 +31,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
 
+  <style>
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .photo-thumb {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, rgba(255, 107, 0, 0.1), rgba(196, 18, 48, 0.1));
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid rgba(255, 107, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .photo-thumb:hover {
+      transform: scale(1.05);
+      border-color: var(--saffron);
+    }
+
+    .photo-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+
   <!-- Schema Markup: Breadcrumb -->
   <script type="application/ld+json">
   {
@@ -710,6 +743,12 @@
       </div>
       <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
       <p class="testimonial-quote">"Jag was wonderful! He helped with the poses and was very quick in getting the photos back to us. We loved the different lighting and edits in the photos so they don't all look the same! Thank you Jag!!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/937963611/53b4d95881c59b0bc7ea583bf5a9a198-xxlarge.jpg" alt="Amber Smith family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/937963611/7d2f341069810bfc46665bf704dc2f75-xxlarge.jpg" alt="Amber Smith family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/937963611/f04bb6fd03630d82bf94636d61f70c9d-xxlarge.jpg" alt="Amber Smith family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/937963611/7648d2908d8c432d7d15d9324d727d4d-xxlarge.jpg" alt="Amber Smith family session"/></div>
+      </div>
     </div>
     <div class="testimonial-card fade-up delay-2">
       <div class="testimonial-header">
