@@ -123,6 +123,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, var(--saffron), var(--gold)); transform: scaleX(0); transition: transform var(--transition); }
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
 .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+
+/* DROPDOWN MENU */
+.nav-dropdown { position: relative; }
+.nav-dropdown .dropdown-menu { position: absolute; top: 100%; left: 0; background: rgba(8,4,4,0.99); border: 1px solid var(--border); border-top: none; min-width: 220px; display: none; flex-direction: column; z-index: 1001; backdrop-filter: blur(16px); }
+.nav-dropdown:hover .dropdown-menu { display: flex; }
+.dropdown-menu a { padding: 0.8rem 1.5rem; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; color: var(--text-muted); border-bottom: 1px solid var(--border); transition: all var(--transition); }
+.dropdown-menu a:last-child { border-bottom: none; }
+.dropdown-menu a:hover { background: rgba(255,107,0,0.1); color: var(--saffron); padding-left: 2rem; }
+
 .nav-book { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; padding: 0.6rem 1.5rem; border: 1px solid var(--saffron); color: var(--saffron); border-radius: var(--radius); transition: all var(--transition); }
 .nav-book:hover { background: var(--saffron); color: #fff; }
 .hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; cursor: pointer; flex-shrink: 0; }
