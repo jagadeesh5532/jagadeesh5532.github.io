@@ -26,27 +26,44 @@ mobileNav.classList.remove('open');
 
 // PORTFOLIO DROPDOWN (show on click for mobile, hover for desktop)
 const navDropdowns = document.querySelectorAll('.nav-dropdown');
+const isMobile = () => window.innerWidth <= 800;
+
 navDropdowns.forEach(dropdown => {
 const link = dropdown.querySelector('a:first-child'); // Main Portfolio link
 const menu = dropdown.querySelector('.dropdown-menu');
 const menuLinks = menu ? menu.querySelectorAll('a') : [];
 
 if (link && menu) {
-link.addEventListener('click', (e) => {
-// Only prevent default on mobile, allow normal navigation on desktop
-if (window.innerWidth <= 800) {
+link.addEventListener('touchstart', (e) => {
+if (isMobile()) {
 e.preventDefault();
+e.stopPropagation();
+const isActive = dropdown.classList.contains('active');
+navDropdowns.forEach(d => d.classList.remove('active'));
+if (!isActive) {
+dropdown.classList.add('active');
+}
+}
+}, { passive: false });
+
+link.addEventListener('click', (e) => {
+if (isMobile()) {
+e.preventDefault();
+e.stopPropagation();
+const isActive = dropdown.classList.contains('active');
 navDropdowns.forEach(d => {
 if (d !== dropdown) d.classList.remove('active');
 });
-dropdown.classList.toggle('active');
+if (!isActive) {
+dropdown.classList.add('active');
+}
 }
 });
 }
 
 // Close dropdown when clicking a menu item
 menuLinks.forEach(menuLink => {
-menuLink.addEventListener('click', () => {
+menuLink.addEventListener('click', (e) => {
 navDropdowns.forEach(d => d.classList.remove('active'));
 });
 });
