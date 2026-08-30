@@ -24,21 +24,34 @@ mobileNav.classList.remove('open');
 });
 }
 
-// PORTFOLIO DROPDOWN (show on click)
+// PORTFOLIO DROPDOWN (show on click for mobile, hover for desktop)
 const navDropdowns = document.querySelectorAll('.nav-dropdown');
 navDropdowns.forEach(dropdown => {
-const link = dropdown.querySelector('a');
+const link = dropdown.querySelector('a:first-child'); // Main Portfolio link
 const menu = dropdown.querySelector('.dropdown-menu');
+const menuLinks = menu ? menu.querySelectorAll('a') : [];
+
 if (link && menu) {
 link.addEventListener('click', (e) => {
+// Only prevent default on mobile, allow normal navigation on desktop
+if (window.innerWidth <= 800) {
 e.preventDefault();
 navDropdowns.forEach(d => {
 if (d !== dropdown) d.classList.remove('active');
 });
 dropdown.classList.toggle('active');
-});
 }
 });
+}
+
+// Close dropdown when clicking a menu item
+menuLinks.forEach(menuLink => {
+menuLink.addEventListener('click', () => {
+navDropdowns.forEach(d => d.classList.remove('active'));
+});
+});
+});
+
 document.addEventListener('click', (e) => {
 if (!e.target.closest('.nav-dropdown')) {
 navDropdowns.forEach(d => d.classList.remove('active'));
