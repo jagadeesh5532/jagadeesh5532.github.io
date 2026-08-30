@@ -128,6 +128,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav-dropdown { position: relative; }
 .nav-dropdown .dropdown-menu { position: absolute; top: 100%; left: 0; background: rgba(8,4,4,0.99); border: 1px solid var(--border); border-top: none; min-width: 220px; display: none; flex-direction: column; z-index: 1001; backdrop-filter: blur(16px); }
 .nav-dropdown:hover .dropdown-menu { display: flex; }
+.nav-dropdown.active .dropdown-menu { display: flex; }
 .dropdown-menu a { padding: 0.8rem 1.5rem; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; color: var(--text-muted); border-bottom: 1px solid var(--border); transition: all var(--transition); }
 .dropdown-menu a:last-child { border-bottom: none; }
 .dropdown-menu a:hover { background: rgba(255,107,0,0.1); color: var(--saffron); padding-left: 2rem; }

@@ -24,6 +24,27 @@ mobileNav.classList.remove('open');
 });
 }
 
+// PORTFOLIO DROPDOWN (show on click)
+const navDropdowns = document.querySelectorAll('.nav-dropdown');
+navDropdowns.forEach(dropdown => {
+const link = dropdown.querySelector('a');
+const menu = dropdown.querySelector('.dropdown-menu');
+if (link && menu) {
+link.addEventListener('click', (e) => {
+e.preventDefault();
+navDropdowns.forEach(d => {
+if (d !== dropdown) d.classList.remove('active');
+});
+dropdown.classList.toggle('active');
+});
+}
+});
+document.addEventListener('click', (e) => {
+if (!e.target.closest('.nav-dropdown')) {
+navDropdowns.forEach(d => d.classList.remove('active'));
+}
+});
+
 // HERO BG ZOOM
 const heroBg = document.getElementById('heroBg');
 if (heroBg) setTimeout(() => heroBg.classList.add('loaded'), 100);
