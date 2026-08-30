@@ -47,9 +47,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: auto;
   pointer-events: auto;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .social-bar {
-    display: none !important;
+    left: calc(5% + 250px);
+  }
+}
+@media (max-width: 900px) {
+  .social-bar {
+    display: none;
   }
 }
 .social-bar a {
@@ -70,31 +75,22 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: scale(1.15);
 }
 
-/* Tablet/Small screens - Hide fixed social bar */
-@media (max-width: 1400px) {
-  .social-bar {
-    display: none !important;
-  }
-}
-
 /* Mobile - Show as non-fixed element below navbar */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .social-bar {
     display: flex !important;
     position: static;
     height: auto;
-    padding: 1rem 5%;
+    padding: 1rem 3%;
     gap: 1.2rem;
     border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
     background: var(--bg-2);
     justify-content: flex-start;
-    order: -1;
     left: auto;
     top: auto;
     z-index: auto;
   }
-  .social-bar a { padding: 0; }
+  .social-bar a { padding: 0 6px; }
   .social-bar-icon {
     width: 18px;
     height: 18px;
