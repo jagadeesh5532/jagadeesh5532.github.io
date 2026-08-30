@@ -102,32 +102,30 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* NAV */
-.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: rgba(8,4,4,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: all var(--transition); gap: 2rem; flex-wrap: nowrap; }
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0; background: rgba(8,4,4,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: all var(--transition); }
 @media (max-width: 800px) {
   .navbar {
-    padding: 0 3%;
     position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
     z-index: 100;
     width: 100%;
     border-top: 1px solid var(--border);
     margin-top: 0;
     height: auto;
     min-height: var(--nav-h);
+    padding: 0 3%;
   }
 }
 .navbar.scrolled { background: rgba(8,4,4,0.99); border-bottom-color: rgba(212,160,23,0.35); }
-.nav-logo img { height: 90px; width: auto; filter: brightness(0) invert(1); transition: filter var(--transition); object-fit: contain; margin: auto 0; }
+.nav-logo { position: absolute; left: 5%; flex-shrink: 0; }
+.nav-logo img { height: 90px; width: auto; filter: brightness(0) invert(1); transition: filter var(--transition); object-fit: contain; }
 .nav-logo:hover img { filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,107,0,0.7)); }
 @media (max-width: 800px) {
+  .nav-logo { position: static; }
   .nav-logo img { height: 55px; }
 }
-.nav-logo { flex-shrink: 0; }
-.nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; flex-shrink: 1; min-width: 0; }
+.nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; position: absolute; left: 50%; transform: translateX(-50%); }
 @media (max-width: 800px) {
-  .nav-links { display: none; }
+  .nav-links { display: none; position: static; transform: none; left: auto; }
 }
 .nav-links a { font-size: 0.9rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; color: var(--text-muted); transition: color var(--transition); position: relative; padding-bottom: 4px; white-space: nowrap; }
 .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, var(--saffron), var(--gold)); transform: scaleX(0); transition: transform var(--transition); }
@@ -149,14 +147,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .nav-dropdown.active .dropdown-menu { display: flex; }
 }
 
-.nav-book { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; padding: 0.65rem 1.8rem; border: 1px solid var(--saffron); color: var(--saffron); border-radius: var(--radius); transition: all var(--transition); flex-shrink: 0; white-space: nowrap; }
+.nav-book { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; padding: 0.65rem 1.8rem; border: 1px solid var(--saffron); color: var(--saffron); border-radius: var(--radius); transition: all var(--transition); flex-shrink: 0; white-space: nowrap; position: absolute; right: 5%; top: 50%; transform: translateY(-50%); }
 .nav-book:hover { background: var(--saffron); color: #fff; }
 @media (max-width: 800px) {
   .nav-book { display: none; }
 }
-.hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; cursor: pointer; flex-shrink: 0; }
+.hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; cursor: pointer; flex-shrink: 0; position: absolute; right: 3%; top: 50%; transform: translateY(-50%); }
 @media (max-width: 800px) {
-  .hamburger { display: flex; }
+  .hamburger { display: flex; position: static; right: auto; top: auto; transform: none; }
 }
 .hamburger span { display: block; width: 26px; height: 2px; background: var(--text); transition: all var(--transition); border-radius: 1px; }
 .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
