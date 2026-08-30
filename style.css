@@ -264,7 +264,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* TESTIMONIALS */
 .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: auto; gap: 1.5rem; margin-top: 3.5rem; }
-.testimonial-card { background: var(--bg-card); border: 1px solid var(--border); padding: 2.5rem; border-radius: var(--radius); position: relative; overflow: hidden; transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition); }
+.testimonial-card { background: var(--bg-card); border: 1px solid var(--border); padding: 2.5rem; border-radius: var(--radius); position: relative; overflow: hidden; transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition); min-height: auto; height: auto; }
 .testimonial-card::before { content: '\201C'; position: absolute; top: 0.8rem; left: 1.5rem; font-family: var(--font-display); font-size: 6rem; color: var(--saffron); opacity: 0.18; line-height: 1; pointer-events: none; }
 .testimonial-card:hover { border-color: rgba(212,160,23,0.45); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
 .stars { display: flex; gap: 3px; margin-bottom: 1.2rem; }
@@ -306,7 +306,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .carousel-arrow:hover { transform: scale(1.1) !important; }
   .carousel-track { gap: 0; }
   .carousel-track .testimonial-card { flex: 0 0 100%; width: 100%; padding: 1.5rem; min-height: auto; height: auto; }
-  .testimonial-card { min-height: 0 !important; }
+  .testimonial-card { min-height: auto; height: auto; }
+  .testimonials-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
   .testimonial-quote { font-size: 0.95rem; line-height: 1.5; margin-bottom: 0 !important; }
   .testimonial-author { font-size: 0.85rem; }
   .testimonial-type { font-size: 0.65rem; }
@@ -439,7 +440,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .albums-grid { grid-template-columns: repeat(2, 1fr); }
   .album-card.wide { grid-column: span 1; }
-  .testimonials-grid { grid-template-columns: 1fr 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: auto; }
 }
 @media (max-width: 800px) {
   :root { --nav-h: 65px; }
