@@ -34,27 +34,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .social-bar {
   position: fixed;
   top: 0;
-  left: calc(5% + 300px);
+  left: calc(5% + 180px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 1.5rem;
   background: transparent;
   border: none;
   padding: 0;
   height: var(--nav-h);
-  z-index: 999;
+  z-index: 1001;
   width: auto;
   pointer-events: auto;
 }
 @media (max-width: 1200px) {
   .social-bar {
-    left: calc(5% + 250px);
+    left: calc(5% + 150px);
   }
 }
 @media (max-width: 900px) {
   .social-bar {
-    display: none;
+    position: static;
+    display: flex !important;
   }
 }
 .social-bar a {
