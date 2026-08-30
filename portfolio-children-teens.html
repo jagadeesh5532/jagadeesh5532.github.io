@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Children & Teens Photography | JG Moments</title>
-  <meta name="description" content="Professional children and teen photography in Houston. Candid moments, milestone photos, and authentic expressions."/>
   <link rel="canonical" href="https://jg-moments.com/portfolio-children-teens.html"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    .page-hero {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 400px;
+      max-height: 600px;
+      height: auto;
+      position: relative;
+      margin-top: -2rem;
+      aspect-ratio: 16 / 9;
+    }
+    .page-hero-tint {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.3);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      auto-rows: auto;
+      gap: 10px;
+      padding: 0;
+      background-color: var(--bg);
+      grid-auto-flow: dense;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: visible;
+      border-radius: 0;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+      background: transparent;
+      display: block;
+      aspect-ratio: auto;
+    }
+
+    .gallery-item:hover {
+      filter: brightness(1.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-hero {
+        aspect-ratio: 16 / 9;
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-hero {
+        aspect-ratio: 4 / 3;
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.8rem;
+        padding: 1.5rem 6%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -46,24 +125,47 @@
   <a href="mailto:contact@jg-moments.com" aria-label="Email"><svg class="social-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
 </div>
 
-<div class="page-hero"><div class="page-hero-bg" style="background: transparent;"></div><div class="page-hero-content"><div class="section-eyebrow">Professional Photography</div><h1>Children & <em style="color:var(--gold-light);">Teens</em></h1></div></div>
+<div class="page-hero"><div class="page-hero-bg" style="background: transparent;"></div><div class="page-hero-tint" style="display:none;"></div><div class="page-hero-content"><div class="section-eyebrow">Professional Photography</div><h1>Children & <em style="color:var(--gold-light);">Teens</em></h1></div></div>
 
-<section class="section" style="padding-top:2rem;">
-  <div class="albums-grid">
-    <a href="portraits.html" class="album-card"><img src="//images.pixieset.com/219766511/dc197ef1746ce335175833fb943225a0-xxlarge.jpg" alt="Children & Teens" loading="lazy"/><div class="album-overlay"><h3 class="album-title">Children & Teens</h3></div><div class="album-arrow">→</div></a>
-    <a href="arya-cake-smash.html" class="album-card"><img src="https://images.pixieset.com/962486611/524949cf8e0aa024297b4378827ed72d-xxlarge.jpg" alt="Arya Cake Smash" loading="lazy"/><div class="album-overlay" style="background:rgba(0,0,0,0.4);"><h3 class="album-title">Arya Cake Smash</h3></div><div class="album-arrow">→</div></a>
-  </div>
-</section>
+<div class="gradient-band"></div>
+<div class="gallery-grid">
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/dc197ef1746ce335175833fb943225a0-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/1c1589e3f10b04fdc6c1bcecb3938af2-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/e25c699e165a3fff4902aae382b2d4f1-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/1065c8e15a6d7b2f3831ad10c78abe13-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/2a09ae7249dbcd3b229b656b11e11a87-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/fdd71fb9309635aa9088ed5049e39aa4-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/2fef2173b1f25e95cdae85ce379cc72c-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/ceab9d4f581e5dff56199da798fb6f11-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/dbc93b0d108e419e0b1fed9ca411dfae-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/c63bfb1d0cda6f5258ba53c9025ffa23-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/1791481cf182c46901a5a36294df3219-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/ead5ab45ea76ad552120462b59603d05-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/a5451f1adbfe5dbce94bdb95f2e215ad-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/e27cc63561ff3d1bde77d21d7f031c90-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/e8dc7e8ad954881da34a2e14f6d5e841-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/c7dce7ad1b4cb97228c9287d21c1017a-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/7cace870bd6195c92f813e866f0fb427-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/ef76f8d7e39c28d99cfdc5ed57c2b98d-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/26a09123383f6045db7332d944410b58-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/47ef14caabc109a962d365285a3327b9-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/207a39daa8d06b3d4ec1cadf18ee7dfd-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/b000715b64b61dc0c175322fd19ecd94-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/9640fae603f1c2f48fb91a1802101330-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/6de8d5f11c03a60986cc4ad63cb03f52-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+  <div class="gallery-item"><img src="https://images.pixieset.com/219766511/6dea5e2bbda8f256742312cf1e2c1f19-xxlarge.jpg" alt="Children & Teens Photography" loading="lazy"/></div>
+</div>
 
-<section class="cta-band"><h2 class="cta-title">Ready to capture your <em style="color:var(--saffron);">child's</em> special moments?</h2><p class="cta-desc">Professional children's photography that captures genuine smiles and authentic joy.</p><div class="cta-btns"><a href="contact.html" class="btn btn-saffron">Book a Session</a><a href="testimonials.html" class="btn btn-gold">Read Testimonials</a></div></section>
+<div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:2rem 6%;text-align:center;" class="pixieset-cta">
+  <a href="https://jgmoments.pixieset.com/childrenandteens/" target="_blank" class="btn btn-saffron" style="display:inline-block;">View Full Gallery →</a>
+</div>
 
-<section class="section" style="padding:4rem 6%;background:rgba(255,107,0,0.05);">
-  <div style="max-width:600px;margin:0 auto;text-align:center;">
-    <p style="font-size:1.05rem;color:var(--text);margin-bottom:1rem;font-weight:500;">⭐ Love Our Work? Leave a Google Review!</p>
-    <p style="color:var(--text-muted);margin-bottom:1.5rem;font-size:0.9rem;">Your feedback helps other families discover JG Moments and means the world to us.</p>
-    <a href="https://tinyurl.com/ky5bcehu" target="_blank" class="btn btn-saffron" style="padding:0.75rem 1.5rem;">Leave a Review on Google</a>
-  </div>
-</section>
+<div class="text-center" style="padding:2rem 6%;background-color:var(--bg);">
+  <h3 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:1rem;color:var(--text);">Ready to Capture Your Child's Precious Moments?</h3>
+  <a href="contact.html" class="btn btn-saffron" style="margin-bottom:1rem;">Book a Session</a><br>
+  <a href="portfolio.html" class="btn btn-outline">← Back to Albums</a>
+</div>
+
 
 <footer class="footer">
   <div class="gradient-band" style="margin-bottom:4rem;margin-left:-6%;margin-right:-6%;"></div>
@@ -76,6 +178,7 @@
   <div class="footer-bottom"><p class="footer-copy">© 2026 JG Moments Photography · Houston, TX</p></div>
 </footer>
 
+<div class="lightbox" id="lightbox"><div class="lightbox-inner"><img src="" alt="" id="lbImg"/></div><button class="lb-close" id="lbClose">✕</button><button class="lb-prev" id="lbPrev">‹</button><button class="lb-next" id="lbNext">›</button></div>
 <script src="main.js?v=5"></script>
 </body>
 </html>
