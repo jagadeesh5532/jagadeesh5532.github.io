@@ -61,10 +61,15 @@ dropdown.classList.add('active');
 });
 }
 
-// Close dropdown when clicking a menu item
+// Close dropdown when clicking a menu item (allow navigation)
 menuLinks.forEach(menuLink => {
 menuLink.addEventListener('click', (e) => {
+// Allow navigation - don't prevent default
 navDropdowns.forEach(d => d.classList.remove('active'));
+// On mobile, let the link navigate naturally
+if (isMobile()) {
+// Navigation will happen automatically
+}
 });
 });
 });
