@@ -32,8 +32,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* SOCIAL BAR - Next to Logo in Navbar */
 .social-bar {
-  position: absolute;
-  left: 250px;
+  position: fixed;
+  left: 320px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -47,10 +47,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   z-index: 1001;
   width: auto;
   pointer-events: auto;
+  margin-top: 0;
+  top: 40px;
 }
 @media (max-width: 1200px) {
   .social-bar {
-    left: 220px;
+    left: 280px;
   }
 }
 @media (max-width: 900px) {
