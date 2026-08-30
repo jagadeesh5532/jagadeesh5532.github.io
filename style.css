@@ -33,7 +33,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* SOCIAL BAR - Next to Logo in Navbar */
 .social-bar {
   position: absolute;
-  left: 200px;
+  left: 250px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -50,7 +50,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 @media (max-width: 1200px) {
   .social-bar {
-    left: 180px;
+    left: 220px;
   }
 }
 @media (max-width: 900px) {
