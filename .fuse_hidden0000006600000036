@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials | JG Moments Photography</title>
+  <meta name="description" content="Read what clients say about JG Moments Photography, and share your own experience!"/>
+
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Testimonials | JG Moments Photography"/>
+  <meta property="og:description" content="Read what clients say about JG Moments Photography. Real words from real clients capturing portraits, sports events, celebrations, and more."/>
+  <meta property="og:url" content="https://jg-moments.com/testimonials.html"/>
+  <meta property="og:image" content="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f"/>
+  <meta property="og:image:width" content="1445"/>
+  <meta property="og:image:height" content="854"/>
+  <meta property="og:site_name" content="JG Moments Photography"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Testimonials | JG Moments Photography"/>
+  <meta name="twitter:description" content="Read what clients say about JG Moments Photography. Real words from real clients capturing portraits, sports events, celebrations, and more."/>
+  <meta name="twitter:image" content="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f"/>
+  <meta name="twitter:site" content="@jg_moments"/>
+  <meta name="twitter:creator" content="@jg_moments"/>
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="https://jg-moments.com/testimonials.html"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+
+  <style>
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .photo-thumb {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, rgba(255, 107, 0, 0.1), rgba(196, 18, 48, 0.1));
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid rgba(255, 107, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .photo-thumb:hover {
+      transform: scale(1.05);
+      border-color: var(--saffron);
+    }
+
+    .photo-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+
+  <!-- Schema Markup: Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jg-moments.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Testimonials",
+        "item": "https://jg-moments.com/testimonials.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Review Schema for Testimonials -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "JG Moments Photography",
+    "url": "https://jg-moments.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Houston",
+      "addressRegion": "TX",
+      "postalCode": "77000",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-346-946-2388",
+    "email": "contact@jg-moments.com",
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Jessica Smith"
+        },
+        "reviewBody": "We could not be happier with our engagement photo experience! From the moment he arrived, we knew we were in great hands. He came prepared with a wagon stocked with bottled water, a fan, and even a pop-up changing tent, which made outfit changes so much easier and more comfortable in the Texas heat. He was incredibly kind, professional, and accommodating throughout the entire session. He happily incorporated specific poses and shots that I had requested, and even rolled with additional props and ideas we came up with on the spot. Nothing felt rushed, and he truly wanted to make sure we got the photos we envisioned. What impressed us even more was the turnaround time, our photos were beautifully edited and delivered in just three days! Not only did we receive them quickly, but there was also a wonderful variety of images, each one capturing genuine moments and emotions. The photos are absolutely beautiful and perfectly reflect the love, joy, and connection between us. These are memories we will cherish for the rest of our lives, and we are so grateful for the care and talent he brought to our engagement session. We highly recommend him to anyone looking for a photographer who is talented, thoughtful, prepared, and truly passionate about what he does."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Dominque Joshua"
+        },
+        "reviewBody": "After receiving our initial wedding photos back, we realized I didn't get 1 photo by myself in my wedding gown nor too many of us by ourselves.. so we scheduled a photoshoot! The photographer came to our home & was amazing! This was so fun & intimate! It was wild having to get back into these wedding clothes 3 weeks later because so many emotions from that day came back, but it was so worth it! Thank you to @jg_moments for making this happen for us! We appreciate you!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Afreen Pargaonkar"
+        },
+        "reviewBody": "Jagdeesh is a fantastic photographer. He truly loves the process of photography and capturing your precious moments the way you want him to along with adding his own cinematic style to it. He is so patient and understanding especially when it comes to photography with kids. He has photographed us for many of our special moments and we will ask him to do so for many many more of our special occasions and moments."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Shari Block"
+        },
+        "reviewBody": "Love the photos!!! Jag was very nice and I felt comfortable meeting him and during the shoot. And he even had a small tent where I could change and this was an outdoor shoot. I've already recommended him in a Facebook post."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Rashmi SA"
+        },
+        "reviewBody": "A truly dedicated photographer who captures every moment perfectly. What impressed me the most was the passion, patience, and commitment shown throughout the entire shoot. No detail was overlooked, and every frame reflected genuine effort and creativity. Their ability to make everyone feel comfortable while tirelessly working to get the perfect shot. Thank you for your hard work, professionalism, and dedication to creating memories that will be cherished forever. Highly recommended!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Creshelle Smith"
+        },
+        "reviewBody": "Absolutely loved our photos. Jag was professional and so accommodating; he worked great with our busy toddlers. We received our pictures faster than I've ever experienced. Will absolutely use Joyful & Graceful Moments for our future sessions."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Krishna Lanka"
+        },
+        "reviewBody": "We had multiple photo shoots done with them and every single photo came out really really good. The service provided is outstanding. They really put a lot of thought and effort to understand what you need and make suggestions to make your perfect moments memorable. And they do this with a smile on their face. I would very strongly recommend them for your events!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Neelima"
+        },
+        "reviewBody": "We had a wonderful experience! Jagadesh made us feel very comfortable throughout the photoshoot, which made everything feel natural and easy. The pictures turned out beautifully, especially the night shots—they were absolutely stunning and captured the moment perfectly. We're really happy with the results and truly appreciate the effort and talent. Highly recommend!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Northpoint Shockwaves"
+        },
+        "reviewBody": "Thank you for all the awesome pictures you've taken this season, Jag. We have so many fun memories to look back on and share with our Shockwaves family. We truly appreciate all the time and effort you put into capturing these special moments!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Alishba Hamid"
+        },
+        "reviewBody": "Such a great experience working with JG moments. The photographer was super nice and got me exactly what I asked for and the pictures turned out perfect! I definitely recommend! Thank you! ❤️"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Hamdi Gomma"
+        },
+        "reviewBody": "Great experience! Wonderful photographer. Jag captured the best moments of our small, private ceremony beautifully. We highly recommend him to anyone looking for someone who goes beyond the ordinary and delivers a stunning, memorable collection of photographs."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Lorain Pinto"
+        },
+        "reviewBody": "Absolutely stunning photography — every shot captured the emotion perfectly. The attention to detail and lighting was incredible. Professional, creative, and easy to work with. Every photo tells a story. Thank you for capturing such genuine smiles and emotions. Pure magic behind the camera💫"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Venkatesh M"
+        },
+        "reviewBody": "Awesome photography. Pictures are crisp and clear. Excellent capture of those beautiful smiles and moments to recall memories over period of time. Keep it up buddy. Highly recommended for his photography for any events."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Meenakshi Anurag"
+        },
+        "reviewBody": "Jagdeesh has a remarkable eye for light and composition. His candid shots are especially outstanding—he has a true fly-on-the-wall ability to capture genuine moments as they naturally unfold. What sets him apart is his patience and calm presence, which puts people at ease. Ultimately, his work speaks for itself."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Michael Repking"
+        },
+        "reviewBody": "Awesome thank you so much, they look amazing!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Shelbie"
+        },
+        "reviewBody": "He was so nice and did such a great job! Not only did he make the experience fun, he made it comfortable. He did exactly what I needed and more — everything came out perfect and exactly how I wanted it. I'm so glad I worked with him and I will again, no doubt!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Amber Smith"
+        },
+        "reviewBody": "Jag was wonderful! He helped with the poses and was very quick in getting the photos back to us. We loved the different lighting and edits in the photos so they don't all look the same! Thank you Jag!!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Ayman Resheidat"
+        },
+        "reviewBody": "Had a session and I love the pictures. Jag is a nice man, knows his stuff, was there on time, was patient and took his time!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Anita Kundaje"
+        },
+        "reviewBody": "Jag photographed my daughter's swim meet and I was honestly blown away. Every shot tells a story and captures emotions so beautifully. He caught moments I didn't even know were happening — the focus, the effort, the pure joy on the kids' faces. The photos don't just look great, they feel alive. He has such a natural talent for freezing those moments you'll treasure forever. Absolutely recommend!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Venkat Reddy"
+        },
+        "reviewBody": "We had a wonderful experience during our kids ceremony. Jagadeesh was punctual, professional, patient, and very supportive throughout the event. He suggested great poses and took the time to capture every moment perfectly. His work was excellent, and the edited photos were delivered within just a few days. He is versatile and has very good skills at multiple types of photography. Highly recommended for anyone looking for quality photography and exceptional service!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Mamatha R"
+        },
+        "reviewBody": "I've had the pleasure of knowing him as a friend, and I can honestly say his talent behind the camera is incredible. He has a unique ability to capture genuine emotions and turn ordinary moments into beautiful memories. His professionalism, creativity, and attention to detail make every photo special. Not only is he an amazing photographer, but he's also wonderful to work with. I highly recommend him to anyone looking for stunning, high-quality photography."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "James Maxwell"
+        },
+        "reviewBody": "Pictures came out great and received them shortly after the shoot."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Extra Time Soccer Training"
+        },
+        "reviewBody": "They came out great thank you!!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Kam Edwards"
+        },
+        "reviewBody": "They're Amazing!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Shobhit Shah"
+        },
+        "reviewBody": "Amazing Photography as family had lots of photos taken at many different functions and all were exceptional."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Stavrula Carataidis"
+        },
+        "reviewBody": "They were lovely thank you"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Mayur Shah"
+        },
+        "reviewBody": "Jagdish is very professional photographer and always positive. We had our family photos for the couple event and it was awesome. He always pours excellent ideas."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Priyank Chouksey"
+        },
+        "reviewBody": "We had an amazing experience working with Jagdeesh from the very beginning, the communication was professional, friendly and responsive. He took time to understand exactly what we were looking for and made the entire process feel comfortable and enjoyable. The quality of pictures exceeded my expectations. Every image was beautifully captured, with great attentions to detail and a natural authentic style. The final gallery was delivered professionally and perfectly organized. What impressed me most was his ability to make everyone feel relaxed in front of the camera while still capturing genuine emotions and candid moments. You can tell he is passionate about craft and genuinely care about clients. I highly recommend him to anyone looking for a talented, reliable, and creative photographer. I will definitely be using his services again in the future."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Damone Johnson"
+        },
+        "reviewBody": "Really good photo quality. Works really well with children. Super nice and professional. Turn around time on receiving finished photos was within a few days. Highly recommend, and we'll use his service again."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Mahesh Kumar"
+        },
+        "reviewBody": "An exceptional photographer with years of experience in capturing life's most beautiful moments. His passion for photography truly reflects in every picture he takes. Each captured moment speaks a million words and becomes a priceless memory to cherish forever. I would never hesitate to seek his help whenever we want to preserve special memories in the most meaningful way!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Danielle Combs"
+        },
+        "reviewBody": "Joyful & Graceful Moments is amazing! The owner was very professional, incredibly talented, and made the entire process easy from start to finish. We absolutely love my daughter's sweet 16 photos and highly recommend him to anyone"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Maudie Byrd"
+        },
+        "reviewBody": "Pictures took place at my home for very special birthday party. Photographer was nice, professional and did a wonderful job catching the party spirit. I would highly recommend for any important event."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Nicole Thomas"
+        },
+        "reviewBody": "On vacation in galveston, my family and I had professional photos done on the beach. Our photographer Jag. (Joyful and grateful moments) was absolutely amazing. Considering we were a group of 19 people. 10 of them kids (2 under 2 and 1 autistic). Jag was extremely patient and made sure he captured everyone laughing. He allowed us to play around with some direction while he shot us. Absolutely, 10 out of 10 experience. And the photos were amazing!! THANK YOU!!!!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Jonathan Chism"
+        },
+        "reviewBody": "We had an outstanding experience working with this photographer! His high-definition head shots are absolutely exceptional—crisp and vibrant. Beyond the quality of his work, he was incredibly professional, easy to communicate with, and went above and beyond to work around our busy schedule. The Autism Dads Social Club greatly appreciates his flexibility, professionalism, and attention to detail. He made the entire experience enjoyable and stress-free, and the final results exceeded our expectations. We will definitely be working with him again and highly recommend him to anyone looking for top-quality photography and outstanding customer service!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Sailaja Lanka"
+        },
+        "reviewBody": "We had an absolutely wonderful experience with Jag for multiple events. He is very patient and has a remarkable talent in capturing genuine emotions and beautiful moments that tell a story. Jag's attention to detail sets him apart resulting in natural and stunning photographs!! We are so grateful for the memories he captured and would highly recommend him to anyone looking for an exceptional photographer! Can't wait for our next event to be captured!!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Drupath Reddy"
+        },
+        "reviewBody": "Photos were delivered very quickly and Jag was professional and captured all moments perfectly. We are happy with the experience."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Pamela Dean"
+        },
+        "reviewBody": "I found Jag with Joyful & Graceful Moments very professional, flexible, and an excellent photographer. We had 17 in our photos, 11 of which are kids. We have pictures that are pretty, everyone's eyes are open and most of us looking at the camera (even the 18 month old). I do not hesitate to recommend you use him for photos!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Damien Tubbs"
+        },
+        "reviewBody": "Was very great to work with and would recommend to anyone! Very timely, saw the vision, and followed through with great pictures."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Ivone Bruno"
+        },
+        "reviewBody": "Excellent service, respectful, punctual and beautifully captured very special moments of my granddaughter's Christening. Provided the photos very fast. I will strongly recommend him."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Mike Alvarado"
+        },
+        "reviewBody": "JG Moments was a incredible! We needed photographs for a Bday party. Great communication and, I cannot stress enough- Jag was extremely friendly and accommodating. The photo's came out excellent and the turnaround was perfect. Thank you!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Sunil Chitty"
+        },
+        "reviewBody": "Jagadeesh is an awesome photographer who captures beautiful memories with a genuine smile and a lot of passion. His keen eye for photography allows him to capture moments beautifully and naturally. What really stands out is his dedication to perfection. He puts a lot of thought into capturing each moment and spends considerable time editing the photos based on the environment, lighting, and individual personalities to bring out the best in every picture. Beyond his photography skills, Jagadeesh is also a very humble, friendly, and wonderful person to interact with. His passion, patience, and attention to detail truly make him an exceptional photographer. Highly recommended!"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Shilpa"
+        },
+        "reviewBody": "Jagadish is such a talented photographer! I've been a guest at several house events where he was shooting, and he has an amazing ability to blend right in and capture genuine, candid moments. He makes everyone feel completely at ease around the camera. The photos he delivers are always stunning."
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "48"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo"><img src="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f" alt="JG Moments"/></a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li class="nav-dropdown"><a href="portfolio.html">Portfolio ▼</a><div class="dropdown-menu"><a href="portfolio-children-teens.html">Children & Teens</a><a href="portfolio-individual-portraits.html">Individual Portraits</a><a href="portfolio-family.html">Family Portraits</a><a href="portfolio-weddings.html">Weddings & Engagements</a><a href="portfolio-couples.html">Proposals <a href="portfolio-couples.html">Proposals <a href="portfolio-couples.html">Proposals <a href="portfolio-couples.html">Engagement & Couple Shoots</a> Couple Shoots</a> Couple Shoots</a> Couple Shoots</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-cultural.html">Indian Cultural Events</a><a href="portfolio-holidays.html">Celebrations & Events</a><a href="portfolio-sports.html">Sports Photography</a><a href="portfolio-awards.html">Award Ceremonies</a><a href="portfolio-corporate.html">Corporate Events</a></div></li><li><a href="testimonials.html" class="active">Testimonials</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <a href="contact.html" class="nav-book">Get in touch</a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><div class="nav-dropdown"><a href="portfolio.html">Portfolio ▼</a><div class="dropdown-menu"><a href="portfolio-children-teens.html">Children & Teens</a><a href="portfolio-individual-portraits.html">Individual Portraits</a><a href="portfolio-family.html">Family Portraits</a><a href="portfolio-weddings.html">Weddings & Engagements</a><a href="portfolio-couples.html">Proposals <a href="portfolio-couples.html">Proposals <a href="portfolio-couples.html">Proposals <a href="portfolio-couples.html">Engagement & Couple Shoots</a> Couple Shoots</a> Couple Shoots</a> Couple Shoots</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-cultural.html">Indian Cultural Events</a><a href="portfolio-holidays.html">Celebrations & Events</a><a href="portfolio-sports.html">Sports Photography</a><a href="portfolio-awards.html">Award Ceremonies</a><a href="portfolio-corporate.html">Corporate Events</a></div></div><a href="testimonials.html">Testimonials</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+
+<!-- SOCIAL BAR -->
+<div class="social-bar">
+  <a href="https://www.facebook.com/profile.php?id=61589169345858" target="_blank" aria-label="Facebook" title="Follow on Facebook"><svg class="social-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+  <a href="https://www.instagram.com/jg_moments/" target="_blank" aria-label="Instagram" title="Follow on Instagram"><svg class="social-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a>
+  <a href="https://jg-moments.com" aria-label="Portfolio" title="Adobe Portfolio"><svg class="social-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+  <a href="mailto:contact@jg-moments.com" aria-label="Email"><svg class="social-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-bg" id="pageBg" style="background: transparent;"></div>
+  <div class="page-hero-tint" style="display:none;"></div>
+  <div class="page-hero-content">
+    <div class="section-eyebrow">Client Stories</div>
+    <h1>What People <em style="color:var(--gold-light);">Say</em></h1>
+  </div>
+</div>
+
+<!-- EXISTING TESTIMONIALS -->
+<section class="section" style="padding-top:0; margin-top:-2rem;">
+  <div class="testimonials-grid" style="margin-top:0;">
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Jessica Smith</p>
+          <p class="testimonial-type">Engagement Photography, Humble</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"We could not be happier with our engagement photo experience! From the moment he arrived, we knew we were in great hands. He came prepared with a wagon stocked with bottled water, a fan, and even a pop-up changing tent, which made outfit changes so much easier and more comfortable in the Texas heat. He was incredibly kind, professional, and accommodating throughout the entire session. He happily incorporated specific poses and shots that I had requested, and even rolled with additional props and ideas we came up with on the spot. Nothing felt rushed, and he truly wanted to make sure we got the photos we envisioned. What impressed us even more was the turnaround time, our photos were beautifully edited and delivered in just three days! Not only did we receive them quickly, but there was also a wonderful variety of images, each one capturing genuine moments and emotions. The photos are absolutely beautiful and perfectly reflect the love, joy, and connection between us. These are memories we will cherish for the rest of our lives, and we are so grateful for the care and talent he brought to our engagement session. We highly recommend him to anyone looking for a photographer who is talented, thoughtful, prepared, and truly passionate about what he does."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/574949611/8b314e896d6d738c38017a29b862d707-xxlarge.jpg" alt="Jessica Smith engagement session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/574949611/c5afb4b7b9350ae32cdb3b9b1a435cdf-xxlarge.jpg" alt="Jessica Smith engagement session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/574949611/a119842726a6f672fdce0e66737a6769-xxlarge.jpg" alt="Jessica Smith engagement session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/574949611/9cd8d10b9a2556c929eab36dcd3311aa-xxlarge.jpg" alt="Jessica Smith engagement session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Jonathan Chism</p>
+          <p class="testimonial-type">Headshots, Sugarland</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"We had an outstanding experience working with this photographer! His high-definition head shots are absolutely exceptional—crisp and vibrant. Beyond the quality of his work, he was incredibly professional, easy to communicate with, and went above and beyond to work around our busy schedule. The Autism Dads Social Club greatly appreciates his flexibility, professionalism, and attention to detail. He made the entire experience enjoyable and stress-free, and the final results exceeded our expectations. We will definitely be working with him again and highly recommend him to anyone looking for top-quality photography and outstanding customer service!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/058771811/6611ef0703b9a59becd1bf0d91832588-xxlarge.jpg" alt="Jonathan Chism headshots session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/058771811/d660938a1f0513feac82382b0f679b4a-xxlarge.jpg" alt="Jonathan Chism headshots session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/058771811/bfa3cf19828787b9dc64a757c41aefaa-xxlarge.jpg" alt="Jonathan Chism headshots session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Nicole Thomas</p>
+          <p class="testimonial-type">Family Photography, Galveston Island</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"On vacation in galveston, my family and I had professional photos done on the beach. Our photographer Jag. (Joyful and grateful moments) was absolutely amazing. Considering we were a group of 19 people. 10 of them kids (2 under 2 and 1 autistic). Jag was extremely patient and made sure he captured everyone laughing. He allowed us to play around with some direction while he shot us. Absolutely, 10 out of 10 experience. And the photos were amazing!! THANK YOU!!!!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/941437711/ea0b6c210620a0a4a8da5d3360bb7e05-xxlarge.jpg" alt="Nicole Thomas family beach session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/941437711/5dc206e189def86743ef5098b2d0b3c3-xxlarge.jpg" alt="Nicole Thomas family beach session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/941437711/22f8176bd8352a1c6e9ca7794d951054-xxlarge.jpg" alt="Nicole Thomas family beach session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/941437711/80c374ec2a4c7a62aa062675406579d5-xxlarge.jpg" alt="Nicole Thomas family beach session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Dominque Joshua</p>
+          <p class="testimonial-type">Wedding Photography, Spring</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"After receiving our initial wedding photos back, we realized I didn't get 1 photo by myself in my wedding gown nor too many of us by ourselves.. so we scheduled a photoshoot! The photographer came to our home & was amazing! This was so fun & intimate! It was wild having to get back into these wedding clothes 3 weeks later because so many emotions from that day came back, but it was so worth it! Thank you to @jg_moments for making this happen for us! We appreciate you!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/313429611/acf2144ed655efb996404dc3d4a289b9-xxlarge.jpg" alt="Dominque Joshua wedding session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/313429611/ae856e80166afc1b831bed210a3218ed-xxlarge.jpg" alt="Dominque Joshua wedding session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/313429611/eb1a4651b91f5fefda91204601c4d338-xxlarge.png" alt="Dominque Joshua wedding session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/313429611/8a9d652a1bb8940ae8e5049ac8d25839-xxlarge.png" alt="Dominque Joshua wedding session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Afreen Pargaonkar</p>
+          <p class="testimonial-type">Family Photography, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Jagdeesh is a fantastic photographer. He truly loves the process of photography and capturing your precious moments the way you want him to along with adding his own cinematic style to it. He is so patient and understanding especially when it comes to photography with kids. He has photographed us for many of our special moments and we will ask him to do so for many many more of our special occasions and moments."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/219766511/19c1cac06de01fc82354b56891a07845-xxlarge.jpg" alt="Afreen Pargaonkar family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/419486511/dba6d0fc8ba46339ae310fb9717944e4-xxlarge.jpg" alt="Afreen Pargaonkar family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/219766511/2fef2173b1f25e95cdae85ce379cc72c-xxlarge.jpg" alt="Afreen Pargaonkar family session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Shari Block</p>
+          <p class="testimonial-type">Portrait Photography, Spring</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Love the photos!!! Jag was very nice and I felt comfortable meeting him and during the shoot. And he even had a small tent where I could change and this was an outdoor shoot. I've already recommended him in a Facebook post."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/247559611/176fecbf05b0fdab1a78d3fe5d9fb700-xxlarge.jpg" alt="Shari Block portrait session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/247559611/01167a47b9030ee81b672f8682fa6457-xxlarge.jpg" alt="Shari Block portrait session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/247559611/5c59608a1157e0a7a98c7f05cdb506be-xxlarge.jpg" alt="Shari Block portrait session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/247559611/ebe3e90a51a04141a7d58d522f2423b2-xxlarge.jpg" alt="Shari Block portrait session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Rashmi SA</p>
+          <p class="testimonial-type">Family Photography, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"A truly dedicated photographer who captures every moment perfectly. What impressed me the most was the passion, patience, and commitment shown throughout the entire shoot. No detail was overlooked, and every frame reflected genuine effort and creativity. Their ability to make everyone feel comfortable while tirelessly working to get the perfect shot. Thank you for your hard work, professionalism, and dedication to creating memories that will be cherished forever. Highly recommended!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/219766511/b000715b64b61dc0c175322fd19ecd94-xxlarge.jpg" alt="Rashmi SA family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/219766511/589e17588ccd776b70d2af1adeca79c2-xxlarge.jpg" alt="Rashmi SA family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/219766511/1c1589e3f10b04fdc6c1bcecb3938af2-xxlarge.jpg" alt="Rashmi SA family session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Creshelle Smith</p>
+          <p class="testimonial-type">Family Photography, Pearland</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Absolutely loved our photos. Jag was professional and so accommodating; he worked great with our busy toddlers. We received our pictures faster than I've ever experienced. Will absolutely use Joyful & Graceful Moments for our future sessions."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/892857611/4e3e54d5ffb9e4f4dbf692ad6c664d47-xxlarge.jpg" alt="Creshelle Smith family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/892857611/2108e54d66e8c3d49a59b2b002c12523-xxlarge.jpg" alt="Creshelle Smith family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/892857611/8fa330bf6f9f45c2fca1b3b56a19d549-xxlarge.jpg" alt="Creshelle Smith family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/892857611/518210f4b7fefdc6a645985f433a4e9b-xxlarge.jpg" alt="Creshelle Smith family session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Krishna Lanka</p>
+          <p class="testimonial-type">Family & Cultural Events Photography, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"We had multiple photo shoots done with them and every single photo came out really really good. The service provided is outstanding. They really put a lot of thought and effort to understand what you need and make suggestions to make your perfect moments memorable. And they do this with a smile on their face. I would very strongly recommend them for your events!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/733586511/70620034f02f64ed915000d8802a9335-xxlarge.jpg" alt="Krishna Lanka cultural events session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/733586511/a63b0897467890416090d371340bbf56-xxlarge.jpg" alt="Krishna Lanka cultural events session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/219766511/ef76f8d7e39c28d99cfdc5ed57c2b98d-xxlarge.jpg" alt="Krishna Lanka cultural events session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Neelima</p>
+          <p class="testimonial-type">Portrait Photography, Chicago</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"We had a wonderful experience! Jagadesh made us feel very comfortable throughout the photoshoot, which made everything feel natural and easy. The pictures turned out beautifully, especially the night shots—they were absolutely stunning and captured the moment perfectly. We're really happy with the results and truly appreciate the effort and talent. Highly recommend!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/995091711/3f6cce80ea57dc49c039dc49076c6db0-xxlarge.jpg" alt="Neelima portrait session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/995091711/38b395695f3ac438de04a4de7d30faee-xxlarge.jpg" alt="Neelima portrait session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/995091711/d4702af7f6a76a56f550daa2ca778234-xxlarge.jpg" alt="Neelima portrait session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/995091711/826b8b46d11b9f80df34d1ab06696d3d-xxlarge.jpg" alt="Neelima portrait session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <img src="https://d1nmxxg9d5tdo.cloudfront.net/2528/logos/original/NorthpointeShockwavesLogo3.jpg" alt="Northpoint Shockwaves" class="testimonial-avatar"/>
+        <div>
+          <p class="testimonial-author">Northpoint Shockwaves</p>
+          <p class="testimonial-type">Swim Team Photography, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Thank you for all the awesome pictures you've taken this season, Jag. We have so many fun memories to look back on and share with our Shockwaves family. We truly appreciate all the time and effort you put into capturing these special moments!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/482966511/4daf9eb1f074dfb1546317806311e460-xxlarge.jpg" alt="Northpoint Shockwaves swim team session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/482966511/a40a5e5be664a4f815698d0a4698b0d1-xxlarge.jpg" alt="Northpoint Shockwaves swim team session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/482966511/33cb8b859fd373b62c66894121a28d1e-xxlarge.jpg" alt="Northpoint Shockwaves swim team session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/482966511/302dd4c2aec6af911ee978a5bfba2dda-xxlarge.jpg" alt="Northpoint Shockwaves swim team session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Alishba Hamid</p>
+          <p class="testimonial-type">Cake Smash & Birthday Photography, Houston</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Such a great experience working with JG moments. The photographer was super nice and got me exactly what I asked for and the pictures turned out perfect! I definitely recommend! Thank you! ❤️"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/962486611/524949cf8e0aa024297b4378827ed72d-xxlarge.jpg" alt="Alishba Hamid cake smash session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/962486611/71fbcb51b2f65564fae0e21bfd889313-xxlarge.jpg" alt="Alishba Hamid cake smash session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/962486611/95d26b0c6331e5838fb1c8f8a2e8abda-xxlarge.jpg" alt="Alishba Hamid cake smash session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/962486611/c0408b300e006d4e5801ffd6a8b3ec0d-xxlarge.jpg" alt="Alishba Hamid cake smash session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Hamdi Gomma</p>
+          <p class="testimonial-type">Nikkah Ceremony Photography, Katy</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Great experience! Wonderful photographer. Jag captured the best moments of our small, private ceremony beautifully. We highly recommend him to anyone looking for someone who goes beyond the ordinary and delivers a stunning, memorable collection of photographs."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/334693511/a71e1eac27e41f7cdc0923c928c6afa9-xxlarge.jpg" alt="Hamdi Gomma nikkah ceremony session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/334693511/bd8b2adb317a0e562aa3ff116a576d66-xxlarge.jpg" alt="Hamdi Gomma nikkah ceremony session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/334693511/48020eb9a9ae9d17b69822b2a1a662ae-xxlarge.jpg" alt="Hamdi Gomma nikkah ceremony session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/334693511/7958f297c1c252e6c58774c5551dee19-xxlarge.jpg" alt="Hamdi Gomma nikkah ceremony session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Lorain Pinto</p>
+          <p class="testimonial-type">Family Photography, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Absolutely stunning photography — every shot captured the emotion perfectly. The attention to detail and lighting was incredible. Professional, creative, and easy to work with. Every photo tells a story. Thank you for capturing such genuine smiles and emotions. Pure magic behind the camera💫"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/219766511/dc197ef1746ce335175833fb943225a0-xxlarge.jpg" alt="Lorain Pinto family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/219766511/e25c699e165a3fff4902aae382b2d4f1-xxlarge.jpg" alt="Lorain Pinto family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/219766511/c775c6950076ebd40862a3f99bded2da-xxlarge.jpg" alt="Lorain Pinto family session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Venkatesh M</p>
+          <p class="testimonial-type">Family & Cultural Events Photography, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Awesome photography. Pictures are crisp and clear. Excellent capture of those beautiful smiles and moments to recall memories over period of time. Keep it up buddy. Highly recommended for his photography for any events."</p>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Meenakshi Anurag</p>
+          <p class="testimonial-type">Candid Photography, Cypress</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Jagdeesh has a remarkable eye for light and composition. His candid shots are especially outstanding—he has a true fly-on-the-wall ability to capture genuine moments as they naturally unfold. What sets him apart is his patience and calm presence, which puts people at ease. Ultimately, his work speaks for itself."</p>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Michael Repking</p>
+          <p class="testimonial-type">Proposal Photography, Kingwood</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Awesome thank you so much, they look amazing!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/721365511/ec5bedf0ff43b4778c5036f70b03ff33-xxlarge.jpg" alt="Michael Repking proposal session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/721365511/62b6ffb34a26684bac15dc87196e1507-xxlarge.jpg" alt="Michael Repking proposal session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/721365511/34286236c20e8819779971f1022907ca-xxlarge.jpg" alt="Michael Repking proposal session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Shelbie</p>
+          <p class="testimonial-type">Audition Photography, Houston</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"He was so nice and did such a great job! Not only did he make the experience fun, he made it comfortable. He did exactly what I needed and more — everything came out perfect and exactly how I wanted it. I'm so glad I worked with him and I will again, no doubt!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/498708511/f2cf6d5019776fa9e47918799a869dab-xxlarge.jpg" alt="Shelbie audition session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/498708511/25f9d05a33e7469c99fa140452edb177-xxlarge.jpg" alt="Shelbie audition session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/498708511/7c57b220f59b0d58fa072a1705282236-xxlarge.jpg" alt="Shelbie audition session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Sudhir</p>
+          <p class="testimonial-type">Family Photography, Cypress</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Amazing photographs.. he knows what he is doing and captures those moments beautifully. Highly recommend."</p>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Amber Smith</p>
+          <p class="testimonial-type">Family Photography</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Jag was wonderful! He helped with the poses and was very quick in getting the photos back to us. We loved the different lighting and edits in the photos so they don't all look the same! Thank you Jag!!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/937963611/53b4d95881c59b0bc7ea583bf5a9a198-xxlarge.jpg" alt="Amber Smith family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/937963611/7d2f341069810bfc46665bf704dc2f75-xxlarge.jpg" alt="Amber Smith family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/937963611/f04bb6fd03630d82bf94636d61f70c9d-xxlarge.jpg" alt="Amber Smith family session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/937963611/7648d2908d8c432d7d15d9324d727d4d-xxlarge.jpg" alt="Amber Smith family session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Ayman Resheidat</p>
+          <p class="testimonial-type">Portrait Photography, Houston</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Had a session and I love the pictures. Jag is a nice man, knows his stuff, was there on time, was patient and took his time!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/209477611/0879d4ff2a38db6df728adb90926cb6d-xxlarge.jpg" alt="Ayman Resheidat portrait session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/209477611/abbc249d43a539b432f772a41abd5e03-xxlarge.jpg" alt="Ayman Resheidat portrait session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/209477611/0f8dc8418252f53d84615b5884e8eb14-xxlarge.jpg" alt="Ayman Resheidat portrait session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Anita Kundaje</p>
+          <p class="testimonial-type">Swim Meet Photography, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Jag photographed my daughter's swim meet and I was honestly blown away. Every shot tells a story and captures emotions so beautifully. He caught moments I didn't even know were happening — the focus, the effort, the pure joy on the kids' faces. The photos don't just look great, they feel alive. He has such a natural talent for freezing those moments you'll treasure forever. Absolutely recommend!"</p>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Venkat Reddy</p>
+          <p class="testimonial-type">Kids Ceremony Photography, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"We had a wonderful experience during our kids ceremony. Jagadeesh was punctual, professional, patient, and very supportive throughout the event. He suggested great poses and took the time to capture every moment perfectly. His work was excellent, and the edited photos were delivered within just a few days. He is versatile and has very good skills at multiple types of photography. Highly recommended for anyone looking for quality photography and exceptional service!"</p>
+      <div class="photo-strip three-photos">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/219766511/26a09123383f6045db7332d944410b58-xxlarge.jpg" alt="Venkat Reddy kids ceremony session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/219766511/57ab32fdd272324d8c4e459c5c9f1941-xxlarge.jpg" alt="Venkat Reddy kids ceremony session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Mamatha R</p>
+          <p class="testimonial-type">Family & Cultural Events Photography, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"I've had the pleasure of knowing him as a friend, and I can honestly say his talent behind the camera is incredible. He has a unique ability to capture genuine emotions and turn ordinary moments into beautiful memories. His professionalism, creativity, and attention to detail make every photo special. Not only is he an amazing photographer, but he's also wonderful to work with. I highly recommend him to anyone looking for stunning, high-quality photography."</p>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">James Maxwell</p>
+          <p class="testimonial-type">Soccer Photography, Missouri City</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Pictures came out great and received them shortly after the shoot."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/572589611/df2fcb0bec63edadd3b5b794e153bed9-xxlarge.jpg" alt="James Maxwell soccer session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/572589611/f421a36272cf0f2a4628b698c670bec8-xxlarge.jpg" alt="James Maxwell soccer session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/572589611/297b617f57031ee405ecbb42302da17f-xxlarge.jpg" alt="James Maxwell soccer session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Kam Edwards</p>
+          <p class="testimonial-type">Surprise Proposal, Buffalo Bayou Park</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"They're Amazing!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/785658511/ac3dfa2cd0b764ee0733630a5b6848df-xxlarge.jpg" alt="Kam Edwards proposal session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/785658511/b2b235c748ebe68febe7de46532c47d7-xxlarge.jpg" alt="Kam Edwards proposal session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/785658511/029a3d61052684b941e124e92546da0d-xxlarge.jpg" alt="Kam Edwards proposal session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Shobhit Shah</p>
+          <p class="testimonial-type">Family Photography, Cypress</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Amazing Photography as family had lots of photos taken at many different functions and all were exceptional."</p>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Stavrula Carataidis</p>
+          <p class="testimonial-type">Graduation Party, Spring</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"They were lovely thank you"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/379006511/aa211092a15bc5758114083a50783eb2-xxlarge.jpg" alt="Stavrula Carataidis graduation party session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/379006511/941fcfb44b2f1a2111820428847e4cca-xxlarge.jpg" alt="Stavrula Carataidis graduation party session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/379006511/15bf1647c1856ec68eed156941ec38a4-xxlarge.jpg" alt="Stavrula Carataidis graduation party session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/379006511/f11e7c68ac91cf22850900348b9146a8-xxlarge.jpg" alt="Stavrula Carataidis graduation party session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Mayur Shah</p>
+          <p class="testimonial-type">Family Event Photography, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Jagdish is very professional photographer and always positive. We had our family photos for the couple event and it was awesome. He always pours excellent ideas."</p>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Priyank Chouksey</p>
+          <p class="testimonial-type">Family Photography, Cypress</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"We had an amazing experience working with Jagdeesh from the very beginning, the communication was professional, friendly and responsive. He took time to understand exactly what we were looking for and made the entire process feel comfortable and enjoyable. The quality of pictures exceeded my expectations. Every image was beautifully captured, with great attentions to detail and a natural authentic style. The final gallery was delivered professionally and perfectly organized. What impressed me most was his ability to make everyone feel relaxed in front of the camera while still capturing genuine emotions and candid moments. You can tell he is passionate about craft and genuinely care about clients. I highly recommend him to anyone looking for a talented, reliable, and creative photographer. I will definitely be using his services again in the future."</p>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Damone Johnson</p>
+          <p class="testimonial-type">Kids Graduation Photography, Pearland</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Really good photo quality. Works really well with children. Super nice and professional. Turn around time on receiving finished photos was within a few days. Highly recommend, and we'll use his service again."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/272684711/a1af6dba3fc0dbafb078d5f3d75ff8b9-xxlarge.jpg" alt="Damone Johnson kids graduation session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/272684711/990b3169bdcc43f22eeeeebee0c09970-xxlarge.jpg" alt="Damone Johnson kids graduation session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/272684711/e76f74818a5f9133e19d18fba535f4a3-xxlarge.jpg" alt="Damone Johnson kids graduation session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/272684711/76dea6cf093eaf949a0f9e2b03e0c8f8-xxlarge.jpg" alt="Damone Johnson kids graduation session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Mahesh Kumar</p>
+          <p class="testimonial-type">Family Photography</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"An exceptional photographer with years of experience in capturing life's most beautiful moments. His passion for photography truly reflects in every picture he takes. Each captured moment speaks a million words and becomes a priceless memory to cherish forever. I would never hesitate to seek his help whenever we want to preserve special memories in the most meaningful way!"</p>
+      <div class="photo-strip three-photos">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/419486511/d86daafe5a2228cbdca9e6fe936be9f9-xxlarge.jpg" alt="Mahesh Kumar family session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Danielle Combs</p>
+          <p class="testimonial-type">16th Birthday Photography, Houston</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Joyful & Graceful Moments is amazing! The owner was very professional, incredibly talented, and made the entire process easy from start to finish. We absolutely love my daughter's sweet 16 photos and highly recommend him to anyone"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/096735711/a7bffd1a6ecd2b61c89feaf4a7a3f8bc-xxlarge.jpg" alt="Danielle Combs 16th birthday session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/096735711/f7808e2acaa351c1b5c0b3b27fd1ce32-xxlarge.jpg" alt="Danielle Combs 16th birthday session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/096735711/10ec27475668242fe19267f2db5f2e00-xxlarge.jpg" alt="Danielle Combs 16th birthday session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/096735711/e3c104b96a5a7d33da1c11cbe4d35e69-xxlarge.jpg" alt="Danielle Combs 16th birthday session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Maudie Byrd</p>
+          <p class="testimonial-type">Birthday Party Photography, Galveston</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Pictures took place at my home for very special birthday party. Photographer was nice, professional and did a wonderful job catching the party spirit. I would highly recommend for any important event."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/114307711/88d20c3430f25f099d713053aa23cf0f-xxlarge.jpg" alt="Maudie Byrd birthday party session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/114307711/2f42d6816e6b931ed4ded2179a58dd91-xxlarge.jpg" alt="Maudie Byrd birthday party session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/114307711/4fe240356977a4cdabb98a6cab668f48-xxlarge.jpg" alt="Maudie Byrd birthday party session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/114307711/df1f0db1d10a92f40494b02d0666d65a-xxlarge.jpg" alt="Maudie Byrd birthday party session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Sailaja Lanka</p>
+          <p class="testimonial-type">Event & Portrait Photography, Cypress</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"We had an absolutely wonderful experience with Jag for multiple events. He is very patient and has a remarkable talent in capturing genuine emotions and beautiful moments that tell a story. Jag's attention to detail sets him apart resulting in natural and stunning photographs!! We are so grateful for the memories he captured and would highly recommend him to anyone looking for an exceptional photographer! Can't wait for our next event to be captured!!"</p>
+      <div class="photo-strip">
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Drupath Reddy</p>
+          <p class="testimonial-type">Engagement Photography, Houston</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Photos were delivered very quickly and Jag was professional and captured all moments perfectly. We are happy with the experience."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/557289711/034a67bbb235efdb198459a50058fd68-xxlarge.jpg" alt="Drupath Reddy engagement session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/557289711/71653bf9be44183dd2a8304b08202a84-xxlarge.jpg" alt="Drupath Reddy engagement session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/557289711/730593ae97d203b23fdce2c2806cd7a3-xxlarge.jpg" alt="Drupath Reddy engagement session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Pamela Dean</p>
+          <p class="testimonial-type">Family Portraits, Conroe</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"I found Jag with Joyful & Graceful Moments very professional, flexible, and an excellent photographer. We had 17 in our photos, 11 of which are kids. We have pictures that are pretty, everyone's eyes are open and most of us looking at the camera (even the 18 month old). I do not hesitate to recommend you use him for photos!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/609802811/0410908e318a343d60d269a0f26a28cb-xxlarge.jpg" alt="Pamela Dean family portraits session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/609802811/b6226bf18a7c967aaf91b66fbea43d35-xxlarge.jpg" alt="Pamela Dean family portraits session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/609802811/1e01a00d857541a5f6c49695e8718534-xxlarge.jpg" alt="Pamela Dean family portraits session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/609802811/10ad0d032f0ef839d53ccca3908e052f-xxlarge.jpg" alt="Pamela Dean family portraits session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Damien Tubbs</p>
+          <p class="testimonial-type">Family Gathering Photography, Houston</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Was very great to work with and would recommend to anyone! Very timely, saw the vision, and followed through with great pictures."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/135614811/a0095b50705b353f951e25b24d9f94f4-xxlarge.jpg" alt="Damien Tubbs family gathering session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/135614811/c6b2069890c908eb7fe3ecbde03ac8e1-xxlarge.jpg" alt="Damien Tubbs family gathering session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/135614811/26d5315588124769e422f5551b2c0b9b-xxlarge.jpg" alt="Damien Tubbs family gathering session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/135614811/c241cb4e4fc9f803465f0069dc4f79a6-xxlarge.jpg" alt="Damien Tubbs family gathering session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/135614811/3c3859f5ff467cdfd5f876b7c5ac7d5b-xxlarge.jpg" alt="Damien Tubbs family gathering session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Ivone Bruno</p>
+          <p class="testimonial-type">Baby Christening Photography, Pearland</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Excellent service, respectful, punctual and beautifully captured very special moments of my granddaughter's Christening. Provided the photos very fast. I will strongly recommend him."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/077020911/109ccdab98659f33d402ea5b87d8a323-xxlarge.jpg" alt="Ivone Bruno christening session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/077020911/06da133ef2f2e95dabfd6a78239cd74c-xxlarge.jpg" alt="Ivone Bruno christening session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/077020911/cd667a7cc216b1ef5aa4e574938f7068-xxlarge.jpg" alt="Ivone Bruno christening session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/077020911/1234a2d5f09c82dcb6fe65551ac95173-xxlarge.jpg" alt="Ivone Bruno christening session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Extra Time Soccer Training</p>
+          <p class="testimonial-type">Soccer Photography, Missouri City</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"They came out great thank you!!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/572589611/fc3530e6ff35f49775805457990928b3-xxlarge.jpg" alt="Extra Time Soccer Training session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/572589611/39191cd8e6c4f2de69545be890eff4e1-xxlarge.jpg" alt="Extra Time Soccer Training session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/572589611/7c1d1350a77be189cab192aa9609c031-xxlarge.jpg" alt="Extra Time Soccer Training session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/572589611/57bb5e6a63c01813a1e4ea08630907c9-xxlarge.jpg" alt="Extra Time Soccer Training session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Mike Alvarado</p>
+          <p class="testimonial-type">Birthday Events & Family Portraits, Humble</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"JG Moments was a incredible! We needed photographs for a Bday party. Great communication and, I cannot stress enough- Jag was extremely friendly and accommodating. The photo's came out excellent and the turnaround was perfect. Thank you!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/943326021/6SSWHCIgxZ_t1786932769-511065904c8d40e9b1bb75723fd864c5.jpg" alt="Mike Alvarado birthday party session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/943326021/booqaNCZn4_t1786923602-26322675590bc871400382379a550af7.jpg" alt="Mike Alvarado birthday party session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/943326021/74f0922ed06e71e12a93346de32ef4fe-xxlarge.jpg" alt="Mike Alvarado birthday party session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/943326021/nDD0l6pqfP_t1786923791-391f876fe3a76e4be1b04f40ea056f67.jpg" alt="Mike Alvarado birthday party session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/943326021/b6d3a766dc921ebbb7912b59a41879df-xxlarge.jpg" alt="Mike Alvarado birthday party session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Sunil Chitty</p>
+          <p class="testimonial-type">Family Portraits, Chicago</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Jagadeesh is an awesome photographer who captures beautiful memories with a genuine smile and a lot of passion. His keen eye for photography allows him to capture moments beautifully and naturally. What really stands out is his dedication to perfection. He puts a lot of thought into capturing each moment and spends considerable time editing the photos based on the environment, lighting, and individual personalities to bring out the best in every picture. Beyond his photography skills, Jagadeesh is also a very humble, friendly, and wonderful person to interact with. His passion, patience, and attention to detail truly make him an exceptional photographer. Highly recommended!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/945377021/45002428da785550237bc4e9a1900f7e-xxlarge.jpg" alt="Sunil Chitty family portrait session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/945377021/21ed104301a36862c5ea0831fc9f9b97-xxlarge.jpg" alt="Sunil Chitty family portrait session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/945377021/8cc3b939c1dd4899055e8db67743ff69-xxlarge.jpg" alt="Sunil Chitty family portrait session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/945377021/5a0d07d83f1b67dc521375acdb594b26-xxlarge.jpg" alt="Sunil Chitty family portrait session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Shilpa</p>
+          <p class="testimonial-type">Family Portraits, Cypress</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Jagadish is such a talented photographer! I've been a guest at several house events where he was shooting, and he has an amazing ability to blend right in and capture genuine, candid moments. He makes everyone feel completely at ease around the camera. The photos he delivers are always stunning."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/009499021/57ff3c6ee898fbbfd0219774d552c77d-xxlarge.jpg" alt="Shilpa family event session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">R Nair</p>
+          <p class="testimonial-type">Portrait Photography, Cypress</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Great photography!"</p>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Tracy Acosta</p>
+          <p class="testimonial-type">Headshots & Sports Team Photos, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"We used Joyful and Graceful moments for staff headshots and sports team photos. Our photo shoot with our staff was fantastic. The photographer was incredibly patient with all of my coaches and took extra time to find just the right angle to compliment each subject. The shots turned out amazing and look amazing our team website. Will definitely continue to use for future projects."</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/517860911/17c79e3142e58487cb8d8cc4bf374831-xxlarge.jpg" alt="Tracy Acosta headshots session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/517860911/329b88087b217da6c485a9b853dd8a2c-xxlarge.jpg" alt="Tracy Acosta headshots session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/517860911/c0a403a574c4f21b60f9bdde6a891efc-xxlarge.jpg" alt="Tracy Acosta headshots session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/517860911/28d2c91729d95667cc01fe1ca33075dc-xxlarge.jpg" alt="Tracy Acosta headshots session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Nirosha Reddy</p>
+          <p class="testimonial-type">Traditional Events & Portraits, Cypress</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Beautiful photos! 📸✨ The pictures came out so nicely, with great quality and attention to detail. Every moment was captured perfectly. Absolutely loved them! Highly recommend! 😊"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/660704121/d1d956cc2bf0569b9d11a11d07f0a97d-xxlarge.jpg" alt="Nirosha Reddy traditional events session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up delay-1">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Rohan</p>
+          <p class="testimonial-type">Portrait Photography, Tomball</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"JG is an amazing photographer. He has taken pictures of me and my family on multiple occasions. He takes some of the best photos i have ever taken and is very patient and kind. He really wants the pictures to come out well and makes suggestions on how to pose to get the get angles. Thank you for all the great pictures. Truly one of a kind!!!"</p>
+    </div>
+    <div class="testimonial-card fade-up delay-2">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Charlene Jones</p>
+          <p class="testimonial-type">Wedding Photography, Houston</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Enjoyed our session. Loved our photos! Professional and quality work. Thanks Jag!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/715323121/1dea91efc0e0d65a0490250a4b8c0d17-xxlarge.jpg" alt="Charlene Jones wedding session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/715323121/2364d30f25a59a2745890f5eeefb6260-xxlarge.jpg" alt="Charlene Jones wedding session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/715323121/3b9d87e4b2f5511f6b2d9ac49528a9a7-xxlarge.jpg" alt="Charlene Jones wedding session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/715323121/6397116ad5645d80ffc190a4b2016f1a-xxlarge.jpg" alt="Charlene Jones wedding session"/></div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-header">
+        <div>
+          <p class="testimonial-author">Aaron Ludwig</p>
+          <p class="testimonial-type">Wedding Photography, Missouri City</p>
+        </div>
+      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <p class="testimonial-quote">"Jennifer and I absolutely LOVE all of the photos! You and your work exceeded our expectations in every way. It was such a pleasure working with you. You perfectly captured every moment we were looking for and more. You're professional, thorough, and truly have an eye for photography. We can't tell you how much we appreciate it!"</p>
+      <div class="photo-strip">
+        <div class="photo-thumb"><img src="https://images.pixieset.com/792052121/kdSHSIJKT9_t1787791720-074f20ca975f30e6db2f46f438e4785a.jpg" alt="Aaron Ludwig wedding session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/792052121/31779c6827e76cdc96bd2a166c5c29c7-xxlarge.jpg" alt="Aaron Ludwig wedding session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/792052121/93JstcTFqg_t1787791779-2cef75f7ab810dde283b587ab8604eea.jpg" alt="Aaron Ludwig wedding session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/792052121/968343a5bf0bff883a1da5f9519c0efe-xxlarge.jpg" alt="Aaron Ludwig wedding session"/></div>
+        <div class="photo-thumb"><img src="https://images.pixieset.com/792052121/50a01324dfd1dde90bd62e39218487a3-xxlarge.jpg" alt="Aaron Ludwig wedding session"/></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gradient-band"></div>
+
+<!-- LEAVE YOUR REVIEW ON GOOGLE -->
+<section class="section" style="padding-top:6rem;">
+  <div style="max-width:720px;margin:0 auto;text-align:center;">
+    <div class="section-eyebrow">Share Your Story</div>
+    <h2 class="section-title">Leave Your <em>Feedback</em></h2>
+    <p class="section-desc" style="margin-bottom:2rem;">Had a session with JG Moments? We'd love to hear about your experience! Please leave a review on Google — your feedback means the world and helps other families discover us.</p>
+
+    <div style="background:rgba(255,107,0,0.05);padding:2.5rem;border-radius:12px;border:2px solid rgba(255,107,0,0.2);margin-bottom:2rem;">
+      <div style="font-size:1.1rem;color:var(--text);margin-bottom:1.5rem;font-weight:600;">⭐ Share Your 5-Star Review on Google</div>
+      <p style="color:var(--text-muted);margin-bottom:2rem;font-size:0.95rem;">Your Google review helps build our reputation and guides other families looking for quality photography services.</p>
+      <a href="https://tinyurl.com/ky5bcehu" target="_blank" class="btn btn-saffron" style="display:inline-block;padding:1rem 2.5rem;font-size:0.95rem;">
+        Leave a Google Review →
+      </a>
+    </div>
+
+    <p style="color:var(--text-muted);font-size:0.9rem;">Thank you for taking the time to share your experience! 🙏</p>
+  </div>
+</section>
+
+<section class="cta-band" style="padding:5rem 6%;">
+  <h2 class="cta-title" style="font-size:clamp(2rem,4vw,3.5rem);">Ready to create your own<br><em style="color:var(--saffron);">joyful moment?</em></h2>
+  <div class="cta-btns"><a href="contact.html" class="btn btn-saffron">Get in touch</a><a href="portfolio.html" class="btn btn-gold">View Portfolio</a></div>
+</section>
+
+<footer class="footer">
+  <div class="gradient-band" style="margin-bottom:4rem;margin-left:-6%;margin-right:-6%;"></div>
+  <div class="footer-grid">
+    <div><a href="index.html" class="footer-logo"><img src="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f" alt="JG Moments"/></a><p class="footer-tagline">"Joyful &amp; Graceful Moments"</p><p class="footer-bio">Every moment tells a story. Let's make yours unforgettable.</p><div class="footer-socials" style="display:flex; gap:0.75rem; margin-top:1rem;"><a href="https://www.facebook.com/profile.php?id=61589169345858" target="_blank" aria-label="Facebook">📘</a><a href="https://www.instagram.com/jg_moments/" target="_blank" aria-label="Instagram">📷</a><a href="https://jg-moments.com" aria-label="Portfolio">🌐</a><a href="mailto:contact@jg-moments.com" aria-label="Email">✉</a></div></div>    <div>
+      <p class="footer-heading">Featured Albums</p>
+      <ul class="footer-links">
+        <li><a href="portraits.html">Children & Teens</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="portraits-families.html">Portraits & Families</a></li>
+        <li><a href="celebrations.html">Celebrations</a></li>
+        <li><a href="travel-nature.html">Travel &amp; Nature</a></li>
+        <li style="margin-top:0.5rem;"><a href="portfolio.html" style="color:var(--saffron);font-weight:500;">View All Albums →</a></li>
+      </ul>
+    </div>
+    <div><p class="footer-heading">Navigate</p><ul class="footer-links"><li><a href="index.html">Home</a></li><li class="nav-dropdown"><a href="portfolio.html">Portfolio ▼</a><div class="dropdown-menu"><a href="portfolio-children-teens.html">Children & Teens</a><a href="portfolio-individual-portraits.html">Individual Portraits</a><a href="portfolio-family.html">Family Portraits</a><a href="portfolio-weddings.html">Weddings & Engagements</a><a href="portfolio-couples.html">Proposals <a href="portfolio-couples.html">Proposals <a href="portfolio-couples.html">Proposals <a href="portfolio-couples.html">Engagement & Couple Shoots</a> Couple Shoots</a> Couple Shoots</a> Couple Shoots</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-cultural.html">Indian Cultural Events</a><a href="portfolio-holidays.html">Celebrations & Events</a><a href="portfolio-sports.html">Sports Photography</a><a href="portfolio-awards.html">Award Ceremonies</a><a href="portfolio-corporate.html">Corporate Events</a></div></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><p class="footer-heading">Reviews</p><ul class="footer-links"><li><a href="https://tinyurl.com/ky5bcehu" target="_blank">Google Reviews ⭐</a></li><li><a href="https://www.thumbtack.com/tx/cypress/event-photographers/joyful-graceful-moments/service/579542813940228099" target="_blank">Thumbtack</a></li></ul></div>
+    <div><p class="footer-heading">Contact</p><div class="footer-contact-line"><span class="icon">✉</span><a href="mailto:contact@jg-moments.com" style="color:var(--text-muted);">contact@jg-moments.com</a></div><div class="footer-contact-line"><span class="icon">📍</span><span>Houston, Texas</span></div></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 JG Moments Photography · Houston, TX</p></div>
+</footer>
+<script src="main.js?v=5"></script>
+</body>
+</html>

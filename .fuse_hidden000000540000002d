@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0; url=portfolio-children-teens.html">
+  <link rel="canonical" href="https://jg-moments.com/portfolio-children-teens.html"/>
+</head>
+<body>
+  <p>Redirecting to Children & Teens Photography...</p>
+  <script>
+    window.location.href = 'portfolio-children-teens.html';
+  </script>
+</body>
+</html>
