@@ -155,6 +155,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (max-width: 800px) {
   .nav-book { display: none; }
 }
+.mobile-nav { max-height: 70vh; overflow-y: auto; }
 .hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; cursor: pointer; flex-shrink: 0; position: absolute; right: 3%; top: 50%; transform: translateY(-50%); }
 @media (max-width: 800px) {
   .hamburger { display: flex; position: static; right: auto; top: auto; transform: none; }
@@ -173,7 +174,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* Mobile Dropdown Menu */
 .mobile-nav .nav-dropdown { position: relative; }
-.mobile-nav .dropdown-menu { position: static; display: none; flex-direction: column; background: rgba(8,4,4,0.5); border: none; min-width: auto; backdrop-filter: none; padding-left: 1.5rem; }
+.mobile-nav .dropdown-menu { position: static; display: none; flex-direction: column; background: rgba(8,4,4,0.5); border: none; min-width: auto; backdrop-filter: none; padding-left: 1.5rem; max-height: 50vh; overflow-y: auto; }
 .mobile-nav .nav-dropdown.active .dropdown-menu { display: flex; }
 .mobile-nav .dropdown-menu a { padding: 0.8rem 0; font-size: 1rem; border-bottom: 1px solid rgba(212,160,23,0.1); }
 
