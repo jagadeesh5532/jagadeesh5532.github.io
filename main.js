@@ -74,6 +74,22 @@ if (isMobile()) {
 });
 });
 
+
+// NESTED SUBMENU (right flyout on desktop, inline expand on touch)
+document.querySelectorAll('.dropdown-menu .has-sub > .sub-label').forEach(label => {
+  const parent = label.parentElement;
+  const toggle = (e) => {
+    if (window.innerWidth <= 800) {
+      e.preventDefault(); e.stopPropagation();
+      const open = parent.classList.contains('sub-open');
+      document.querySelectorAll('.dropdown-menu .has-sub').forEach(p => p.classList.remove('sub-open'));
+      if (!open) parent.classList.add('sub-open');
+    }
+  };
+  label.addEventListener('click', toggle);
+  label.addEventListener('touchstart', toggle, { passive: false });
+});
+
 document.addEventListener('click', (e) => {
 if (!e.target.closest('.nav-dropdown')) {
 navDropdowns.forEach(d => d.classList.remove('active'));
