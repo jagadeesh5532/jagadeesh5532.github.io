@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weddings, Engagements & Couple Shoots | JG Moments</title>
+  <title>Weddings, Engagements &amp; Couple Shoots | JG Moments</title>
   <link rel="canonical" href="https://jg-moments.com/portfolio-weddings.html"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -96,182 +96,84 @@
         padding: 1.5rem 6%;
       }
     }
+
+    .hub-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem 2rem;
+      padding: 3.5rem 6% 1rem 6%;
+      background-color: var(--bg);
+    }
+    .hub-card { display: block; color: inherit; }
+    .hub-card-img {
+      width: 100%; aspect-ratio: 3 / 2; object-fit: cover;
+      border-radius: 6px; display: block;
+      transition: transform .5s ease, filter .35s ease;
+    }
+    .hub-card:hover .hub-card-img { transform: scale(1.02); filter: brightness(1.08); }
+    .hub-card h2 {
+      font-family: var(--font-display); font-size: 1.55rem; font-weight: 400;
+      color: var(--text); margin: 1rem 0 .5rem 0; line-height: 1.2;
+    }
+    .hub-card p {
+      font-family: var(--font-body); font-weight: 300; font-size: .9rem;
+      line-height: 1.75; color: #D5C3AD; margin: 0 0 .6rem 0;
+    }
+    .hub-more {
+      font-size: .78rem; font-weight: 500; letter-spacing: .06em;
+      color: var(--saffron); display: inline-block;
+      transition: color var(--transition), transform var(--transition);
+    }
+    .hub-card:hover .hub-more { color: var(--gold-light); transform: translateX(3px); }
+    .hub-intro { padding: 3rem 6% 0 6%; background-color: var(--bg); }
+    .hub-intro h1 {
+      font-family: var(--font-display); font-size: clamp(2.2rem,5vw,3.4rem);
+      font-weight: 300; color: var(--text); line-height: 1.1; margin-bottom: .8rem;
+    }
+    .hub-intro h1 em { font-style: italic; color: var(--gold-light); }
+    .hub-intro p {
+      font-size: .98rem; color: var(--text-muted); max-width: 620px; line-height: 1.85;
+    }
+    @media (max-width: 1024px) { .hub-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 680px) {
+      .hub-grid { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 6% 1rem 6%; }
+      .hub-card h2 { font-size: 1.35rem; }
+    }
   </style>
 </head>
 <body>
 <nav class="navbar" id="navbar"><a href="index.html" class="nav-logo"><img src="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f" alt="JG Moments"/></a>
-  <ul class="nav-links"><li><a href="index.html">Home</a></li><li class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><a href="portfolio-weddings.html">Weddings, Engagements & Couple Shoots</a><a href="portfolio-celebrations-events.html">Celebrations & Events</a><a href="portfolio-children-teens.html">Children & Teens</a><a href="portfolio-sports.html">Sports Photography</a><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><a href="portfolio-individual-portraits.html">Individual Portraits</a><a href="portfolio-family.html">Family Portraits</a><a href="portfolio-cultural.html">Cultural & Religious Events</a></div></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="nav-book">Get in touch</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></nav><div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><div class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><a href="portfolio-weddings.html">Weddings, Engagements & Couple Shoots</a><a href="portfolio-celebrations-events.html">Celebrations & Events</a><a href="portfolio-children-teens.html">Children & Teens</a><a href="portfolio-sports.html">Sports Photography</a><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><a href="portfolio-individual-portraits.html">Individual Portraits</a><a href="portfolio-family.html">Family Portraits</a><a href="portfolio-cultural.html">Cultural & Religious Events</a></div></div><a href="testimonials.html">Testimonials</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><!-- AARON WEDDING CEREMONY - SECTION 1 -->
-<section style="padding: 4rem 6% 3rem 6%; background-color: var(--bg);">
-  <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--text); margin-bottom: 0.5rem; margin-top: 1rem;">Aaron Wedding Ceremony</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">A beautiful celebration of love and tradition</p>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/kdSHSIJKT9_t1787791720-074f20ca975f30e6db2f46f438e4785a.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/ca155adec95f072cff4578a6392eb14f-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/fc53e0f87623718b78ba6b868680c21f-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/e1d21ebe651beb18582209c5c8ba4c6c-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/989432cf4907d0e0ee280a31c02343d9-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/6f05ccf61257b64ac0f56f52972bb1c7-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/6c3e25d16dd65e8d6ecf5112b2e06569-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/c7355c967369f1e678ceacbec6446ef5-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/4c5f7987854c5b37473764f677ca3bdd-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/968343a5bf0bff883a1da5f9519c0efe-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/31779c6827e76cdc96bd2a166c5c29c7-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/8ba2aae96acbe385f923098003065d71-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/0d68c2265423dde9142911efc36601e2-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/792052121/1e61ecd9fe14a749f4bea1cf557cb1ee-xxlarge.jpg" alt="Aaron Wedding Ceremony" loading="lazy"/></div>
-  </div>
-</section>
-
-<!-- HAMDI NIKKAH CEREMONY -->
-<section style="padding: 3rem 6%; background-color: var(--bg);">
-  <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--text); margin-bottom: 0.5rem;">Hamdi Nikkah Ceremony</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">A beautiful celebration of love and tradition</p>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.pixieset.com/334693511/a71e1eac27e41f7cdc0923c928c6afa9-xxlarge.jpg" alt="Hamdi Nikkah Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/334693511/bd8b2adb317a0e562aa3ff116a576d66-xxlarge.jpg" alt="Hamdi Nikkah Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/334693511/e3e6113303a1b6fd0682c1decaf205cf-xxlarge.jpg" alt="Hamdi Nikkah Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/334693511/e864907cdc109957d2bfe22ce108c7f3-xxlarge.jpg" alt="Hamdi Nikkah Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/334693511/a8efd803cfd82d87b33fa825ba6c0a3a-xxlarge.jpg" alt="Hamdi Nikkah Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/334693511/bc98515c2877937451fdb389ab11e695-xxlarge.jpg" alt="Hamdi Nikkah Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/334693511/af8c91aa3cf7ce2c2dc4a48ba73aa769-xxlarge.jpg" alt="Hamdi Nikkah Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/334693511/48020eb9a9ae9d17b69822b2a1a662ae-xxlarge.jpg" alt="Hamdi Nikkah Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/334693511/7958f297c1c252e6c58774c5551dee19-xxlarge.jpg" alt="Hamdi Nikkah Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/334693511/36638b811be6414d3c2f3bdaf74a9647-xxlarge.jpg" alt="Hamdi Nikkah Ceremony" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/334693511/e891a9d4f941994823eb245c6ec5d858-xxlarge.jpg" alt="Hamdi Nikkah Ceremony" loading="lazy"/></div>
-  </div>
-</section>
-
-<!-- DOMINIQUE WEDDING SHOOT -->
-<section style="padding: 3rem 6%; background-color: var(--bg-2);">
-  <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--text); margin-bottom: 0.5rem;">Dominique Wedding Shoot</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">An elegant wedding celebration captured in every moment</p>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.pixieset.com/313429611/acf2144ed655efb996404dc3d4a289b9-xxlarge.jpg" alt="Dominique Wedding Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/313429611/55ac33e29ffbb947f4be0ca5235d538e-xxlarge.png" alt="Dominique Wedding Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/313429611/ae856e80166afc1b831bed210a3218ed-xxlarge.jpg" alt="Dominique Wedding Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/313429611/eb1a4651b91f5fefda91204601c4d338-xxlarge.png" alt="Dominique Wedding Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/313429611/0660d2aa05eaae60d637b4dd7c42dcfe-xxlarge.jpg" alt="Dominique Wedding Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/313429611/8a9d652a1bb8940ae8e5049ac8d25839-xxlarge.png" alt="Dominique Wedding Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/313429611/3ac708b8f314a672f65ed5487c693851-xxlarge.jpg" alt="Dominique Wedding Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/313429611/b8944fffdd684323a7e664bc12bd0749-xxlarge.jpg" alt="Dominique Wedding Shoot" loading="lazy"/></div>
-  </div>
-</section>
-
-<!-- CHARLENE WEDDING -->
-<section style="padding: 3rem 6%; background-color: var(--bg);">
-  <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--text); margin-bottom: 0.5rem;">Charlene Wedding</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">A radiant celebration of love and joy</p>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.pixieset.com/715323121/1dea91efc0e0d65a0490250a4b8c0d17-xxlarge.jpg" alt="Charlene Wedding" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/715323121/66bc8819cc2d3a13b16ef09ed98ca9a6-xxlarge.jpg" alt="Charlene Wedding" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/715323121/b69460b9b92f2b72bc538c137c7d968b-xxlarge.jpg" alt="Charlene Wedding" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/715323121/2708fb0da1648ae8802cef2f4b0d7766-xxlarge.jpg" alt="Charlene Wedding" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/715323121/f68b16d5ff478cdc32767f475d059623-xxlarge.jpg" alt="Charlene Wedding" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/715323121/95ed7c7cbd8b634754415220f9b1e982-xxlarge.jpg" alt="Charlene Wedding" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/715323121/13880b20eb892994059bcba90d3453cb-xxlarge.jpg" alt="Charlene Wedding" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/715323121/9ec4a2bff49ae199aacd36afe5ba7991-xxlarge.jpg" alt="Charlene Wedding" loading="lazy"/></div>
-  </div>
-</section>
-<!-- DRUPATH - GEETHA ENGAGEMENT -->
-<section style="padding: 3rem 6%; background-color: var(--bg-2);">
-  <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--text); margin-bottom: 0.5rem;">Drupath - Geetha Engagement</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">A beautiful engagement celebration</p>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.pixieset.com/557289711/7a248cb430569c39847e7639fc3e446f-xxlarge.jpg" alt="Drupath Geetha Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/557289711/b85ce8a6259765abc8b6a41ece9fca38-xxlarge.jpg" alt="Drupath Geetha Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/557289711/c3215a9bc95ead05d7ddc6f2b312702c-xxlarge.jpg" alt="Drupath Geetha Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/557289711/38fab4cb9cb88aff5a22018297d29abb-xxlarge.jpg" alt="Drupath Geetha Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/557289711/24b4e7acf5ecd72d9087c4958f445360-xxlarge.jpg" alt="Drupath Geetha Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/557289711/dee895013f5c86814170bdad3e83627d-xxlarge.jpg" alt="Drupath Geetha Engagement" loading="lazy"/></div>
-  </div>
-</section>
-
-<!-- NEELIMA - SUNIL COUPLE SHOOT -->
-<section style="padding: 3rem 6%; background-color: var(--bg);">
-  <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--text); margin-bottom: 0.5rem;">Neelima - Sunil Couple Shoot</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">An intimate couple photography session</p>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.pixieset.com/945377021/d64c1a9490379c16cf7fe3b64a613777-xxlarge.jpg" alt="Neelima Sunil Couple Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/945377021/8cc3b939c1dd4899055e8db67743ff69-xxlarge.jpg" alt="Neelima Sunil Couple Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/945377021/7949465f9665cc29700b6ae1f9590612-xxlarge.jpg" alt="Neelima Sunil Couple Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/945377021/21ed104301a36862c5ea0831fc9f9b97-xxlarge.jpg" alt="Neelima Sunil Couple Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/995091711/038fe9f2d05b1d608953d50dc63a73c6-xxlarge.jpg" alt="Neelima Sunil Couple Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/995091711/d4702af7f6a76a56f550daa2ca778234-xxlarge.jpg" alt="Neelima Sunil Couple Shoot" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/995091711/a2262c77cd224337c1809ef8fe748c13-xxlarge.jpg" alt="Neelima Sunil Couple Shoot" loading="lazy"/></div>
-  </div>
-</section>
-
-<!-- JESSICA ENGAGEMENT -->
-<section style="padding: 3rem 6%; background-color: var(--bg);">
-  <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--text); margin-bottom: 0.5rem;">Jessica Engagement</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">A beautiful engagement celebration</p>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.pixieset.com/574949611/8b314e896d6d738c38017a29b862d707-xxlarge.jpg" alt="Jessica Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/574949611/c20eb0d0137377f9efee3095340e5590-xxlarge.jpg" alt="Jessica Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/574949611/c5afb4b7b9350ae32cdb3b9b1a435cdf-xxlarge.jpg" alt="Jessica Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/574949611/a119842726a6f672fdce0e66737a6769-xxlarge.jpg" alt="Jessica Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/574949611/d752463b9a0aa8e20731bd2f5617f9ff-xxlarge.jpg" alt="Jessica Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/574949611/0cbd739e07359454a34e84d612e368ff-xxlarge.jpg" alt="Jessica Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/574949611/9c7988e8c7caf03c209f88ef84605a23-xxlarge.jpg" alt="Jessica Engagement" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/574949611/9cd8d10b9a2556c929eab36dcd3311aa-xxlarge.jpg" alt="Jessica Engagement" loading="lazy"/></div>
-  </div>
-</section>
-
-<!-- MICHAEL & MELANIE PROPOSAL -->
-<section style="padding: 3rem 6%; background-color: var(--bg-2);">
-  <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--text); margin-bottom: 0.5rem;">Michael & Melanie Proposal</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">A magical moment captured forever</p>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/2081124709371892ea455943511ff385-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/7efae2197fee4d00985fa1403a452830-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/34286236c20e8819779971f1022907ca-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/40924d89fce3d0627fbafc884a5b4c12-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/de19113e0d2642fa9ed080628e825be1-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/74cbab5a9af46203d0cf2bade9d5aeb1-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/ec5bedf0ff43b4778c5036f70b03ff33-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/2f3fa9cf7efe6d52f972ad147289b90e-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/d4bbe31489889e8daa4baf306cefcddf-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/0cf2578967bbcf68fc3cac10aadf139e-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/62b6ffb34a26684bac15dc87196e1507-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/a7dda098a4ae9e05529f81c33185c5a6-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/de3d37769fd9fdac1e3fb6935c270854-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-  </div>
-</section>
-
-<!-- FERNANDO PROPOSAL -->
-<section style="padding: 3rem 6%; background-color: var(--bg);">
-  <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--text); margin-bottom: 0.5rem;">Fernando Proposal</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">A romantic proposal moment captured</p>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/547edbb86889f09d3ebb5a25ad7aaa38-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/330866299a75785dc4428c1da4e0a3e0-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/10debbef08f2c5ef52104f68ec4f9b3d-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/266a8632393c11a8e741f343e7ec65e8-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/8f0a875bf3700645994655b1afbd3b0f-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/44482ccc9dac79ead6f3c1e255260189-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
-  </div>
-</section>
-
-<!-- KAM & AMBER PROPOSAL -->
-<section style="padding: 3rem 6%; background-color: var(--bg-2);">
-  <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--text); margin-bottom: 0.5rem;">Kam & Amber Proposal</h2>
-  <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">A beautiful marriage proposal moment</p>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/e63145fa3f798f79dad652fa139c63d7-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/ac3dfa2cd0b764ee0733630a5b6848df-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/126cdf4382c59eeea53ddf487fe7dc33-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/7f3b056c8726075c9824e7bc155e3972-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/029a3d61052684b941e124e92546da0d-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/b2b235c748ebe68febe7de46532c47d7-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/890a7fdf8d69bf58453c6ef9a1b3e4bc-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/c729bafecf7725f870189e7d87230887-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/1d4a980acea8ddcec6bb51d3709e7b7b-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/bff6e49e851882ed15409fd2e018c24b-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/29956261e8985adecd089d8367afe086-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/94afe0ff2306a45428f65949e63068d2-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/e18d3b025f942332a6254371d878ccdf-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-  </div>
-</section>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><span class="dropdown-group">Weddings, Engagements &amp; Couple Shoots</span><a class="dropdown-sub" href="portfolio-weddings-ceremonies.html">Weddings</a><a class="dropdown-sub" href="portfolio-engagements.html">Engagements</a><a class="dropdown-sub" href="portfolio-couple-shoots.html">Couple Shoots</a><a class="dropdown-sub" href="portfolio-proposals.html">Proposals</a><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><a href="portfolio-children-teens.html">Children &amp; Teens</a><a href="portfolio-sports.html">Sports Photography</a><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><a href="portfolio-individual-portraits.html">Individual Portraits</a><a href="portfolio-family.html">Family Portraits</a><a href="portfolio-cultural.html">Cultural &amp; Religious Events</a></div></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="nav-book">Get in touch</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></nav><div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><div class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><span class="dropdown-group">Weddings, Engagements &amp; Couple Shoots</span><a class="dropdown-sub" href="portfolio-weddings-ceremonies.html">Weddings</a><a class="dropdown-sub" href="portfolio-engagements.html">Engagements</a><a class="dropdown-sub" href="portfolio-couple-shoots.html">Couple Shoots</a><a class="dropdown-sub" href="portfolio-proposals.html">Proposals</a><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><a href="portfolio-children-teens.html">Children &amp; Teens</a><a href="portfolio-sports.html">Sports Photography</a><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><a href="portfolio-individual-portraits.html">Individual Portraits</a><a href="portfolio-family.html">Family Portraits</a><a href="portfolio-cultural.html">Cultural &amp; Religious Events</a></div></div><a href="testimonials.html">Testimonials</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="hub-intro">
+  <div class="section-eyebrow">Portfolio</div>
+  <h1>Weddings, Engagements &amp; <em>Couple Shoots</em></h1>
+  <p>Four collections covering the whole arc &mdash; the proposal, the engagement session, portraits together, and the wedding day itself.</p>
+</div>
+<div class="hub-grid">
+  <a class="hub-card" href="portfolio-weddings-ceremonies.html">
+    <img class="hub-card-img" src="https://images.pixieset.com/792052121/ca155adec95f072cff4578a6392eb14f-xxlarge.jpg" alt="Weddings photography by JG Moments" loading="lazy"/>
+    <h2>Weddings</h2>
+    <p>Full wedding day coverage, from the ceremony through the celebration. Includes traditional and multicultural ceremonies, photographed so the day is told as it unfolded.</p>
+    <span class="hub-more">See More &rarr;</span>
+  </a>
+  <a class="hub-card" href="portfolio-engagements.html">
+    <img class="hub-card-img" src="https://images.pixieset.com/557289711/7a248cb430569c39847e7639fc3e446f-xxlarge.jpg" alt="Engagements photography by JG Moments" loading="lazy"/>
+    <h2>Engagements</h2>
+    <p>Engagement sessions photographed on location, relaxed and unhurried, with time to move between setups and settle in front of the camera.</p>
+    <span class="hub-more">See More &rarr;</span>
+  </a>
+  <a class="hub-card" href="portfolio-couple-shoots.html">
+    <img class="hub-card-img" src="https://images.pixieset.com/945377021/d64c1a9490379c16cf7fe3b64a613777-xxlarge.jpg" alt="Couple Shoots photography by JG Moments" loading="lazy"/>
+    <h2>Couple Shoots</h2>
+    <p>Portrait sessions for couples, shot outdoors and into the evening. Natural direction throughout, so the frames feel like the two of you.</p>
+    <span class="hub-more">See More &rarr;</span>
+  </a>
+  <a class="hub-card" href="portfolio-proposals.html">
+    <img class="hub-card-img" src="https://images.pixieset.com/721365511/2081124709371892ea455943511ff385-xxlarge.jpg" alt="Proposals photography by JG Moments" loading="lazy"/>
+    <h2>Proposals</h2>
+    <p>Proposals captured discreetly as they happen, from the moment itself through the celebration that follows, then the first photographs as a newly engaged couple.</p>
+    <span class="hub-more">See More &rarr;</span>
+  </a>
+</div>
 
 <div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:2rem 6%;text-align:center;" class="pixieset-cta">
   <a href="https://jgmoments.pixieset.com/nikkahceremony/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>

@@ -144,6 +144,21 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .dropdown-menu a:last-child { border-bottom: none; }
 .dropdown-menu a:hover { background: rgba(255,107,0,0.1); color: var(--saffron); padding-left: 2rem; }
 
+/* Non-clickable group label inside dropdown (e.g. Weddings family) */
+.dropdown-menu .dropdown-group {
+  padding: 0.8rem 1.5rem 0.5rem 1.5rem;
+  font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+  font-weight: 600; color: var(--gold-light);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-body);
+  cursor: default; pointer-events: none; user-select: none;
+}
+.dropdown-menu a.dropdown-sub { padding-left: 2.5rem; }
+.dropdown-menu a.dropdown-sub:hover { padding-left: 3rem; }
+.mobile-nav .dropdown-menu .dropdown-group { padding: 0.8rem 0 0.4rem 0; font-size: 0.8rem; }
+.mobile-nav .dropdown-menu a.dropdown-sub { padding-left: 1.2rem; }
+
+
 /* Mobile dropdown - toggle with .active class */
 @media (max-width: 800px) {
   .nav-dropdown:hover .dropdown-menu { display: none; }
