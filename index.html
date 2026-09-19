@@ -210,13 +210,34 @@
     .svc-card:hover .svc-label { background:rgba(255,107,0,.9); }
     @media(max-width:1000px){ .svc-grid{grid-template-columns:repeat(3,1fr);} }
     @media(max-width:700px){ .svc-grid{grid-template-columns:repeat(2,1fr); gap:.6rem; padding:0 4%;} }
-    .why-grid { max-width:900px; }
-    .why-item { margin-bottom:1.8rem; }
-    .why-cols { display:grid; grid-template-columns:repeat(3,1fr); gap:2.2rem; margin-top:.5rem; }
-    @media(max-width:860px){ .why-cols{grid-template-columns:1fr; gap:1.4rem;} }
-    .why-item h3 { font-family:var(--font-display); font-size:1.35rem; font-weight:400; color:var(--text); margin-bottom:.5rem; }
-    .why-item p { font-size:.92rem; line-height:1.8; color:#D5C3AD; }
-    .why-quote { border-left:2px solid var(--saffron); padding:.4rem 0 .4rem 1rem; margin-top:.7rem; font-size:.88rem; color:var(--text-muted); font-style:italic; }
+    .why-head { text-align:center; max-width:640px; margin:0 auto 3rem auto; }
+    .why-head .section-eyebrow { justify-content:center; }
+    .why-head .section-desc { margin-left:auto; margin-right:auto; }
+    .why-cols { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; }
+    .why-item {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius); padding:2rem 1.8rem;
+      display:flex; flex-direction:column;
+      transition:border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .why-item:hover { border-color:rgba(212,160,23,0.45); transform:translateY(-5px); box-shadow:0 20px 40px rgba(0,0,0,0.4); }
+    .why-num {
+      font-family:var(--font-display); font-size:2.4rem; line-height:1;
+      color:var(--saffron); opacity:.5; margin-bottom:.8rem;
+    }
+    .why-item h3 {
+      font-family:var(--font-display); font-size:1.4rem; font-weight:400;
+      color:var(--text); margin-bottom:.7rem; line-height:1.25;
+    }
+    .why-item p { font-family:var(--font-body); font-weight:300; font-size:.9rem; line-height:1.8; color:#D5C3AD; }
+    .why-quote {
+      border-left:2px solid var(--saffron); padding:.5rem 0 .5rem 1rem;
+      margin-top:auto; padding-top:1.1rem; font-size:.85rem;
+      color:var(--text-muted); font-style:italic; line-height:1.7;
+    }
+    .why-cta { text-align:center; margin-top:2.8rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    @media(max-width:900px){ .why-cols{grid-template-columns:1fr; gap:1rem;} .why-item{padding:1.6rem 1.4rem;} .why-head{margin-bottom:2rem;} }
+
     
   </style>
 </head>
@@ -268,7 +289,7 @@
     <h1 class="hero-title">Capturing <em>Life's</em><br>Most Beautiful<br>Moments</h1>
     <p class="hero-desc">Houston photographer covering weddings, portraits, celebrations, sports and corporate events. Most galleries are delivered within 5&ndash;7 days &mdash; often sooner, and headshots frequently the same day.</p>
     <div class="hero-cta">
-      <a href="portfolio.html" class="btn btn-saffron">View Portfolio</a>
+      <a href="#work" class="btn btn-saffron">View Portfolio</a>
       <a href="contact.html" class="btn btn-gold">Get in touch</a>
     </div>
   </div>
@@ -287,7 +308,7 @@
   <div class="trust-item"><div class="trust-big">5&ndash;7 Days</div><div class="trust-small">Typical gallery delivery</div></div>
   <div class="trust-item"><div class="trust-big">Houston, TX</div><div class="trust-small">&amp; surrounding areas</div></div>
 </div>
-<section class="section" style="padding:4rem 0 3rem 0;">
+<section id="work" class="section" style="padding:4rem 0 3rem 0;">
   <div style="padding:0 6%;">
     <div class="section-eyebrow">What I Shoot</div>
     <h2 class="section-title">Explore the <em>Work</em></h2>
@@ -309,32 +330,35 @@
   </div>
 </section>
 
-<section class="section" style="padding:4rem 6%;background:var(--bg-2);">
-  <div class="why-grid">
-    <div>
-      <div class="section-eyebrow">Why Work With Me</div>
-      <h2 class="section-title" style="font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:1.8rem;">Joyful &amp; Graceful <em>Moments</em></h2>
-      <div class="why-cols">
-<div class="why-item">
-        <h3>Fast, Reliable Turnaround</h3>
-        <p>Edited galleries are delivered within 5&ndash;7 days. In practice most arrive sooner &mdash; event coverage often within a couple of days, and headshots frequently the same day or the next.</p>
-        <p class="why-quote">&ldquo;Our photos were beautifully edited and delivered in just three days!&rdquo; &mdash; Jessica Smith</p>
-      </div>
-      <div class="why-item">
-        <h3>One Photographer, Every Occasion</h3>
-        <p>Weddings and nikkah ceremonies, engagements and proposals, family portraits, children and teens, swim meets and soccer matches, corporate conferences, headshots and cultural celebrations &mdash; booked once, with the same eye across all of it.</p>
-      </div>
-      <div class="why-item">
-        <h3>Patient, Unhurried Sessions</h3>
-        <p>Nothing feels rushed. There is time to try poses, work with restless kids, and make people comfortable in front of the camera &mdash; the thing clients mention most often in their reviews.</p>
-        <p class="why-quote">&ldquo;Extremely patient and made sure he captured everyone laughing.&rdquo; &mdash; Nicole Thomas</p>
-      </div>
-      </div>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
-        <a href="contact.html" class="btn btn-saffron">Get in touch</a>
-        <a href="testimonials.html" class="btn btn-gold">Read 54 Reviews</a>
-      </div>
+<section class="section" style="padding:5rem 6%;background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="why-head">
+    <div class="section-eyebrow">Why Work With Me</div>
+    <h2 class="section-title" style="font-size:clamp(1.9rem,4vw,3rem);">Joyful &amp; Graceful <em>Moments</em></h2>
+    <p class="section-desc">What clients say they value most, in their own words.</p>
+  </div>
+  <div class="why-cols">
+    <div class="why-item">
+      <div class="why-num">01</div>
+      <h3>Fast, Reliable Turnaround</h3>
+      <p>Edited galleries are delivered within 5&ndash;7 days. In practice most arrive sooner &mdash; event coverage often within a couple of days, and headshots frequently the same day or the next.</p>
+      <p class="why-quote">&ldquo;Our photos were beautifully edited and delivered in just three days!&rdquo;<br><span style="color:var(--saffron);font-style:normal;font-size:.78rem;letter-spacing:.08em;">&mdash; Jessica Smith</span></p>
     </div>
+    <div class="why-item">
+      <div class="why-num">02</div>
+      <h3>One Photographer, Every Occasion</h3>
+      <p>Weddings and nikkah ceremonies, engagements and proposals, family portraits, children and teens, swim meets and soccer matches, corporate conferences, headshots and cultural celebrations &mdash; booked once, with the same eye across all of it.</p>
+      <p class="why-quote">&ldquo;We had multiple photo shoots done and every single photo came out really really good.&rdquo;<br><span style="color:var(--saffron);font-style:normal;font-size:.78rem;letter-spacing:.08em;">&mdash; Krishna Lanka</span></p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03</div>
+      <h3>Patient, Unhurried Sessions</h3>
+      <p>Nothing feels rushed. There is time to try poses, work with restless kids, and make people comfortable in front of the camera &mdash; the thing clients mention most often in their reviews.</p>
+      <p class="why-quote">&ldquo;Extremely patient and made sure he captured everyone laughing.&rdquo;<br><span style="color:var(--saffron);font-style:normal;font-size:.78rem;letter-spacing:.08em;">&mdash; Nicole Thomas</span></p>
+    </div>
+  </div>
+  <div class="why-cta">
+    <a href="contact.html" class="btn btn-saffron">Get in touch</a>
+    <a href="testimonials.html" class="btn btn-gold">Read 54 Reviews</a>
   </div>
 </section>
 
@@ -376,7 +400,7 @@
   <p class="cta-desc">Every moment is fleeting. Let's preserve yours with beauty, authenticity, and grace.</p>
   <div class="cta-btns">
     <a href="contact.html" class="btn btn-saffron">Get In Touch</a>
-    <a href="portfolio.html" class="btn btn-gold">Explore My Work</a>
+    <a href="#work" class="btn btn-gold">Explore My Work</a>
   </div>
 </section>
 
@@ -403,7 +427,7 @@
         <li><a href="portraits-families.html">Portraits & Families</a></li>
         <li><a href="celebrations.html">Celebrations</a></li>
         <li><a href="travel-nature.html">Travel &amp; Nature</a></li>
-        <li style="margin-top:0.5rem;"><a href="portfolio.html" style="color:var(--saffron);font-weight:500;">View All Albums →</a></li>
+        <li style="margin-top:0.5rem;"><a href="#work" style="color:var(--saffron);font-weight:500;">View All Albums →</a></li>
       </ul>
     </div>
     <div>
