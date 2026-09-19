@@ -195,6 +195,22 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .review-duo { display:grid; grid-template-columns:1fr 1fr; gap:1rem; max-width:1000px; margin:0 auto; }
+    .review-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius);
+      padding:2.2rem 1.8rem; text-align:center; display:flex; flex-direction:column; align-items:center;
+      transition:border-color var(--transition), transform var(--transition), box-shadow var(--transition); }
+    .review-card:hover { border-color:rgba(212,160,23,0.45); transform:translateY(-4px);
+      box-shadow:0 18px 36px rgba(0,0,0,0.35); }
+    .review-stars { color:var(--gold-light); font-size:1.15rem; letter-spacing:.18em; margin-bottom:.5rem; }
+    .review-score { font-family:var(--font-display); font-size:2.6rem; line-height:1; color:var(--gold-light); }
+    .review-score span { display:block; font-family:var(--font-body); font-size:.68rem; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase; color:var(--saffron); margin-top:.45rem; }
+    .review-card h3 { font-family:var(--font-display); font-size:1.35rem; font-weight:400;
+      color:var(--text); margin:.9rem 0 .5rem 0; }
+    .review-card p { font-size:.88rem; line-height:1.75; color:#D5C3AD; margin-bottom:1.4rem; max-width:340px; }
+    .review-card .btn { margin-top:auto; }
+    @media(max-width:760px){ .review-duo{grid-template-columns:1fr;} }
   </style>
   <style>
     .trust-bar { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
@@ -325,11 +341,22 @@
 </section>
 
 <!-- GOOGLE REVIEW CTA -->
-<section class="section" style="padding:3rem 6%;background:rgba(255,107,0,0.05);">
-  <div style="max-width:600px;margin:0 auto;text-align:center;">
-    <p style="font-size:1.05rem;color:var(--text);margin-bottom:1rem;font-weight:500;">⭐ Love Our Work? Leave a Google Review!</p>
-    <p style="color:var(--text-muted);margin-bottom:1.5rem;font-size:0.9rem;">Your feedback helps other families discover JG Moments and means the world to us.</p>
-    <a href="https://tinyurl.com/ky5bcehu" target="_blank" class="btn btn-saffron" style="padding:0.75rem 1.5rem;">Leave a Review on Google</a>
+<section class="section" style="padding:3.5rem 6%;background:rgba(255,107,0,0.05);">
+  <div class="review-duo">
+    <div class="review-card">
+      <div class="review-score">5.0<span>54 Google reviews</span></div>
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <h3>Read What Clients Say</h3>
+      <p>Every review on our Google listing, written by the families and businesses we have photographed.</p>
+      <a href="https://maps.app.goo.gl/AoJAn5yK3azBU58d9" target="_blank" rel="noopener" class="btn btn-gold">Read All Google Reviews</a>
+    </div>
+    <div class="review-card">
+      <div class="review-score">&#9733;<span>Share your experience</span></div>
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <h3>Love Our Work?</h3>
+      <p>Your feedback helps other families discover JG Moments and means the world to us.</p>
+      <a href="https://tinyurl.com/ky5bcehu" target="_blank" rel="noopener" class="btn btn-saffron">Leave a Review on Google</a>
+    </div>
   </div>
 </section>
 
