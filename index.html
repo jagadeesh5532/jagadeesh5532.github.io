@@ -4,12 +4,12 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JG Moments Photography | Joyful &amp; Graceful Moments — Houston, TX</title>
-  <meta name="description" content="Houston-based photography capturing family portraits, children's photography, swim events, celebrations, and travel. Joyful &amp; Graceful Moments."/>
+  <meta name="description" content="Houston photographer covering weddings, portraits, celebrations, sports and corporate events. Galleries delivered in 5-7 days, often sooner."/>
 
   <!-- Open Graph Meta Tags for Social Media -->
   <meta property="og:type" content="business.business"/>
   <meta property="og:title" content="JG Moments Photography | Joyful &amp; Graceful Moments"/>
-  <meta property="og:description" content="Houston-based photography capturing family portraits, children's photography, swim events, celebrations, and travel. Joyful &amp; Graceful Moments."/>
+  <meta property="og:description" content="Houston photographer covering weddings, portraits, celebrations, sports and corporate events. Galleries delivered in 5-7 days, often sooner."/>
   <meta property="og:url" content="https://jg-moments.com"/>
   <meta property="og:image" content="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f"/>
   <meta property="og:image:width" content="1445"/>
@@ -20,7 +20,7 @@
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="JG Moments Photography | Joyful &amp; Graceful Moments"/>
-  <meta name="twitter:description" content="Houston-based photography capturing family portraits, children's photography, swim events, celebrations, and travel. Joyful &amp; Graceful Moments."/>
+  <meta name="twitter:description" content="Houston photographer covering weddings, portraits, celebrations, sports and corporate events. Galleries delivered in 5-7 days, often sooner."/>
   <meta name="twitter:image" content="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f"/>
   <meta name="twitter:site" content="@jg_moments"/>
   <meta name="twitter:creator" content="@jg_moments"/>
@@ -210,33 +210,42 @@
     .svc-card:hover .svc-label { background:rgba(255,107,0,.9); }
     @media(max-width:1000px){ .svc-grid{grid-template-columns:repeat(3,1fr);} }
     @media(max-width:700px){ .svc-grid{grid-template-columns:repeat(2,1fr); gap:.6rem; padding:0 4%;} }
-    .why-head { text-align:center; max-width:640px; margin:0 auto 3rem auto; }
-    .why-head .section-eyebrow { justify-content:center; }
-    .why-head .section-desc { margin-left:auto; margin-right:auto; }
-    .why-cols { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; }
-    .why-item {
-      background:var(--bg-card); border:1px solid var(--border);
-      border-radius:var(--radius); padding:2rem 1.8rem;
-      display:flex; flex-direction:column;
-      transition:border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    .turnaround {
+      display:grid; grid-template-columns:auto 1fr; gap:2.5rem;
+      align-items:center; max-width:1000px; margin:0 auto;
     }
-    .why-item:hover { border-color:rgba(212,160,23,0.45); transform:translateY(-5px); box-shadow:0 20px 40px rgba(0,0,0,0.4); }
-    .why-num {
-      font-family:var(--font-display); font-size:2.4rem; line-height:1;
-      color:var(--saffron); opacity:.5; margin-bottom:.8rem;
+    .turnaround-num {
+      font-family:var(--font-display); font-size:clamp(4rem,9vw,7rem); line-height:.9;
+      color:var(--gold-light); white-space:nowrap; text-align:center;
     }
-    .why-item h3 {
-      font-family:var(--font-display); font-size:1.4rem; font-weight:400;
-      color:var(--text); margin-bottom:.7rem; line-height:1.25;
+    .turnaround-num span {
+      display:block; font-family:var(--font-body); font-size:.7rem; font-weight:600;
+      letter-spacing:.24em; text-transform:uppercase; color:var(--saffron);
+      margin-top:.6rem; opacity:.9;
     }
-    .why-item p { font-family:var(--font-body); font-weight:300; font-size:.9rem; line-height:1.8; color:#D5C3AD; }
-    .why-quote {
-      border-left:2px solid var(--saffron); padding:.5rem 0 .5rem 1rem;
-      margin-top:auto; padding-top:1.1rem; font-size:.85rem;
-      color:var(--text-muted); font-style:italic; line-height:1.7;
+    .turnaround-body h2 {
+      font-family:var(--font-display); font-size:clamp(1.8rem,3.6vw,2.6rem);
+      font-weight:300; color:var(--text); line-height:1.15; margin-bottom:.9rem;
     }
-    .why-cta { text-align:center; margin-top:2.8rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
-    @media(max-width:900px){ .why-cols{grid-template-columns:1fr; gap:1rem;} .why-item{padding:1.6rem 1.4rem;} .why-head{margin-bottom:2rem;} }
+    .turnaround-body h2 em { font-style:italic; color:var(--gold-light); }
+    .turnaround-body p {
+      font-family:var(--font-body); font-weight:300; font-size:1rem;
+      line-height:1.85; color:#D5C3AD; max-width:620px;
+    }
+    .turnaround-quote {
+      margin-top:1.4rem; padding-left:1.1rem; border-left:2px solid var(--saffron);
+      font-family:var(--font-display); font-style:italic; font-size:1.05rem;
+      color:var(--text-muted); line-height:1.6;
+    }
+    .turnaround-quote cite {
+      display:block; margin-top:.5rem; font-family:var(--font-body); font-style:normal;
+      font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--saffron);
+    }
+    .turnaround-cta { display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.8rem; }
+    @media(max-width:760px){
+      .turnaround { grid-template-columns:1fr; gap:1.2rem; text-align:left; }
+      .turnaround-num { text-align:left; }
+    }
 
     
   </style>
@@ -286,8 +295,8 @@
   <div class="hero-gradient-bottom"></div>
   <div class="hero-content fade-up">
     <p class="hero-eyebrow">Joyful &amp; Graceful Moments</p>
-    <h1 class="hero-title">Capturing <em>Life's</em><br>Most Beautiful<br>Moments</h1>
-    <p class="hero-desc">Houston photographer covering weddings, portraits, celebrations, sports and corporate events. Most galleries are delivered within 5&ndash;7 days &mdash; often sooner, and headshots frequently the same day.</p>
+    <h1 class="hero-title">Houston <em>Photography</em><br>for Life's Biggest<br>Moments</h1>
+    <p class="hero-desc">Weddings, portraits, celebrations, sports and corporate events &mdash; photographed across Houston and beyond. Galleries delivered in 5&ndash;7 days, often sooner.</p>
     <div class="hero-cta">
       <a href="#work" class="btn btn-saffron">View Portfolio</a>
       <a href="contact.html" class="btn btn-gold">Get in touch</a>
@@ -330,35 +339,19 @@
   </div>
 </section>
 
-<section class="section" style="padding:5rem 6%;background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="why-head">
-    <div class="section-eyebrow">Why Work With Me</div>
-    <h2 class="section-title" style="font-size:clamp(1.9rem,4vw,3rem);">Joyful &amp; Graceful <em>Moments</em></h2>
-    <p class="section-desc">What clients say they value most, in their own words.</p>
-  </div>
-  <div class="why-cols">
-    <div class="why-item">
-      <div class="why-num">01</div>
-      <h3>Fast, Reliable Turnaround</h3>
+<section class="section" style="padding:4.5rem 6%;background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="turnaround">
+    <div class="turnaround-num">5&ndash;7<span>Days</span></div>
+    <div class="turnaround-body">
+      <div class="section-eyebrow">Fast, Reliable Turnaround</div>
+      <h2>Your photos, back <em>quickly</em></h2>
       <p>Edited galleries are delivered within 5&ndash;7 days. In practice most arrive sooner &mdash; event coverage often within a couple of days, and headshots frequently the same day or the next.</p>
-      <p class="why-quote">&ldquo;Our photos were beautifully edited and delivered in just three days!&rdquo;<br><span style="color:var(--saffron);font-style:normal;font-size:.78rem;letter-spacing:.08em;">&mdash; Jessica Smith</span></p>
+      <p class="turnaround-quote">&ldquo;Our photos were beautifully edited and delivered in just three days!&rdquo;<cite>Jessica Smith</cite></p>
+      <div class="turnaround-cta">
+        <a href="contact.html" class="btn btn-saffron">Get in touch</a>
+        <a href="testimonials.html" class="btn btn-gold">Read 54 Reviews</a>
+      </div>
     </div>
-    <div class="why-item">
-      <div class="why-num">02</div>
-      <h3>One Photographer, Every Occasion</h3>
-      <p>Weddings and nikkah ceremonies, engagements and proposals, family portraits, children and teens, swim meets and soccer matches, corporate conferences, headshots and cultural celebrations &mdash; booked once, with the same eye across all of it.</p>
-      <p class="why-quote">&ldquo;We had multiple photo shoots done and every single photo came out really really good.&rdquo;<br><span style="color:var(--saffron);font-style:normal;font-size:.78rem;letter-spacing:.08em;">&mdash; Krishna Lanka</span></p>
-    </div>
-    <div class="why-item">
-      <div class="why-num">03</div>
-      <h3>Patient, Unhurried Sessions</h3>
-      <p>Nothing feels rushed. There is time to try poses, work with restless kids, and make people comfortable in front of the camera &mdash; the thing clients mention most often in their reviews.</p>
-      <p class="why-quote">&ldquo;Extremely patient and made sure he captured everyone laughing.&rdquo;<br><span style="color:var(--saffron);font-style:normal;font-size:.78rem;letter-spacing:.08em;">&mdash; Nicole Thomas</span></p>
-    </div>
-  </div>
-  <div class="why-cta">
-    <a href="contact.html" class="btn btn-saffron">Get in touch</a>
-    <a href="testimonials.html" class="btn btn-gold">Read 54 Reviews</a>
   </div>
 </section>
 
