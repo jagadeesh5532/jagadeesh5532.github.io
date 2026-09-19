@@ -4,7 +4,8 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Proposal Photography | JG Moments</title>
-  <link rel="canonical" href="https://jg-moments.com/portfolio-proposals.html"/>
+    <meta name="description" content="Proposal Photography — Surprise proposals captured discreetly as they happen, plus the celebration that follows. 28 photographs."/>
+<link rel="canonical" href="https://jg-moments.com/portfolio-proposals.html"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=8"/>
@@ -69,6 +70,8 @@
       height: auto;
       display: block;
       object-fit: cover;
+      aspect-ratio: 3 / 2;          /* reserves space -> prevents layout shift */
+      background: var(--bg-card);   /* placeholder tone while loading */
     }
 
     @media (max-width: 1024px) {
@@ -96,25 +99,45 @@
         padding: 1.5rem 6%;
       }
     }
+
+    .sessions { padding: 2.5rem 6% 1rem 6%; background-color: var(--bg); }
+    .sessions h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400;
+      color: var(--text); margin-bottom: .4rem; }
+    .sessions p.sub { color: var(--text-muted); font-size: .9rem; margin-bottom: 1.2rem; }
+    .session-links { display: flex; flex-wrap: wrap; gap: .6rem; }
+    .session-links a { display: inline-block; padding: .55rem 1.1rem; font-size: .78rem;
+      letter-spacing: .06em; color: var(--text-muted); border: 1px solid var(--border);
+      border-radius: 999px; transition: all var(--transition); }
+    .session-links a:hover { border-color: var(--saffron); color: var(--saffron); }
+
+    .page-title { padding: 2.2rem 6% 0.6rem 6%; background-color: var(--bg); }
+    .page-title h1 { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 300; color: var(--text); line-height: 1.15; }
+    .page-title p { font-family: var(--font-body); font-weight: 300; font-size: .95rem;
+      color: #D5C3AD; margin-top: .5rem; max-width: 640px; line-height: 1.75; }
   </style>
 </head>
 <body>
-<nav class="navbar" id="navbar"><a href="index.html" class="nav-logo"><img src="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f" alt="JG Moments"/></a>
+<nav class="navbar" id="navbar"><a href="index.html" class="nav-logo"><img src="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f" alt="JG Moments Photography, Houston TX" width="300" height="177"/></a>
   <ul class="nav-links"><li><a href="index.html">Home</a></li><li class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><div class="has-sub"><span class="sub-label">Weddings &amp; Engagements</span><div class="submenu"><a href="portfolio-weddings-ceremonies.html">Weddings</a><a href="portfolio-engagements.html">Engagements</a><a href="portfolio-proposals.html">Proposals</a></div></div><div class="has-sub"><span class="sub-label">Portraits</span><div class="submenu"><a href="portfolio-family.html">Family</a><a href="portfolio-couple-shoots.html">Couples</a><a href="portfolio-children-teens.html">Children &amp; Teens</a><a href="portfolio-individual-portraits.html">Individual Portraits</a></div></div><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><div class="has-sub"><span class="sub-label">Sports</span><div class="submenu"><a href="portfolio-swimming.html">Swimming</a><a href="portfolio-soccer.html">Soccer</a></div></div><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><div class="has-sub"><span class="sub-label">Cultural &amp; Religious</span><div class="submenu"><a href="portfolio-baptism.html">Baptism</a><a href="portfolio-diwali.html">Diwali</a></div></div></div></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="nav-book">Get in touch</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></nav><div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><div class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><div class="has-sub"><span class="sub-label">Weddings &amp; Engagements</span><div class="submenu"><a href="portfolio-weddings-ceremonies.html">Weddings</a><a href="portfolio-engagements.html">Engagements</a><a href="portfolio-proposals.html">Proposals</a></div></div><div class="has-sub"><span class="sub-label">Portraits</span><div class="submenu"><a href="portfolio-family.html">Family</a><a href="portfolio-couple-shoots.html">Couples</a><a href="portfolio-children-teens.html">Children &amp; Teens</a><a href="portfolio-individual-portraits.html">Individual Portraits</a></div></div><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><div class="has-sub"><span class="sub-label">Sports</span><div class="submenu"><a href="portfolio-swimming.html">Swimming</a><a href="portfolio-soccer.html">Soccer</a></div></div><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><div class="has-sub"><span class="sub-label">Cultural &amp; Religious</span><div class="submenu"><a href="portfolio-baptism.html">Baptism</a><a href="portfolio-diwali.html">Diwali</a></div></div></div></div><a href="testimonials.html">Testimonials</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><!-- MICHAEL & MELANIE PROPOSAL -->
+<div class="page-title">
+  <h1>Proposal Photography</h1>
+  <p>Surprise proposals captured discreetly as they happen, plus the celebration that follows.</p>
+</div>
 <section style="padding: 3rem 6%; background-color: var(--bg-2);">
   <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--text); margin-bottom: 0.5rem;">Michael & Melanie Proposal</h2>
   <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">A magical moment captured forever</p>
   <div class="gallery-grid">
     <div class="gallery-item"><img src="https://images.pixieset.com/721365511/7efae2197fee4d00985fa1403a452830-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/34286236c20e8819779971f1022907ca-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/40924d89fce3d0627fbafc884a5b4c12-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/de19113e0d2642fa9ed080628e825be1-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/74cbab5a9af46203d0cf2bade9d5aeb1-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/d4bbe31489889e8daa4baf306cefcddf-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/0cf2578967bbcf68fc3cac10aadf139e-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/62b6ffb34a26684bac15dc87196e1507-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/a7dda098a4ae9e05529f81c33185c5a6-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/de3d37769fd9fdac1e3fb6935c270854-xxlarge.jpg" alt="Michael & Melanie Proposal" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/34286236c20e8819779971f1022907ca-xxlarge.jpg" alt="Michael & Melanie Proposal — photographed by JG Moments, Houston TX" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/40924d89fce3d0627fbafc884a5b4c12-xxlarge.jpg" alt="Michael & Melanie Proposal — candid moment captured by JG Moments, Houston" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/de19113e0d2642fa9ed080628e825be1-xxlarge.jpg" alt="Michael & Melanie Proposal — professional photography by JG Moments, Houston TX" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/74cbab5a9af46203d0cf2bade9d5aeb1-xxlarge.jpg" alt="Michael & Melanie Proposal — captured by JG Moments Photography, Houston" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/d4bbe31489889e8daa4baf306cefcddf-xxlarge.jpg" alt="Michael & Melanie Proposal — Houston photography by JG Moments" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/0cf2578967bbcf68fc3cac10aadf139e-xxlarge.jpg" alt="Michael & Melanie Proposal — documented by JG Moments Photography, Houston TX" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/62b6ffb34a26684bac15dc87196e1507-xxlarge.jpg" alt="Michael & Melanie Proposal — photographed by JG Moments, Houston TX" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/a7dda098a4ae9e05529f81c33185c5a6-xxlarge.jpg" alt="Michael & Melanie Proposal — candid moment captured by JG Moments, Houston" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/721365511/de3d37769fd9fdac1e3fb6935c270854-xxlarge.jpg" alt="Michael & Melanie Proposal — professional photography by JG Moments, Houston TX" loading="lazy"/></div>
   </div>
 </section>
 
@@ -124,11 +147,11 @@
   <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">A romantic proposal moment captured</p>
   <div class="gallery-grid">
     <div class="gallery-item"><img src="https://images.pixieset.com/371645611/547edbb86889f09d3ebb5a25ad7aaa38-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/330866299a75785dc4428c1da4e0a3e0-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/10debbef08f2c5ef52104f68ec4f9b3d-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/266a8632393c11a8e741f343e7ec65e8-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/8f0a875bf3700645994655b1afbd3b0f-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/44482ccc9dac79ead6f3c1e255260189-xxlarge.jpg" alt="Fernando Proposal" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/330866299a75785dc4428c1da4e0a3e0-xxlarge.jpg" alt="Fernando Proposal — photographed by JG Moments, Houston TX" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/10debbef08f2c5ef52104f68ec4f9b3d-xxlarge.jpg" alt="Fernando Proposal — candid moment captured by JG Moments, Houston" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/266a8632393c11a8e741f343e7ec65e8-xxlarge.jpg" alt="Fernando Proposal — professional photography by JG Moments, Houston TX" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/8f0a875bf3700645994655b1afbd3b0f-xxlarge.jpg" alt="Fernando Proposal — captured by JG Moments Photography, Houston" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/371645611/44482ccc9dac79ead6f3c1e255260189-xxlarge.jpg" alt="Fernando Proposal — Houston photography by JG Moments" loading="lazy"/></div>
   </div>
 </section>
 
@@ -138,20 +161,25 @@
   <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">A beautiful marriage proposal moment</p>
   <div class="gallery-grid">
     <div class="gallery-item"><img src="https://images.pixieset.com/785658511/e63145fa3f798f79dad652fa139c63d7-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/ac3dfa2cd0b764ee0733630a5b6848df-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/126cdf4382c59eeea53ddf487fe7dc33-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/7f3b056c8726075c9824e7bc155e3972-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/029a3d61052684b941e124e92546da0d-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/b2b235c748ebe68febe7de46532c47d7-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/890a7fdf8d69bf58453c6ef9a1b3e4bc-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/c729bafecf7725f870189e7d87230887-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/1d4a980acea8ddcec6bb51d3709e7b7b-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/bff6e49e851882ed15409fd2e018c24b-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/29956261e8985adecd089d8367afe086-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
-    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/e18d3b025f942332a6254371d878ccdf-xxlarge.jpg" alt="Kam & Amber Proposal" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/ac3dfa2cd0b764ee0733630a5b6848df-xxlarge.jpg" alt="Kam & Amber Proposal — photographed by JG Moments, Houston TX" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/126cdf4382c59eeea53ddf487fe7dc33-xxlarge.jpg" alt="Kam & Amber Proposal — candid moment captured by JG Moments, Houston" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/7f3b056c8726075c9824e7bc155e3972-xxlarge.jpg" alt="Kam & Amber Proposal — professional photography by JG Moments, Houston TX" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/029a3d61052684b941e124e92546da0d-xxlarge.jpg" alt="Kam & Amber Proposal — captured by JG Moments Photography, Houston" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/b2b235c748ebe68febe7de46532c47d7-xxlarge.jpg" alt="Kam & Amber Proposal — Houston photography by JG Moments" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/890a7fdf8d69bf58453c6ef9a1b3e4bc-xxlarge.jpg" alt="Kam & Amber Proposal — documented by JG Moments Photography, Houston TX" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/c729bafecf7725f870189e7d87230887-xxlarge.jpg" alt="Kam & Amber Proposal — photographed by JG Moments, Houston TX" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/1d4a980acea8ddcec6bb51d3709e7b7b-xxlarge.jpg" alt="Kam & Amber Proposal — candid moment captured by JG Moments, Houston" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/bff6e49e851882ed15409fd2e018c24b-xxlarge.jpg" alt="Kam & Amber Proposal — professional photography by JG Moments, Houston TX" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/29956261e8985adecd089d8367afe086-xxlarge.jpg" alt="Kam & Amber Proposal — captured by JG Moments Photography, Houston" loading="lazy"/></div>
+    <div class="gallery-item"><img src="https://images.pixieset.com/785658511/e18d3b025f942332a6254371d878ccdf-xxlarge.jpg" alt="Kam & Amber Proposal — Houston photography by JG Moments" loading="lazy"/></div>
   </div>
 </section>
 
+<section class="sessions">
+  <h2>Featured Sessions</h2>
+  <p class="sub">Individual shoots from this collection.</p>
+  <div class="session-links"><a href="surprise-marriage-proposal.html">Michael &amp; Melanie Proposal</a><a href="fernando-proposal.html">Fernando Proposal</a><a href="kam-marriage-proposal.html">Kam &amp; Amber Proposal</a></div>
+</section>
 <div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:2rem 6%;text-align:center;" class="pixieset-cta">
   <a href="https://jgmoments.pixieset.com/nikkahceremony/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
 </div>
@@ -161,7 +189,7 @@
   <a href="portfolio-weddings.html" class="btn btn-outline">← Back to Weddings &amp; Engagements</a>
   <a href="index.html" class="btn btn-outline">← Back to Home</a>
 </div>
-<footer class="footer"><div class="gradient-band" style="margin-bottom:4rem;margin-left:-6%;margin-right:-6%;"></div><div class="footer-grid"><div><a href="index.html" class="footer-logo"><img src="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f" alt="JG Moments"/></a><p class="footer-tagline">"Joyful &amp; Graceful Moments"</p></div><div><p class="footer-heading">Contact</p><a href="mailto:contact@jg-moments.com">contact@jg-moments.com</a></div></div><div class="footer-bottom"><p class="footer-copy">© 2026 JG Moments</p></div></footer>
+<footer class="footer"><div class="gradient-band" style="margin-bottom:4rem;margin-left:-6%;margin-right:-6%;"></div><div class="footer-grid"><div><a href="index.html" class="footer-logo"><img src="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f" alt="JG Moments Photography, Houston TX" width="300" height="177"/></a><p class="footer-tagline">"Joyful &amp; Graceful Moments"</p></div><div><p class="footer-heading">Contact</p><a href="mailto:contact@jg-moments.com">contact@jg-moments.com</a></div></div><div class="footer-bottom"><p class="footer-copy">© 2026 JG Moments</p></div></footer>
 <div class="lightbox" id="lightbox"><div class="lightbox-inner"><img src="" alt="" id="lbImg"/></div><button class="lb-close" id="lbClose">✕</button><button class="lb-prev" id="lbPrev">‹</button><button class="lb-next" id="lbNext">›</button></div>
 <script src="main.js?v=6"></script>
 </body>
