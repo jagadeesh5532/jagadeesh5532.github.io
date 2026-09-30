@@ -116,27 +116,28 @@
       color: #D5C3AD; margin-top: .5rem; max-width: 640px; line-height: 1.75; }
     @media (max-width: 800px) { .page-title { margin-top: 0; } }
 
-    .album-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem;
-      padding:1.5rem 6% 2.5rem 6%; }
-    .album-card { position:relative; display:block; overflow:hidden; border-radius:4px;
+    /* renamed from .album-* so style.css's global .album-card
+       (aspect-ratio:3/4; max-height:360px) can't shrink these */
+    .wed-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem;
+      padding:1.5rem 6% 3rem 6%; }
+    .wed-card { position:relative; display:block; overflow:hidden; border-radius:4px;
       background:var(--bg-card); }
-    .album-card img { width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 25%;
+    .wed-card img { width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 22%;
       display:block; transition:transform .6s ease; }
-    .album-card:hover img { transform:scale(1.05); }
-    .album-label { position:absolute; left:0; right:0; bottom:0; background:rgba(8,4,4,.86);
-      padding:.9rem 1rem; text-align:center; transition:background .3s ease; }
-    .album-card:hover .album-label { background:rgba(255,107,0,.92); }
-    .album-label .n { display:block; font-family:var(--font-display); font-size:1.22rem;
+    .wed-card:hover img { transform:scale(1.05); }
+    .wed-label { position:absolute; left:0; right:0; bottom:0; background:rgba(8,4,4,.86);
+      padding:1rem 1rem; text-align:center; transition:background .3s ease; }
+    .wed-card:hover .wed-label { background:rgba(255,107,0,.92); }
+    .wed-label .n { display:block; font-family:var(--font-display); font-size:1.35rem;
       font-weight:400; color:var(--text); line-height:1.2; }
-    .album-label .k { display:block; margin-top:.3rem; font-size:.62rem; letter-spacing:.16em;
-      text-transform:uppercase; font-weight:600; color:var(--saffron);
-      transition:color .3s ease; }
-    .album-card:hover .album-label .k { color:var(--text); }
-    @media (max-width:1000px){ .album-grid { grid-template-columns:repeat(2,1fr); } }
-    @media (max-width:560px){ .album-grid { grid-template-columns:1fr; gap:.7rem;
+    .wed-label .k { display:block; margin-top:.3rem; font-size:.63rem; letter-spacing:.16em;
+      text-transform:uppercase; font-weight:600; color:var(--saffron); transition:color .3s ease; }
+    .wed-card:hover .wed-label .k { color:var(--text); }
+    @media (max-width:1000px){ .wed-grid { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:560px){ .wed-grid { grid-template-columns:1fr; gap:.7rem;
       padding:1.2rem 4% 2rem 4%; }
-      .album-card img { aspect-ratio:3/2; }
-      .album-label .n { font-size:1.15rem; } }
+      .wed-card img { aspect-ratio:3/2; }
+      .wed-label .n { font-size:1.2rem; } }
   </style>
 </head>
 <body>
@@ -145,26 +146,26 @@
   <h1>Wedding Photography</h1>
   <p>Five weddings photographed across Houston and the surrounding areas &mdash; traditional ceremonies, courthouse vows and post-wedding portraits.</p>
 </div>
-<div class="album-grid">
-  <a class="album-card" href="aaron-jennifer-wedding.html">
+<div class="wed-grid">
+  <a class="wed-card" href="aaron-jennifer-wedding.html">
     <img src="https://images.pixieset.com/792052121/968343a5bf0bff883a1da5f9519c0efe-xxlarge.jpg" alt="Aaron and Jennifer wedding photography by JG Moments, Houston TX" loading="lazy"/>
-    <div class="album-label"><span class="n">Aaron &amp; Jennifer</span><span class="k">Laos &amp; American Wedding</span></div>
+    <div class="wed-label"><span class="n">Aaron &amp; Jennifer</span><span class="k">Laos &amp; American Wedding</span></div>
   </a>
-  <a class="album-card" href="hamdi-nikkah-ceremony.html">
+  <a class="wed-card" href="hamdi-nikkah-ceremony.html">
     <img src="https://images.pixieset.com/334693511/e3e6113303a1b6fd0682c1decaf205cf-xxlarge.jpg" alt="Hamdi and Fubo wedding photography by JG Moments, Houston TX" loading="lazy"/>
-    <div class="album-label"><span class="n">Hamdi &amp; Fubo</span><span class="k">Nikkah Ceremony</span></div>
+    <div class="wed-label"><span class="n">Hamdi &amp; Fubo</span><span class="k">Nikkah Ceremony</span></div>
   </a>
-  <a class="album-card" href="dominique-wedding-portraits.html">
+  <a class="wed-card" href="dominique-wedding-portraits.html">
     <img src="https://images.pixieset.com/313429611/8a9d652a1bb8940ae8e5049ac8d25839-xxlarge.png" alt="Dominque and Joshua wedding photography by JG Moments, Houston TX" loading="lazy"/>
-    <div class="album-label"><span class="n">Dominque &amp; Joshua</span><span class="k">Post-Wedding Portraits</span></div>
+    <div class="wed-label"><span class="n">Dominque &amp; Joshua</span><span class="k">Post-Wedding Portraits</span></div>
   </a>
-  <a class="album-card" href="charlene-courthouse-wedding.html">
+  <a class="wed-card" href="charlene-courthouse-wedding.html">
     <img src="https://images.pixieset.com/715323121/1dea91efc0e0d65a0490250a4b8c0d17-xxlarge.jpg" alt="Charlene and Joshua wedding photography by JG Moments, Houston TX" loading="lazy"/>
-    <div class="album-label"><span class="n">Charlene &amp; Joshua</span><span class="k">Courthouse Wedding</span></div>
+    <div class="wed-label"><span class="n">Charlene &amp; Joshua</span><span class="k">Courthouse Wedding</span></div>
   </a>
-  <a class="album-card" href="drupath-geetha-wedding.html">
+  <a class="wed-card" href="drupath-geetha-wedding.html">
     <img src="https://images.pixieset.com/557289711/88d20fe03ee24d84c8efa92dbf6037ee-xxlarge.jpg" alt="Drupath and Geetha wedding photography by JG Moments, Houston TX" loading="lazy"/>
-    <div class="album-label"><span class="n">Drupath &amp; Geetha</span><span class="k">Courthouse Wedding</span></div>
+    <div class="wed-label"><span class="n">Drupath &amp; Geetha</span><span class="k">Courthouse Wedding</span></div>
   </a>
 </div>
 
