@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charlene &amp; Joshua &mdash; Houston Courthouse Wedding | JG Moments Photography</title>
+  <meta name="description" content="An intimate courthouse wedding at the Houston Municipal Courthouse in downtown Houston, Texas, photographed by JG Moments Photography."/>
+  <link rel="canonical" href="https://jg-moments.com/charlene-courthouse-wedding.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=8"/>
+  <style>
+    .story-hero { margin-top: var(--nav-h); position: relative; overflow: hidden; }
+    .story-hero img { width: 100%; height: clamp(400px, 72vh, 780px);
+      object-fit: cover; object-position: center 30%; display: block;
+      -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 50%, rgba(0,0,0,.72) 68%, rgba(0,0,0,.34) 84%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 0%, #000 50%, rgba(0,0,0,.72) 68%, rgba(0,0,0,.34) 84%, transparent 100%); }
+    @media (max-width: 700px) { .story-hero img { height: clamp(300px, 50vh, 440px); } }
+    @media (max-width: 800px) { .story-hero { margin-top: 0; } }
+
+    .story-head { padding: 2rem 6% 0 6%; max-width: 1180px; margin: 0 auto; }
+    .story-head h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 5.2vw, 3.6rem);
+      font-weight: 300; color: var(--text); line-height: 1.1; margin-bottom: .4rem; }
+    .story-head h1 em { font-style: italic; color: var(--gold-light); }
+
+    .story-meta { margin: 0; padding: 0; border-top: none; display: block; }
+    .story-meta > div { margin-bottom: 1.4rem; }
+    .story-meta dt { font-size: .66rem; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--saffron); font-weight: 600; margin-bottom: .45rem; }
+    .story-meta dd { font-family: var(--font-display); font-size: 1.12rem; color: var(--text); margin: 0; }
+
+    .story-columns { display: grid; grid-template-columns: 210px 1fr; gap: 3.2rem;
+      max-width: 1180px; margin: 0 auto; padding: 1.4rem 6% 2rem 6%; align-items: start;
+      border-top: 1px solid var(--border); }
+    .story-body { max-width: 760px; }
+    @media (max-width: 900px) {
+      .story-columns { grid-template-columns: 1fr; gap: 1.4rem; }
+      .story-meta { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 2rem; }
+      .story-meta > div { margin-bottom: 0; }
+    }
+    @media (max-width: 560px) { .story-meta { grid-template-columns: 1fr; gap: 1rem; } }
+    .story-body p { font-family: var(--font-body); font-weight: 300; font-size: 1rem;
+      line-height: 1.8; color: #D5C3AD; margin-bottom: .85rem; }
+    .story-body p.lead { font-family: var(--font-display); font-weight: 300;
+      font-size: clamp(1.5rem, 2.9vw, 2.15rem); line-height: 1.34;
+      color: var(--text); font-style: italic; margin-bottom: 1.5rem;
+      padding-bottom: 1.3rem; border-bottom: 1px solid var(--border); }
+    .story-body p.lead em, .story-body p.lead strong { font-style: italic; color: var(--gold-light); font-weight: 300; }
+
+    .story-grid { columns: 3; column-gap: 10px; padding: 0 6% 2rem 6%; }
+    .story-item { break-inside: avoid; -webkit-column-break-inside: avoid;
+      page-break-inside: avoid; margin-bottom: 10px; display: block; overflow: hidden;
+      border-radius: 2px; background: var(--bg-card); cursor: pointer; }
+    
+    .story-item img { width: 100%; height: auto; display: block;
+      transition: transform .6s ease, filter .35s ease; }
+    
+    .story-item:hover img { transform: scale(1.03); filter: brightness(1.06); }
+    @media (max-width: 900px) { .story-grid { columns: 2; } } }
+    @media (max-width: 560px) { .story-grid { columns: 1; column-gap: 0; padding: 0 4% 2rem 4%; } } }
+
+    .story-quote { background: var(--bg-2); border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border); padding: 2.6rem 6%; }
+    .story-quote blockquote { max-width: 820px; margin: 0 auto; text-align: center; }
+    .story-quote .stars { justify-content: center; margin-bottom: 1.2rem; }
+    .story-quote p { font-family: var(--font-display); font-style: italic;
+      font-size: clamp(1.1rem, 2.1vw, 1.45rem); line-height: 1.75; color: var(--text-muted); }
+    .story-quote cite { display: block; margin-top: 1.3rem; font-family: var(--font-body);
+      font-style: normal; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--saffron); }
+
+    .story-cta { text-align: center; padding: 2.4rem 6%; background-color: var(--bg); }
+    .story-cta h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--text); margin-bottom: 1.4rem; }
+    .story-cta .btn { margin: 0 .3rem .6rem .3rem; }
+
+    .story-cta + footer.footer { padding-top: 2.5rem; }
+    .story-cta + footer.footer .gradient-band { margin-bottom: 2rem !important; }
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar"><a href="index.html" class="nav-logo"><img src="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f" alt="JG Moments Photography, Houston TX" width="300" height="177"/></a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><div class="has-sub"><span class="sub-label">Weddings &amp; Engagements</span><div class="submenu"><a href="portfolio-weddings-ceremonies.html">Weddings</a><a href="portfolio-engagements.html">Engagements</a><a href="portfolio-proposals.html">Proposals</a></div></div><div class="has-sub"><span class="sub-label">Portraits</span><div class="submenu"><a href="portfolio-family.html">Family</a><a href="portfolio-couple-shoots.html">Couples</a><a href="portfolio-children-teens.html">Children &amp; Teens</a></div></div><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><div class="has-sub"><span class="sub-label">Sports</span><div class="submenu"><a href="portfolio-swimming.html">Swimming</a><a href="portfolio-soccer.html">Soccer</a></div></div><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><div class="has-sub"><span class="sub-label">Cultural &amp; Religious</span><div class="submenu"><a href="portfolio-baptism.html">Baptism</a><a href="portfolio-diwali.html">Diwali</a></div></div></div></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="nav-book">Get in touch</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></nav><div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><div class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><div class="has-sub"><span class="sub-label">Weddings &amp; Engagements</span><div class="submenu"><a href="portfolio-weddings-ceremonies.html">Weddings</a><a href="portfolio-engagements.html">Engagements</a><a href="portfolio-proposals.html">Proposals</a></div></div><div class="has-sub"><span class="sub-label">Portraits</span><div class="submenu"><a href="portfolio-family.html">Family</a><a href="portfolio-couple-shoots.html">Couples</a><a href="portfolio-children-teens.html">Children &amp; Teens</a></div></div><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><div class="has-sub"><span class="sub-label">Sports</span><div class="submenu"><a href="portfolio-swimming.html">Swimming</a><a href="portfolio-soccer.html">Soccer</a></div></div><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><div class="has-sub"><span class="sub-label">Cultural &amp; Religious</span><div class="submenu"><a href="portfolio-baptism.html">Baptism</a><a href="portfolio-diwali.html">Diwali</a></div></div></div></div><a href="testimonials.html">Testimonials</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><!-- AARON WEDDING CEREMONY - SECTION 1 -->
+<div class="story-hero">
+  <img src="https://images.pixieset.com/715323121/1dea91efc0e0d65a0490250a4b8c0d17-xxlarge.jpg" alt="Charlene's courthouse wedding in downtown Houston, Texas, photographed by JG Moments Photography"/>
+</div>
+
+<div class="story-head">
+  <div class="section-eyebrow">Wedding Story</div>
+  <h1>A Houston <em>Courthouse</em> Wedding</h1>
+</div>
+
+<div class="story-columns">
+  <dl class="story-meta">
+    <div><dt>Project Type</dt><dd>Courthouse Wedding</dd></div>
+    <div><dt>When</dt><dd>August 2026</dd></div>
+    <div><dt>Location</dt><dd>Downtown Houston, TX</dd></div>
+  </dl>
+  <div class="story-body">
+  <p class="lead">One hour, one room, <em>one family</em> &mdash; a courthouse wedding downtown, and everything that matters in it.</p>
+  <p>Charlene and Joshua were married at the Houston Municipal Courthouse on a Monday afternoon in August. No venue, no reception, no months of planning. A room on the second floor, the people who needed to be there, and about an hour from start to finish.</p>
+  <p>Courthouse weddings ask something different of a photographer. There is no rehearsal and no second run at anything. The ceremony is short, the room is small and often bright in awkward ways, and you are working around officials doing their job rather than a coordinator managing yours. Everything has to be right the first time, because there is no first time twice.</p>
+  <p>What these ceremonies have in abundance is focus. Without the scale of a large wedding, nothing sits between a couple and the reason they came. You see it clearly in the frames &mdash; the vows, the look between them, the small room doing exactly what it needed to.</p>
+  <p>The last thing we photographed was the three of them together, Charlene, Joshua and their daughter, at the end of the ceremony. A family of three, on the day it became official.</p>
+</div>
+</div>
+
+<div class="story-grid">
+    <div class="story-item"><img src="https://images.pixieset.com/715323121/66bc8819cc2d3a13b16ef09ed98ca9a6-xxlarge.jpg" alt="Courthouse wedding ceremony in downtown Houston, photographed by JG Moments" loading="lazy"/></div>
+    <div class="story-item"><img src="https://images.pixieset.com/715323121/b69460b9b92f2b72bc538c137c7d968b-xxlarge.jpg" alt="Intimate courthouse wedding, JG Moments Photography, Houston TX" loading="lazy"/></div>
+    <div class="story-item"><img src="https://images.pixieset.com/715323121/2708fb0da1648ae8802cef2f4b0d7766-xxlarge.jpg" alt="Couple exchanging vows at a Houston courthouse wedding, JG Moments Photography" loading="lazy"/></div>
+    <div class="story-item"><img src="https://images.pixieset.com/715323121/f68b16d5ff478cdc32767f475d059623-xxlarge.jpg" alt="Candid moment from a downtown Houston courthouse wedding by JG Moments" loading="lazy"/></div>
+    <div class="story-item"><img src="https://images.pixieset.com/715323121/95ed7c7cbd8b634754415220f9b1e982-xxlarge.jpg" alt="Family portrait after the courthouse ceremony, JG Moments Photography, Houston" loading="lazy"/></div>
+    <div class="story-item"><img src="https://images.pixieset.com/715323121/13880b20eb892994059bcba90d3453cb-xxlarge.jpg" alt="Courthouse wedding portrait, Houston photography by JG Moments" loading="lazy"/></div>
+    <div class="story-item"><img src="https://images.pixieset.com/715323121/9ec4a2bff49ae199aacd36afe5ba7991-xxlarge.jpg" alt="Newlyweds at the Houston Municipal Courthouse, JG Moments Photography, Houston TX" loading="lazy"/></div>
+</div>
+
+<section class="story-quote">
+  <blockquote>
+    <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+    <p>&ldquo;Enjoyed our session. Loved our photos! Professional and quality work. Thanks Jag!&rdquo;</p>
+    <cite>Charlene Jones &mdash; Wedding Photography</cite>
+  </blockquote>
+</section>
+
+<div class="story-cta">
+  <h3>Planning a courthouse wedding?</h3>
+  <a href="contact.html" class="btn btn-saffron">Get in touch</a>
+  <a href="portfolio-weddings-ceremonies.html" class="btn btn-gold">More Weddings</a>
+  <a href="index.html" class="btn btn-outline">&larr; Back to Home</a>
+</div>
+
+<footer class="footer">
+  <div class="gradient-band" style="margin-bottom:4rem;margin-left:-6%;margin-right:-6%;"></div>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="footer-logo"><img src="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f" alt="JG Moments Photography, Houston TX" width="300" height="177"/></a>
+      <p class="footer-tagline">"Joyful &amp; Graceful Moments"</p>
+      <p class="footer-bio">Houston-based photographer specializing in family portraits, children's photography, sports events, celebrations, and travel photography. Capturing the soul of every moment since 2010.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/profile.php?id=61589169345858" target="_blank" aria-label="Facebook" title="Follow on Facebook"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://www.instagram.com/jg_moments/" target="_blank" aria-label="Instagram" title="Follow on Instagram"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a>
+        <a href="https://jg-moments.com" aria-label="Portfolio" title="Adobe Portfolio"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+        <a href="mailto:contact@jg-moments.com" aria-label="Email"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-heading">Featured Albums</p>
+      <ul class="footer-links"><li><a href="portfolio-weddings.html">Weddings &amp; Engagements</a></li><li><a href="portfolio-family.html">Portraits</a></li><li><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a></li><li><a href="portfolio-sports.html">Sports</a></li><li><a href="portfolio-headshots.html">Headshots</a></li><li><a href="portfolio-corporate.html">Corporate Events</a></li><li style="margin-top:0.5rem;"><a href="index.html#work" style="color:var(--saffron);font-weight:500;">View All Albums &rarr;</a></li></ul>
+    </div>
+    <div>
+      <p class="footer-heading">Navigate</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><div class="has-sub"><span class="sub-label">Weddings &amp; Engagements</span><div class="submenu"><a href="portfolio-weddings-ceremonies.html">Weddings</a><a href="portfolio-engagements.html">Engagements</a><a href="portfolio-proposals.html">Proposals</a></div></div><div class="has-sub"><span class="sub-label">Portraits</span><div class="submenu"><a href="portfolio-family.html">Family</a><a href="portfolio-couple-shoots.html">Couples</a><a href="portfolio-children-teens.html">Children &amp; Teens</a></div></div><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><div class="has-sub"><span class="sub-label">Sports</span><div class="submenu"><a href="portfolio-swimming.html">Swimming</a><a href="portfolio-soccer.html">Soccer</a></div></div><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><div class="has-sub"><span class="sub-label">Cultural &amp; Religious</span><div class="submenu"><a href="portfolio-baptism.html">Baptism</a><a href="portfolio-diwali.html">Diwali</a></div></div></div></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Reviews</p>
+      <ul class="footer-links">
+        <li><a href="https://maps.app.goo.gl/AoJAn5yK3azBU58d9" target="_blank">Google Reviews ⭐</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Get In Touch</p>
+      <div class="footer-contact-line"><span class="icon"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span><a href="mailto:contact@jg-moments.com" style="color:var(--text-muted);">contact@jg-moments.com</a></div>
+      <div class="footer-contact-line"><span class="icon"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 2H2.5A1.5 1.5 0 0 0 1 3.5v17A1.5 1.5 0 0 0 2.5 22h19A1.5 1.5 0 0 0 23 20.5v-17A1.5 1.5 0 0 0 21.5 2M12 18.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5"/></svg></span><span>Houston, Texas</span></div>
+      <div class="footer-contact-line"><span class="icon"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><a href="https://jg-moments.com" style="color:var(--text-muted);">jg-moments.com</a></div>
+      <div style="margin-top:1.5rem;">
+        <a href="contact.html" class="btn btn-saffron" style="font-size:0.68rem;padding:0.7rem 1.5rem;">Get in touch</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 JG Moments Photography · Houston, TX</p>
+    <p class="footer-copy" style="color:var(--text-dim);">All images © JG Moments Photography. All rights reserved.</p>
+  </div>
+</footer>
+<div class="lightbox" id="lightbox"><div class="lightbox-inner"><img src="" alt="" id="lbImg"/></div><button class="lb-close" id="lbClose">✕</button><button class="lb-prev" id="lbPrev">‹</button><button class="lb-next" id="lbNext">›</button></div>
+<script src="main.js?v=6"></script>
+
+<script>
+(function(){
+  var items = Array.prototype.slice.call(document.querySelectorAll('.story-item'));
+  var lb    = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  if(!items.length || !lb || !lbImg) return;
+
+  var srcs = items.map(function(it){ var i = it.querySelector('img'); return i ? i.src : ''; })
+                  .filter(function(x){ return x; });
+  var idx = 0;
+
+  function show(i){
+    idx = (i + srcs.length) % srcs.length;
+    lbImg.src = srcs[idx];
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  items.forEach(function(it, i){
+    it.style.cursor = 'zoom-in';
+    it.addEventListener('click', function(e){ e.stopPropagation(); show(i); });
+  });
+
+  var btnClose = document.getElementById('lbClose');
+  var btnPrev  = document.getElementById('lbPrev');
+  var btnNext  = document.getElementById('lbNext');
+  if(btnClose) btnClose.addEventListener('click', function(e){ e.stopPropagation(); close(); });
+  if(btnPrev)  btnPrev.addEventListener('click',  function(e){ e.stopPropagation(); show(idx - 1); });
+  if(btnNext)  btnNext.addEventListener('click',  function(e){ e.stopPropagation(); show(idx + 1); });
+
+  lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape')     close();
+    if(e.key === 'ArrowLeft')  show(idx - 1);
+    if(e.key === 'ArrowRight') show(idx + 1);
+  });
+})();
+</script>
+</body>
+</html>
