@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+  /* theme: applied before first paint so there is no flash */
+  (function(){try{var t=localStorage.getItem('jg-theme')||'light';
+    document.documentElement.setAttribute('data-theme',t);}catch(e){
+    document.documentElement.setAttribute('data-theme','light');}})();
+  </script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SPE Conference 2026 | JG Moments Photography</title>
-    <meta name="description" content="Corporate Event Photography — Conferences, exhibitions and company events photographed across Houston."/>
+  <title>Corporate Event Photography, Houston | JG Moments</title>
+    <meta name="description" content="Corporate event, conference and exhibition photography in Houston by JG Moments Photography — keynotes, exhibition floors, networking and awards."/>
 <link rel="canonical" href="https://jg-moments.com/portfolio-corporate.html"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="SPE Conference 2026 | JG Moments Photography"/>
-  <meta property="og:description" content="Corporate Event Photography — Conferences, exhibitions and company events photographed across Houston."/>
+  <meta property="og:title" content="Corporate Event Photography, Houston | JG Moments"/>
+  <meta property="og:description" content="Corporate event, conference and exhibition photography in Houston by JG Moments Photography — keynotes, exhibition floors, networking and awards."/>
   <meta property="og:url" content="https://jg-moments.com/portfolio-corporate.html"/>
   <meta property="og:image" content="https://images.pixieset.com/671562121/26b96d15aadbccbca555d36fafa29817-xxlarge.jpg"/>
   <meta property="og:site_name" content="JG Moments Photography"/>
   <meta property="og:locale" content="en_US"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="SPE Conference 2026 | JG Moments Photography"/>
-  <meta name="twitter:description" content="Corporate Event Photography — Conferences, exhibitions and company events photographed across Houston."/>
+  <meta name="twitter:title" content="Corporate Event Photography, Houston | JG Moments"/>
+  <meta name="twitter:description" content="Corporate event, conference and exhibition photography in Houston by JG Moments Photography — keynotes, exhibition floors, networking and awards."/>
   <meta name="twitter:image" content="https://images.pixieset.com/671562121/26b96d15aadbccbca555d36fafa29817-xxlarge.jpg"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=8"/>
+  <link rel="stylesheet" href="style.css?v=22"/>
   <style>
     .page-hero {
       background-size: contain;
@@ -111,44 +117,67 @@
       }
     }
 
+    .sessions { padding: 2.5rem 6% 1rem 6%; background-color: var(--bg); }
+    .sessions h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400;
+      color: var(--text); margin-bottom: .4rem; }
+    .sessions p.sub { color: var(--text-muted); font-size: .9rem; margin-bottom: 1.2rem; }
+    .session-links { display: flex; flex-wrap: wrap; gap: .6rem; }
+    .session-links a { display: inline-block; padding: .55rem 1.1rem; font-size: .78rem;
+      letter-spacing: .06em; color: var(--text-muted); border: 1px solid var(--border);
+      border-radius: 999px; transition: all var(--transition); }
+    .session-links a:hover { border-color: var(--saffron); color: var(--saffron); }
+
     .page-title { margin-top: var(--nav-h); padding: 2.2rem 6% 0.6rem 6%; background-color: var(--bg); }
     .page-title h1 { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.8rem);
       font-weight: 300; color: var(--text); line-height: 1.15; }
-    .page-title p { font-family: var(--font-body); font-weight: 300; font-size: .95rem;
-      color: #D5C3AD; margin-top: .5rem; max-width: 640px; line-height: 1.75; }
+    .page-title p { font-family: var(--font-body); font-weight: 400; font-size: .95rem;
+      color: var(--prose); margin-top: .5rem; max-width: 640px; line-height: 1.75; }
     @media (max-width: 800px) { .page-title { margin-top: 0; } }
+
+    /* renamed from .album-* so style.css's global .album-card
+       (aspect-ratio:3/4; max-height:360px) can't shrink these */
+    .wed-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,560px));
+      justify-content:center; gap:1rem; padding:1.5rem 6% 3rem 6%; }
+    .wed-card { position:relative; display:block; overflow:hidden; border-radius:4px;
+      background:var(--bg-card); }
+    .wed-card img { width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 22%;
+      display:block; transition:transform .6s ease; }
+    .wed-card:hover img { transform:scale(1.05); }
+    .wed-label { position:absolute; left:0; right:0; bottom:0; background:rgba(var(--surface),.86);
+      padding:1rem 1rem; text-align:center; transition:background .3s ease; }
+    .wed-card:hover .wed-label { background:rgba(255,107,0,.92); }
+    .wed-label .n { display:block; font-family:var(--font-display); font-size:1.35rem;
+      font-weight:400; color:var(--text); line-height:1.2; }
+    .wed-label .k { display:block; margin-top:.3rem; font-size:.63rem; letter-spacing:.16em;
+      text-transform:uppercase; font-weight:600; color:var(--saffron); transition:color .3s ease; }
+    .wed-card:hover .wed-label .k { color:var(--text); }
+    @media (max-width:1000px){ .wed-grid { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:560px){ .wed-grid { grid-template-columns:1fr; gap:.7rem;
+      padding:1.2rem 4% 2rem 4%; }
+      .wed-card img { aspect-ratio:3/2; }
+      .wed-label .n { font-size:1.2rem; } }
   </style>
 </head>
 <body>
 <nav class="navbar" id="navbar"><a href="index.html" class="nav-logo"><img src="https://cdn.myportfolio.com/adf9b4d7-4684-4168-acfb-aee0faac1aad/8ba96ab9-3df8-40cd-8e3c-0cc2e9b5c6c9_rwc_0x0x1445x854x4096.png?h=0459893e8fb48b7a053ce172a441f18f" alt="JG Moments Photography, Houston TX" width="300" height="177"/></a>
-  <ul class="nav-links"><li><a href="index.html">Home</a></li><li class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><a href="portfolio-engagements.html">Engagement Sessions</a><a href="portfolio-weddings-ceremonies.html">Wedding Sessions</a><a href="portfolio-proposals.html">Proposals</a><div class="has-sub"><span class="sub-label">Portraits</span><div class="submenu"><a href="portfolio-family.html">Family</a><a href="portfolio-couple-shoots.html">Couples</a><a href="portfolio-children-teens.html">Children &amp; Teens</a></div></div><a href="portfolio-maternity.html">Maternity</a><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><div class="has-sub"><span class="sub-label">Sports</span><div class="submenu"><a href="portfolio-swimming.html">Swimming</a><a href="portfolio-soccer.html">Soccer</a></div></div><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><div class="has-sub"><span class="sub-label">Cultural &amp; Religious</span><div class="submenu"><a href="portfolio-baptism.html">Baptism</a><a href="portfolio-diwali.html">Diwali</a></div></div></div></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="nav-book">Get in touch</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></nav><div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><div class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><a href="portfolio-engagements.html">Engagement Sessions</a><a href="portfolio-weddings-ceremonies.html">Wedding Sessions</a><a href="portfolio-proposals.html">Proposals</a><div class="has-sub"><span class="sub-label">Portraits</span><div class="submenu"><a href="portfolio-family.html">Family</a><a href="portfolio-couple-shoots.html">Couples</a><a href="portfolio-children-teens.html">Children &amp; Teens</a></div></div><a href="portfolio-maternity.html">Maternity</a><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><div class="has-sub"><span class="sub-label">Sports</span><div class="submenu"><a href="portfolio-swimming.html">Swimming</a><a href="portfolio-soccer.html">Soccer</a></div></div><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><div class="has-sub"><span class="sub-label">Cultural &amp; Religious</span><div class="submenu"><a href="portfolio-baptism.html">Baptism</a><a href="portfolio-diwali.html">Diwali</a></div></div></div></div><a href="testimonials.html">Testimonials</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="page-title">
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><a href="portfolio-engagements.html">Engagement Sessions</a><a href="portfolio-weddings-ceremonies.html">Wedding Sessions</a><a href="portfolio-proposals.html">Proposals</a><div class="has-sub"><span class="sub-label">Portraits</span><div class="submenu"><a href="portfolio-family.html">Family</a><a href="portfolio-couple-shoots.html">Couples</a><a href="portfolio-children-teens.html">Children &amp; Teens</a></div></div><a href="portfolio-maternity.html">Maternity</a><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><div class="has-sub"><span class="sub-label">Sports</span><div class="submenu"><a href="portfolio-swimming.html">Swimming</a><a href="portfolio-soccer.html">Soccer</a></div></div><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><div class="has-sub"><span class="sub-label">Cultural &amp; Religious</span><div class="submenu"><a href="portfolio-baptism.html">Baptism</a><a href="portfolio-diwali.html">Diwali</a></div></div></div></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="nav-book">Get in touch</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></nav><div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><div class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><a href="portfolio-engagements.html">Engagement Sessions</a><a href="portfolio-weddings-ceremonies.html">Wedding Sessions</a><a href="portfolio-proposals.html">Proposals</a><div class="has-sub"><span class="sub-label">Portraits</span><div class="submenu"><a href="portfolio-family.html">Family</a><a href="portfolio-couple-shoots.html">Couples</a><a href="portfolio-children-teens.html">Children &amp; Teens</a></div></div><a href="portfolio-maternity.html">Maternity</a><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><div class="has-sub"><span class="sub-label">Sports</span><div class="submenu"><a href="portfolio-swimming.html">Swimming</a><a href="portfolio-soccer.html">Soccer</a></div></div><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><div class="has-sub"><span class="sub-label">Cultural &amp; Religious</span><div class="submenu"><a href="portfolio-baptism.html">Baptism</a><a href="portfolio-diwali.html">Diwali</a></div></div></div></div><a href="testimonials.html">Testimonials</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="page-title">
   <h1>Corporate Event Photography</h1>
   <p>Conferences, exhibitions and company events photographed across Houston.</p>
 </div>
-<div class="gallery-grid">
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/26b96d15aadbccbca555d36fafa29817-xxlarge.jpg" alt="SPE Conference 2026" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/e7b9e8867e1c51a221b93a2c39caf09c-xxlarge.jpg" alt="SPE Conference 2026 — photographed by JG Moments, Houston TX" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/606297671e924958333a79ff4ae69f8e-xxlarge.jpg" alt="SPE Conference 2026 — candid moment captured by JG Moments, Houston" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/9e9d9b97f21e3622986cfd3217f84872-xxlarge.jpg" alt="SPE Conference 2026 — professional photography by JG Moments, Houston TX" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/0bdaa6f5c82e26edf08bc22e2f92ea38-xxlarge.jpg" alt="SPE Conference 2026 — captured by JG Moments Photography, Houston" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/05f299b9513a56c578491ef2bc881da7-xxlarge.jpg" alt="SPE Conference 2026 — Houston photography by JG Moments" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/f8fc535e7431f64491ce5cf6f320856c-xxlarge.jpg" alt="SPE Conference 2026 — documented by JG Moments Photography, Houston TX" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/02e72480b724bf4c43d0798ce18d5f1e-xxlarge.jpg" alt="SPE Conference 2026 — photographed by JG Moments, Houston TX" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/9905f12477eec6c4f6bd45b22623c342-xxlarge.jpg" alt="SPE Conference 2026 — candid moment captured by JG Moments, Houston" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/eded556d8048ee974aaf2ef1ddfb7340-xxlarge.jpg" alt="SPE Conference 2026 — professional photography by JG Moments, Houston TX" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/e4b344de1eca3eaa1ef07b213de5d72a-xxlarge.jpg" alt="SPE Conference 2026 — captured by JG Moments Photography, Houston" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/664a1f4602d934f2523997316ad15510-xxlarge.jpg" alt="SPE Conference 2026 — Houston photography by JG Moments" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/1fb2a08df7faf65a7f5dac470e4e8b01-xxlarge.jpg" alt="SPE Conference 2026 — documented by JG Moments Photography, Houston TX" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/e4ecd03c8564bdb07cd887bfe110a577-xxlarge.jpg" alt="SPE Conference 2026 — photographed by JG Moments, Houston TX" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/d63826cec4c935f95ee67495b4d555ac-xxlarge.jpg" alt="SPE Conference 2026 — candid moment captured by JG Moments, Houston" loading="lazy"/></div>
-  <div class="gallery-item"><img src="https://images.pixieset.com/671562121/a4d95087e1cca2fba5f4f44077e75e63-xxlarge.jpg" alt="SPE Conference 2026 — professional photography by JG Moments, Houston TX" loading="lazy"/></div>
-</div>
+<div class="wed-grid">
+    <a class="wed-card" href="spe-alce-conference.html">
+      <img src="https://images.pixieset.com/671562121/26b96d15aadbccbca555d36fafa29817-xxlarge.jpg" alt="SPE Artificial Lift Conference and Exhibition photographed in Houston by JG Moments Photography" loading="lazy"/>
+      <div class="wed-label"><span class="n">SPE ALCE 2026</span><span class="k">Conference &amp; Exhibition</span></div>
+    </a>
+  </div>
+
 <div style="background:linear-gradient(135deg,var(--bg-light),var(--bg));padding:2rem 6%;text-align:center;" class="pixieset-cta">
-  <a href="https://jgmoments.pixieset.com/speconference2026/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
+  <a href="https://jgmoments.pixieset.com/nikkahceremony/" target="_blank" class="btn btn-saffron" style="display:inline-block;">Visit Pixieset Gallery →</a>
 </div>
 <div class="text-center" style="padding:2rem 6%;background-color:var(--bg);">
-  <h3 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:1rem;color:var(--text);">Ready to Capture Your Corporate Events?</h3>
-  <a href="contact.html" class="btn btn-saffron" style="margin-bottom:1rem;">Get In touch</a><br>
+  <h3>Ready to Capture Your Corporate Event?</h3>
+  <a href="contact.html" class="btn btn-saffron" style="margin-bottom:1rem;">Book a Session</a><br>
+  <a href="portfolio-weddings.html" class="btn btn-outline">← Back to Weddings &amp; Engagements</a>
   <a href="index.html" class="btn btn-outline">← Back to Home</a>
 </div>
 <footer class="footer">
@@ -173,7 +202,7 @@
       <p class="footer-heading">Navigate</p>
       <ul class="footer-links">
         <li><a href="index.html">Home</a></li>
-        <li class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><a href="portfolio-engagements.html">Engagement Sessions</a><a href="portfolio-weddings-ceremonies.html">Wedding Sessions</a><a href="portfolio-proposals.html">Proposals</a><div class="has-sub"><span class="sub-label">Portraits</span><div class="submenu"><a href="portfolio-family.html">Family</a><a href="portfolio-couple-shoots.html">Couples</a><a href="portfolio-children-teens.html">Children &amp; Teens</a></div></div><a href="portfolio-maternity.html">Maternity</a><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><div class="has-sub"><span class="sub-label">Sports</span><div class="submenu"><a href="portfolio-swimming.html">Swimming</a><a href="portfolio-soccer.html">Soccer</a></div></div><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><a href="portfolio-awards.html">Award Ceremonies</a><div class="has-sub"><span class="sub-label">Cultural &amp; Religious</span><div class="submenu"><a href="portfolio-baptism.html">Baptism</a><a href="portfolio-diwali.html">Diwali</a></div></div></div></li>
+        <li class="nav-dropdown"><a href="#" onclick="return false;">Portfolio ▼</a><div class="dropdown-menu"><a href="portfolio-engagements.html">Engagement Sessions</a><a href="portfolio-weddings-ceremonies.html">Wedding Sessions</a><a href="portfolio-proposals.html">Proposals</a><div class="has-sub"><span class="sub-label">Portraits</span><div class="submenu"><a href="portfolio-family.html">Family</a><a href="portfolio-couple-shoots.html">Couples</a><a href="portfolio-children-teens.html">Children &amp; Teens</a></div></div><a href="portfolio-maternity.html">Maternity</a><a href="portfolio-celebrations-events.html">Celebrations &amp; Events</a><div class="has-sub"><span class="sub-label">Sports</span><div class="submenu"><a href="portfolio-swimming.html">Swimming</a><a href="portfolio-soccer.html">Soccer</a></div></div><a href="portfolio-corporate.html">Corporate Events</a><a href="portfolio-headshots.html">Headshots</a><div class="has-sub"><span class="sub-label">Cultural &amp; Religious</span><div class="submenu"><a href="portfolio-baptism.html">Baptism</a><a href="portfolio-diwali.html">Diwali</a></div></div></div></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -202,5 +231,25 @@
 </footer>
 <div class="lightbox" id="lightbox"><div class="lightbox-inner"><img src="" alt="" id="lbImg"/></div><button class="lb-close" id="lbClose">✕</button><button class="lb-prev" id="lbPrev">‹</button><button class="lb-next" id="lbNext">›</button></div>
 <script src="main.js?v=6"></script>
+<button id="themeBtn" aria-label="Switch between dark and light mode"><span class="ico">☽</span><span class="lbl">Dark mode</span></button>
+<script>
+(function(){
+  var b=document.getElementById('themeBtn'), h=document.documentElement;
+  if(!b) return;
+  function paint(){
+    var dark = h.getAttribute('data-theme')==='dark';
+    b.querySelector('.ico').textContent = dark ? '\u2600' : '\u263D';
+    b.querySelector('.lbl').textContent = dark ? 'Light mode' : 'Dark mode';
+  }
+  paint();
+  try{ if(!localStorage.getItem('jg-theme-used')) b.classList.add('hint'); }catch(e){}
+  b.addEventListener('click',function(){
+    var next = h.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+    h.setAttribute('data-theme',next);
+    try{ localStorage.setItem('jg-theme',next); localStorage.setItem('jg-theme-used','1'); }catch(e){}
+    b.classList.remove('hint'); paint();
+  });
+})();
+</script>
 </body>
 </html>
