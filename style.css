@@ -34,6 +34,7 @@ html[data-theme="light"] {
   --card-shadow: 0 6px 18px rgba(26,21,18,0.09);
   --card-shadow-hover: 0 18px 38px rgba(26,21,18,0.16);
   --card-edge: rgba(26,21,18,0.13);
+  --review-bg: #FDF2E6;        /* warm tint for the review block */
 }
 
 /* ---------- DARK ---------- */
@@ -61,6 +62,7 @@ html[data-theme="dark"] {
   --card-shadow: 0 6px 18px rgba(0,0,0,0.35);
   --card-shadow-hover: 0 20px 40px rgba(0,0,0,0.45);
   --card-edge: rgba(212,160,23,0.22);
+  --review-bg: #221310;        /* warm tint for the review block */
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -689,3 +691,80 @@ body { transition: background-color .25s ease, color .25s ease; }
   font-size: .63rem; font-weight: 700; letter-spacing: .18em; color: var(--saffron);
 }
 #carouselTrack .stars, #carouselTrack .review-stars { color: var(--gold); }
+
+
+/* ---------- CLIENT REVIEW BLOCK - deliberately loud, it is the strongest sales asset ----------
+   element+class beats the per-page .story-quote rules, so this wins without !important */
+section.story-quote {
+  background: var(--review-bg);
+  border: 1px solid var(--card-edge);
+  border-top: 3px solid var(--saffron);
+  border-radius: 4px;
+  box-shadow: var(--card-shadow);
+  max-width: 1000px;
+  margin: 1rem auto 2.5rem auto;
+  padding: 3rem 2.4rem 2.6rem 2.4rem;
+  position: relative;
+  overflow: hidden;
+}
+/* oversized quote mark as background texture */
+section.story-quote::before {
+  content: '\201C';
+  position: absolute; top: -2.2rem; left: 1.2rem;
+  font-family: var(--font-display); font-size: 11rem; line-height: 1;
+  color: var(--saffron); opacity: .13; pointer-events: none;
+}
+section.story-quote blockquote { position: relative; z-index: 1; }
+section.story-quote .stars { font-size: 1.35rem; letter-spacing: .22em; color: var(--gold); margin-bottom: 1rem; }
+section.story-quote p {
+  font-family: var(--font-display); font-style: italic;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem); line-height: 1.6;
+  color: var(--text);
+}
+section.story-quote cite {
+  display: inline-block; margin-top: 1.6rem; padding-top: 1.1rem;
+  border-top: 1px solid var(--card-edge);
+  font-family: var(--font-body); font-style: normal; font-weight: 700;
+  font-size: .74rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--saffron);
+}
+@media (max-width: 700px) {
+  section.story-quote { margin: .5rem 4% 2rem 4%; padding: 2.2rem 1.4rem 1.8rem 1.4rem; }
+  section.story-quote::before { font-size: 7rem; top: -1.4rem; left: .6rem; }
+}
+
+
+/* ---------- REVIEW CARDS - same visual language as the story review block ----------
+   applies to testimonials.html (59 cards) and the homepage carousel */
+.testimonial-card {
+  background: var(--review-bg);
+  border: 1px solid var(--card-edge);
+  border-top: 3px solid var(--saffron);
+  border-radius: 4px;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem 1.4rem 1.3rem 1.4rem;
+}
+.testimonial-card::before { color: var(--saffron); opacity: .12; font-size: 6.5rem; }
+.testimonial-card:hover {
+  border-color: var(--card-edge);
+  border-top-color: var(--saffron-light);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-4px);
+}
+.testimonial-card .stars { font-size: 1.05rem; letter-spacing: .16em; color: var(--gold); }
+.testimonial-author { font-weight: 700; }
+.testimonial-type { font-weight: 700; color: var(--saffron); }
+
+/* homepage carousel keeps the larger type it already had */
+#carouselTrack .testimonial-card { padding: 1.9rem 1.7rem 1.6rem 1.7rem; }
+#carouselTrack .testimonial-card::before { font-size: 7rem; opacity: .10; }
+
+/* the two call-to-action cards on the homepage review strip */
+.review-card {
+  background: var(--review-bg);
+  border: 1px solid var(--card-edge);
+  border-top: 3px solid var(--saffron);
+  box-shadow: var(--card-shadow);
+}
+.review-card:hover { box-shadow: var(--card-shadow-hover); border-top-color: var(--saffron-light); }
+.review-stars { color: var(--gold); }
