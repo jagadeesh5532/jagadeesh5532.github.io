@@ -768,3 +768,18 @@ section.story-quote cite {
 }
 .review-card:hover { box-shadow: var(--card-shadow-hover); border-top-color: var(--saffron-light); }
 .review-stars { color: var(--gold); }
+
+
+/* ---------- NAVBAR OVERLAP FIX ----------
+   .social-bar is position:fixed and .nav-links is absolutely centred, so neither can
+   push the other out of the way - below ~1700px they collide. Keep the header icons
+   only where there is genuinely room; everywhere else the icons still appear in the
+   mobile bar (under 900px) and in the footer on every page. */
+@media (min-width: 901px) and (max-width: 1699px) {
+  .social-bar { display: none !important; }
+}
+/* give the centred links a hard stop so they can never run under the logo either */
+@media (min-width: 801px) {
+  .nav-links { max-width: calc(100% - 620px); }
+  .nav-links a { white-space: nowrap; }
+}
