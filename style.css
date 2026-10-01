@@ -34,7 +34,7 @@ html[data-theme="light"] {
   --card-shadow: 0 6px 18px rgba(26,21,18,0.09);
   --card-shadow-hover: 0 18px 38px rgba(26,21,18,0.16);
   --card-edge: rgba(26,21,18,0.13);
-  --review-bg: #FDF2E6;        /* warm tint for the review block */
+  --review-bg: #F9E6D2;        /* warm tint for the review block */
 }
 
 /* ---------- DARK ---------- */
@@ -62,7 +62,7 @@ html[data-theme="dark"] {
   --card-shadow: 0 6px 18px rgba(0,0,0,0.35);
   --card-shadow-hover: 0 20px 40px rgba(0,0,0,0.45);
   --card-edge: rgba(212,160,23,0.22);
-  --review-bg: #221310;        /* warm tint for the review block */
+  --review-bg: #2C1A14;        /* warm tint for the review block */
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -760,13 +760,15 @@ section.story-quote cite {
 #carouselTrack .testimonial-card::before { font-size: 7rem; opacity: .10; }
 
 /* the two call-to-action cards on the homepage review strip */
-.review-card {
+/* element+class so it beats index.html's inline .review-card rule */
+div.review-card {
   background: var(--review-bg);
   border: 1px solid var(--card-edge);
   border-top: 3px solid var(--saffron);
   box-shadow: var(--card-shadow);
 }
-.review-card:hover { box-shadow: var(--card-shadow-hover); border-top-color: var(--saffron-light); }
+div.review-card:hover { box-shadow: var(--card-shadow-hover); border-top-color: var(--saffron-light); }
+div.review-card p { color: var(--prose); }
 .review-stars { color: var(--gold); }
 
 
