@@ -1,3 +1,16 @@
+/* Testimonial thumbnails render at roughly 70-120px. Serving the 1600px
+   original wasted several megabytes on the homepage, so pick small variants. */
+function thumbSrc(u){
+  var m = u.match(/^(.*)-xxlarge\.(jpg|png)$/);
+  return m ? m[1] + '-medium.' + m[2] : u;
+}
+function thumbSrcset(u){
+  var m = u.match(/^(.*)-xxlarge\.(jpg|png)$/);
+  if (!m) return '';
+  return ' srcset="' + [['thumb',150],['small',240],['medium',360],['large',640]]
+    .map(function(p){ return m[1] + '-' + p[0] + '.' + m[2] + ' ' + p[1] + 'w'; }).join(', ') + '"';
+}
+
 // JG Moments Photography — Main JS
 
 // NAV SCROLL
@@ -604,17 +617,6 @@ if (track) {
 
   window.addEventListener('resize', updateCarouselPosition);
 
-/* Testimonial thumbnails render at roughly 70-120px. Serving the 1600px
-   original wasted several megabytes on the homepage, so pick small variants. */
-function thumbSrc(u){
-  var m = u.match(/^(.*)-xxlarge\.(jpg|png)$/);
-  return m ? m[1] + '-medium.' + m[2] : u;
-}
-function thumbSrcset(u){
-  var m = u.match(/^(.*)-xxlarge\.(jpg|png)$/);
-  if (!m) return '';
-  return ' srcset="' + [['thumb',150],['small',240],['medium',360],['large',640]]
-    .map(function(p){ return m[1] + '-' + p[0] + '.' + m[2] + ' ' + p[1] + 'w'; }).join(', ') + '"';
-}
+
 
 }
