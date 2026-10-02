@@ -1,2 +1,18 @@
+# local-only working files - never publish these
+_private_local/
+*.docx
+*.sh
+*.backup
+*.mobile-redesign-backup
+*.tmp.*
 *.zip
 *-backup-*/
+CLAUDE.md
+TASKS.md
+ADMIN_SETUP.md
+ADD-IMAGES-README.md
+GITHUB_UPDATES_GUIDE.md
+QUICK_REFERENCE.md
+CHANGELOG.md
+admin.html
+testimonials.json

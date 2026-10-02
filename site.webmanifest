@@ -1,0 +1,13 @@
+{
+  "name": "JG Moments Photography",
+  "short_name": "JG Moments",
+  "description": "Wedding, portrait, maternity and event photography in Cypress, Houston and across the Texas Gulf Coast.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF9F6",
+  "theme_color": "#C2491B",
+  "icons": [
+    { "src": "/images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
