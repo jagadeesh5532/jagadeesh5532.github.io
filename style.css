@@ -19,10 +19,10 @@ html[data-theme="light"] {
   --text-muted: #3D352E;
   --text-dim: #4E443B;
   --prose: #241E18;
-  --saffron: #C2491B;
+  --saffron: #BA4619;
   --saffron-light: #E0622B;
   --crimson: #A3122A;
-  --gold: #8A6A12;
+  --gold: #846511;
   --gold-light: #7D5F0E;
   --purple: #6E1FA8;
   --teal: #00897B;
@@ -930,17 +930,24 @@ div.review-card p { color: var(--prose); }
 
 .hero-dots { position: absolute; left: 6%; bottom: 2.6rem; z-index: 3;
   display: flex; flex-wrap: wrap; gap: .5rem; max-width: 60%; }
-.hero-dot { width: 9px; height: 9px; padding: 0; border-radius: 50%;
-  border: 1px solid rgba(255,251,245,.75); background: transparent; cursor: pointer;
+.hero-dot { width: 26px; height: 26px; padding: 0; border: 0; background: none;
+  cursor: pointer; position: relative; display: inline-flex; }
+.hero-dot::before { content: ""; position: absolute; top: 50%; left: 50%;
+  width: 9px; height: 9px; margin: -5px 0 0 -5px; border-radius: 50%;
+  border: 1px solid rgba(255,251,245,.75); background: transparent;
   transition: background .3s ease, transform .3s ease, border-color .3s ease; }
-.hero-dot:hover { background: rgba(255,251,245,.6); }
-.hero-dot.is-active { background: var(--saffron); border-color: var(--saffron); transform: scale(1.25); }
+.hero-dot:hover::before { background: rgba(255,251,245,.6); }
+.hero-dot.is-active::before { background: var(--saffron); border-color: var(--saffron); transform: scale(1.25); }
 .hero-dot:focus-visible { outline: 2px solid #FFFBF5; outline-offset: 3px; }
 
 @media (max-width: 800px) {
-  .hero-dots { left: 7%; right: 7%; bottom: 1.6rem; max-width: none; gap: .42rem; }
-  .hero-dot { width: 7px; height: 7px; }
+  .hero-dots { left: 7%; right: 7%; bottom: 1.2rem; max-width: none; gap: 0; }
+  .hero-dot { width: 24px; height: 24px; }
+  .hero-dot::before { width: 7px; height: 7px; margin: -4px 0 0 -4px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-slide { transition: none; }
 }
+
+/* hero slides are now <img> elements so they can be responsive (srcset) */
+.hero-slide { width: 100%; height: 100%; object-fit: cover; object-position: center 42%; }
