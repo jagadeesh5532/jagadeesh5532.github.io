@@ -907,3 +907,6 @@ div.review-card p { color: var(--prose); }
 @media (max-width:560px){ .wed-grid { grid-template-columns:1fr; gap:.7rem; padding:1.2rem 4% 2rem 4%; }
   .wed-card img { aspect-ratio:3/2; }
   .wed-label .n { font-size:1.2rem; } }
+/* story CTA heading promoted from h3 to h2 — keep the original visual weight */
+.story-cta h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400;
+  color: var(--text); margin-bottom: 1.4rem; }
