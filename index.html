@@ -159,7 +159,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=39"/>
+  <link rel="preload" as="image" href="https://images.pixieset.com/643210321/c214b38d3482e4ffd994b1dfdaeabb5c-xxlarge.jpg" fetchpriority="high"/>
+  <link rel="stylesheet" href="style.css?v=40"/>
 
   <style>
     .photo-strip {
@@ -277,7 +278,40 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg" id="heroBg" style="background-image:url('https://images.pixieset.com/419486511/165e61640c94eb05b1fc049c31ff3b0f-xxlarge.jpg');"></div>
+  <div class="hero-bg" id="heroBg">
+  <div class="hero-slide is-active" style="background-image:url('https://images.pixieset.com/643210321/c214b38d3482e4ffd994b1dfdaeabb5c-xxlarge.jpg');" role="img" aria-label="A first birthday celebration photographed in Sugar Land, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/488182321/543ea8108c3573859afa3c9c5dba4b41-xxlarge.jpg" role="img" aria-label="A Sweet 16 birthday party photographed in Houston, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/792052121/e7ee71ba3535a55376a61084b5c3577e-xxlarge.jpg" role="img" aria-label="A wedding ceremony photographed in Missouri City, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/634312611/2a51e814dfd7ab5af78f5e11b5a51303-xxlarge.jpg" role="img" aria-label="A portrait session photographed around Houston, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/804507121/10d3a320797194316e88baedd6ae2b4c-xxlarge.jpg" role="img" aria-label="A family session photographed around Houston, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/755946121/6ab026780f99e20739b4765e0dcfc4d4-xxlarge.jpg" role="img" aria-label="A family portrait session photographed in Tomball, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/792052121/372f4750fdd7b16a9d2f663fc516f346-xxlarge.jpg" role="img" aria-label="A wedding day photographed in Missouri City, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/943326021/64021c34a6f046a1866e5c2b0b87ce6a-xxlarge.jpg" role="img" aria-label="A Sweet 16 celebration photographed in Houston, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/831561911/f3e345117d83b146f60369051aa96a34-xxlarge.jpg" role="img" aria-label="A milestone birthday celebration photographed in Galveston, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/077020911/06da133ef2f2e95dabfd6a78239cd74c-xxlarge.jpg" role="img" aria-label="A baptism photographed in Pearland, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/609802811/1bc7470d94253ac979b6ec34d37b0939-xxlarge.jpg" role="img" aria-label="A family reunion portrait session photographed around Houston, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/419486511/165e61640c94eb05b1fc049c31ff3b0f-xxlarge.jpg" role="img" aria-label="A cake smash and first birthday session photographed in Houston, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/721365511/7efae2197fee4d00985fa1403a452830-xxlarge.jpg" role="img" aria-label="A surprise marriage proposal photographed in Kingwood, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/941437711/22f8176bd8352a1c6e9ca7794d951054-xxlarge.jpg" role="img" aria-label="A beach family session photographed in Galveston, Texas"></div>
+  <div class="hero-slide" data-src="https://images.pixieset.com/671562121/1c361b72a721a30cb7e719c465c1d612-xxlarge.jpg" role="img" aria-label="A corporate conference photographed in The Woodlands, Texas"></div>
+</div>
+  <div class="hero-dots" id="heroDots" role="tablist" aria-label="Featured photographs">
+    <button type="button" class="hero-dot is-active" data-i="0" role="tab" aria-selected="true" aria-label="Show image 1 of 15"></button>
+    <button type="button" class="hero-dot" data-i="1" role="tab" aria-selected="false" aria-label="Show image 2 of 15"></button>
+    <button type="button" class="hero-dot" data-i="2" role="tab" aria-selected="false" aria-label="Show image 3 of 15"></button>
+    <button type="button" class="hero-dot" data-i="3" role="tab" aria-selected="false" aria-label="Show image 4 of 15"></button>
+    <button type="button" class="hero-dot" data-i="4" role="tab" aria-selected="false" aria-label="Show image 5 of 15"></button>
+    <button type="button" class="hero-dot" data-i="5" role="tab" aria-selected="false" aria-label="Show image 6 of 15"></button>
+    <button type="button" class="hero-dot" data-i="6" role="tab" aria-selected="false" aria-label="Show image 7 of 15"></button>
+    <button type="button" class="hero-dot" data-i="7" role="tab" aria-selected="false" aria-label="Show image 8 of 15"></button>
+    <button type="button" class="hero-dot" data-i="8" role="tab" aria-selected="false" aria-label="Show image 9 of 15"></button>
+    <button type="button" class="hero-dot" data-i="9" role="tab" aria-selected="false" aria-label="Show image 10 of 15"></button>
+    <button type="button" class="hero-dot" data-i="10" role="tab" aria-selected="false" aria-label="Show image 11 of 15"></button>
+    <button type="button" class="hero-dot" data-i="11" role="tab" aria-selected="false" aria-label="Show image 12 of 15"></button>
+    <button type="button" class="hero-dot" data-i="12" role="tab" aria-selected="false" aria-label="Show image 13 of 15"></button>
+    <button type="button" class="hero-dot" data-i="13" role="tab" aria-selected="false" aria-label="Show image 14 of 15"></button>
+    <button type="button" class="hero-dot" data-i="14" role="tab" aria-selected="false" aria-label="Show image 15 of 15"></button>
+  </div>
   <div class="hero-gradient"></div>
   <div class="hero-gradient-bottom"></div>
   <div class="hero-content fade-up">
@@ -539,6 +573,49 @@
     try{ localStorage.setItem('jg-theme',next); localStorage.setItem('jg-theme-used','1'); }catch(e){}
     b.classList.remove('hint'); paint();
   });
+})();
+</script>
+
+<script>
+/* Hero carousel: cross-fade, dots, lazy per-slide loading, pauses when the tab is hidden. */
+(function(){
+  var wrap=document.getElementById('heroBg'); if(!wrap) return;
+  var slides=[].slice.call(wrap.querySelectorAll('.hero-slide'));
+  var dots=[].slice.call(document.querySelectorAll('#heroDots .hero-dot'));
+  if(slides.length<2) return;
+  var i=0, timer=null, HOLD=6000;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function load(n){
+    var el=slides[n]; if(!el||!el.dataset.src) return;
+    var src=el.dataset.src; delete el.dataset.src;
+    var im=new Image(); im.onload=function(){ el.style.backgroundImage="url('"+src+"')"; }; im.src=src;
+  }
+  function go(n){
+    n=(n+slides.length)%slides.length;
+    load(n);                       /* make sure the target itself is loaded before we fade to it */
+    slides[i].classList.remove('is-active');
+    if(dots[i]){ dots[i].classList.remove('is-active'); dots[i].setAttribute('aria-selected','false'); }
+    i=n;
+    slides[i].classList.add('is-active');
+    if(dots[i]){ dots[i].classList.add('is-active'); dots[i].setAttribute('aria-selected','true'); }
+    load(i+1); load(i+2);
+  }
+  function start(){ if(reduce||timer) return; timer=setInterval(function(){ go(i+1); },HOLD); }
+  function stop(){ clearInterval(timer); timer=null; }
+  dots.forEach(function(d){ d.addEventListener('click',function(){
+    stop();
+    var n=+d.dataset.i, el=slides[n];
+    if(el && el.dataset.src){           /* not loaded yet: fetch first, then fade */
+      var src=el.dataset.src; delete el.dataset.src;
+      var im=new Image();
+      im.onload=function(){ el.style.backgroundImage="url('"+src+"')"; go(n); start(); };
+      im.onerror=function(){ go(n); start(); };
+      im.src=src;
+    } else { go(n); start(); }
+  }); });
+  document.addEventListener('visibilitychange',function(){ document.hidden?stop():start(); });
+  load(1); load(2);
+  if(!reduce) start();
 })();
 </script>
 </body>

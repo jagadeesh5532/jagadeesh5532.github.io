@@ -920,3 +920,27 @@ div.review-card p { color: var(--prose); }
   .nav-book  { display: none; }
   .hamburger { display: flex; }
 }
+
+/* ---------- Hero carousel ---------- */
+.hero-bg { overflow: hidden; }
+.hero-slide { position: absolute; inset: 0;
+  background-size: cover; background-position: center 42%; background-repeat: no-repeat;
+  opacity: 0; transition: opacity 1.5s ease-in-out; will-change: opacity; }
+.hero-slide.is-active { opacity: 1; }
+
+.hero-dots { position: absolute; left: 6%; bottom: 2.6rem; z-index: 3;
+  display: flex; flex-wrap: wrap; gap: .5rem; max-width: 60%; }
+.hero-dot { width: 9px; height: 9px; padding: 0; border-radius: 50%;
+  border: 1px solid rgba(255,251,245,.75); background: transparent; cursor: pointer;
+  transition: background .3s ease, transform .3s ease, border-color .3s ease; }
+.hero-dot:hover { background: rgba(255,251,245,.6); }
+.hero-dot.is-active { background: var(--saffron); border-color: var(--saffron); transform: scale(1.25); }
+.hero-dot:focus-visible { outline: 2px solid #FFFBF5; outline-offset: 3px; }
+
+@media (max-width: 800px) {
+  .hero-dots { left: 7%; right: 7%; bottom: 1.6rem; max-width: none; gap: .42rem; }
+  .hero-dot { width: 7px; height: 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { transition: none; }
+}
