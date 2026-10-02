@@ -267,14 +267,14 @@ btn.disabled = false;
 }, 5000);
 } else {
 const errData = await res.json().catch(() => ({}));
-console.error('Formspree error:', errData);
+
 btn.textContent = 'Failed — please try again';
 btn.style.background = 'var(--crimson)';
 btn.disabled = false;
 setTimeout(() => { btn.textContent = origTxt; btn.style.background = ''; }, 4000);
 }
 } catch (err) {
-console.error('Network error:', err);
+
 // Fallback: submit form normally if fetch fails
 btn.textContent = 'Redirecting…';
 form.submit();
@@ -515,17 +515,15 @@ const prevBtn = document.getElementById('carouselPrev');
 const nextBtn = document.getElementById('carouselNext');
 let autoScrollInterval;
 
-console.log('Carousel track found:', !!track);
-console.log('Testimonials count:', testimonials.length);
 
 function renderCarousel() {
-  console.log('renderCarousel called');
+
   if (!track) {
-    console.error('Track element not found!');
+
     return;
   }
   track.innerHTML = '';
-  console.log('Rendering', testimonials.length, 'testimonials');
+
   testimonials.forEach((t, idx) => {
     const card = document.createElement('div');
     card.className = 'testimonial-card';
@@ -534,7 +532,7 @@ function renderCarousel() {
       const photoClass = t.photos.length === 2 ? 'three-photos' : '';
       photosHTML = `<div class="photo-strip ${photoClass}">`;
       t.photos.forEach(photo => {
-        photosHTML += `<div class="photo-thumb"><img src="${photo}" alt="${t.author} session" loading="lazy"/></div>`;
+        photosHTML += `<div class="photo-thumb"><img src="${thumbSrc(photo)}"${thumbSrcset(photo)} sizes="(max-width:800px) 23vw, 120px" alt="${t.author} session" loading="lazy" decoding="async" width="400" height="400"/></div>`;
       });
       photosHTML += `</div>`;
     }
@@ -551,7 +549,7 @@ function renderCarousel() {
     `;
     track.appendChild(card);
   });
-  console.log('Rendered', track.children.length, 'cards');
+
 }
 
 function updateCarouselPosition() {
@@ -605,4 +603,18 @@ if (track) {
   });
 
   window.addEventListener('resize', updateCarouselPosition);
+
+/* Testimonial thumbnails render at roughly 70-120px. Serving the 1600px
+   original wasted several megabytes on the homepage, so pick small variants. */
+function thumbSrc(u){
+  var m = u.match(/^(.*)-xxlarge\.(jpg|png)$/);
+  return m ? m[1] + '-medium.' + m[2] : u;
+}
+function thumbSrcset(u){
+  var m = u.match(/^(.*)-xxlarge\.(jpg|png)$/);
+  if (!m) return '';
+  return ' srcset="' + [['thumb',150],['small',240],['medium',360],['large',640]]
+    .map(function(p){ return m[1] + '-' + p[0] + '.' + m[2] + ' ' + p[1] + 'w'; }).join(', ') + '"';
+}
+
 }
