@@ -601,7 +601,7 @@
   var slides=[].slice.call(wrap.querySelectorAll('.hero-slide'));
   var dots=[].slice.call(document.querySelectorAll('#heroDots .hero-dot'));
   if(slides.length<2) return;
-  var i=0, timer=null, HOLD=6000;
+  var i=0, timer=null, HOLD=3000;
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function load(n){
     var el=slides[n]; if(!el||!el.dataset.src) return;
