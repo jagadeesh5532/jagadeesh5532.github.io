@@ -1,16 +1,5 @@
-# JG Moments Photography - robots.txt
-# Allow search engines to crawl and index all pages
-
+# JG Moments Photography — robots.txt
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 
-# Sitemap location
 Sitemap: https://jg-moments.com/sitemap.xml
-
-# Crawl delay (optional - 0 means no delay)
-Crawl-delay: 0
-
-# Request rate (optional)
-Request-rate: 30/60
