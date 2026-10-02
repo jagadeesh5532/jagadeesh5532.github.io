@@ -67,7 +67,10 @@ html[data-theme="dark"] {
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-weight: 400; line-height: 1.7; overflow-x: hidden; }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%;
+  /* width/height attributes are presentational hints (they set a fixed CSS height).
+     Let CSS own the height so aspect-ratio / object-fit rules still win. */
+  height: auto; }
 picture { display: contents; }
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
@@ -248,7 +251,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-.mobile-nav { display: none; position: fixed; top: calc(var(--nav-h) + 70px); left: 0; right: 0; background: rgba(var(--surface),0.99); padding: 2rem 5%; z-index: 999; border-bottom: 1px solid var(--border); }
+.mobile-nav { display: none; position: fixed; top: calc(var(--nav-h) + 70px); left: 0; right: 0; background: rgb(var(--surface)); box-shadow: 0 18px 40px rgba(0,0,0,.18); padding: 2rem 5%; z-index: 999; border-bottom: 1px solid var(--border); }
 .mobile-nav.open { display: block; }
 @media (max-width: 800px) {
   .mobile-nav { top: calc(var(--nav-h) + 36px); }
@@ -781,10 +784,7 @@ div.review-card p { color: var(--prose); }
   .social-bar { display: none !important; }
 }
 /* give the centred links a hard stop so they can never run under the logo either */
-@media (min-width: 801px) {
-  .nav-links { max-width: calc(100% - 620px); }
-  .nav-links a { white-space: nowrap; }
-}
+@media (min-width: 1101px) { .nav-links a { white-space: nowrap; } }
 
 /* ---------- Page title (global fallback; pages may override inline) ---------- */
 .page-title { margin-top: var(--nav-h); padding: 2.2rem 6% 0.6rem 6%; background-color: var(--bg); }
@@ -864,7 +864,7 @@ div.review-card p { color: var(--prose); }
 .svc-cards a { position: relative; display: block; overflow: hidden; border-radius: 4px;
   background: var(--bg-card); text-decoration: none; box-shadow: var(--card-shadow); }
 .svc-cards img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 25%;
-  display: block; transition: transform .6s ease; }
+  display: block; transition: transform .6s ease; height: auto; }
 .svc-cards a:hover img { transform: scale(1.06); }
 .svc-cards .cap { position: absolute; left: 0; right: 0; bottom: 0;
   padding: 1.5rem .7rem .62rem .7rem; color: #FFFBF5;
@@ -888,7 +888,7 @@ div.review-card p { color: var(--prose); }
 .wed-card { position:relative; display:block; overflow:hidden; border-radius:4px;
   background:var(--bg-card); }
 .wed-card img { width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 22%;
-  display:block; transition:transform .6s ease; }
+  display:block; transition:transform .6s ease; height: auto; }
 .wed-card:hover img { transform:scale(1.05); }
 .wed-label { position:absolute; left:0; right:0; bottom:0; background:rgba(var(--surface),.86);
   padding:1rem; text-align:center; transition:background .3s ease; }
@@ -910,3 +910,13 @@ div.review-card p { color: var(--prose); }
 /* story CTA heading promoted from h3 to h2 — keep the original visual weight */
 .story-cta h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400;
   color: var(--text); margin-bottom: 1.4rem; }
+
+
+/* ---------- Navbar: use the hamburger until the full bar genuinely fits ----------
+   Home + Services + Testimonials + About + Contact needs ~570px, plus logo (152px)
+   and the Get-in-touch button (177px). Below ~1100px they collided. */
+@media (max-width: 1100px) {
+  .nav-links { display: none; }
+  .nav-book  { display: none; }
+  .hamburger { display: flex; }
+}
