@@ -174,7 +174,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="https://images.pixieset.com/643210321/c214b38d3482e4ffd994b1dfdaeabb5c-xxlarge.jpg" imagesrcset="https://images.pixieset.com/643210321/c214b38d3482e4ffd994b1dfdaeabb5c-medium.jpg 360w, https://images.pixieset.com/643210321/c214b38d3482e4ffd994b1dfdaeabb5c-large.jpg 640w, https://images.pixieset.com/643210321/c214b38d3482e4ffd994b1dfdaeabb5c-xlarge.jpg 1024w, https://images.pixieset.com/643210321/c214b38d3482e4ffd994b1dfdaeabb5c-xxlarge.jpg 1600w" imagesizes="(max-width:800px) 340px, 100vw" fetchpriority="high"/>
-  <link rel="stylesheet" href="style.css?v=47"/>
+  <link rel="stylesheet" href="style.css?v=48"/>
 
   <style>
     .photo-strip {
@@ -260,6 +260,27 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link rel="manifest" href="/site.webmanifest"/>
 <meta name="theme-color" content="#080404"/>
+<style>
+  /* ---------------------------------------------------------------
+     HOME PAGE HERO ONLY. Deliberately kept out of style.css so these
+     rules cannot reach any other page. The full-canvas .hero-gradient
+     scrim was removed from the markup above; the copy is protected by
+     a text-shadow plus a soft ellipse behind the text block instead,
+     which leaves the right-hand side of each photograph untouched.
+     --------------------------------------------------------------- */
+  .hero-gradient-bottom {
+    background: linear-gradient(to top, rgba(var(--surface),0.92) 0%, transparent 35%);
+  }
+  .hero-content::before {
+    content: ""; position: absolute; z-index: -1; pointer-events: none;
+    left: -8%; right: -18%; top: -12%; bottom: -14%;
+    background: radial-gradient(ellipse at 32% 50%,
+      rgba(8,4,4,0.62) 0%, rgba(8,4,4,0.42) 42%, rgba(8,4,4,0) 72%);
+  }
+  .hero-title  { text-shadow: 0 2px 28px rgba(8,4,4,0.80), 0 1px 4px rgba(8,4,4,0.55); }
+  .hero-desc   { text-shadow: 0 1px 16px rgba(8,4,4,0.92), 0 1px 3px rgba(8,4,4,0.75); }
+  .hero-eyebrow{ text-shadow: 0 1px 14px rgba(8,4,4,0.90), 0 1px 3px rgba(8,4,4,0.70); }
+</style>
 </head>
 <body>
 <!-- NAVBAR -->
@@ -324,7 +345,6 @@
     <button type="button" class="hero-dot" data-i="12" role="tab" aria-selected="false" aria-label="Show image 13 of 14"></button>
     <button type="button" class="hero-dot" data-i="13" role="tab" aria-selected="false" aria-label="Show image 14 of 14"></button>
   </div>
-  <div class="hero-gradient"></div>
   <div class="hero-gradient-bottom"></div>
   <div class="hero-content fade-up">
     <p class="hero-eyebrow">Joyful &amp; Graceful Moments</p>
