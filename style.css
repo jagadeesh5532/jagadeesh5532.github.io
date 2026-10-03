@@ -998,3 +998,91 @@ div.review-card p { color: var(--prose); }
   font-size: .86rem; color: var(--text-dim); line-height: 1.7; }
 .venue-meta strong { color: var(--text-muted); font-weight: 600; }
 @media (max-width: 800px) { .venue-note { padding: 2.2rem 7% 2.4rem 7%; } }
+
+/* ---------- What to wear generator ---------- */
+.wtw-pick { padding: 2.6rem 6% 1rem 6%; background-color: var(--bg); }
+.wtw-pick .inner { max-width: 980px; margin: 0 auto; }
+.wtw-row { margin-bottom: 1.5rem; }
+.wtw-row > label { display: block; font-family: var(--font-body); font-size: .68rem;
+  letter-spacing: .18em; text-transform: uppercase; font-weight: 600;
+  color: var(--saffron); margin-bottom: .6rem; }
+.wtw-opts { display: flex; flex-wrap: wrap; gap: .45rem; }
+.wtw-opt { font-family: var(--font-body); font-size: .84rem; padding: .55rem 1rem;
+  border: 1px solid var(--card-edge); border-radius: 999px; background: var(--bg-card);
+  color: var(--text-muted); cursor: pointer; transition: all .2s ease; }
+.wtw-opt:hover { border-color: var(--saffron); color: var(--saffron); }
+.wtw-opt[aria-pressed="true"] { background: var(--saffron); border-color: var(--saffron); color: #FFFBF5; }
+.wtw-opt:focus-visible { outline: 2px solid var(--saffron); outline-offset: 2px; }
+
+.wtw-out { padding: 1rem 6% 3.4rem 6%; background-color: var(--bg); }
+.wtw-out .inner { max-width: 980px; margin: 0 auto; }
+.wtw-card { background: var(--bg-2); border: 1px solid var(--card-edge);
+  border-radius: 6px; padding: 2rem 1.8rem; }
+.wtw-card h3 { font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.25rem,2.3vw,1.6rem); color: var(--text); margin-bottom: .4rem; }
+.wtw-sub { font-size: .9rem; color: var(--text-dim); margin-bottom: 1.6rem; }
+
+.wtw-swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px,1fr));
+  gap: .7rem; margin-bottom: 1.8rem; }
+.wtw-sw { border-radius: 5px; overflow: hidden; border: 1px solid var(--card-edge); }
+.wtw-sw .chip { height: 76px; display: block; }
+.wtw-sw .lbl { display: block; padding: .5rem .55rem .6rem .55rem; background: var(--bg-card); }
+.wtw-sw .nm { display: block; font-family: var(--font-body); font-size: .74rem;
+  font-weight: 600; color: var(--text); line-height: 1.3; }
+.wtw-sw .hx { display: block; font-size: .64rem; letter-spacing: .06em;
+  color: var(--text-dim); margin-top: .15rem; }
+
+.wtw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 1.4rem 2rem; }
+.wtw-blk h4 { font-family: var(--font-body); font-size: .68rem; letter-spacing: .16em;
+  text-transform: uppercase; font-weight: 700; color: var(--saffron); margin-bottom: .55rem; }
+.wtw-blk ul { list-style: none; padding: 0; margin: 0; }
+.wtw-blk li { position: relative; padding-left: 1.1rem; color: var(--prose);
+  font-size: .93rem; line-height: 1.65; margin-bottom: .5rem; }
+.wtw-blk li::before { content: "—"; position: absolute; left: 0; color: var(--saffron); }
+.wtw-blk li.no::before { content: "\00d7"; color: #C0564E; }
+.wtw-note { margin-top: 1.7rem; padding-top: 1.2rem; border-top: 1px solid var(--card-edge);
+  color: var(--prose); font-size: .95rem; line-height: 1.8; }
+.wtw-note strong { color: var(--text); }
+@media (max-width: 800px) {
+  .wtw-pick { padding: 2rem 6% .6rem 6%; }
+  .wtw-out { padding: .6rem 6% 2.4rem 6%; }
+  .wtw-card { padding: 1.4rem 1.2rem; }
+  .wtw-sw .chip { height: 60px; }
+}
+
+/* ---------- What to wear: inspiration strips + undertone guide ---------- */
+.wtw-insp { margin: 1.7rem 0 0 0; padding-top: 1.4rem; border-top: 1px solid var(--card-edge); }
+.wtw-insp h4 { font-family: var(--font-body); font-size: .68rem; letter-spacing: .16em;
+  text-transform: uppercase; font-weight: 700; color: var(--saffron); margin-bottom: .75rem; }
+.wtw-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; }
+.wtw-strip a { display: block; position: relative; overflow: hidden; border-radius: 4px;
+  background: var(--bg-card); text-decoration: none; }
+.wtw-strip img { width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover;
+  object-position: center 25%; display: block; transition: transform .6s ease; }
+.wtw-strip a:hover img { transform: scale(1.06); }
+.wtw-strip .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.3rem .6rem .55rem .6rem;
+  color: #FFFBF5; font-family: var(--font-body); font-size: .68rem; line-height: 1.3;
+  text-shadow: 0 1px 3px rgba(8,4,4,.65);
+  background: linear-gradient(to top, rgba(8,4,4,.85) 0%, rgba(8,4,4,.45) 60%, rgba(8,4,4,0) 100%); }
+
+.undertone { padding: 3rem 6% 3.4rem 6%; background-color: var(--bg-2);
+  border-top: 1px solid var(--card-edge); }
+.undertone .inner { max-width: 980px; margin: 0 auto; }
+.undertone h2 { font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.3rem,2.4vw,1.75rem); color: var(--text); margin-bottom: 1rem; }
+.undertone h2 em { font-style: italic; color: var(--saffron); }
+.undertone > .inner > p { color: var(--prose); font-size: 1rem; line-height: 1.85; margin-bottom: 1.05rem; }
+.ut-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 1.4rem; margin-top: 1.8rem; }
+.ut-card { background: var(--bg-card); border: 1px solid var(--card-edge);
+  border-radius: 6px; padding: 1.3rem 1.2rem; }
+.ut-card h3 { font-family: var(--font-body); font-size: .72rem; letter-spacing: .15em;
+  text-transform: uppercase; font-weight: 700; color: var(--saffron); margin-bottom: .7rem; }
+.ut-card p { color: var(--prose); font-size: .92rem; line-height: 1.7; margin-bottom: .7rem; }
+.ut-chips { display: flex; flex-wrap: wrap; gap: .3rem; }
+.ut-chips span { width: 30px; height: 30px; border-radius: 4px; border: 1px solid var(--card-edge); }
+@media (max-width: 800px) {
+  .undertone { padding: 2.2rem 7%; }
+  .wtw-strip { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+}
