@@ -4,8 +4,8 @@
   "description": "Wedding, portrait, maternity and event photography in Cypress, Houston and across the Texas Gulf Coast.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#080404",
-  "theme_color": "#080404",
+  "background_color": "#FBF9F6",
+  "theme_color": "#C2491B",
   "icons": [
     {
       "src": "/images/icon-192.png",
