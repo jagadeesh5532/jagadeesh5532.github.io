@@ -997,7 +997,10 @@ div.review-card p { color: var(--prose); }
 .venue-meta { margin-top: 1.5rem; padding-top: 1.1rem; border-top: 1px solid var(--card-edge);
   font-size: .86rem; color: var(--text-dim); line-height: 1.7; }
 .venue-meta strong { color: var(--text-muted); font-weight: 600; }
-@media (max-width: 800px) { .venue-note { padding: 2.2rem 7% 2.4rem 7%; } }
+/* Two stacked venue bands share a background, so drop the seam between them. */
+.venue-note + .venue-note { padding-top: 0; }
+@media (max-width: 800px) { .venue-note { padding: 2.2rem 7% 2.4rem 7%; }
+  .venue-note + .venue-note { padding-top: 0; } }
 
 /* ---------- What to wear generator ---------- */
 .wtw-pick { padding: 2.6rem 6% 1rem 6%; background-color: var(--bg); }
