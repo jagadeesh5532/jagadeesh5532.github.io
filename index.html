@@ -3,9 +3,9 @@
 <head>
   <script>
   /* theme: applied before first paint so there is no flash */
-  (function(){try{var t=localStorage.getItem('jg-theme')||'dark';
+  (function(){try{var t=localStorage.getItem('jg-theme')||'light';
     document.documentElement.setAttribute('data-theme',t);}catch(e){
-    document.documentElement.setAttribute('data-theme','dark');}})();
+    document.documentElement.setAttribute('data-theme','light');}})();
   </script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -259,7 +259,7 @@
 <link rel="icon" href="/favicon.ico" sizes="any"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link rel="manifest" href="/site.webmanifest"/>
-<meta name="theme-color" content="#080404"/>
+<meta name="theme-color" content="#FBF9F6"/>
 <style>
   /* ---------------------------------------------------------------
      HOME PAGE HERO ONLY. Deliberately kept out of style.css so these
@@ -277,9 +277,12 @@
     background: radial-gradient(ellipse at 32% 50%,
       rgba(8,4,4,0.62) 0%, rgba(8,4,4,0.42) 42%, rgba(8,4,4,0) 72%);
   }
-  .hero-title  { text-shadow: 0 2px 28px rgba(8,4,4,0.80), 0 1px 4px rgba(8,4,4,0.55); }
-  .hero-desc   { text-shadow: 0 1px 16px rgba(8,4,4,0.92), 0 1px 3px rgba(8,4,4,0.75); }
-  .hero-eyebrow{ text-shadow: 0 1px 14px rgba(8,4,4,0.90), 0 1px 3px rgba(8,4,4,0.70); }
+  /* style.css already pins this copy with `.hero-content h1` / `.hero-content p`
+     (0,1,1), which outranks a bare `.hero-title` (0,1,0). Match those selectors
+     and add `.hero` so these actually win. The copy stays cream in BOTH themes,
+     so this works whether the site opens light or dark. */
+  .hero .hero-content h1 { text-shadow: 0 2px 28px rgba(8,4,4,0.80), 0 1px 4px rgba(8,4,4,0.55); }
+  .hero .hero-content p  { text-shadow: 0 1px 16px rgba(8,4,4,0.92), 0 1px 3px rgba(8,4,4,0.75); }
 </style>
 </head>
 <body>
