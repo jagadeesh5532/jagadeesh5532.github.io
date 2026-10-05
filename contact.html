@@ -92,7 +92,37 @@
   </div>
 </div>
 
-<section class="section" style="padding-top:0; margin-top:-2rem;">
+<!-- AVAILABILITY (read-only) -->
+<section class="section" id="availability" style="padding-top:0; margin-top:-2rem;">
+  <div class="avail fade-up" style="margin:0 auto;">
+    <h2 style="font-family:var(--font-display);font-weight:400;font-size:clamp(1.3rem,2.4vw,1.75rem);color:var(--text);margin:0 0 .5rem;">My <em style="font-style:italic;color:var(--saffron);">availability</em></h2>
+    <p class="avail-note" style="margin:0 0 1.4rem;">Dates I am already booked are crossed out. This updates straight from my own calendar, so it is current. All dates are Houston time (Central).</p>
+
+    <div id="availBox" hidden>
+      <div class="avail-head">
+        <p class="avail-month" id="availMonth">&nbsp;</p>
+        <div class="avail-nav">
+          <button type="button" id="availPrev" aria-label="Previous month">&#8249;</button>
+          <button type="button" id="availNext" aria-label="Next month">&#8250;</button>
+        </div>
+      </div>
+      <div class="avail-grid" role="grid" aria-labelledby="availMonth">
+        <div class="avail-dow" role="columnheader">Sun</div><div class="avail-dow" role="columnheader">Mon</div><div class="avail-dow" role="columnheader">Tue</div><div class="avail-dow" role="columnheader">Wed</div><div class="avail-dow" role="columnheader">Thu</div><div class="avail-dow" role="columnheader">Fri</div><div class="avail-dow" role="columnheader">Sat</div>
+      </div>
+      <div class="avail-grid" id="availDays" role="grid"></div>
+      <div class="avail-key">
+        <span><i class="k-free"></i> Free</span>
+        <span><i class="k-busy"></i> Booked</span>
+      </div>
+    </div>
+
+    <p class="avail-note" id="availFallback">
+      For current availability, <a href="#contact-form">send me your date</a> and I will confirm the same day.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
   <div class="contact-wrapper">
     <!-- LEFT: CONTACT INFO -->
     <div class="fade-up">
@@ -201,36 +231,6 @@
         <p style="font-size:0.78rem;color:var(--text-dim);margin-top:1rem;text-align:center;">Your information is kept private and never shared.</p>
       </form>
     </div>
-  </div>
-</section>
-
-<!-- AVAILABILITY (read-only) -->
-<section class="section" id="availability" style="padding-top:0;">
-  <div class="avail fade-up" style="margin:0 auto;">
-    <h2 style="font-family:var(--font-display);font-weight:400;font-size:clamp(1.3rem,2.4vw,1.75rem);color:var(--text);margin:0 0 .5rem;">My <em style="font-style:italic;color:var(--saffron);">availability</em></h2>
-    <p class="avail-note" style="margin:0 0 1.4rem;">Dates I am already booked are crossed out. This updates straight from my own calendar, so it is current. All dates are Houston time (Central).</p>
-
-    <div id="availBox" hidden>
-      <div class="avail-head">
-        <p class="avail-month" id="availMonth">&nbsp;</p>
-        <div class="avail-nav">
-          <button type="button" id="availPrev" aria-label="Previous month">&#8249;</button>
-          <button type="button" id="availNext" aria-label="Next month">&#8250;</button>
-        </div>
-      </div>
-      <div class="avail-grid" role="grid" aria-labelledby="availMonth">
-        <div class="avail-dow" role="columnheader">Sun</div><div class="avail-dow" role="columnheader">Mon</div><div class="avail-dow" role="columnheader">Tue</div><div class="avail-dow" role="columnheader">Wed</div><div class="avail-dow" role="columnheader">Thu</div><div class="avail-dow" role="columnheader">Fri</div><div class="avail-dow" role="columnheader">Sat</div>
-      </div>
-      <div class="avail-grid" id="availDays" role="grid"></div>
-      <div class="avail-key">
-        <span><i class="k-free"></i> Free</span>
-        <span><i class="k-busy"></i> Booked</span>
-      </div>
-    </div>
-
-    <p class="avail-note" id="availFallback">
-      For current availability, <a href="#contact-form">send me your date</a> and I will confirm the same day.
-    </p>
   </div>
 </section>
 
