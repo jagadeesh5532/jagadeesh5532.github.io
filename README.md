@@ -203,6 +203,18 @@ and visitors just see "send me your date and I will confirm the same day."
 **It never shows event titles** — only whether a day has something on it. Even so,
 use a *separate* calendar for this, not your personal one (see the warning below).
 
+> **Already set up (4 Oct 2026):** the calendar `JG Availability` exists, is public
+> with "See all event details", and its ID plus the API key are already in
+> `contact.html`. The API key `Google calender website` lives in the Cloud project
+> `jg-moments-site`, restricted to HTTP referrers `jg-moments.com/*` /
+> `www.jg-moments.com/*` and to the Calendar API only. You should not need the
+> steps below again — they are kept for reference if anything is ever rebuilt.
+>
+> **To mark yourself booked:** open Google Calendar, switch to the `JG Availability`
+> calendar, and add an all-day event on each booked day. The title is irrelevant
+> ("Booked" is fine) and is never shown on the site — but never put client names,
+> venues or phone numbers in this calendar, because it is publicly readable.
+
 ### 1. Make a dedicated public calendar
 
 1. Google Calendar → **Settings** → **Add calendar** → **Create new calendar**.
