@@ -191,3 +191,63 @@ Generate with **`repo`** scope checked, then share with Claude in chat.
 ---
 
 *Site built and maintained with ❤️ by Claude for JG Moments Photography · Houston, TX*
+
+---
+
+## Availability calendar (contact page)
+
+The contact page shows a read-only month grid of which days are free or booked.
+It ships **switched off**: until you do the two steps below, the grid stays hidden
+and visitors just see "send me your date and I will confirm the same day."
+
+**It never shows event titles** — only whether a day has something on it. Even so,
+use a *separate* calendar for this, not your personal one (see the warning below).
+
+### 1. Make a dedicated public calendar
+
+1. Google Calendar → **Settings** → **Add calendar** → **Create new calendar**.
+   Name it something like `JG Availability`.
+2. Open that calendar's settings → **Access permissions for events** →
+   tick **Make available to public**, and set the dropdown to
+   **See all event details**.
+3. Scroll to **Integrate calendar** and copy the **Calendar ID**
+   (looks like `abc123...@group.calendar.google.com`).
+4. Block out your booked days in this calendar as all-day events.
+   The title does not matter — "Booked" is fine.
+
+> **Why a separate calendar:** the grid only reads dates, but the calendar itself
+> has to be public for the page to read it at all. Anyone who finds the calendar ID
+> could look up the event titles directly. So never put client names, venues or
+> phone numbers in this calendar.
+
+### 2. Get an API key
+
+1. <https://console.cloud.google.com/> → create a project (any name).
+2. **APIs & Services** → **Enable APIs** → enable **Google Calendar API**.
+3. **Credentials** → **Create credentials** → **API key**.
+4. Click the key → **Application restrictions** → **Websites**, and add
+   `jg-moments.com/*` and `www.jg-moments.com/*`.
+5. **API restrictions** → **Restrict key** → select **Google Calendar API**.
+
+### 3. Paste both values in
+
+In `contact.html`, near the bottom, find:
+
+```js
+var CAL_ID  = '';
+var API_KEY = '';
+```
+
+Fill both in and push. The grid appears automatically.
+
+### Notes
+
+- Shows the current month plus three ahead.
+- All dates are reckoned in **America/Chicago**, not the visitor's timezone, so a
+  client in California or London sees the same days you do. CDT is handled
+  automatically — do not change this to a fixed UTC offset.
+- The key is visible in the page source — that is normal and safe here, because
+  the website restriction stops it being used anywhere else, and it can only read
+  a calendar you deliberately made public.
+- If the calendar is unreachable the page silently falls back to the plain
+  "get in touch" line rather than showing a broken or misleadingly empty grid.

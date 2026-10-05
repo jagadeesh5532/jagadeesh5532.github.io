@@ -1089,3 +1089,43 @@ div.review-card p { color: var(--prose); }
   .undertone { padding: 2.2rem 7%; }
   .wtw-strip { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
 }
+
+
+/* ---------- Availability calendar (contact page) ----------
+   Read-only. Reads a PUBLIC Google Calendar via the Calendar API and marks each
+   day busy or free. Event titles are never read or rendered -- only the fact
+   that a day has an entry -- so no client detail can leak into the page.
+   If the API is not configured or the request fails, the grid hides itself and
+   a plain "get in touch" line is shown instead. */
+.avail { max-width: 560px; }
+.avail-head { display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; margin-bottom: 1rem; }
+.avail-month { font-family: var(--font-display); font-size: 1.15rem; color: var(--text);
+  font-weight: 400; margin: 0; }
+.avail-nav { display: flex; gap: .4rem; }
+.avail-nav button { width: 34px; height: 34px; line-height: 1; cursor: pointer;
+  border-radius: 50%; border: 1px solid var(--border); background: transparent;
+  color: var(--text-muted); font-size: .95rem; transition: border-color .2s, color .2s; }
+.avail-nav button:hover:not(:disabled) { border-color: var(--saffron); color: var(--saffron); }
+.avail-nav button:disabled { opacity: .3; cursor: default; }
+.avail-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.avail-dow { text-align: center; font-size: .62rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-dim); padding-bottom: .4rem; }
+.avail-day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+  border-radius: 4px; font-size: .85rem; border: 1px solid transparent; }
+.avail-day.is-free { background: rgba(0,137,123,0.14); color: var(--text);
+  border-color: rgba(0,137,123,0.4); }
+.avail-day.is-busy { background: rgba(196,18,48,0.12); color: var(--text-dim);
+  border-color: rgba(196,18,48,0.3); text-decoration: line-through; }
+.avail-day.is-past { opacity: .25; }
+.avail-day.is-pad { border: 0; }
+.avail-key { display: flex; flex-wrap: wrap; gap: 1.1rem; margin-top: 1rem;
+  font-size: .76rem; color: var(--text-dim); }
+.avail-key span { display: inline-flex; align-items: center; gap: .45rem; }
+.avail-key i { width: 11px; height: 11px; border-radius: 3px; display: inline-block;
+  border: 1px solid; }
+.avail-key .k-free { background: rgba(0,137,123,0.14); border-color: rgba(0,137,123,0.4); }
+.avail-key .k-busy { background: rgba(196,18,48,0.12); border-color: rgba(196,18,48,0.3); }
+.avail-note { margin-top: 1rem; font-size: .82rem; color: var(--text-dim); line-height: 1.7; }
+.avail-note a { color: var(--saffron); }
+@media (max-width: 560px) { .avail-day { font-size: .78rem; } }
