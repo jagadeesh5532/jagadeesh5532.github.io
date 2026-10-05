@@ -38,7 +38,8 @@
     @media (max-width: 700px) { .story-hero img { height: clamp(300px, 50vh, 440px); } }
     @media (max-width: 800px) { .story-hero { margin-top: 0; } }
 
-    .story-head { padding: 2rem 6% 1.9rem 6%; max-width: 1180px; margin: 0 auto; }
+    /* no hero on this page, so the heading carries the navbar offset itself */
+    .story-head { margin-top: var(--nav-h); padding: 2rem 6% 1.9rem 6%; max-width: 1180px; margin: 0 auto; }
     .story-head h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 5.2vw, 3.6rem);
       font-weight: 300; color: var(--text); line-height: 1.1; margin-bottom: .4rem; }
     .story-head h1 em { font-style: italic; color: var(--gold-light);
@@ -184,10 +185,6 @@
 <nav class="navbar" id="navbar"><a href="/" class="nav-logo"><img src="/images/logo/logo.png" alt="JG Moments Photography, Houston TX" width="400" height="236"/></a>
   <ul class="nav-links"><li><a href="/">Home</a></li><li class="nav-dropdown"><a href="#" onclick="return false;">Services ▼</a><div class="dropdown-menu"><a href="services.html">All Services</a><a href="wedding-photography.html">Weddings</a><a href="engagement-proposal-photography.html">Engagements &amp; Proposals</a><a href="maternity-photography.html">Maternity</a><a href="family-portrait-photography.html">Family &amp; Portraits</a><a href="headshot-photography.html">Headshots</a><a href="birthday-celebration-photography.html">Birthdays &amp; Celebrations</a><a href="cultural-religious-photography.html">Cultural &amp; Religious</a><a href="corporate-event-photography.html">Corporate &amp; Events</a><a href="sports-photography.html">Sports</a></div></li><li><a href="testimonials.html">Testimonials</a></li><li class="nav-dropdown"><a href="#" onclick="return false;">About ▼</a><div class="dropdown-menu"><a href="about.html">About Me</a><a href="locations.html">Where I Shoot</a><a href="what-to-wear.html">What to Wear</a><a href="contact.html#availability">Availability</a><a href="faq.html">FAQ</a></div></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="nav-book">Get in touch</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></nav><div class="mobile-nav" id="mobileNav"><a href="/">Home</a><div class="nav-dropdown"><a href="#" onclick="return false;">Services ▼</a><div class="dropdown-menu"><a href="services.html">All Services</a><a href="wedding-photography.html">Weddings</a><a href="engagement-proposal-photography.html">Engagements &amp; Proposals</a><a href="maternity-photography.html">Maternity</a><a href="family-portrait-photography.html">Family &amp; Portraits</a><a href="headshot-photography.html">Headshots</a><a href="birthday-celebration-photography.html">Birthdays &amp; Celebrations</a><a href="cultural-religious-photography.html">Cultural &amp; Religious</a><a href="corporate-event-photography.html">Corporate &amp; Events</a><a href="sports-photography.html">Sports</a></div></div><a href="testimonials.html">Testimonials</a><div class="nav-dropdown"><a href="#" onclick="return false;">About ▼</a><div class="dropdown-menu"><a href="about.html">About Me</a><a href="locations.html">Where I Shoot</a><a href="what-to-wear.html">What to Wear</a><a href="contact.html#availability">Availability</a><a href="faq.html">FAQ</a></div></div><a href="contact.html">Contact</a></div><!-- AARON WEDDING CEREMONY - SECTION 1 -->
 <!-- JESSICA GIFFORD THERAPIST HEADSHOTS -->
-<div class="story-hero">
-  <img src="https://images.pixieset.com/058771811/0c5e3687e93cd5359b4e380ec62c42f8-xxlarge.jpg" alt="Headshot photographed at an Autism Dads Social Club event, Talyard Brewing, Sugar Land TX" fetchpriority="high" decoding="async" width="1600" height="2405" srcset="https://images.pixieset.com/058771811/0c5e3687e93cd5359b4e380ec62c42f8-medium.jpg 360w, https://images.pixieset.com/058771811/0c5e3687e93cd5359b4e380ec62c42f8-large.jpg 640w, https://images.pixieset.com/058771811/0c5e3687e93cd5359b4e380ec62c42f8-xlarge.jpg 1024w, https://images.pixieset.com/058771811/0c5e3687e93cd5359b4e380ec62c42f8-xxlarge.jpg 1600w" sizes="(max-width:800px) 340px, 100vw"/>
-</div>
-
 <div class="story-head">
   <div class="section-eyebrow">Headshots</div>
   <h1>Autism Dads Social Club <em>Headshots</em></h1>
@@ -208,6 +205,7 @@
 </div>
 
 <div class="story-grid">
+    <div class="story-item"><img src="https://images.pixieset.com/058771811/0c5e3687e93cd5359b4e380ec62c42f8-xxlarge.jpg" alt="Headshot photographed at an Autism Dads Social Club event, Talyard Brewing, Sugar Land TX" fetchpriority="high" decoding="async" width="1600" height="2405" srcset="https://images.pixieset.com/058771811/0c5e3687e93cd5359b4e380ec62c42f8-medium.jpg 360w, https://images.pixieset.com/058771811/0c5e3687e93cd5359b4e380ec62c42f8-large.jpg 640w, https://images.pixieset.com/058771811/0c5e3687e93cd5359b4e380ec62c42f8-xlarge.jpg 1024w" sizes="(max-width:700px) 92vw, (max-width:1100px) 46vw, 31vw"/></div>
     <div class="story-item"><img src="https://images.pixieset.com/058771811/b6f6ba8d5c844cabe3eb192c88f146f7-xxlarge.jpg" alt="Autism Dads Social Club board member headshot, photographed at Talyard Brewing in Sugar Land" loading="lazy" width="1600" height="2405" srcset="https://images.pixieset.com/058771811/b6f6ba8d5c844cabe3eb192c88f146f7-medium.jpg 360w, https://images.pixieset.com/058771811/b6f6ba8d5c844cabe3eb192c88f146f7-large.jpg 640w, https://images.pixieset.com/058771811/b6f6ba8d5c844cabe3eb192c88f146f7-xlarge.jpg 1024w" sizes="(max-width:700px) 92vw, (max-width:1100px) 46vw, 31vw"/></div>
     <div class="story-item"><img src="https://images.pixieset.com/058771811/d104194f20d3956017c0bd1c9d88f343-xxlarge.jpg" alt="Nonprofit headshot captured during a social event in Sugar Land, Texas" loading="lazy" width="1600" height="2405" srcset="https://images.pixieset.com/058771811/d104194f20d3956017c0bd1c9d88f343-medium.jpg 360w, https://images.pixieset.com/058771811/d104194f20d3956017c0bd1c9d88f343-large.jpg 640w, https://images.pixieset.com/058771811/d104194f20d3956017c0bd1c9d88f343-xlarge.jpg 1024w" sizes="(max-width:700px) 92vw, (max-width:1100px) 46vw, 31vw"/></div>
     <div class="story-item"><img src="https://images.pixieset.com/058771811/59eb81a65d834f0065c9d18f343c7ce8-xxlarge.jpg" alt="Event headshot for a Houston nonprofit, by JG Moments Photography" loading="lazy" width="1600" height="2405" srcset="https://images.pixieset.com/058771811/59eb81a65d834f0065c9d18f343c7ce8-medium.jpg 360w, https://images.pixieset.com/058771811/59eb81a65d834f0065c9d18f343c7ce8-large.jpg 640w, https://images.pixieset.com/058771811/59eb81a65d834f0065c9d18f343c7ce8-xlarge.jpg 1024w" sizes="(max-width:700px) 92vw, (max-width:1100px) 46vw, 31vw"/></div>
@@ -243,8 +241,8 @@
       <a class="related-card" href="tasc-headshots.html">
         <span>TASC &mdash; Coaching Staff Headshots</span>
       </a>
-      <a class="related-card" href="jessica-gifford.html">
-        <span>Jessica &mdash; Therapist Headshots</span>
+      <a class="related-card" href="shelbi-audition-shoot.html">
+        <span>Shelbi &mdash; Audition Headshots</span>
       </a>
       <a class="related-card" href="aymen-portrait.html">
         <span>Ayman &mdash; Houston Skyline</span>
