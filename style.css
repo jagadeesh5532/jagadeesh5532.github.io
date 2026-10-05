@@ -1130,21 +1130,15 @@ div.review-card p { color: var(--prose); }
 .avail-note a { color: var(--saffron); }
 @media (max-width: 560px) { .avail-day { font-size: .78rem; } }
 
-/* ---------- Homepage testimonial carousel: make the cards read as a set ----------
-   Quotes range from 17 to 1,270 characters, which left card heights at 1180 / 713 /
-   602px side by side -- ragged and hard to scan. Clamp the quote, pin the photos to
-   the bottom, and stretch every card to the tallest, so the row reads as one block. */
-#carouselTrack { align-items: stretch; }
-#carouselTrack .testimonial-card { height: 100%; display: flex; flex-direction: column; }
-#carouselTrack .testimonial-quote {
-  display: -webkit-box; -webkit-line-clamp: 9; -webkit-box-orient: vertical;
-  overflow: hidden; margin-bottom: 1rem; }
-#carouselTrack .photo-strip { margin-top: auto; grid-template-columns: repeat(4, 1fr); }
+/* ---------- Homepage testimonial carousel: more presence, full quotes ----------
+   Quotes are shown in full -- never truncated -- so card heights vary with the
+   length of the review. Cards are therefore top-aligned rather than stretched:
+   stretching every card to the tallest (Jessica's runs to ~1,180px) would leave
+   the short ones mostly empty. */
+#carouselTrack { align-items: flex-start; }
+#carouselTrack .testimonial-quote { margin-bottom: 1rem; }
+#carouselTrack .photo-strip { grid-template-columns: repeat(4, 1fr); }
 #carouselTrack .photo-thumb { aspect-ratio: 1; }
-/* lift the whole section a little so it reads as a highlight, not filler */
 #carouselTrack .testimonial-card { border-top-width: 4px; }
 #carouselTrack .testimonial-author { font-size: 1.3rem; }
 #carouselTrack .stars { font-size: 1.15rem; letter-spacing: .18em; }
-@media (max-width: 800px) {
-  #carouselTrack .testimonial-quote { -webkit-line-clamp: 12; }
-}
