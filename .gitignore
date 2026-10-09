@@ -16,3 +16,6 @@ QUICK_REFERENCE.md
 CHANGELOG.md
 admin.html
 testimonials.json
+
+# FUSE leftovers from editing files in a mounted folder
+.fuse_hidden*
