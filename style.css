@@ -985,11 +985,12 @@ div.review-card p { color: var(--prose); }
 
 /* ---------- Venue / closing note on album pages ---------- */
 .venue-note { padding: 3rem 6% 3.2rem 6%; background-color: var(--bg); }
-.venue-note .inner { max-width: 820px; margin: 0 auto; }
+/* 820px gave ~97 characters per line; 50-75 is the comfortable range */
+.venue-note .inner { max-width: 700px; margin: 0 auto; }
 .venue-note h2 { font-family: var(--font-display); font-weight: 400;
   font-size: clamp(1.3rem, 2.4vw, 1.75rem); color: var(--text); margin-bottom: 1.1rem; line-height: 1.25; }
 .venue-note h2 em { font-style: italic; color: var(--saffron); }
-.venue-note p { color: var(--prose); font-size: 1rem; line-height: 1.85; margin-bottom: 1.05rem; }
+.venue-note p { color: var(--prose); font-size: 1.0625rem; line-height: 1.85; margin-bottom: 1.05rem; }
 .venue-note p:last-child { margin-bottom: 0; }
 .venue-note a { color: var(--saffron); text-decoration: none;
   border-bottom: 1px solid rgba(186,70,25,0.38); transition: border-color .2s ease; }

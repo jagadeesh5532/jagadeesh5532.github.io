@@ -28,7 +28,7 @@
   <link rel="dns-prefetch" href="https://images.pixieset.com">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=51"/>
+  <link rel="stylesheet" href="style.css?v=52"/>
   <style>
     .story-hero { margin-top: var(--nav-h); position: relative; overflow: hidden; }
     .story-hero img { width: 100%; height: clamp(400px, 72vh, 780px);
@@ -47,21 +47,21 @@
 
     .story-meta { margin: 0; padding: 0; border-top: none; display: block; }
     .story-meta > div { margin-bottom: 1.4rem; }
-    .story-meta dt { font-size: .66rem; letter-spacing: .22em; text-transform: uppercase;
+    .story-meta dt { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
       color: var(--saffron); font-weight: 600; margin-bottom: .45rem; }
     .story-meta dd { font-family: var(--font-display); font-size: 1.12rem; color: var(--text); margin: 0; }
 
     .story-columns { display: grid; grid-template-columns: 210px 1fr; gap: 3.2rem;
       max-width: 1180px; margin: 0 auto; padding: 1.4rem 6% 2rem 6%; align-items: start;
       border-top: 1px solid var(--border); }
-    .story-body { max-width: 760px; }
+    .story-body { max-width: 680px; }   /* ~76 chars per line, was ~90 */
     @media (max-width: 900px) {
       .story-columns { grid-template-columns: 1fr; gap: 1.4rem; }
       .story-meta { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 2rem; }
       .story-meta > div { margin-bottom: 0; }
     }
     @media (max-width: 560px) { .story-meta { grid-template-columns: 1fr; gap: 1rem; } }
-    .story-body p { font-family: var(--font-body); font-weight: 400; font-size: 1rem;
+    .story-body p { font-family: var(--font-body); font-weight: 400; font-size: 1.0625rem;
       line-height: 1.8; color: var(--prose); margin-bottom: .85rem; }
     .story-body p.lead { font-family: var(--font-display); font-weight: 300;
       font-size: clamp(1.5rem, 2.9vw, 2.15rem); line-height: 1.34;
