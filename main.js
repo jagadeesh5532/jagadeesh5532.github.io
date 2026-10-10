@@ -625,3 +625,130 @@ if (track) {
 
 
 }
+
+/* ===== Site search (client-side, uses search-index.json) ===== */
+(function initSiteSearch() {
+  let indexPromise = null;
+  let pages = [];
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('search-index.json')
+        .then(r => r.json())
+        .then(j => { pages = j; return j; })
+        .catch(() => { pages = []; return []; });
+    }
+    return indexPromise;
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  function scorePage(p, tokens, requireAll) {
+    const T = p.title.toLowerCase();
+    const D = (p.description || '').toLowerCase();
+    const K = p.keywords.join(' | ').toLowerCase();
+    let total = 0;
+    for (const t of tokens) {
+      let s = 0;
+      if (T.includes(t)) s += 3;
+      if (K.includes(t)) s += 2;
+      if (D.includes(t)) s += 1;
+      if (!s && requireAll) return 0;
+      total += s;
+    }
+    return total;
+  }
+
+  function search(q) {
+    const tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
+    if (!tokens.length) return [];
+    let hits = pages.map(p => ({ p, s: scorePage(p, tokens, true) })).filter(r => r.s > 0);
+    if (!hits.length) hits = pages.map(p => ({ p, s: scorePage(p, tokens, false) })).filter(r => r.s > 0);
+    return hits.sort((a, b) => b.s - a.s).map(r => r.p);
+  }
+
+  function renderList(container, results, limit) {
+    if (!results.length) {
+      container.innerHTML = '<p class="search-empty">No matches yet. Try a service like "maternity", a type of session like "cake smash", or a town like "Houston".</p>';
+      return;
+    }
+    const shown = limit ? results.slice(0, limit) : results;
+    container.innerHTML = shown.map(p =>
+      '<a href="' + esc(p.url) + '"><strong>' + esc(p.title) + '</strong><small>' + esc(p.description) + '</small></a>'
+    ).join('') + (limit && results.length > limit
+      ? '<a class="search-more" href="search.html?q=' + encodeURIComponent(results.length ? lastQuery : '') + '">See all ' + results.length + ' results</a>'
+      : '');
+  }
+
+  let lastQuery = '';
+
+  /* Header search button and overlay, added to every page that loads main.js */
+  const hamburger = document.getElementById('hamburger');
+  if (hamburger && !document.getElementById('searchPanel')) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'nav-search';
+    btn.setAttribute('aria-label', 'Search the site');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>';
+    hamburger.parentNode.insertBefore(btn, hamburger);
+
+    const panel = document.createElement('div');
+    panel.className = 'search-panel';
+    panel.id = 'searchPanel';
+    panel.hidden = true;
+    panel.innerHTML = '<div class="search-box" role="dialog" aria-label="Search">' +
+      '<input type="search" id="searchInput" placeholder="Search maternity, cake smash, Houston..." aria-label="Search the site" autocomplete="off"/>' +
+      '<div class="search-hits" id="searchHits"></div></div>';
+    document.body.appendChild(panel);
+
+    const input = document.getElementById('searchInput');
+    const hits = document.getElementById('searchHits');
+
+    function open() {
+      panel.hidden = false;
+      loadIndex();
+      setTimeout(() => input.focus(), 50);
+    }
+    function close() { panel.hidden = true; }
+
+    btn.addEventListener('click', open);
+    panel.addEventListener('click', e => { if (e.target === panel) close(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !panel.hidden) close();
+      if (e.key === '/' && panel.hidden && !/input|textarea/i.test(document.activeElement.tagName)) { e.preventDefault(); open(); }
+    });
+    input.addEventListener('input', async () => {
+      await loadIndex();
+      lastQuery = input.value.trim();
+      if (!lastQuery) { hits.innerHTML = ''; return; }
+      renderList(hits, search(lastQuery), 8);
+    });
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && input.value.trim()) {
+        window.location.href = 'search.html?q=' + encodeURIComponent(input.value.trim());
+      }
+    });
+  }
+
+  /* Full results page (search.html) */
+  const resultsEl = document.getElementById('searchResults');
+  if (resultsEl) {
+    const params = new URLSearchParams(window.location.search);
+    const q = (params.get('q') || '').trim();
+    const box = document.getElementById('searchPageInput');
+    box.value = q;
+    loadIndex().then(() => {
+      document.getElementById('searchSummary').textContent = q
+        ? 'Results for "' + q + '"'
+        : 'Type a service, session or town above to find it.';
+      if (q) renderList(resultsEl, search(q));
+    });
+    box.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && box.value.trim()) {
+        window.location.href = 'search.html?q=' + encodeURIComponent(box.value.trim());
+      }
+    });
+  }
+})();
