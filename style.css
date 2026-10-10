@@ -1143,3 +1143,24 @@ div.review-card p { color: var(--prose); }
 #carouselTrack .testimonial-card { border-top-width: 4px; }
 #carouselTrack .testimonial-author { font-size: 1.3rem; }
 #carouselTrack .stars { font-size: 1.15rem; letter-spacing: .18em; }
+
+
+/* ---------- Homepage: location line inside the H1, and the intro paragraph ----------
+   The keyword phrase sits inside the <h1> so Google reads it as the heading,
+   but it is styled small and quiet so "Capturing Life's Most Beautiful Moments"
+   remains the thing you actually see. */
+.hero-h1-place { display: block; margin-top: .9rem;
+  font-family: var(--font-body); font-size: .74rem; font-weight: 600;
+  letter-spacing: .24em; text-transform: uppercase; color: #F2E9DC;
+  text-shadow: 0 1px 3px rgba(8,4,4,.7); }
+.home-intro { padding: 2.6rem 6% 0 6%; background-color: var(--bg); }
+.home-intro .inner { max-width: 700px; margin: 0 auto; }
+.home-intro p { font-size: 1.0625rem; line-height: 1.85; color: var(--prose); margin-bottom: 1rem; }
+.home-intro a { color: var(--saffron); text-decoration: none;
+  border-bottom: 1px solid rgba(186,70,25,.38); }
+.home-intro a:hover { border-bottom-color: var(--saffron); }
+.home-areas { font-size: .95rem !important; color: var(--text-dim) !important; }
+@media (max-width: 800px) {
+  .hero-h1-place { font-size: .66rem; letter-spacing: .2em; margin-top: .7rem; }
+  .home-intro { padding: 2rem 7% 0 7%; }
+}
