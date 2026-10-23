@@ -1,4 +1,4 @@
-# JG Moments Photography — robots.txt
+# Joyful & Graceful Moments — robots.txt
 User-agent: *
 Allow: /
 
