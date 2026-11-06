@@ -245,6 +245,15 @@ document.addEventListener('DOMContentLoaded', initGalleryGrid);
 initGalleryGrid();
 }
 
+
+// ===== Prefill session type from ?type= =====
+(function(){
+  const sel=document.getElementById('c-session');
+  if(!sel) return;
+  const t=new URLSearchParams(location.search).get('type');
+  if(t && [...sel.options].some(o=>o.value===t)) sel.value=t;
+})();
+
 // ===== FORMSPREE AJAX SUBMIT (JSON method — most reliable) =====
 document.querySelectorAll('.ajax-form').forEach(form => {
 form.addEventListener('submit', async function(e) {

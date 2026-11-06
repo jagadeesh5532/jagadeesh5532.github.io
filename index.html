@@ -3,9 +3,9 @@
 <head>
   <script>
   /* theme: applied before first paint so there is no flash */
-  (function(){try{var t=localStorage.getItem('jg-theme')||'dark';
+  (function(){try{var t=localStorage.getItem('jg-theme')||'light';
     document.documentElement.setAttribute('data-theme',t);}catch(e){
-    document.documentElement.setAttribute('data-theme','dark');}})();
+    document.documentElement.setAttribute('data-theme','light');}})();
   </script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -268,7 +268,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="https://images.pixieset.com/792052121/e7ee71ba3535a55376a61084b5c3577e-xxlarge.jpg" imagesrcset="https://images.pixieset.com/792052121/e7ee71ba3535a55376a61084b5c3577e-medium.jpg 360w, https://images.pixieset.com/792052121/e7ee71ba3535a55376a61084b5c3577e-large.jpg 640w, https://images.pixieset.com/792052121/e7ee71ba3535a55376a61084b5c3577e-xlarge.jpg 1024w, https://images.pixieset.com/792052121/e7ee71ba3535a55376a61084b5c3577e-xxlarge.jpg 1600w" imagesizes="(max-width:800px) 340px, 100vw" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=54"/>
+  <link rel="stylesheet" href="style.css?v=55"/>
 
   <style>
     .photo-strip {
@@ -732,6 +732,19 @@
   </div>
   </div>
 </section>
+<section class="how-it-works">
+  <div class="inner">
+    <h2>How booking <em>works</em></h2>
+    <p class="how-sub">No pressure, no commitment to ask. Here is what happens after you get in touch.</p>
+    <ol class="how-steps">
+      <li><strong>Tell me about it</strong><span>Send the date, event type and location. It takes about a minute.</span></li>
+      <li><strong>Get your quote</strong><span>I reply within 24 hours with availability and a quote built around your day.</span></li>
+      <li><strong>Lock in the date</strong><span>Confirm the plan and reserve your date, so it is held for you.</span></li>
+      <li><strong>Enjoy your gallery</strong><span>Most galleries arrive in 5&ndash;7 days, often sooner.</span></li>
+    </ol>
+    <a href="contact.html" class="btn btn-saffron">Request a quote</a>
+  </div>
+</section>
 <section class="cta-band">
   <h2 class="cta-title">Ready to capture <em style="color:var(--saffron);">your</em> story?</h2>
   <p class="cta-desc">Every moment is fleeting. Let's preserve yours with beauty, authenticity, and grace.</p>
@@ -818,7 +831,7 @@
   <button class="lb-next" id="lbNext">›</button>
 </div>
 
-<script src="main.js?v=12"></script>
+<script src="main.js?v=13"></script>
 
 <script>
 (function(){
