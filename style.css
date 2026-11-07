@@ -1200,3 +1200,14 @@ div.review-card p { color: var(--prose); }
 .how-perks{color:var(--gold);font-size:.9rem;margin-bottom:1.4rem}
 @media (max-width:900px){.how-steps{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.how-it-works{padding:2.2rem 7%}.how-steps{grid-template-columns:1fr}}
+
+/* ===== Mobile hero fixes ===== */
+.hero-content .btn-outline { background: rgba(8,4,4,.38); border-color: rgba(255,251,245,.6); }
+@media (max-width: 800px) {
+  .hero-slide { object-position: 30% 42%; }
+  .hero-gradient-bottom { background: linear-gradient(to top, rgba(var(--surface),0.97) 0%, transparent 16%); }
+  .hero { padding-bottom: 5.2rem; }
+  .hero-dots { left: 4%; right: 4%; }
+  .hero-dot { width: 22px; height: 22px; }
+  .scroll-indicator { display: none; }
+}

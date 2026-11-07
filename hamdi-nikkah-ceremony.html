@@ -3,7 +3,7 @@
 <head>
   <script>
   /* theme: applied before first paint so there is no flash */
-  (function(){try{var t=localStorage.getItem('jg-theme')||'light';
+  (function(){try{var t=localStorage.getItem('jg-theme2')||'light';
     document.documentElement.setAttribute('data-theme',t);}catch(e){
     document.documentElement.setAttribute('data-theme','light');}})();
   </script>
@@ -28,7 +28,7 @@
   <link rel="dns-prefetch" href="https://images.pixieset.com">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=55"/>
+  <link rel="stylesheet" href="style.css?v=56"/>
   <style>
     .story-hero { margin-top: var(--nav-h); position: relative; overflow: hidden; }
     .story-hero img { width: 100%; height: clamp(400px, 72vh, 780px);
@@ -374,7 +374,7 @@
   b.addEventListener('click',function(){
     var next = h.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
     h.setAttribute('data-theme',next);
-    try{ localStorage.setItem('jg-theme',next); localStorage.setItem('jg-theme-used','1'); }catch(e){}
+    try{ localStorage.setItem('jg-theme2',next); localStorage.setItem('jg-theme-used','1'); }catch(e){}
     b.classList.remove('hint'); paint();
   });
 })();
