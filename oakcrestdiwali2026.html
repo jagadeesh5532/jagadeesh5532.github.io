@@ -26,6 +26,9 @@
     .gallery-link p { color: var(--prose); font-size: 1.05rem; line-height: 1.75; margin-bottom: 1.8rem; }
     .gallery-link .btns { display: flex; flex-direction: column; gap: .9rem; }
     .gallery-link .btn { width: 100%; justify-content: center; text-align: center; padding: 1.05rem 1.5rem; font-size: .8rem; }
+    .gallery-link .review-btn { font-size: .95rem; padding: 1.2rem 1.5rem; box-shadow: 0 8px 22px rgba(186,70,25,.38); animation: reviewPulse 2.2s ease-in-out infinite; }
+    @keyframes reviewPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.03); } }
+    @media (prefers-reduced-motion: reduce) { .gallery-link .review-btn { animation: none; } }
     .gallery-link .thanks { font-size: .9rem; color: var(--text-dim); margin: 1.6rem 0 0 0; }
   </style>
 </head>
@@ -34,10 +37,10 @@
     <div class="card">
       <img class="logo" src="/images/logo/logo.png" alt="Joyful &amp; Graceful Moments" width="400" height="236"/>
       <h1>Your <em>Diwali 2026</em> photos are ready</h1>
-      <p>Thank you for celebrating with us. Open the gallery to view and download your photos, and if you love them, a quick review means a lot.</p>
+      <p>Thank you for celebrating with us. Open the gallery to view and download your photos, and if you love them, a quick review means a lot to us.</p>
       <div class="btns">
-        <a class="btn btn-saffron" href="https://jgmoments.pixieset.com/diwali2026/">View your photos</a>
-        <a class="btn btn-outline" href="https://g.page/r/CVVQY3dkT_t4EBM/review">Leave a Google review</a>
+        <a class="btn btn-outline" href="https://jgmoments.pixieset.com/diwali2026/">View your photos</a>
+        <a class="btn btn-saffron review-btn" href="https://g.page/r/CVVQY3dkT_t4EBM/review">&#9733; Leave a review</a>
       </div>
       <p class="thanks">Joyful &amp; Graceful Moments &middot; Houston, TX</p>
     </div>
