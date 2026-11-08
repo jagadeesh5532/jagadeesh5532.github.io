@@ -3,9 +3,9 @@
 <head>
   <script>
   /* theme: applied before first paint so there is no flash */
-  (function(){try{var t=localStorage.getItem('jg-theme2')||'light';
+  (function(){try{var t=localStorage.getItem('jg-theme3')||'dark';
     document.documentElement.setAttribute('data-theme',t);}catch(e){
-    document.documentElement.setAttribute('data-theme','light');}})();
+    document.documentElement.setAttribute('data-theme','dark');}})();
   </script>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Client Reviews | Houston Photographer | Joyful &amp; Graceful Moments</title>
@@ -1385,7 +1385,7 @@
   b.addEventListener('click',function(){
     var next = h.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
     h.setAttribute('data-theme',next);
-    try{ localStorage.setItem('jg-theme2',next); localStorage.setItem('jg-theme-used','1'); }catch(e){}
+    try{ localStorage.setItem('jg-theme3',next); localStorage.setItem('jg-theme-used','1'); }catch(e){}
     b.classList.remove('hint'); paint();
   });
 })();
