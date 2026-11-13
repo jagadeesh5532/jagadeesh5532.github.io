@@ -268,7 +268,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
   <link rel="preload" as="image" href="https://images.pixieset.com/804507121/09375ec8a7922b90a65d32cf403ca4cd-xxlarge.jpg" imagesrcset="https://images.pixieset.com/804507121/09375ec8a7922b90a65d32cf403ca4cd-medium.jpg 360w, https://images.pixieset.com/804507121/09375ec8a7922b90a65d32cf403ca4cd-large.jpg 640w, https://images.pixieset.com/804507121/09375ec8a7922b90a65d32cf403ca4cd-xlarge.jpg 1024w, https://images.pixieset.com/804507121/09375ec8a7922b90a65d32cf403ca4cd-xxlarge.jpg 1600w" imagesizes="(max-width:800px) 340px, 100vw" fetchpriority="high"/>
-  <link rel="stylesheet" href="style.css?v=57"/>
+  <link rel="stylesheet" href="style.css?v=59"/>
 
   <style>
     .photo-strip {
@@ -356,8 +356,8 @@
     .album-reviews { display:flex; flex-direction:column; gap:.9rem; margin-bottom:1.3rem; }
     .album-review { margin:0; padding:1rem 1.2rem; background:var(--bg-2); border-left:3px solid var(--saffron); border-radius:3px; }
     .album-review .stars { margin-bottom:.4rem; font-size:.85rem; }
-    .album-review blockquote { margin:0; font-family:var(--font-display); font-style:italic; font-size:1.05rem; line-height:1.6; color:var(--text-muted); }
-    .album-review figcaption { margin-top:.55rem; font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--saffron); }
+    .album-review blockquote { margin:0; font-family:var(--font-body); font-style:normal; font-weight:400; font-size:1.0625rem; line-height:1.7; color:var(--text); }
+    .album-review figcaption { margin-top:.7rem; font-size:.875rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--saffron); }
     .album-link { align-self:flex-start; font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:600; color:var(--saffron); text-decoration:none; border-bottom:1px solid rgba(186,70,25,.4); padding-bottom:2px; }
     .album-link:hover { border-bottom-color:var(--saffron); }
     /* tablets and phones: photo always on top, text below, no side switching */
@@ -365,7 +365,7 @@
       .album-row, .album-row:nth-child(even){ grid-template-columns:1fr; gap:1.2rem; }
       .album-row:nth-child(even) .album-photo{ order:0; }
  }
-    @media(max-width:700px){ .album-info h3{font-size:1.45rem;} .album-desc{font-size:1rem;} .album-review blockquote{font-size:1rem;} }
+    @media(max-width:700px){ .album-info h3{font-size:1.45rem;} .album-desc{font-size:1rem;} .album-review blockquote{font-size:1.0625rem;line-height:1.7;} }
     @media(max-width:1000px){ .svc-grid{grid-template-columns:repeat(3,1fr);
       grid-auto-rows:clamp(338px,44vw,546px);} .svc-card.wide{grid-column:span 2;} }
     @media(max-width:700px){ .svc-card.full{grid-column:span 1;} .svc-grid{grid-template-columns:1fr; gap:.7rem; padding:0 4%;

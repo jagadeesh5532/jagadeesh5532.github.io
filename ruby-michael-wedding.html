@@ -28,7 +28,7 @@
   <link rel="dns-prefetch" href="https://images.pixieset.com">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="style.css?v=57"/>
+  <link rel="stylesheet" href="style.css?v=59"/>
   <style>
     .story-hero { margin-top: var(--nav-h); position: relative; overflow: hidden; }
     .story-hero img { width: 100%; height: clamp(400px, 72vh, 780px);
@@ -108,25 +108,72 @@
       "@id": "https://jg-moments.com/ruby-michael-wedding.html#gallery",
       "name": "Ruby & Michael, Sunrise Elopement at Lake Conroe",
       "url": "https://jg-moments.com/ruby-michael-wedding.html",
-      "author": {"@type": "LocalBusiness","@id": "https://jg-moments.com/#business","name": "Joyful & Graceful Moments","url": "https://jg-moments.com/"},
-      "copyrightHolder": {"@id": "https://jg-moments.com/#business"},
+      "author": {
+        "@type": "LocalBusiness",
+        "@id": "https://jg-moments.com/#business",
+        "name": "Joyful & Graceful Moments",
+        "url": "https://jg-moments.com/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cypress",
+          "addressRegion": "TX",
+          "postalCode": "77429",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-346-946-2388"
+      },
+      "copyrightHolder": {
+        "@id": "https://jg-moments.com/#business"
+      },
       "dateCreated": "2026-10-28",
       "keywords": "sunrise elopement photographer, Lake Conroe wedding photographer, Montgomery TX elopement, intimate wedding Houston",
       "description": "Ruby and Michael's intimate sunrise elopement on Lake Conroe in Montgomery, Texas, photographed by Joyful & Graceful Moments.",
-      "image": ["https://images.pixieset.com/181677521/cf1c03ef561b6f03cb5b4f22f691ace0-xxlarge.jpg", "https://images.pixieset.com/181677521/c811eb065b227c2f3db530cf1c9cd7dc-xxlarge.jpg", "https://images.pixieset.com/181677521/aa928d9ac4884d141cfe5ff9b52ad345-xxlarge.jpg", "https://images.pixieset.com/181677521/c81734ccabaf1cbd2bb3d44b7a574cac-xxlarge.jpg", "https://images.pixieset.com/181677521/446f29e94889c8df7ffb847660927996-xxlarge.jpg", "https://images.pixieset.com/181677521/aa680e76078139aaed67cd8ac70d14a6-xxlarge.jpg", "https://images.pixieset.com/181677521/6f4c780a0029aa30ee9add3ff81cc517-xxlarge.jpg", "https://images.pixieset.com/181677521/35acb4a0602ac5848aefac1d5c6564bd-xxlarge.jpg", "https://images.pixieset.com/181677521/f6431152a10486bf2b3c9bd7361f65a5-xxlarge.jpg"],
+      "image": [
+        "https://images.pixieset.com/181677521/cf1c03ef561b6f03cb5b4f22f691ace0-xxlarge.jpg",
+        "https://images.pixieset.com/181677521/c811eb065b227c2f3db530cf1c9cd7dc-xxlarge.jpg",
+        "https://images.pixieset.com/181677521/aa928d9ac4884d141cfe5ff9b52ad345-xxlarge.jpg",
+        "https://images.pixieset.com/181677521/c81734ccabaf1cbd2bb3d44b7a574cac-xxlarge.jpg",
+        "https://images.pixieset.com/181677521/446f29e94889c8df7ffb847660927996-xxlarge.jpg",
+        "https://images.pixieset.com/181677521/aa680e76078139aaed67cd8ac70d14a6-xxlarge.jpg",
+        "https://images.pixieset.com/181677521/6f4c780a0029aa30ee9add3ff81cc517-xxlarge.jpg",
+        "https://images.pixieset.com/181677521/35acb4a0602ac5848aefac1d5c6564bd-xxlarge.jpg",
+        "https://images.pixieset.com/181677521/f6431152a10486bf2b3c9bd7361f65a5-xxlarge.jpg"
+      ],
       "contentLocation": {
         "@type": "Place",
         "name": "Lake Conroe, behind Walden's restaurant",
         "hasMap": "https://www.google.com/maps/search/?api=1&query=13101+Melville+Dr+Montgomery+TX+77356",
-        "address": {"@type": "PostalAddress","streetAddress": "13101 Melville Dr","addressLocality": "Montgomery","addressRegion": "TX","postalCode": "77356","addressCountry": "US"}
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "13101 Melville Dr",
+          "addressLocality": "Montgomery",
+          "addressRegion": "TX",
+          "postalCode": "77356",
+          "addressCountry": "US"
+        }
       }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem","position": 1,"name": "Home","item": "https://jg-moments.com/"},
-        {"@type": "ListItem","position": 2,"name": "Weddings","item": "https://jg-moments.com/wedding-photography.html"},
-        {"@type": "ListItem","position": 3,"name": "Ruby & Michael","item": "https://jg-moments.com/ruby-michael-wedding.html"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jg-moments.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Weddings",
+          "item": "https://jg-moments.com/wedding-photography.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ruby & Michael",
+          "item": "https://jg-moments.com/ruby-michael-wedding.html"
+        }
       ]
     }
   ]
