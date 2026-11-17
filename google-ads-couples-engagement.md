@@ -1,7 +1,6 @@
 # Google Ads: Couples & Engagement Sessions (Search, $10/day)
 
 Landing page: https://jg-moments.com/engagement-proposal-photography.html
-Pricing angle: per session, starting at $300 + tax.
 
 ## Campaign
 - Type: Search only (no Search Partners, no Display). Name: `Couples & Engagement - Houston`
@@ -25,8 +24,8 @@ Negatives: `free, cheap, jobs, course, class, template, wedding venue, wedding d
 Headlines (30 chars max):
 1. Houston Engagement Photographer
 2. Couples Photo Sessions
-3. Sessions from $300
-4. Priced Per Session, Not Per Hour
+3. Relaxed Photo Sessions
+4. Book Your Session Date
 5. 30+ Edited Photos Included
 6. Natural, Candid Couple Photos
 7. Relaxed, Easy Sessions
@@ -38,7 +37,7 @@ Headlines (30 chars max):
 
 Descriptions (90 max):
 1. Relaxed engagement and couples sessions in Houston. 30+ edited photos in an online gallery.
-2. Priced per session, from $300 plus tax. Natural, candid photos you will love. Book today.
+2. Natural, candid photos you will love. Check available dates and book today.
 3. Serving Houston, Tomball, Cypress, The Woodlands, Conroe. Prints available online.
 4. Engagements, proposals, anniversaries and couples. Check dates and book your session.
 
@@ -50,7 +49,7 @@ Descriptions (90 max):
 
 ## Sitelinks
 Engagements portfolio (`/portfolio-engagements.html`), Couples portfolio (`/portfolio-couples.html`), Proposals (`/portfolio-proposals.html`), What to Wear (`/what-to-wear.html`), Contact (`/contact.html`).
-Callouts: Priced Per Session, 30+ Edited Photos, Online Gallery, Houston Area.
+Callouts: 30+ Edited Photos, Online Gallery, Houston Area.
 
 ## Check after 2 weeks
-Search terms report (add negatives), pause keywords with 20+ clicks and no inquiries, judge cost per inquiry against a $300 session.
+Search terms report (add negatives), pause keywords with 20+ clicks and no inquiries, judge cost per inquiry.

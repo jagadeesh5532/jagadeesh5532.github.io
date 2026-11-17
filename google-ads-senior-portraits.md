@@ -46,7 +46,7 @@ Display path: `senior` / `portraits`
 Headlines (max 30 characters each; add 12-15):
 1. Houston Senior Portraits
 2. Senior Photographer Houston
-3. Senior Sessions from $300
+3. Senior Sessions in Houston
 4. Natural Light & Golden Hour
 5. 30+ Edited Photos Included
 6. Relaxed, Stress-Free Sessions
@@ -62,12 +62,12 @@ Descriptions (max 90 characters; add 4):
 1. Relaxed senior sessions in Houston. 30+ edited photos in an online gallery.
 2. Natural, candid senior portraits you'll love. Check dates and book your session.
 3. Serving Houston, Tomball, Cypress, The Woodlands and Conroe. Prints available online.
-4. Sessions from $300 plus tax. Outfit changes and location help included.
+4. Outfit changes and location help included. Check dates and book your session.
 
 Pin: put "Houston Senior Portraits" in position 1 (optional).
 
 ## Assets (extensions)
-- Sitelinks: Senior Portfolio (`/everett-senior-portraits.html`), What to Wear (`/what-to-wear.html`), Pricing / Contact (`/contact.html`), Testimonials (`/testimonials.html`)
+- Sitelinks: Senior Portfolio (`/everett-senior-portraits.html`), What to Wear (`/what-to-wear.html`), Contact (`/contact.html`), Testimonials (`/testimonials.html`)
 - Callouts: 30+ Edited Photos, Online Gallery, Prints Available, Houston Area
 - Structured snippet: Types: Senior Portraits, Outdoor Sessions, Golden Hour
 - Call asset: add your number if you want calls
@@ -82,7 +82,7 @@ Without it you can't tell what works.
 ## What to check
 - Week 1: Search terms report. Add junk queries as negatives.
 - Week 2: Pause keywords with 20+ clicks and no inquiries.
-- Day 30: Judge cost per inquiry. A good target is under $40 per lead on a $300 session.
+- Day 30: Judge cost per inquiry. Set your own target cost per lead.
 - Expect roughly 100-200 clicks/month at this budget. Seniors book in a short window (summer and fall), so run it during peak season.
 
 ## Don't
