@@ -1220,3 +1220,12 @@ div.review-card p { color: var(--prose); }
 .wtw-sessions p { color: var(--prose); font-size: 1rem; line-height: 1.8; margin-bottom: 1.4rem; }
 .wtw-sessions .wtw-strip { grid-template-columns: repeat(3, 1fr); gap: .8rem; }
 @media (max-width: 700px) { .wtw-sessions { padding: 2.2rem 7%; } .wtw-sessions .wtw-strip { grid-template-columns: repeat(2, 1fr); gap: .6rem; } }
+
+
+/* headshot gallery */
+.story-grid { columns: 3; column-gap: 10px; padding: 0 6% 2rem 6%; }
+.story-item { break-inside: avoid; -webkit-column-break-inside: avoid; page-break-inside: avoid; margin-bottom: 10px; display: block; overflow: hidden; border-radius: 2px; background: var(--bg-card); cursor: zoom-in; }
+.story-item img { width: 100%; height: auto; display: block; transition: transform .6s ease, filter .35s ease; }
+.story-item:hover img { transform: scale(1.03); filter: brightness(1.06); }
+@media (max-width: 900px) { .story-grid { columns: 2; } }
+@media (max-width: 560px) { .story-grid { columns: 1; column-gap: 0; padding: 0 4% 2rem 4%; } }

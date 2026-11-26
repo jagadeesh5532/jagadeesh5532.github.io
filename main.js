@@ -663,7 +663,7 @@ if (track) {
 
   function loadIndex() {
     if (!indexPromise) {
-      indexPromise = fetch('search-index.json?v=2')
+      indexPromise = fetch('search-index.json?v=3')
         .then(r => r.json())
         .then(j => { pages = j; return j; })
         .catch(() => { pages = []; return []; });
